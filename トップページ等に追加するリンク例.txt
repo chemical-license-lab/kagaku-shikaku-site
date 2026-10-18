@@ -1,0 +1,5 @@
+<!-- index.html または pollution-air-harmful.html に追加する案内リンク例 -->
+<a href="pollution-air-harmful-analysis.html">大気有害物質特論｜過去10年100問 徹底分析を見る →</a>
+
+<!-- 既存のカードデザインに合わせる場合は、このリンクを既存ボタンやカードのhrefに指定 -->
+<!-- href="pollution-air-harmful-analysis.html" -->

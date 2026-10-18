@@ -1,34 +1,21 @@
-化学資格研究所：大気有害物質特論・テーマ別図解6枚の追加セット
-作成対象：kagaku-shikaku-lab-v0.8 を基にした差分ファイルです。
+【化学資格研究所｜大気有害物質特論 過去10年100問徹底分析】追加セット
 
-【簡単な導入方法（GitHub Desktop）】
-1) 今使っているサイトのフォルダをバックアップしてください。
-   例：C:\Users\（自分のユーザー名）\GitHub\kagaku-shikaku-site
-2) このZIPを「すべて展開」します。
-3) 展開先のファイルを【すべて選択】し、サイトのフォルダ直下にコピーします。
-   コピー先は index.html がある場所です。assets フォルダは【統合】してください。
-   「同名ファイルは置き換えますか？」と聞かれたら、
-   index.html / pollution-air.html / pollution-air-harmful.html を上書きします。
-   既に別の変更をした場合は上書き前に差分を確認してください。
-4) GitHub Desktop を開き、Changes で新規画像とHTMLが入っているか確認。
-5) Summary に「Add six topic-based illustrated lessons」を入力し Commit to main。
-6) Push origin をクリック。GitHub Pages の反映を待って表示を確認します。
+■ 内容
+- pollution-air-harmful-analysis.html：メイン記事（出題構造／S8テーマ／A6テーマ／一覧表／図解6枚／学習順／直前チェック）
+- assets/analysis-harmful/01.webp ～ 06.webp：ページで使用する図解
+- トップページ等に追加するリンク例.txt：既存サイトへの導線
 
-【新しい閲覧ページ】
-pollution-air-harmful-topics.html          テーマ別一覧
-pollution-air-harmful-topic-01.html      ① 製品・製造工程から発生する有害物質
-pollution-air-harmful-topic-02.html      ② 鉛の製錬工程と排ガス中の鉛化合物
-pollution-air-harmful-topic-03.html      ③ カドミウムとその化合物の性質・用途
-pollution-air-harmful-topic-04.html      ④ 無機・有機塩素化合物の製造反応
-pollution-air-harmful-topic-05.html      ⑤ ふっ素・ふっ化水素・塩素・塩化水素の性質比較
-pollution-air-harmful-topic-06.html      ⑥ 四ふっ化けい素とふっ化水素の反応・処理
+■ 反映手順（GitHub Desktop）
+1. 公開中サイトのローカルフォルダを丸ごとバックアップ。
+2. このZIPを右クリックして「すべて展開」。
+3. 画像の入ったassetsフォルダとHTMLファイルを、index.htmlがあるフォルダにコピー（assetsはフォルダ統合）。
+4. index.html または pollution-air-harmful.html の適切な箇所に案内リンクを追加（リンク例.txt参照）。
+5. ブラウザで pollution-air-harmful-analysis.html を開いて表示確認。
+6. GitHub Desktopで Commit to main → Push origin。
+7. Pagesの反映後、https://chemical-license-lab.github.io/kagaku-shikaku-site/pollution-air-harmful-analysis.html を確認。
 
-【今回のファイル】
-既存HTMLの更新：3件
-新規HTML：7件
-新規画像：6件（WebP、1448×1086、4:3）
-元画像のPNGからWebPへ変換したものです。情報は変更していません。
-
-【注記】
-本セットはサイトの追加・更新用です。従来の年度別30問を削除しません。
-公開前に各図の数式・化学的説明・JIS／法令への適合を再点検してください。
+■ 注意
+元サイトのHTMLを上書きしない安全な追加セットです。トップなどへの案内リンクの追加のみ、既存HTMLの編集が必要です。
+現行のサイトコードを受領していないため、既存ヘッダーをもとにしたデザイン統一は行っていますが、更新後の最新版デザインと完全一致は未検証です。
+本ページは過去10年間の独自分類をもとにした学習用の分析です。公的な出題予測ではありません。
+図解中の化学反応・測定方法・安全情報については一次資料との照合をおすすめします。
