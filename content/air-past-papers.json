@@ -1,0 +1,172 @@
+{
+  "site": "化学資格研究所",
+  "scope": "公害防止管理者 大気関係第1種",
+  "target_years": [
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "subjects": [
+    "大気概論",
+    "大気特論",
+    "ばいじん・粉じん特論",
+    "大気有害物質特論",
+    "大規模大気特論"
+  ],
+  "status": "画像掲載済み／正答・専門内容の監修未完了",
+  "years": {
+    "2016": {
+      "label": "平成28年度",
+      "subject": "大気有害物質特論",
+      "count": 10,
+      "index": "pollution-air-harmful-h28.html",
+      "questions": [
+        {
+          "number": 1,
+          "image": "assets/h28/q01.webp",
+          "page": "pollution-air-harmful-h28-q01.html"
+        },
+        {
+          "number": 2,
+          "image": "assets/h28/q02.webp",
+          "page": "pollution-air-harmful-h28-q02.html"
+        },
+        {
+          "number": 3,
+          "image": "assets/h28/q03.webp",
+          "page": "pollution-air-harmful-h28-q03.html"
+        },
+        {
+          "number": 4,
+          "image": "assets/h28/q04.webp",
+          "page": "pollution-air-harmful-h28-q04.html"
+        },
+        {
+          "number": 5,
+          "image": "assets/h28/q05.webp",
+          "page": "pollution-air-harmful-h28-q05.html"
+        },
+        {
+          "number": 6,
+          "image": "assets/h28/q06.webp",
+          "page": "pollution-air-harmful-h28-q06.html"
+        },
+        {
+          "number": 7,
+          "image": "assets/h28/q07.webp",
+          "page": "pollution-air-harmful-h28-q07.html"
+        },
+        {
+          "number": 8,
+          "image": "assets/h28/q08.webp",
+          "page": "pollution-air-harmful-h28-q08.html"
+        },
+        {
+          "number": 9,
+          "image": "assets/h28/q09.webp",
+          "page": "pollution-air-harmful-h28-q09.html"
+        },
+        {
+          "number": 10,
+          "image": "assets/h28/q10.webp",
+          "page": "pollution-air-harmful-h28-q10.html"
+        }
+      ]
+    },
+    "2017": {
+      "label": "平成29年度",
+      "subject": "大気有害物質特論",
+      "count": 10,
+      "index": "pollution-air-harmful-h29.html",
+      "questions": [
+        {
+          "number": 1,
+          "title": "製品と製造過程で発生する有害物質",
+          "keywords": "有害物質・製造工程",
+          "description": "亜鉛・ガラス・りん酸・アルミニウム・釉薬に関連する排出物",
+          "image": "assets/h29/q01.webp",
+          "page": "pollution-air-harmful-h29-q01.html"
+        },
+        {
+          "number": 2,
+          "title": "無機塩素化合物の製造方法",
+          "keywords": "無機塩素化合物・反応式",
+          "description": "塩化鉄・塩化銅・塩化亜鉛などの製法を比較",
+          "image": "assets/h29/q02.webp",
+          "page": "pollution-air-harmful-h29-q02.html"
+        },
+        {
+          "number": 3,
+          "title": "ガス吸収とガス吸着の違い",
+          "keywords": "ガス吸収・ガス吸着",
+          "description": "湿式と乾式のしくみ・特徴・用途を比較",
+          "image": "assets/h29/q03.webp",
+          "page": "pollution-air-harmful-h29-q03.html"
+        },
+        {
+          "number": 4,
+          "title": "充塡塔の構造と吸収装置の分類",
+          "keywords": "充塡塔・圧力損失",
+          "description": "充塡物、気液の流れ、ガス分散型・液分散型",
+          "image": "assets/h29/q04.webp",
+          "page": "pollution-air-harmful-h29-q04.html"
+        },
+        {
+          "number": 5,
+          "title": "活性炭によるガス吸着処理",
+          "keywords": "活性炭・吸着",
+          "description": "吸着しやすい物質、添着炭、破過時間を整理",
+          "image": "assets/h29/q05.webp",
+          "page": "pollution-air-harmful-h29-q05.html"
+        },
+        {
+          "number": 6,
+          "title": "ふっ素化合物の性質と処理",
+          "keywords": "ふっ化水素・吸収速度",
+          "description": "ふっ化水素、水溶液、境膜抵抗、中和処理",
+          "image": "assets/h29/q06.webp",
+          "page": "pollution-air-harmful-h29-q06.html"
+        },
+        {
+          "number": 7,
+          "title": "特定物質の燃焼性と爆発性",
+          "keywords": "燃焼性・爆発性",
+          "description": "アンモニア・一酸化炭素・硫化水素・二酸化硫黄・アクロレイン",
+          "image": "assets/h29/q07.webp",
+          "page": "pollution-air-harmful-h29-q07.html"
+        },
+        {
+          "number": 8,
+          "title": "排ガス中のふっ素化合物の分析",
+          "keywords": "JIS・ふっ素化合物",
+          "description": "イオン電極・イオンクロマト・吸光光度法を比較",
+          "image": "assets/h29/q08.webp",
+          "page": "pollution-air-harmful-h29-q08.html"
+        },
+        {
+          "number": 9,
+          "title": "イオンクロマトグラフによる塩素分析",
+          "keywords": "塩素・JIS・イオンクロマト",
+          "description": "吸収液からクロラミンT、シアン酸イオンの測定まで",
+          "image": "assets/h29/q09.webp",
+          "page": "pollution-air-harmful-h29-q09.html"
+        },
+        {
+          "number": 10,
+          "title": "ICP質量分析法と内標準物質",
+          "keywords": "ICP-MS・カドミウム・鉛",
+          "description": "ICP-MSの流れと内標準物質の役割",
+          "image": "assets/h29/q10.webp",
+          "page": "pollution-air-harmful-h29-q10.html"
+        }
+      ]
+    }
+  }
+}

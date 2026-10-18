@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="化学系資格を、丸暗記から理解へ。図解・丁寧な途中式・演習で学ぶ資格学習サイト。">
+<title>化学資格研究所 | 資格を、丸暗記から理解へ。</title>
+<style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">CQL</span>
+      <span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#qualifications">QUALIFICATIONS</a>
+      <a href="index.html#principle">PRINCIPLE</a>
+      <a href="profile.html">ABOUT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">CHEMICAL QUALIFICATION LABORATORY / EST. 2026</div>
+      <h1>資格を、<br>丸暗記から<br><span class="accent">理解へ。</span></h1>
+      <p class="hero-copy">参考書で省略されがちな「なぜ？」を、図・式・ことばで丁寧にほどく。化学系資格を、合格だけで終わらせないための学習メディアです。</p>
+      <div class="actions">
+        <a class="btn primary" href="#qualifications">資格から探す →</a>
+        <a class="btn" href="profile.html">運営者について ↗</a>
+      </div>
+    </div>
+    <div class="atom" aria-hidden="true">
+      <div class="orbit"></div><div class="nucleus">CQL</div>
+      <span class="e e1"></span><span class="e e2"></span><span class="e e3"></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="principle">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-no">01 / PRINCIPLE</div>
+      <div>
+        <h2>わからないまま、<br>先へ進まない。</h2>
+        <p class="lead">市販の参考書は、試験対策のため説明がコンパクトです。この研究所では、その「途中」を一段ずつ分解します。</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>6</strong><span>QUALIFICATIONS*</span></div>
+      <div class="stat"><strong>100%</strong><span>FIRST ATTEMPT*</span></div>
+      <div class="stat"><strong>5 yr</strong><span>PROCESS ENGINEERING</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="qualifications">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-no">02 / QUALIFICATIONS</div>
+      <div>
+        <h2>学びたい資格から、<br>はじめる。</h2>
+        <p class="lead">まずは4領域から。試験概要、頻出分野、過去問、図解、演習へつなげていきます。</p>
+      </div>
+    </div>
+
+    <div class="qual-list">
+      <a class="qual" href="hazardous.html">
+        <div class="qno">01</div><div class="qname">危険物取扱者 <span class="chip c1">HAZMAT</span></div><div class="qtag">乙4 / 甲種</div><div class="arrow">↗</div>
+      </a>
+      <a class="qual" href="gas.html">
+        <div class="qno">02</div><div class="qname">高圧ガス <span class="chip c2">GAS</span></div><div class="qtag">甲種</div><div class="arrow">↗</div>
+      </a>
+      <a class="qual" href="energy.html">
+        <div class="qno">03</div><div class="qname">エネルギー管理士 <span class="chip c3">ENERGY</span></div><div class="qtag">熱分野</div><div class="arrow">↗</div>
+      </a>
+      <a class="qual" href="pollution.html">
+        <div class="qno">04</div><div class="qname">公害防止管理者 <span class="chip c4">POLLUTION</span></div><div class="qtag">水質 / 大気</div><div class="arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-no">03 / METHOD</div>
+      <div><h2>見る。理解する。<br>手を動かす。</h2></div>
+    </div>
+    <div class="principles">
+      <div class="pcard"><b>01</b><div><h3>VISUAL</h3><p>文章だけでは掴みにくい関係を、図解で整理する。</p></div></div>
+      <div class="pcard"><b>02</b><div><h3>LOGIC</h3><p>途中式と理由を飛ばさず、理解の穴を埋める。</p></div></div>
+      <div class="pcard"><b>03</b><div><h3>PRACTICE</h3><p>読むだけで終わらず、Web演習で自分の手を動かす。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="latest">
+ <div class="wrap"><div class="section-head"><div class="sec-no">04 / NEW CONTENT</div><div><h2>新しい図解、<br>公開中。</h2><p class="lead">過去問を、比較表と模式図で理解する。大気有害物質特論・平成28・29年度の20問を公開しています。</p></div></div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center;border:1px solid var(--line);padding:22px;border-radius:15px;background:#fff">
+ <a href="pollution-air-harmful.html" aria-label="大気有害物質特論の年度別一覧へ"><img src="assets/h29/q01.webp" width="1448" height="1086" alt="平成29年度 大気有害物質特論 問1の図解" loading="lazy" style="width:100%;border-radius:8px;display:block"></a>
+ <div><div class="sec-no">2026 / ILLUSTRATED NOTES</div><h3 style="font-size:clamp(25px,3vw,43px);line-height:1.35;letter-spacing:-.04em;margin:14px 0">平成28・29年度<br>大気有害物質特論<br>図解解説 20問</h3><p style="color:var(--muted);font-size:14px">吸収・吸着・有害物質・分析法を、図で比較しながら学ぶ。</p><a class="btn primary" href="pollution-air-harmful.html">一覧を見る ↗</a></div>
+ </div></div></section>
+<style>@media(max-width:720px){#latest .wrap>div:last-child{grid-template-columns:1fr!important}}</style>
+<section class="section">
+  <div class="wrap about-grid">
+    <div>
+      <div class="sec-no">05 / ABOUT</div>
+      <h2 style="margin:18px 0 26px">化学を学び、<br>現場で使い、<br>資格で深める。</h2>
+      <p class="lead">国立大学院修士課程で化学工学を専攻。現在は石油化学メーカーの生産技術職として勤務しています。匿名で運営しています。</p>
+      <div class="actions"><a class="btn primary" href="profile.html">PROFILE →</a></div>
+    </div>
+    <div class="timeline">
+      <div class="trow"><strong>2019</strong><span>化学工学技士基礎</span></div>
+      <div class="trow"><strong>2022</strong><span>危険物取扱者 甲種</span></div>
+      <div class="trow"><strong>2023</strong><span>高圧ガス製造保安責任者 甲種 / エネルギー管理士</span></div>
+      <div class="trow"><strong>2025</strong><span>公害防止管理者 水質関係第1種</span></div>
+      <div class="trow"><strong>2026</strong><span>公害防止管理者 大気関係第1種（自己採点合格見込み）</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot dark">
+  <div class="wrap foot-inner">
+    <div class="foot-big">CHEMICAL<br>QUALIFICATION<br>LAB.</div>
+    <div style="font-size:11px;color:#9da49f">© 2026 CQL<br>*自己採点合格見込みを含む</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    const el=document.querySelector(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
+  })
+})
+</script>
+</body>
+</html>
