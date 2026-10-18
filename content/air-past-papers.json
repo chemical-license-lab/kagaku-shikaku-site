@@ -167,6 +167,94 @@
           "page": "pollution-air-harmful-h29-q10.html"
         }
       ]
+    },
+    "2018": {
+      "label": "平成30年度",
+      "subject": "大気有害物質特論",
+      "count": 10,
+      "index": "pollution-air-harmful-h30.html",
+      "questions": [
+        {
+          "number": 1,
+          "title": "鉛とその化合物の性質・製造工程",
+          "keywords": "鉛・製錬",
+          "description": "鉛フューム、硫黄除去、溶鉱炉での還元と排ガス中のダスト組成を整理",
+          "image": "assets/h30/q01.webp",
+          "page": "pollution-air-harmful-h30-q01.html"
+        },
+        {
+          "number": 2,
+          "title": "りん鉱石からのふっ素の揮散",
+          "keywords": "りん鉱石・ふっ素",
+          "description": "りん酸・りん酸石灰・りん肥の製造方法と、ふっ化水素の発生を比較",
+          "image": "assets/h30/q02.webp",
+          "page": "pollution-air-harmful-h30-q02.html"
+        },
+        {
+          "number": 3,
+          "title": "ガス吸収装置の選び方",
+          "keywords": "ガス吸収・吸収塔",
+          "description": "ガスの溶解度、気液境膜抵抗と液分散型・ガス分散型装置を比較",
+          "image": "assets/h30/q03.webp",
+          "page": "pollution-air-harmful-h30-q03.html"
+        },
+        {
+          "number": 4,
+          "title": "ラングミュアー吸着等温式",
+          "keywords": "ラングミュアー式・吸着",
+          "description": "単分子層吸着の考え方と、分圧が高くなると飽和する理由を図解",
+          "image": "assets/h30/q04.webp",
+          "page": "pollution-air-harmful-h30-q04.html"
+        },
+        {
+          "number": 5,
+          "title": "塩化水素の吸収・処理装置",
+          "keywords": "塩化水素・吸収装置",
+          "description": "塩化水素の溶解熱、高濃度・低濃度での装置選定と液分散型吸収",
+          "image": "assets/h30/q05.webp",
+          "page": "pollution-air-harmful-h30-q05.html"
+        },
+        {
+          "number": 6,
+          "title": "クロロ硫酸の性質",
+          "keywords": "クロロ硫酸・水反応",
+          "description": "クロロ硫酸の外観・不燃性・水との激しい反応を整理",
+          "image": "assets/h30/q06.webp",
+          "page": "pollution-air-harmful-h30-q06.html"
+        },
+        {
+          "number": 7,
+          "title": "特定物質の漏洩時の応急措置",
+          "keywords": "漏洩対応・安全",
+          "description": "ホスゲン、メルカプタン、ふっ化水素、シアン化水素、一酸化炭素の対応",
+          "image": "assets/h30/q07.webp",
+          "page": "pollution-air-harmful-h30-q07.html"
+        },
+        {
+          "number": 8,
+          "title": "イオンクロマトグラフ法による塩素分析",
+          "keywords": "JIS・イオンクロマト",
+          "description": "排ガス中の塩素をシアン酸イオンに変換して測定する流れを図解",
+          "image": "assets/h30/q08.webp",
+          "page": "pollution-air-harmful-h30-q08.html"
+        },
+        {
+          "number": 9,
+          "title": "排ガス中の塩化水素の分析方法",
+          "keywords": "JIS・塩化水素",
+          "description": "イオンクロマトグラフ法・硝酸銀滴定法・イオン電極法を比較",
+          "image": "assets/h30/q09.webp",
+          "page": "pollution-air-harmful-h30-q09.html"
+        },
+        {
+          "number": 10,
+          "title": "ICP発光分光分析法によるカドミウム分析",
+          "keywords": "ICP-AES・カドミウム",
+          "description": "試料の湿式分解、ネブライザー導入、アルゴンプラズマ、発光測定",
+          "image": "assets/h30/q10.webp",
+          "page": "pollution-air-harmful-h30-q10.html"
+        }
+      ]
     }
   }
 }
