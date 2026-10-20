@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="公害防止管理者 大規模大気特論の平成28〜令和7年度、10年100問を独自分析。設問分布、年度別主題マップ、Sランク8テーマ・Aランク6テーマ、発電所の処理系列、暗記チェックを掲載。" name="description"/><meta content="大気有害物質特論｜過去10年100問の徹底分析・S/Aランク重要ポイント | 化学資格研究所" property="og:title"/><meta content="公害防止管理者・大気有害物質特論のH28〜R7過去10年100問を独自分析。出題位置、S/Aランク、吸収・吸着・有害物質・JIS分析法、学習順、直前確認を1ページに。" property="og:description"/><meta content="article" property="og:type"/><title>大規模大気特論｜過去10年100問の徹底分析・S/A/B重要ポイント | 化学資格研究所</title><style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+}
+
+
+/* v0.6: illustrated past papers */
+:root{color-scheme:light}
+.cql-crumb{padding:22px 0;font-size:12px;color:#65716a;letter-spacing:.04em;}
+.cql-crumb a{text-decoration:underline;text-underline-offset:4px}
+.cql-hero{padding:90px 0 64px;background:#0a0c0b;color:#fff;overflow:hidden}
+.cql-label{display:inline-block;letter-spacing:.18em;text-transform:uppercase;font-weight:800;font-size:12px;color:#aab5ad}
+.cql-hero h1{font-size:clamp(44px,7.4vw,94px);line-height:1.14;margin:20px 0 25px;letter-spacing:-.055em}
+.cql-hero h1 em{font-style:normal;color:var(--lime)}
+.cql-hero p{max-width:740px;color:#c5cec8;font-size:16px;line-height:1.9}
+.cql-hero-note{font-size:12px;color:#a5b0aa;margin-top:22px}
+.cql-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.cql-button{border-radius:100px;padding:13px 21px;display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:800;background:var(--lime);color:#141814;border:1px solid var(--lime);transition:transform .15s}
+.cql-button:hover{transform:translateY(-2px)}
+.cql-button.ghost{background:transparent;color:#fff;border-color:#5b655e}
+.cql-listing{padding:70px 0 105px}
+.cql-result-header{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.cql-result-header h2{font-size:clamp(30px,4.4vw,55px);margin:4px 0 0;letter-spacing:-.05em;line-height:1.15}
+.cql-count{font-size:13px;color:#5e6c64;white-space:nowrap}
+.cql-input{width:100%;max-width:560px;border:1px solid #cbd4cb;background:#fff;border-radius:12px;margin:28px 0 30px;padding:16px 19px;color:#141914;font:inherit;outline-offset:3px}
+.cql-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.cql-card{display:block;border:1px solid #d6ddd5;border-radius:17px;background:white;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.cql-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.cql-card[hidden]{display:none!important}
+.cql-card-cover{overflow:hidden;background:#e5ecf4;aspect-ratio:4 / 3}
+.cql-card-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.cql-card-info{padding:25px 25px 27px}
+.cql-card-number{font-size:11px;letter-spacing:.12em;font-weight:800;color:#596760}
+.cql-card h3{font-size:clamp(20px,2.2vw,28px);line-height:1.35;letter-spacing:-.045em;margin:9px 0 12px}
+.cql-card p{font-size:13px;color:#58655f;margin:0}
+.cql-tags{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 0}
+.cql-tags span{padding:5px 9px;border-radius:50px;background:#edf3ea;color:#3e5044;font-weight:700;font-size:11px}
+.cql-card-bottom{border-top:1px solid #e4e8e2;padding-top:16px;margin-top:19px;font-size:13px;font-weight:800;display:flex;justify-content:space-between}
+.cql-statement{padding:22px 24px;border:1px solid #cbd8cd;border-radius:15px;background:#edf3e9;margin:28px 0;font-size:14px;color:#334239}
+.cql-reading{padding:60px 0 98px}
+.cql-reading .heading{font-size:clamp(31px,4.8vw,60px);line-height:1.2;letter-spacing:-.05em;margin:15px 0}
+.cql-reading .sub{font-size:16px;color:#526258;max-width:740px}
+.cql-figure-card{background:#fff;border:1px solid #d4ddd4;border-radius:18px;padding:18px;margin-top:34px}
+.cql-figure-card img{display:block;width:100%;height:auto}
+.cql-figure-caption{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:15px 0 2px;font-size:12px;color:#627167}
+.cql-figure-caption a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.cql-pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:50px 0 30px}
+.cql-pager a{padding:20px;border:1px solid #cdd6cc;border-radius:12px;display:flex;flex-direction:column;gap:7px;font-weight:800}
+.cql-pager a:hover{background:#e5eddd}
+.cql-pager small{font-size:11px;color:#7a877b}
+.cql-back{margin:20px 0 0;display:inline-flex;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.cql-footer{background:#0a0c0b;color:#fff;padding:42px 0;margin-top:0}
+.cql-footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.cql-footer strong{font-size:23px;letter-spacing:-.04em}
+.cql-footer small{color:#96a39a}
+.cql-mini-banner{padding:28px;border-radius:18px;background:#0a0c0b;color:white;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.cql-mini-banner h3{margin:7px 0 5px;font-size:clamp(22px,3vw,35px);line-height:1.25}
+.cql-mini-banner p{margin:0;color:#c2cec4;font-size:14px}
+.cql-mini-banner .cql-button{white-space:nowrap}
+@media(max-width:720px){
+  .cql-hero{padding:57px 0 50px}
+  .cql-card-grid{grid-template-columns:1fr}
+  .cql-listing{padding:50px 0}
+  .cql-figure-card{padding:10px;border-radius:12px}
+  .cql-figure-caption{flex-direction:column;align-items:flex-start}
+  .cql-mini-banner{flex-direction:column;align-items:flex-start}
+  .cql-pager{grid-template-columns:1fr}
+  .cql-result-header{align-items:flex-start}
+  .cql-reading{padding:40px 0 60px}
+  .cql-figure-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;border-radius:4px;border:1px solid #e1e5e1}
+  .cql-figure-scroll img{min-width:980px;max-width:none}
+  .cql-footer-inner{display:block}
+  .cql-footer-inner small{display:block;margin-top:10px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+
+:root{--paper:#f3f5ef;--ink:#0b0d0c;--line:#d7dfd6;--lime:#c8ff4d;--mint:#b7f7df;--cyan:#9de9ff;--violet:#bfc6fd;--tint:#f9fbf8}
+body{line-height:1.65}section{scroll-margin-top:90px}
+.a-hero{background:#101512;color:#fff;padding:73px 0 76px;position:relative;overflow:hidden;border-bottom:1px solid #3e443e}
+.a-hero:before{content:'';position:absolute;right:-160px;top:-180px;width:570px;height:570px;border:1px solid #4b554d;border-radius:50%;box-shadow:0 0 0 80px #ffffff07,0 0 0 160px #ffffff05;pointer-events:none}
+.a-eyebrow{display:inline-flex;align-items:center;gap:10px;color:#a9c9b4;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.a-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#c8ff4d;box-shadow:0 0 0 4px #c8ff4d22}
+.a-hero h1{font-size:clamp(38px,6.6vw,86px);line-height:1.12;letter-spacing:-.067em;max-width:1040px;margin:21px 0 20px;font-weight:900}
+.a-hero h1 em{font-style:normal;color:#c8ff4d}
+.a-hero p{max-width:840px;color:#cbd7ce;font-size:clamp(15px,2vw,19px);line-height:1.9;margin:0}
+.a-actions{display:flex;flex-wrap:wrap;gap:11px;margin:26px 0 0}
+.a-btn{border:1px solid #4a5b4b;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:12px 17px;border-radius:999px;background:#fff;color:#132218;font-weight:900;font-size:13px;cursor:pointer;transition:transform .15s,background .15s}
+.a-btn:hover{background:#c8ff4d;transform:translateY(-2px)}.a-btn.dark{background:#c8ff4d;border-color:#c8ff4d;color:#101811}.a-btn.dark:hover{background:white}
+.a-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:48px;border-top:1px solid #4a554c;border-bottom:1px solid #4a554c;max-width:850px}
+.a-hero-stat{padding:22px 18px 20px 0}.a-hero-stat + .a-hero-stat{border-left:1px solid #4a554c;padding-left:26px}
+.a-hero-stat b{font-size:clamp(32px,5.7vw,65px);line-height:1.1;letter-spacing:-.07em;display:block;color:#c8ff4d}
+.a-hero-stat small{display:block;color:#bfcac0;font-size:11px;font-weight:700;letter-spacing:.05em;margin-top:5px}
+.a-subnav{position:sticky;top:76px;z-index:20;background:#f3f5eff7;backdrop-filter:blur(10px);border-bottom:1px solid #d9e2da;overflow-x:auto;scrollbar-width:thin}
+.a-subnav .wrap{display:flex;gap:24px;white-space:nowrap;min-height:54px;align-items:center}
+.a-subnav a{font-weight:850;font-size:12px;color:#55685c}.a-subnav a:hover{color:#102a18}
+.a-section{padding:84px 0;border-bottom:1px solid #d9dfd8}.a-section.alt{background:#eaf0ea}.a-section.dark{background:#111915;color:white}
+.a-caption{font-size:11px;font-weight:950;letter-spacing:.17em;color:#53705b}.a-section.dark .a-caption{color:#a9d6b7}
+.a-section-title{font-size:clamp(30px,4.8vw,58px);font-weight:900;letter-spacing:-.06em;line-height:1.2;margin:12px 0 14px}
+.a-lead{font-size:16px;color:#465b4b;line-height:1.9;max-width:780px;margin:0 0 35px}.a-section.dark .a-lead{color:#c5cfc6}
+.a-flexhead{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:25px}
+.a-positions{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;margin:20px 0 17px}
+.a-pos{border:1px solid #bfcabf;min-height:145px;padding:17px 7px 12px;border-radius:13px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:12px;text-align:center}
+.a-pos b{font-size:25px;line-height:1}.a-pos span{font-size:12px;font-weight:850;line-height:1.45}
+.a-pos.pc1{background:#e3f5d5}.a-pos.pc2{background:#dff4f9}.a-pos.pc3{background:#ffe5d6}.a-pos.pc4{background:#dfe3fd}
+.a-legend{display:flex;gap:14px;flex-wrap:wrap;margin:13px 0 0;font-size:12px;font-weight:800;color:#4f6254}
+.a-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.a-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.a-statbox{padding:27px;background:white;border:1px solid #d4ded3;border-radius:17px;display:flex;align-items:center;gap:23px}
+.a-statnumber{font-size:clamp(46px,6vw,78px);line-height:.95;letter-spacing:-.08em;font-weight:950;white-space:nowrap}.a-statcontent h3{font-size:18px;line-height:1.3;letter-spacing:-.03em;margin:0 0 9px}.a-statcontent p{margin:0;color:#627065;font-size:13px}
+.a-note{font-size:12px;line-height:1.75;color:#667169;margin-top:21px;padding:12px 16px;border-left:3px solid #86a48d;background:#ffffff8f}
+.a-ranklegend{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 22px}
+.a-ranklegend article{border-radius:15px;border:1px solid #d5e0d5;background:#fff;padding:18px 21px}
+.a-ranklegend b{font-size:25px;font-weight:950}.a-ranklegend p{font-size:13px;color:#637064;margin:8px 0 0}
+.a-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:23px}.a-search{flex:1;min-width:220px;padding:12px 15px;border-radius:12px;border:1px solid #b8c9b8;font:inherit;color:var(--ink);background:#fff}
+.a-chip{border-radius:99px;padding:9px 14px;font-size:12px;font-weight:900;cursor:pointer;border:1px solid #aebfad;background:white;color:#294735}.a-chip[aria-pressed=true]{background:#1b3725;color:white;border-color:#1b3725}
+.a-rankgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.a-rankcard{background:white;border:1px solid #d4dfd3;border-radius:17px;padding:25px 26px 18px;min-width:0;display:flex;flex-direction:column}
+.a-rankcard[hidden],.a-nomatch[hidden]{display:none!important}.a-rankcard-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:10px}
+.a-sid{display:inline-block;padding:5px 12px;color:#102313;background:#c8ff4d;border-radius:8px;font-size:14px;font-weight:950}
+.a-category{font-size:11px;font-weight:800;color:#607368}.a-rankcard h3{font-size:24px;letter-spacing:-.04em;line-height:1.28;margin:7px 0 8px}
+.a-rankcard .hint{font-size:13px;color:#53695a;margin:0 0 12px}.a-rankcard details{border-top:1px solid #e7ece7;margin-top:auto;padding-top:12px}
+.a-rankcard summary{font-size:13px;font-weight:900;cursor:pointer;list-style:none;color:#184a30}.a-rankcard summary::-webkit-details-marker{display:none}
+.a-rankcard summary:after{content:' ＋';float:right}.a-rankcard details[open] summary:after{content:' −'}
+.a-rankcard ul{margin:12px 0 9px;padding-left:20px;font-size:14px;line-height:1.75}.a-rankcard li+li{margin-top:7px}
+.a-caution{font-size:12px;background:#f1f5ea;border-radius:9px;padding:11px 12px;color:#4b6151;margin:14px 0 5px}
+.a-arows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.a-acard{background:#fff;border:1px solid #d7dfd5;border-radius:14px;padding:23px}
+.a-acard h3{font-size:19px;margin:10px 0}.a-acard p{font-size:13px;line-height:1.8;color:#53685b;margin:0}
+.a-acard .a-anum{font-size:13px;font-weight:950;color:#176244;background:#def6e9;padding:6px 10px;border-radius:6px}
+.a-analysis-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #cad8c9;border-radius:16px;overflow:hidden;line-height:1.6}
+.a-analysis-table th,.a-analysis-table td{text-align:left;border-bottom:1px solid #e0e9e0;padding:17px 19px;font-size:14px}
+.a-analysis-table thead{background:#183325;color:white}.a-analysis-table th{font-weight:900}.a-analysis-table tr:last-child td{border-bottom:0}
+.a-deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.a-figurecard{background:white;border:1px solid #cfdcd0;border-radius:16px;overflow:hidden;text-align:left;cursor:pointer;padding:0;color:inherit;font:inherit}
+.a-figurecard:hover{box-shadow:0 13px 27px #2c503120}.a-figurecard img{width:100%;aspect-ratio:4/3;display:block;object-fit:cover}.a-figurecard span{display:block;padding:15px 18px;font-size:14px;font-weight:850}
+.a-figurecard small{color:#51735b;display:block;font-weight:700;font-size:11px}
+.a-route{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.a-route-step{background:#fff;border:1px solid #d5e1d4;border-radius:14px;padding:19px 15px}
+.a-route-step b{font-size:28px;color:#2e6941}.a-route-step h3{font-size:17px;line-height:1.45;margin:9px 0}.a-route-step p{font-size:12px;margin:0;color:#59715d}
+.a-memo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.a-memo-item{display:flex;align-items:flex-start;gap:11px;border-radius:11px;background:#fff;border:1px solid #d7e1d5;padding:15px 16px;cursor:pointer}
+.a-memo-item input{width:19px;height:19px;margin:2px 0 0;accent-color:#2b7244}.a-memo-item span{font-size:14px;font-weight:700;line-height:1.6}
+.a-memo-item:has(input:checked){background:#e4f7dc}.a-memo-item:has(input:checked) span{text-decoration:line-through;color:#627967}
+.a-lastbar{margin-top:20px;padding:19px 22px;border:1px solid #bfd1bc;background:#fff;border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.a-lastbar strong{font-size:20px}
+.a-source{padding:40px 0 58px;background:#111b16;color:#eef5ef}.a-source a{color:#c8ff4d;text-decoration:underline;text-underline-offset:4px}
+.a-source p{font-size:13px;color:#bbcabe;line-height:1.8;max-width:920px}
+.a-mini{font-size:11px;line-height:1.75;color:#607363}
+.a-lightbox{border:0;border-radius:14px;padding:10px;background:#fdfdfd;max-width:min(96vw,1350px);max-height:94vh;box-shadow:0 25px 80px #0006}.a-lightbox::backdrop{background:#07150bc9}
+.a-lightbox img{max-width:100%;max-height:82vh;display:block;object-fit:contain}.a-close{margin:0 0 7px auto;display:block;cursor:pointer;background:#101811;color:white;border:0;padding:8px 13px;border-radius:10px;font-weight:800}
+.a-btn:focus-visible,.a-chip:focus-visible,.a-rankcard summary:focus-visible,.a-figurecard:focus-visible{outline:3px solid #477c58;outline-offset:3px}
+@media(max-width:900px){.a-rankgrid,.a-deck{grid-template-columns:repeat(2,1fr)}.a-arows{grid-template-columns:repeat(2,1fr)}.a-route{grid-template-columns:repeat(3,1fr)}.a-positions{gap:4px}.a-pos{min-height:125px;padding:12px 3px}.a-pos span{font-size:10px}}
+@media(max-width:660px){.a-hero{padding:44px 0 51px}.a-hero h1{font-size:clamp(37px,9vw,54px)}.a-section{padding:58px 0}.a-hero-stats{gap:0}.a-hero-stat{padding:19px 8px 19px 0}.a-hero-stat+.a-hero-stat{padding-left:12px}.a-hero-stat b{font-size:38px}.a-hero-stat small{font-size:10px}.a-rankgrid,.a-grid2,.a-memo{grid-template-columns:1fr}.a-deck,.a-arows,.a-route{grid-template-columns:1fr 1fr}.a-ranklegend{grid-template-columns:1fr}.a-pos{min-height:91px;padding:8px 2px;border-radius:6px}.a-pos b{font-size:14px}.a-pos span{font-size:8px;word-break:keep-all}.a-positions{gap:3px}.a-positions span{line-height:1.25}.a-section-title{font-size:36px}.a-rankcard{padding:22px}.a-rankcard h3{font-size:22px}.a-analysis-table th,.a-analysis-table td{padding:10px 8px;font-size:12px}.a-statbox{padding:23px}}
+@media(max-width:400px){.a-deck,.a-arows,.a-route{grid-template-columns:1fr}.a-hero-stat b{font-size:33px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Large-air specialization additions */
+.la-bands{display:grid;grid-template-columns:3fr 2fr;gap:12px;margin:22px 0}
+.la-band{border:1px solid rgba(11,13,12,.2);border-radius:16px;padding:24px;background:#e0f4ea}
+.la-band:nth-child(2){background:#fff0d7}
+.la-band b{font-size:clamp(31px,5vw,55px);font-weight:950;letter-spacing:-.08em;line-height:1}
+.la-band small{display:block;letter-spacing:.03em;color:#526358;font-size:13px;font-weight:800;margin-top:8px}
+.la-positionline{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px;max-width:100%;margin:20px 0 12px}
+.la-pos{padding:16px 5px;min-width:0;text-align:center;border-radius:10px;border:1px solid #657068;font-weight:850;background:#b9eee5;font-size:13px}
+.la-pos:nth-child(n+7){background:#ffddaa}
+.la-pos b{display:block;font-size:23px;line-height:1.1}
+.la-pos span{font-size:10px;display:block;margin-top:6px}
+.la-mapguide{display:flex;flex-wrap:wrap;gap:9px;margin-top:19px}
+.la-mapguide span{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:750;background:#fff;border:1px solid #ddd;padding:7px 10px;border-radius:100px}
+.la-mapguide i{width:13px;height:13px;display:inline-block;border-radius:4px;border:1px solid rgba(0,0,0,.08)}
+.la-map-scroll{overflow-x:auto;overscroll-behavior-x:contain;padding:2px 0 12px}
+.la-map{border-collapse:separate;border-spacing:5px;width:100%;min-width:680px;table-layout:fixed}
+.la-map th{font-weight:900;font-size:11px;text-align:center;padding:9px 2px}
+.la-map th:first-child{width:66px}
+.la-map td{padding:0;vertical-align:middle;text-align:center}
+.la-cell{color:#102018;display:flex;justify-content:center;align-items:center;min-height:48px;text-decoration:none;font-size:10px;line-height:1.24;font-weight:850;border:1px solid rgba(0,0,0,.11);border-radius:9px;padding:4px 3px;transition:transform .15s,outline .15s}
+.la-cell:hover,.la-cell:focus-visible{transform:scale(1.055);outline:2px solid #0b0d0c;position:relative;z-index:2}
+.la-map-year{font-size:14px;font-weight:950;letter-spacing:.03em;text-align:left!important}
+.la-distribution{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}
+.la-panel{background:#fff;border:1px solid #d5dfd5;border-radius:14px;padding:24px}
+.la-panel h3{font-size:20px;margin:0 0 18px;letter-spacing:-.04em}
+.la-bar{display:grid;grid-template-columns:130px minmax(0,1fr) 42px;align-items:center;gap:11px;margin:11px 0;font-size:11px;font-weight:800}
+.la-bar-track{height:12px;background:#edf0eb;overflow:hidden;border-radius:100px}
+.la-bar-fill{height:100%;border-radius:100px;background:#202a21}
+.la-bar strong{font-variant-numeric:tabular-nums;text-align:right}
+.la-decision{display:flex;align-items:flex-start;gap:16px;margin:20px 0;padding:20px 24px;background:#e0ffe1;border:1px solid #aad1a9;border-radius:14px}
+.la-decision b{font-size:24px;line-height:1.3}
+.la-decision p{margin:6px 0 0;font-size:13px;line-height:1.8}
+.la-compare-card{display:flex;gap:15px;align-items:center;border:1px solid #d7ded6;border-radius:14px;background:#fff;padding:18px 22px}
+.la-compare-card code{font-size:14px;background:#f2f7ec;border-radius:7px;padding:4px 7px;white-space:normal}
+.la-tabline{display:flex;gap:7px;flex-wrap:wrap;margin:23px 0}
+.la-tab{border:1px solid #a9b8ae;border-radius:100px;padding:9px 16px;background:#fff;font-size:12px;font-weight:850;cursor:pointer;color:#293e30}
+.la-tab[aria-pressed="true"]{background:#161d18;color:#fff}
+.la-muted{font-size:12px;color:#56675b;line-height:1.7}
+.la-sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.la-sources a{display:inline-block;border:1px solid #bed2c2;border-radius:100px;background:#fff;padding:6px 10px;font-size:11px;font-weight:900}
+.la-sources a:hover{background:var(--lime)}
+.la-rank-tag{display:inline-block;font-size:11px;background:var(--lime);font-weight:900;border-radius:100px;padding:3px 10px;margin-bottom:12px}
+.la-system{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:25px 0}
+.la-process-step{display:flex;align-items:center;justify-content:center;min-height:75px;text-align:center;border-radius:12px;border:1px solid #bbd2bd;background:white;padding:9px 4px;line-height:1.5;font-weight:850;font-size:12px}
+.la-process-step:nth-child(2n){background:#e8ffd0}
+.la-process-step small{font-size:10px;color:#526453}
+.la-keyformula{padding:24px;background:#131b15;color:#c8ff4d;border-radius:16px;overflow-x:auto;font-size:clamp(14px,2vw,20px);letter-spacing:-.03em;text-align:center;font-family:Cambria, Georgia, serif;font-weight:800;white-space:nowrap}
+.la-keyformula span{color:white;font-size:12px;font-family:inherit}
+.a-rankcard[hidden],.la-map tr[hidden]{display:none!important}
+@media(max-width:800px){.la-positionline{gap:3px}.la-pos{padding:10px 1px}.la-pos b{font-size:16px}.la-pos span{font-size:8px}.la-distribution{grid-template-columns:1fr}.la-bar{grid-template-columns:115px minmax(0,1fr) 32px}.la-system{grid-template-columns:repeat(2,1fr)}.la-band{padding:18px}.la-cell{min-height:40px}.la-decision{padding:16px}}
+@media(max-width:500px){.la-pos span{display:none}.la-pos b{font-size:14px}.la-positionline{gap:2px}.la-band b{font-size:35px}.la-map{border-spacing:3px;min-width:720px}.la-compare-card{flex-direction:column;align-items:flex-start}}
+</style></head><body><header class="header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="mark">CQL</span><span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span></a><nav class="nav"><a href="index.html#qualifications">QUALIFICATIONS</a><a href="pollution.html">POLLUTION</a><a href="profile.html">ABOUT</a></nav></div></header><main>
+<div class="a-hero"><div class="wrap"><div class="a-eyebrow"><span class="dot"></span> EXAM ANALYSIS / LARGE-SCALE AIR POLLUTION</div>
+<h1>大規模大気特論。<br/><em>過去10年を徹底分析。</em></h1>
+<p>平成28年度〜令和7年度、10年間100問を設問ごとに独自分類。前半は「大気拡散・濃度予測」、後半は「発電所・製油所・鉄鋼・焼却施設」。出題位置とS/Aランクから、何を優先するかを整理しました。</p>
+<div class="a-actions"><a class="a-btn dark" href="#positions">出題構造を知る ↓</a><a class="a-btn" href="#rank-s">Sランク8テーマ ↓</a><a class="a-btn" href="pollution-air.html">大気5科目一覧へ ↗</a></div>
+<div class="a-hero-stats"><div class="a-hero-stat"><b>100<span style="font-size:.38em">問</span></b><small>H28〜R7／10年間</small></div><div class="a-hero-stat"><b>60<span style="font-size:.38em">%</span></b><small>問1〜6：気象・拡散</small></div><div class="a-hero-stat"><b>40<span style="font-size:.38em">%</span></b><small>問7〜10：設備対策</small></div></div></div></div>
+<nav aria-label="ページ内の目次" class="a-subnav"><div class="wrap"><a href="#positions">出題構造</a><a href="#yearmap">10年100問マップ</a><a href="#rank-s">Sランク</a><a href="#rank-a">Aランク</a><a href="#comparison">整理表</a><a href="#method">勉強手順</a><a href="#lastcheck">直前チェック</a></div></nav>
+<section class="a-section" id="positions"><div class="wrap"><div class="a-caption">01 / QUESTION STRUCTURE</div><h2 class="a-section-title">前半６問と、後半４問。<br/>出題の型を先に覚える。</h2><p class="a-lead">10年間すべて、問1〜6の主題は気象・拡散予測、問7〜10は大規模設備の排出対策。どの順番で勉強するかが明確になります。</p>
+<div class="la-bands"><div class="la-band"><b>01–06</b><small>気象・安定度／乱流／拡散式／濃度予測／モデル</small></div><div class="la-band"><b>07–10</b><small>火力発電／製油所／鉄鋼・セメント／廃棄物焼却</small></div></div>
+<div aria-label="1〜6問は気象・拡散、7〜10問は設備対策" class="la-positionline"><div class="la-pos"><b>01</b><span>気象</span></div><div class="la-pos"><b>02</b><span>境界層</span></div><div class="la-pos"><b>03</b><span>乱流</span></div><div class="la-pos"><b>04</b><span>拡散式</span></div><div class="la-pos"><b>05</b><span>モデル</span></div><div class="la-pos"><b>06</b><span>長期予測</span></div><div class="la-pos"><b>07</b><span>工業対策</span></div><div class="la-pos"><b>08</b><span>発電等</span></div><div class="la-pos"><b>09</b><span>工業対策</span></div><div class="la-pos"><b>10</b><span>設備別</span></div></div>
+<div class="a-grid2" style="margin-top:26px"><div class="a-statbox"><div class="a-statnumber" style="color:#187e60">60<span style="font-size:.42em">/100</span></div><div class="a-statcontent"><h3>拡散現象と予測が中心</h3><p>気象安定度、拡散幅、プルーム式、モデルの適用条件を優先。</p></div></div><div class="a-statbox"><div class="a-statnumber" style="color:#345ca1">40<span style="font-size:.42em">/100</span></div><div class="a-statcontent"><h3>設備別の知識が重要</h3><p>発電所の排ガス系列と、各産業の汚染物質・装置を対応づける。</p></div></div></div>
+<p class="a-note">※ 上の数値は全100問を「出題位置で」数えたもの。各問題に含まれる複数の論点を別々に足し上げてはいません。前半・後半の厳密な区分は今回の主題分類によります。</p></div></section>
+<section class="a-section alt" id="yearmap"><div class="wrap"><div class="a-caption">02 / ALL 100 QUESTIONS</div><h2 class="a-section-title">10年分を、ひと目で比較する。</h2><p class="a-lead">1マス＝1問。問題文の転載を避け、各設問の主題を短く言い換えて表示しています。マスをクリックすると参考サイトの該当問題が開きます。</p>
+<div class="la-mapguide"><span><i style="background:#9de9ff"></i>安定度・境界層</span><span><i style="background:#8fe0ca"></i>乱流・風・平均化</span><span><i style="background:#c8ff4d"></i>プルーム・濃度計算</span><span><i style="background:#e4dd9f"></i>排煙上昇・ダウンウォッシュ</span><span><i style="background:#c3c3ff"></i>予測モデル・実験</span><span><i style="background:#ffd584"></i>火力発電・排ガス処理</span><span><i style="background:#f4b8ac"></i>製油所・石油製品</span><span><i style="background:#ffb4ce"></i>鉄鋼・セメント</span><span><i style="background:#b5e8a8"></i>廃棄物焼却</span><span><i style="background:#d7dce0"></i>産業横断・比較</span></div>
+<div class="la-tabline" id="yearFilters"><button aria-pressed="true" class="la-tab" data-year="all">全年表示</button><button aria-pressed="false" class="la-tab" data-year="R7" type="button">R7</button><button aria-pressed="false" class="la-tab" data-year="R6" type="button">R6</button><button aria-pressed="false" class="la-tab" data-year="R5" type="button">R5</button><button aria-pressed="false" class="la-tab" data-year="R4" type="button">R4</button><button aria-pressed="false" class="la-tab" data-year="R3" type="button">R3</button><button aria-pressed="false" class="la-tab" data-year="R2" type="button">R2</button><button aria-pressed="false" class="la-tab" data-year="R1" type="button">R1</button><button aria-pressed="false" class="la-tab" data-year="H30" type="button">H30</button><button aria-pressed="false" class="la-tab" data-year="H29" type="button">H29</button><button aria-pressed="false" class="la-tab" data-year="H28" type="button">H28</button></div>
+<div aria-label="10年分の設問主題マップ、左右スクロール可能" class="la-map-scroll" tabindex="0"><table class="la-map"><thead><tr><th>年度</th><th scope="col">問1</th><th scope="col">問2</th><th scope="col">問3</th><th scope="col">問4</th><th scope="col">問5</th><th scope="col">問6</th><th scope="col">問7</th><th scope="col">問8</th><th scope="col">問9</th><th scope="col">問10</th></tr></thead><tbody><tr class="la-year-row" data-year="R7"><th class="la-map-year" scope="row">R7</th>
+<td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/r7-daitai-01/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="R7 問1：乱流拡散と濃度の変動（参照サイトで開く）"><span>乱流拡散と濃度の変動</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r7-daitai-02/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R7 問2：低層大気の自由・強制対流（参照サイトで開く）"><span>低層大気の自由・強制対流</span></a></td><td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/r7-daitai-03/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="R7 問3：平均化時間と拡散幅（参照サイトで開く）"><span>平均化時間と拡散幅</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r7-daitai-04/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R7 問4：プルーム式による地上濃度（参照サイトで開く）"><span>プルーム式による地上濃度</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r7-daitai-05/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R7 問5：拡散モデルの種類（参照サイトで開く）"><span>拡散モデルの種類</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r7-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R7 問6：風向セクターと長期平均濃度（参照サイトで開く）"><span>風向セクターと長期平均濃度</span></a></td><td><a class="la-cell" data-cat="CR" href="https://yaku-tik.com/kougai/r7-daitai-07/" rel="noopener noreferrer" style="background:#d7dce0" target="_blank" title="R7 問7：大規模事業所のSOx対策（参照サイトで開く）"><span>大規模事業所のSOx対策</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r7-daitai-08/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R7 問8：低低温電気集じんの系列（参照サイトで開く）"><span>低低温電気集じんの系列</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/r7-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="R7 問9：都市ごみの排ガス成分（参照サイトで開く）"><span>都市ごみの排ガス成分</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/r7-daitai-10/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="R7 問10：焼却施設の排ガス処理（参照サイトで開く）"><span>焼却施設の排ガス処理</span></a></td></tr><tr class="la-year-row" data-year="R6"><th class="la-map-year" scope="row">R6</th>
+<td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r6-daitai-01/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R6 問1：気温減率と乾燥断熱減率（参照サイトで開く）"><span>気温減率と乾燥断熱減率</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r6-daitai-02/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R6 問2：拡散幅と着地濃度（参照サイトで開く）"><span>拡散幅と着地濃度</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r6-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R6 問3：日中の混合層（参照サイトで開く）"><span>日中の混合層</span></a></td><td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r6-daitai-04/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R6 問4：排煙上昇高さの計算式（参照サイトで開く）"><span>排煙上昇高さの計算式</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r6-daitai-05/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R6 問5：複雑地形などの予測モデル（参照サイトで開く）"><span>複雑地形などの予測モデル</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r6-daitai-06/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R6 問6：逆転層下の拡散モデル（参照サイトで開く）"><span>逆転層下の拡散モデル</span></a></td><td><a class="la-cell" data-cat="RE" href="https://yaku-tik.com/kougai/r6-daitai-07/" rel="noopener noreferrer" style="background:#f4b8ac" target="_blank" title="R6 問7：製油所の排出対策（参照サイトで開く）"><span>製油所の排出対策</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r6-daitai-08/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R6 問8：石炭火力の集じん・脱硫（参照サイトで開く）"><span>石炭火力の集じん・脱硫</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/r6-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="R6 問9：ごみ焼却のダイオキシン除去（参照サイトで開く）"><span>ごみ焼却のダイオキシン除去</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/r6-daitai-10/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="R6 問10：焼結排ガスの電気集じん（参照サイトで開く）"><span>焼結排ガスの電気集じん</span></a></td></tr><tr class="la-year-row" data-year="R5"><th class="la-map-year" scope="row">R5</th>
+<td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r5-daitai-01/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R5 問1：ダウンウォッシュの抑制（参照サイトで開く）"><span>ダウンウォッシュの抑制</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r5-daitai-02/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R5 問2：中立境界層の風速分布（参照サイトで開く）"><span>中立境界層の風速分布</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r5-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R5 問3：逆転層の種類（参照サイトで開く）"><span>逆転層の種類</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r5-daitai-04/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R5 問4：正規形プルーム中心軸濃度（参照サイトで開く）"><span>正規形プルーム中心軸濃度</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r5-daitai-05/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R5 問5：拡散モデルの特徴（参照サイトで開く）"><span>拡散モデルの特徴</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r5-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R5 問6：地形・用途別モデル選択（参照サイトで開く）"><span>地形・用途別モデル選択</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r5-daitai-07/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R5 問7：低低温形ESPの配置（参照サイトで開く）"><span>低低温形ESPの配置</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r5-daitai-08/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R5 問8：重油火力のSO3対策（参照サイトで開く）"><span>重油火力のSO3対策</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/r5-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="R5 問9：ごみ焼却とNOx低減（参照サイトで開く）"><span>ごみ焼却とNOx低減</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/r5-daitai-10/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="R5 問10：鉄鋼のNOx対策（参照サイトで開く）"><span>鉄鋼のNOx対策</span></a></td></tr><tr class="la-year-row" data-year="R4"><th class="la-map-year" scope="row">R4</th>
+<td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r4-daitai-01/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R4 問1：温位と安定度判定（参照サイトで開く）"><span>温位と安定度判定</span></a></td><td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/r4-daitai-02/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="R4 問2：風速の高度分布とべき乗則（参照サイトで開く）"><span>風速の高度分布とべき乗則</span></a></td><td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/r4-daitai-03/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="R4 問3：気流蛇行・平均化時間（参照サイトで開く）"><span>気流蛇行・平均化時間</span></a></td><td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r4-daitai-04/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R4 問4：排煙の上昇高さ推定（参照サイトで開く）"><span>排煙の上昇高さ推定</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r4-daitai-05/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R4 問5：最大着地濃度とグラフ（参照サイトで開く）"><span>最大着地濃度とグラフ</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r4-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R4 問6：解析解と数値解モデル（参照サイトで開く）"><span>解析解と数値解モデル</span></a></td><td><a class="la-cell" data-cat="RE" href="https://yaku-tik.com/kougai/r4-daitai-07/" rel="noopener noreferrer" style="background:#f4b8ac" target="_blank" title="R4 問7：製油所の硫黄回収（参照サイトで開く）"><span>製油所の硫黄回収</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r4-daitai-08/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R4 問8：火力発電のESP・GGH（参照サイトで開く）"><span>火力発電のESP・GGH</span></a></td><td><a class="la-cell" data-cat="CR" href="https://yaku-tik.com/kougai/r4-daitai-09/" rel="noopener noreferrer" style="background:#d7dce0" target="_blank" title="R4 問9：産業別SOx低減対策（参照サイトで開く）"><span>産業別SOx低減対策</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/r4-daitai-10/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="R4 問10：セメントと燃焼NOx（参照サイトで開く）"><span>セメントと燃焼NOx</span></a></td></tr><tr class="la-year-row" data-year="R3"><th class="la-map-year" scope="row">R3</th>
+<td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r3-daitai-01/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R3 問1：煙の上昇・有効煙突高さ（参照サイトで開く）"><span>煙の上昇・有効煙突高さ</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r3-daitai-02/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R3 問2：煙の形と大気安定度（参照サイトで開く）"><span>煙の形と大気安定度</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r3-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R3 問3：中立境界層と風速分布（参照サイトで開く）"><span>中立境界層と風速分布</span></a></td><td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r3-daitai-04/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R3 問4：ダウンウォッシュ評価式（参照サイトで開く）"><span>ダウンウォッシュ評価式</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r3-daitai-05/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R3 問5：パスキルと拡散幅（参照サイトで開く）"><span>パスキルと拡散幅</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r3-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R3 問6：現地トレーサー実験（参照サイトで開く）"><span>現地トレーサー実験</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r3-daitai-07/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R3 問7：石炭火力の環境設備（参照サイトで開く）"><span>石炭火力の環境設備</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/r3-daitai-08/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="R3 問8：セメント工場のNOx・SOx（参照サイトで開く）"><span>セメント工場のNOx・SOx</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/r3-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="R3 問9：ごみ焼却のダイオキシン対策（参照サイトで開く）"><span>ごみ焼却のダイオキシン対策</span></a></td><td><a class="la-cell" data-cat="CR" href="https://yaku-tik.com/kougai/r3-daitai-10/" rel="noopener noreferrer" style="background:#d7dce0" target="_blank" title="R3 問10：大規模設備の汚染物質発生源（参照サイトで開く）"><span>大規模設備の汚染物質発生源</span></a></td></tr><tr class="la-year-row" data-year="R2"><th class="la-map-year" scope="row">R2</th>
+<td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r2-daitai-01/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R2 問1：温位と断熱減率（参照サイトで開く）"><span>温位と断熱減率</span></a></td><td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/r2-daitai-02/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="R2 問2：風向変動と平均化時間（参照サイトで開く）"><span>風向変動と平均化時間</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r2-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R2 問3：海陸風と内部境界層（参照サイトで開く）"><span>海陸風と内部境界層</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r2-daitai-04/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R2 問4：正規分布と拡散幅（参照サイトで開く）"><span>正規分布と拡散幅</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r2-daitai-05/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R2 問5：着地濃度・煙突高さの推算（参照サイトで開く）"><span>着地濃度・煙突高さの推算</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r2-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R2 問6：解析モデルと数値モデル（参照サイトで開く）"><span>解析モデルと数値モデル</span></a></td><td><a class="la-cell" data-cat="RE" href="https://yaku-tik.com/kougai/r2-daitai-07/" rel="noopener noreferrer" style="background:#f4b8ac" target="_blank" title="R2 問7：石油製品の品質（参照サイトで開く）"><span>石油製品の品質</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r2-daitai-08/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R2 問8：重油火力のSO3・アンモニア注入（参照サイトで開く）"><span>重油火力のSO3・アンモニア注入</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/r2-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="R2 問9：ごみ焼却と水銀対策（参照サイトで開く）"><span>ごみ焼却と水銀対策</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/r2-daitai-10/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="R2 問10：鉄鋼の脱硫・脱硝・集じん（参照サイトで開く）"><span>鉄鋼の脱硫・脱硝・集じん</span></a></td></tr><tr class="la-year-row" data-year="R1"><th class="la-map-year" scope="row">R1</th>
+<td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r1-daitai-01/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R1 問1：有効煙突高さ・拡散諸量（参照サイトで開く）"><span>有効煙突高さ・拡散諸量</span></a></td><td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/r1-daitai-02/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="R1 問2：煙突・建屋ダウンウォッシュ（参照サイトで開く）"><span>煙突・建屋ダウンウォッシュ</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/r1-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="R1 問3：沿岸の内部境界層とヒュミゲーション（参照サイトで開く）"><span>沿岸の内部境界層とヒュミゲーション</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r1-daitai-04/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R1 問4：パスキル線図と濃度計算（参照サイトで開く）"><span>パスキル線図と濃度計算</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/r1-daitai-05/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="R1 問5：プルーム式の適用範囲（参照サイトで開く）"><span>プルーム式の適用範囲</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/r1-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="R1 問6：風洞実験の再現性（参照サイトで開く）"><span>風洞実験の再現性</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/r1-daitai-07/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="R1 問7：火力発電の低低温ESP系列（参照サイトで開く）"><span>火力発電の低低温ESP系列</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/r1-daitai-08/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="R1 問8：セメントのNOx低減技術（参照サイトで開く）"><span>セメントのNOx低減技術</span></a></td><td><a class="la-cell" data-cat="CR" href="https://yaku-tik.com/kougai/r1-daitai-09/" rel="noopener noreferrer" style="background:#d7dce0" target="_blank" title="R1 問9：焼却装置と製油所設備の比較（参照サイトで開く）"><span>焼却装置と製油所設備の比較</span></a></td><td><a class="la-cell" data-cat="CR" href="https://yaku-tik.com/kougai/r1-daitai-10/" rel="noopener noreferrer" style="background:#d7dce0" target="_blank" title="R1 問10：産業別の排出防止対策（参照サイトで開く）"><span>産業別の排出防止対策</span></a></td></tr><tr class="la-year-row" data-year="H30"><th class="la-map-year" scope="row">H30</th>
+<td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/h30-daitai-01/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="H30 問1：ダウンウォッシュと洗い落とし（参照サイトで開く）"><span>ダウンウォッシュと洗い落とし</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/h30-daitai-02/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="H30 問2：最大着地濃度と拡散条件（参照サイトで開く）"><span>最大着地濃度と拡散条件</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/h30-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="H30 問3：気温減率と大気安定度（参照サイトで開く）"><span>気温減率と大気安定度</span></a></td><td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/h30-daitai-04/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="H30 問4：煙の上昇高さの推算（参照サイトで開く）"><span>煙の上昇高さの推算</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/h30-daitai-05/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="H30 問5：パスキルの水平・鉛直拡散幅（参照サイトで開く）"><span>パスキルの水平・鉛直拡散幅</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/h30-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="H30 問6：長期平均と16方位の風向処理（参照サイトで開く）"><span>長期平均と16方位の風向処理</span></a></td><td><a class="la-cell" data-cat="RE" href="https://yaku-tik.com/kougai/h30-daitai-07/" rel="noopener noreferrer" style="background:#f4b8ac" target="_blank" title="H30 問7：石油製品の品質特性（参照サイトで開く）"><span>石油製品の品質特性</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/h30-daitai-08/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="H30 問8：石炭火力の電気集じん（参照サイトで開く）"><span>石炭火力の電気集じん</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/h30-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="H30 問9：ごみ焼却時の有害物質（参照サイトで開く）"><span>ごみ焼却時の有害物質</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/h30-daitai-10/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="H30 問10：鉄鋼焼結工程のSOx対策（参照サイトで開く）"><span>鉄鋼焼結工程のSOx対策</span></a></td></tr><tr class="la-year-row" data-year="H29"><th class="la-map-year" scope="row">H29</th>
+<td><a class="la-cell" data-cat="RI" href="https://yaku-tik.com/kougai/h29-daitai-01/" rel="noopener noreferrer" style="background:#e4dd9f" target="_blank" title="H29 問1：ダウンウォッシュと煙突改修（参照サイトで開く）"><span>ダウンウォッシュと煙突改修</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/h29-daitai-02/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="H29 問2：中立境界層の形成（参照サイトで開く）"><span>中立境界層の形成</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/h29-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="H29 問3：沈降性逆転の成因（参照サイトで開く）"><span>沈降性逆転の成因</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/h29-daitai-04/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="H29 問4：プルーム式の地上濃度（参照サイトで開く）"><span>プルーム式の地上濃度</span></a></td><td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/h29-daitai-05/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="H29 問5：平均化時間と拡散幅（参照サイトで開く）"><span>平均化時間と拡散幅</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/h29-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="H29 問6：大気拡散モデルの分類（参照サイトで開く）"><span>大気拡散モデルの分類</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/h29-daitai-07/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="H29 問7：石炭火力の排ガス処理順序（参照サイトで開く）"><span>石炭火力の排ガス処理順序</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/h29-daitai-08/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="H29 問8：セメント製造とSOx（参照サイトで開く）"><span>セメント製造とSOx</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/h29-daitai-09/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="H29 問9：焼却炉の排ガス対策（参照サイトで開く）"><span>焼却炉の排ガス対策</span></a></td><td><a class="la-cell" data-cat="IN" href="https://yaku-tik.com/kougai/h29-daitai-10/" rel="noopener noreferrer" style="background:#ffb4ce" target="_blank" title="H29 問10：鉄鋼工程と硫黄対策（参照サイトで開く）"><span>鉄鋼工程と硫黄対策</span></a></td></tr><tr class="la-year-row" data-year="H28"><th class="la-map-year" scope="row">H28</th>
+<td><a class="la-cell" data-cat="TU" href="https://yaku-tik.com/kougai/h28-daitai-01/" rel="noopener noreferrer" style="background:#8fe0ca" target="_blank" title="H28 問1：乱流・風速変動（参照サイトで開く）"><span>乱流・風速変動</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/h28-daitai-02/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="H28 問2：温位と乾燥断熱減率（参照サイトで開く）"><span>温位と乾燥断熱減率</span></a></td><td><a class="la-cell" data-cat="ST" href="https://yaku-tik.com/kougai/h28-daitai-03/" rel="noopener noreferrer" style="background:#9de9ff" target="_blank" title="H28 問3：大気境界層と接地層（参照サイトで開く）"><span>大気境界層と接地層</span></a></td><td><a class="la-cell" data-cat="GA" href="https://yaku-tik.com/kougai/h28-daitai-04/" rel="noopener noreferrer" style="background:#c8ff4d" target="_blank" title="H28 問4：最大着地濃度の計算（参照サイトで開く）"><span>最大着地濃度の計算</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/h28-daitai-05/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="H28 問5：数値解モデルの特徴（参照サイトで開く）"><span>数値解モデルの特徴</span></a></td><td><a class="la-cell" data-cat="MO" href="https://yaku-tik.com/kougai/h28-daitai-06/" rel="noopener noreferrer" style="background:#c3c3ff" target="_blank" title="H28 問6：風洞実験と相似則（参照サイトで開く）"><span>風洞実験と相似則</span></a></td><td><a class="la-cell" data-cat="CR" href="https://yaku-tik.com/kougai/h28-daitai-07/" rel="noopener noreferrer" style="background:#d7dce0" target="_blank" title="H28 問7：大型施設のSOx対策比較（参照サイトで開く）"><span>大型施設のSOx対策比較</span></a></td><td><a class="la-cell" data-cat="RE" href="https://yaku-tik.com/kougai/h28-daitai-08/" rel="noopener noreferrer" style="background:#f4b8ac" target="_blank" title="H28 問8：ガソリンの品質・規制（参照サイトで開く）"><span>ガソリンの品質・規制</span></a></td><td><a class="la-cell" data-cat="PW" href="https://yaku-tik.com/kougai/h28-daitai-09/" rel="noopener noreferrer" style="background:#ffd584" target="_blank" title="H28 問9：火力発電と低低温ESP（参照サイトで開く）"><span>火力発電と低低温ESP</span></a></td><td><a class="la-cell" data-cat="WA" href="https://yaku-tik.com/kougai/h28-daitai-10/" rel="noopener noreferrer" style="background:#b5e8a8" target="_blank" title="H28 問10：都市ごみ焼却の発生物質（参照サイトで開く）"><span>都市ごみ焼却の発生物質</span></a></td></tr></tbody></table></div>
+<p class="la-muted">スマートフォンでは表を横スクロールできます。色は各問の主たる出題テーマを示します。同じ問題に複数テーマが含まれる場合も、集計上は１分類に割り当てています。</p>
+<div class="la-distribution"><article class="la-panel"><h3>100問の主題別内訳</h3><div class="la-bar"><span>安定度・境界層</span><div class="la-bar-track"><div class="la-bar-fill" style="width:100%;background:#9de9ff"></div></div><strong>16問</strong></div><div class="la-bar"><span>プルーム・濃度計算</span><div class="la-bar-track"><div class="la-bar-fill" style="width:88%;background:#c8ff4d"></div></div><strong>14問</strong></div><div class="la-bar"><span>予測モデル・実験</span><div class="la-bar-track"><div class="la-bar-fill" style="width:81%;background:#c3c3ff"></div></div><strong>13問</strong></div><div class="la-bar"><span>火力発電・排ガス処理</span><div class="la-bar-track"><div class="la-bar-fill" style="width:69%;background:#ffd584"></div></div><strong>11問</strong></div><div class="la-bar"><span>排煙上昇・ダウンウォッシュ</span><div class="la-bar-track"><div class="la-bar-fill" style="width:62%;background:#e4dd9f"></div></div><strong>10問</strong></div><div class="la-bar"><span>廃棄物焼却</span><div class="la-bar-track"><div class="la-bar-fill" style="width:56%;background:#b5e8a8"></div></div><strong>9問</strong></div><div class="la-bar"><span>鉄鋼・セメント</span><div class="la-bar-track"><div class="la-bar-fill" style="width:56%;background:#ffb4ce"></div></div><strong>9問</strong></div><div class="la-bar"><span>乱流・風・平均化</span><div class="la-bar-track"><div class="la-bar-fill" style="width:44%;background:#8fe0ca"></div></div><strong>7問</strong></div><div class="la-bar"><span>産業横断・比較</span><div class="la-bar-track"><div class="la-bar-fill" style="width:38%;background:#d7dce0"></div></div><strong>6問</strong></div><div class="la-bar"><span>製油所・石油製品</span><div class="la-bar-track"><div class="la-bar-fill" style="width:31%;background:#f4b8ac"></div></div><strong>5問</strong></div><p class="la-muted">独自分類・複数論点を含む設問は主題のみ計上。カテゴリーの分け方により件数は変わります。</p></article>
+<article class="la-panel"><h3>読み取れる出題パターン</h3><div class="la-decision"><div><b>毎年、前半は拡散。</b><p>温位・大気安定度・風速分布・プルーム式・モデル分類が入れ替わりながら登場。基礎を体系的に学ぶほど対応範囲が広がる。</p></div></div><div class="la-decision" style="background:#fff2df;border-color:#e9c398"><div><b>後半は設備を横断。</b><p>石炭火力の脱硫・脱硝・集じんが軸。鉄鋼、セメント、製油所、ごみ焼却の「発生源と対策」をつなげる。</p></div></div></article></div>
+</div></section>
+<section class="a-section" id="rank-s"><div class="wrap"><div class="a-caption">03 / HIGH PRIORITY</div><h2 class="a-section-title">最優先の Sランク８テーマ。</h2><p class="a-lead">繰り返し出題される内容と、周辺問題に応用しやすい基礎を優先。各カードの「重要ポイントを確認」を開くと、学習の要点と過去問へのリンクが見られます。</p>
+<div class="a-ranklegend"><article><b>Sランク</b><p>最初に固めたい。複数年・複数問の関連性が高い。</p></article><article><b>Aランク</b><p>Sの次。産業固有の工程や予測の応用。</p></article><article><b>Bランク</b><p>細かな経験式・限定的な条件。演習で補う。</p></article></div>
+<div class="a-toolbar"><input aria-label="Sランクテーマを検索" class="a-search" id="rankSearch" placeholder="キーワード検索（例：プルーム、脱硫）" type="search"/><button aria-pressed="true" class="a-chip" data-category="すべて" type="button">すべて</button><button aria-pressed="false" class="a-chip" data-category="気象・拡散" type="button">気象・拡散</button><button aria-pressed="false" class="a-chip" data-category="大型設備対策" type="button">大型設備対策</button></div>
+<div class="a-rankgrid" id="rankCards"><article class="a-rankcard" data-cat="気象・拡散" data-search="s1 安定度・温位・大気境界層 気象・拡散 a〜f・中立層・混合層を図で整理 乾燥断熱減率は約9.8℃/km。気温減率と比べて安定・不安定・中立を判断する。 昼間の日射で混合層、晴れた夜の冷却で接地安定層、強風や曇天で中立に近づきやすい。 逆転層の分類（放射性・沈降性・移流性など）と生じる気象状況を対応させる。">
+<div class="a-rankcard-top"><span class="a-sid">S1</span><span class="a-category">気象・拡散</span></div>
+<h3>安定度・温位・大気境界層</h3><p class="hint">A〜F・中立層・混合層を図で整理</p>
+<details><summary>重要ポイントを確認</summary><ul><li>乾燥断熱減率は約9.8℃/km。気温減率と比べて安定・不安定・中立を判断する。</li><li>昼間の日射で混合層、晴れた夜の冷却で接地安定層、強風や曇天で中立に近づきやすい。</li><li>逆転層の分類（放射性・沈降性・移流性など）と生じる気象状況を対応させる。</li></ul>
+<p class="a-caution">混同注意：温位が一定なのは乾燥断熱に近い中立状態。気温一定とは異なる。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r6-daitai-01/" rel="noopener noreferrer" target="_blank">R6 問1 ↗</a><a href="https://yaku-tik.com/kougai/r5-daitai-03/" rel="noopener noreferrer" target="_blank">R5 問3 ↗</a><a href="https://yaku-tik.com/kougai/h29-daitai-03/" rel="noopener noreferrer" target="_blank">H29 問3 ↗</a></span></details></article><article class="a-rankcard" data-cat="気象・拡散" data-search="s2 乱流・パスキル安定度・拡散幅 気象・拡散 σy・σzと平均化時間の意味を区別 水平拡散幅σyは風向変動・蛇行の寄与を受け、平均化時間によって評価が変わる。 パスキルa〜fではa側ほど不安定、dは中立、f側ほど安定で拡散幅の傾向が変わる。 風下距離、安定度、平均化時間を同時に読んで線図を評価する。">
+<div class="a-rankcard-top"><span class="a-sid">S2</span><span class="a-category">気象・拡散</span></div>
+<h3>乱流・パスキル安定度・拡散幅</h3><p class="hint">σy・σzと平均化時間の意味を区別</p>
+<details><summary>重要ポイントを確認</summary><ul><li>水平拡散幅σyは風向変動・蛇行の寄与を受け、平均化時間によって評価が変わる。</li><li>パスキルA〜FではA側ほど不安定、Dは中立、F側ほど安定で拡散幅の傾向が変わる。</li><li>風下距離、安定度、平均化時間を同時に読んで線図を評価する。</li></ul>
+<p class="a-caution">混同注意：拡散幅は「煙突高さ」ではなく「煙の広がり」を表す。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/h30-daitai-05/" rel="noopener noreferrer" target="_blank">H30 問5 ↗</a><a href="https://yaku-tik.com/kougai/r7-daitai-03/" rel="noopener noreferrer" target="_blank">R7 問3 ↗</a><a href="https://yaku-tik.com/kougai/h29-daitai-05/" rel="noopener noreferrer" target="_blank">H29 問5 ↗</a></span></details></article><article class="a-rankcard" data-cat="気象・拡散" data-search="s3 正規形プルーム式と濃度計算 気象・拡散 q・u・σy・σz・heをひとまとめ 地表面での反射を考慮した定常プルーム式では、qが増えると濃度が増え、風速uが増えると濃度は下がる傾向。 中心線直下・地表面ではy=0、z=0を代入し、指数部と係数を整理してから計算する。 qの単位が体積流量か質量流量かで濃度の単位が異なるため、ppmへの換算条件を確認する。">
+<div class="a-rankcard-top"><span class="a-sid">S3</span><span class="a-category">気象・拡散</span></div>
+<h3>正規形プルーム式と濃度計算</h3><p class="hint">Q・u・σy・σz・Heをひとまとめ</p>
+<details><summary>重要ポイントを確認</summary><ul><li>地表面での反射を考慮した定常プルーム式では、Qが増えると濃度が増え、風速uが増えると濃度は下がる傾向。</li><li>中心線直下・地表面ではy=0、z=0を代入し、指数部と係数を整理してから計算する。</li><li>Qの単位が体積流量か質量流量かで濃度の単位が異なるため、ppmへの換算条件を確認する。</li></ul>
+<p class="a-caution">混同注意：「煙突出口」ではなく「有効煙突高さHe」を用いる。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r7-daitai-04/" rel="noopener noreferrer" target="_blank">R7 問4 ↗</a><a href="https://yaku-tik.com/kougai/r5-daitai-04/" rel="noopener noreferrer" target="_blank">R5 問4 ↗</a><a href="https://yaku-tik.com/kougai/h29-daitai-04/" rel="noopener noreferrer" target="_blank">H29 問4 ↗</a></span></details></article><article class="a-rankcard" data-cat="気象・拡散" data-search="s4 排煙上昇・有効煙突高さ・ダウンウォッシュ 気象・拡散 煙突周辺の建屋・排出速度・浮力 一般に有効煙突高さheは物理煙突高さhsと排煙上昇高さδhの和として扱う（ダウンウォッシュなどの補正は別途）。 排ガスの熱浮力、吐出速度、風速、建屋の影響が着地濃度を左右する。 ダウンウォッシュが起きると、煙が建屋や煙突後流に巻き込まれ地表付近の濃度が高くなり得る。">
+<div class="a-rankcard-top"><span class="a-sid">S4</span><span class="a-category">気象・拡散</span></div>
+<h3>排煙上昇・有効煙突高さ・ダウンウォッシュ</h3><p class="hint">煙突周辺の建屋・排出速度・浮力</p>
+<details><summary>重要ポイントを確認</summary><ul><li>一般に有効煙突高さHeは物理煙突高さHsと排煙上昇高さΔHの和として扱う（ダウンウォッシュなどの補正は別途）。</li><li>排ガスの熱浮力、吐出速度、風速、建屋の影響が着地濃度を左右する。</li><li>ダウンウォッシュが起きると、煙が建屋や煙突後流に巻き込まれ地表付近の濃度が高くなり得る。</li></ul>
+<p class="a-caution">混同注意：煙突を高くする対策と、出口径を広げる対策は同じ効果ではない。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/h29-daitai-01/" rel="noopener noreferrer" target="_blank">H29 問1 ↗</a><a href="https://yaku-tik.com/kougai/r5-daitai-01/" rel="noopener noreferrer" target="_blank">R5 問1 ↗</a><a href="https://yaku-tik.com/kougai/r4-daitai-04/" rel="noopener noreferrer" target="_blank">R4 問4 ↗</a></span></details></article><article class="a-rankcard" data-cat="気象・拡散" data-search="s5 拡散予測モデルの選定 気象・拡散 解析解・数値解、プルーム・パフ 正規形プルームは定常・比較的単純な気象・地形条件で使いやすい。パフは時間変化や非定常放出を表現する。 格子モデルや流跡線モデルは、複雑な地形・移流・化学反応などを扱う数値計算で用いられる。 風洞実験・現地トレーサー実験は、特定の条件でモデルを検証・補完する手法。">
+<div class="a-rankcard-top"><span class="a-sid">S5</span><span class="a-category">気象・拡散</span></div>
+<h3>拡散予測モデルの選定</h3><p class="hint">解析解・数値解、プルーム・パフ</p>
+<details><summary>重要ポイントを確認</summary><ul><li>正規形プルームは定常・比較的単純な気象・地形条件で使いやすい。パフは時間変化や非定常放出を表現する。</li><li>格子モデルや流跡線モデルは、複雑な地形・移流・化学反応などを扱う数値計算で用いられる。</li><li>風洞実験・現地トレーサー実験は、特定の条件でモデルを検証・補完する手法。</li></ul>
+<p class="a-caution">混同注意：「解析解か数値解か」と「実験的手法か」を混同しない。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r4-daitai-06/" rel="noopener noreferrer" target="_blank">R4 問6 ↗</a><a href="https://yaku-tik.com/kougai/r6-daitai-05/" rel="noopener noreferrer" target="_blank">R6 問5 ↗</a><a href="https://yaku-tik.com/kougai/h28-daitai-05/" rel="noopener noreferrer" target="_blank">H28 問5 ↗</a></span></details></article><article class="a-rankcard" data-cat="大型設備対策" data-search="s6 石炭火力の排ガス処理系列 大型設備対策 脱硝・集じん・脱硫・gghの順序 代表例では、燃焼排ガスは脱硝（scr）、空気予熱器、ggh熱回収、低低温形esp、湿式脱硫、再加熱を経て排出される。 低低温espは排ガス温度とダストの電気抵抗率の関係、so3の挙動、腐食対策をセットで理解する。 脱硫には湿式石灰石こう法がよく扱われる。設備配置は方式ごとに異なる。">
+<div class="a-rankcard-top"><span class="a-sid">S6</span><span class="a-category">大型設備対策</span></div>
+<h3>石炭火力の排ガス処理系列</h3><p class="hint">脱硝・集じん・脱硫・GGHの順序</p>
+<details><summary>重要ポイントを確認</summary><ul><li>代表例では、燃焼排ガスは脱硝（SCR）、空気予熱器、GGH熱回収、低低温形ESP、湿式脱硫、再加熱を経て排出される。</li><li>低低温ESPは排ガス温度とダストの電気抵抗率の関係、SO3の挙動、腐食対策をセットで理解する。</li><li>脱硫には湿式石灰石こう法がよく扱われる。設備配置は方式ごとに異なる。</li></ul>
+<p class="a-caution">混同注意：低低温EPと通常のEPでGGHの位置づけが変わるため、「代表系列」として覚える。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r7-daitai-08/" rel="noopener noreferrer" target="_blank">R7 問8 ↗</a><a href="https://yaku-tik.com/kougai/r5-daitai-07/" rel="noopener noreferrer" target="_blank">R5 問7 ↗</a><a href="https://yaku-tik.com/kougai/h29-daitai-07/" rel="noopener noreferrer" target="_blank">H29 問7 ↗</a></span></details></article><article class="a-rankcard" data-cat="大型設備対策" data-search="s7 都市ごみ焼却の汚染物質と対策 大型設備対策 nox・hcl・hg・ダイオキシンの対象別整理 焼却排ガスではhcl、sox、nox、ばいじん、水銀、ダイオキシン類などを物質別に把握する。 酸性ガスはアルカリ吸収・反応、粒子はバグフィルター、ダイオキシン類・水銀は活性炭などの吸着が選択肢。 noxの低減は燃焼管理、無触媒脱硝（sncr）、触媒脱硝（scr）の違いを押さえる。">
+<div class="a-rankcard-top"><span class="a-sid">S7</span><span class="a-category">大型設備対策</span></div>
+<h3>都市ごみ焼却の汚染物質と対策</h3><p class="hint">NOx・HCl・Hg・ダイオキシンの対象別整理</p>
+<details><summary>重要ポイントを確認</summary><ul><li>焼却排ガスではHCl、SOx、NOx、ばいじん、水銀、ダイオキシン類などを物質別に把握する。</li><li>酸性ガスはアルカリ吸収・反応、粒子はバグフィルター、ダイオキシン類・水銀は活性炭などの吸着が選択肢。</li><li>NOxの低減は燃焼管理、無触媒脱硝（SNCR）、触媒脱硝（SCR）の違いを押さえる。</li></ul>
+<p class="a-caution">混同注意：同じ集じん装置だけで「全汚染物質」が除去されるわけではない。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r7-daitai-09/" rel="noopener noreferrer" target="_blank">R7 問9 ↗</a><a href="https://yaku-tik.com/kougai/r6-daitai-09/" rel="noopener noreferrer" target="_blank">R6 問9 ↗</a><a href="https://yaku-tik.com/kougai/r2-daitai-09/" rel="noopener noreferrer" target="_blank">R2 問9 ↗</a></span></details></article><article class="a-rankcard" data-cat="大型設備対策" data-search="s8 大規模産業のsox・nox発生源と処理 大型設備対策 鉄鋼・セメント・製油所の比較 製鉄では焼結炉などを中心にsox・ばいじん・noxの発生源を工程別に整理する。 セメントキルンは高温燃焼によるnox、原料・燃料由来のsox、粉じんを工程と結びつける。 製油所では燃料・ガス中の硫黄分を低減し、h2sを分離・硫黄回収する。">
+<div class="a-rankcard-top"><span class="a-sid">S8</span><span class="a-category">大型設備対策</span></div>
+<h3>大規模産業のSOx・NOx発生源と処理</h3><p class="hint">鉄鋼・セメント・製油所の比較</p>
+<details><summary>重要ポイントを確認</summary><ul><li>製鉄では焼結炉などを中心にSOx・ばいじん・NOxの発生源を工程別に整理する。</li><li>セメントキルンは高温燃焼によるNOx、原料・燃料由来のSOx、粉じんを工程と結びつける。</li><li>製油所では燃料・ガス中の硫黄分を低減し、H2Sを分離・硫黄回収する。</li></ul>
+<p class="a-caution">混同注意：SOxの発生源は設備ごとに異なる。焼結炉とセメントキルンを混同しない。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r7-daitai-07/" rel="noopener noreferrer" target="_blank">R7 問7 ↗</a><a href="https://yaku-tik.com/kougai/h30-daitai-10/" rel="noopener noreferrer" target="_blank">H30 問10 ↗</a><a href="https://yaku-tik.com/kougai/r4-daitai-10/" rel="noopener noreferrer" target="_blank">R4 問10 ↗</a></span></details></article></div><p class="a-note" hidden="" id="rankNomatch">該当するテーマはありません。検索語や分類を変えてください。</p>
+<p class="a-note">※ ランクは公式分類や合格率データではなく、10年分の主題、繰り返し、学習の汎用性をもとにした本サイトの独自判断です。得点を保証するものではありません。</p></div></section>
+<section class="a-section alt" id="rank-a"><div class="wrap"><div class="a-caption">04 / SECOND PRIORITY</div><h2 class="a-section-title">得点を積み上げる Aランク。</h2><p class="a-lead">設備固有の処理、気象の例外条件など、Sランクの理解に追加する６テーマ。</p><div class="a-arows"><article class="a-acard"><span class="a-anum">A1</span><h3>製油所の脱硫・硫黄回収</h3><p>H2SをSO2と区別し、クラウス法による硫黄回収を理解する。浮屋根タンクは主にVOC蒸発抑制。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r4-daitai-07/" rel="noopener noreferrer" target="_blank">R4 問7 ↗</a><a href="https://yaku-tik.com/kougai/r6-daitai-07/" rel="noopener noreferrer" target="_blank">R6 問7 ↗</a><a href="https://yaku-tik.com/kougai/r3-daitai-10/" rel="noopener noreferrer" target="_blank">R3 問10 ↗</a></span></article><article class="a-acard"><span class="a-anum">A2</span><h3>鉄鋼の焼結炉とコークス炉</h3><p>焼結排ガスのSOx・ばいじん対策と、コークス炉ガスのH2S除去を分けて整理。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/h29-daitai-10/" rel="noopener noreferrer" target="_blank">H29 問10 ↗</a><a href="https://yaku-tik.com/kougai/h30-daitai-10/" rel="noopener noreferrer" target="_blank">H30 問10 ↗</a><a href="https://yaku-tik.com/kougai/r6-daitai-10/" rel="noopener noreferrer" target="_blank">R6 問10 ↗</a></span></article><article class="a-acard"><span class="a-anum">A3</span><h3>セメント工程のNOx・SOx・粉じん</h3><p>キルンの高温域で生じるNOx、原料中硫黄分の挙動、バグフィルターをセットで覚える。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r4-daitai-10/" rel="noopener noreferrer" target="_blank">R4 問10 ↗</a><a href="https://yaku-tik.com/kougai/r3-daitai-08/" rel="noopener noreferrer" target="_blank">R3 問8 ↗</a><a href="https://yaku-tik.com/kougai/r1-daitai-08/" rel="noopener noreferrer" target="_blank">R1 問8 ↗</a></span></article><article class="a-acard"><span class="a-anum">A4</span><h3>長期平均濃度と風向セクター</h3><p>風向16方位の頻度分布、セクター内のばらつきと長期平均濃度の求め方を区別。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r7-daitai-06/" rel="noopener noreferrer" target="_blank">R7 問6 ↗</a><a href="https://yaku-tik.com/kougai/h30-daitai-06/" rel="noopener noreferrer" target="_blank">H30 問6 ↗</a></span></article><article class="a-acard"><span class="a-anum">A5</span><h3>海陸風・逆転層・ヒュミゲーション</h3><p>海陸風と内部境界層、上層逆転層による拡散抑制など、通常のプルーム式から外れる条件を理解。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r6-daitai-06/" rel="noopener noreferrer" target="_blank">R6 問6 ↗</a><a href="https://yaku-tik.com/kougai/r1-daitai-03/" rel="noopener noreferrer" target="_blank">R1 問3 ↗</a><a href="https://yaku-tik.com/kougai/r2-daitai-03/" rel="noopener noreferrer" target="_blank">R2 問3 ↗</a></span></article><article class="a-acard"><span class="a-anum">A6</span><h3>重油火力のSO3・アンモニア注入</h3><p>SO3による酸性ミスト・腐食と、アンモニア注入による塩の生成を区別して把握。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r5-daitai-08/" rel="noopener noreferrer" target="_blank">R5 問8 ↗</a><a href="https://yaku-tik.com/kougai/r2-daitai-08/" rel="noopener noreferrer" target="_blank">R2 問8 ↗</a></span></article></div><div class="a-note">Bランクの例：個別の煙上昇経験式の定数、特殊な拡散条件専用の数式、施設固有の細かな数値・条件。まず原理と適用条件を押さえ、誤答した項目を追加する。</div></div></section>
+<section class="a-section" id="comparison"><div class="wrap"><div class="a-caption">05 / QUICK COMPARISON</div><h2 class="a-section-title">似た概念を、対比で覚える。</h2><p class="a-lead">選択肢で入れ替わりやすい言葉・装置を対応づける。</p><div style="overflow-x:auto;border-radius:15px"><table class="a-analysis-table"><thead><tr><th>比較するもの</th><th>押さえたい関係</th><th>混同注意</th></tr></thead><tbody><tr><td><strong>安定・中立・不安定</strong></td><td>気温減率と乾燥断熱減率（約9.8℃/km）の比較</td><td>大気中の気温が高さで下がることと、混合しやすいことは同じではない</td></tr><tr><td><strong>パスキル安定度</strong></td><td>A側＝不安定／D＝中立／F側＝安定</td><td>拡散幅σy・σzと大気安定度を取り違えない</td></tr><tr><td><strong>煙突高さ</strong></td><td>有効煙突高さ He＝物理高さ Hs＋上昇 ΔH（基本形）</td><td>ダウンウォッシュ時は後流の影響を別途扱う</td></tr><tr><td><strong>モデル分類</strong></td><td>プルーム・パフ＝代表的な解析モデル／格子＝数値モデル</td><td>流跡線モデルを解析解モデルに入れない</td></tr><tr><td><strong>脱硝・集じん・脱硫</strong></td><td>SCR＝NOx／ESP＝粒子／湿式脱硫＝SO2</td><td>装置の除去対象を順番だけで覚えない</td></tr><tr><td><strong>製油所・鉄鋼</strong></td><td>クラウス法＝製油所等の硫黄回収／焼結炉＝鉄鋼の重要なSOx源</td><td>浮屋根タンクは主にVOC蒸発抑制</td></tr><tr><td><strong>ごみ焼却</strong></td><td>HCl＝アルカリ中和、Hg・ダイオキシン＝吸着/集じんとの組合せ</td><td>焼却炉排ガスの物質を全部同じ設備で除去しない</td></tr></tbody></table></div>
+<div class="la-keyformula" style="margin-top:20px">H<sub>e</sub> = H<sub>s</sub> + ΔH <span>   ／   正規形プルーム：Q・u・σ<sub>y</sub>・σ<sub>z</sub>・H<sub>e</sub> を読む</span></div>
+<p class="a-note">基本の煙突高さ関係は概念整理用。着地濃度を計算する際は、反射・建屋影響・平均化時間・入力単位・適用条件を問題ごとに確認すること。</p>
+</div></section>
+<section class="a-section alt" id="flow"><div class="wrap"><div class="a-caption">06 / EQUIPMENT FLOW</div><h2 class="a-section-title">石炭火力は、装置の順で理解する。</h2><p class="a-lead">正解を丸暗記するより「何のために設置するか」と結びつける。次は低低温形電気集じんを採用する設備の代表的な流れです。</p>
+<div class="la-system"><div class="la-process-step">ボイラー<br/><small>排ガス発生</small></div><div class="la-process-step">脱硝<br/><small>SCR・NOx</small></div><div class="la-process-step">空気予熱器<br/><small>熱回収</small></div><div class="la-process-step">GGH熱回収<br/><small>排ガス冷却</small></div><div class="la-process-step">低低温ESP<br/><small>ばいじん</small></div><div class="la-process-step">湿式脱硫<br/><small>SO₂</small></div><div class="la-process-step">GGH再加熱→煙突<br/><small>排出</small></div></div>
+<div class="a-grid2"><div class="a-statbox"><div class="a-statcontent"><h3>低低温形ESP</h3><p>排ガスを通常より低い温度にして集じんする方式。粉じんの電気抵抗率や硫酸成分との関係を理解する。</p></div></div><div class="a-statbox"><div class="a-statcontent"><h3>脱硫装置の役割</h3><p>湿式石灰石こう法などでSO₂を吸収・反応させる。脱硫と脱硝は除去対象が異なる。</p></div></div></div><p class="a-note">※ 代表的な模式順序であり、すべての石炭火力が同一配置・方式とは限りません。</p><span class="la-sources"><a href="https://yaku-tik.com/kougai/r7-daitai-08/" rel="noopener noreferrer" target="_blank">R7 問8 ↗</a><a href="https://yaku-tik.com/kougai/r5-daitai-07/" rel="noopener noreferrer" target="_blank">R5 問7 ↗</a><a href="https://yaku-tik.com/kougai/r1-daitai-07/" rel="noopener noreferrer" target="_blank">R1 問7 ↗</a></span></div></section>
+<section class="a-section" id="method"><div class="wrap"><div class="a-caption">07 / LEARNING ROUTE</div><h2 class="a-section-title">おすすめの学習順は、５段階。</h2><p class="a-lead">数式から始めず、言葉と模式図を理解してから計算問題に進む。</p><div class="a-route">
+<article class="a-route-step"><b>01</b><h3>気象を把握する</h3><p>温位・大気安定度・混合層・中立境界層を区別。</p></article>
+<article class="a-route-step"><b>02</b><h3>拡散をつなげる</h3><p>乱流、パスキル、σy/σz、ダウンウォッシュ。</p></article>
+<article class="a-route-step"><b>03</b><h3>式・モデルを整理</h3><p>正規形プルームの変数と、モデルの使い分け。</p></article>
+<article class="a-route-step"><b>04</b><h3>設備の流れを理解</h3><p>発電所、製油所、鉄鋼・セメント、ごみ焼却。</p></article>
+<article class="a-route-step"><b>05</b><h3>年度別に演習する</h3><p>R7→過去年度で解き、間違えたテーマを補強。</p></article>
+</div></div></section>
+<section class="a-section alt" id="lastcheck"><div class="wrap"><div class="a-caption">08 / FINAL REVIEW</div><h2 class="a-section-title">直前暗記の16項目チェック。</h2><p class="a-lead">理解できた項目にチェック。進み具合は同じ端末・ブラウザに保存されます。</p><div class="a-memo"><label class="a-memo-item"><input data-check="0" type="checkbox"><span>乾燥断熱減率は約9.8℃/km（約0.01℃/m）</span></input></label><label class="a-memo-item"><input data-check="1" type="checkbox"/><span>温位と気温の違いを説明できる</span></label><label class="a-memo-item"><input data-check="2" type="checkbox"/><span>晴れた昼＝混合層／晴れた夜＝接地安定層</span></label><label class="a-memo-item"><input data-check="3" type="checkbox"/><span>パスキル A〜F：A側が不安定、D中立</span></label><label class="a-memo-item"><input data-check="4" type="checkbox"/><span>σy＝水平拡散幅／σz＝鉛直拡散幅</span></label><label class="a-memo-item"><input data-check="5" type="checkbox"/><span>平均化時間と水平拡散幅の関係を説明できる</span></label><label class="a-memo-item"><input data-check="6" type="checkbox"/><span>プルーム式のQ・u・σy・σz・Heを識別できる</span></label><label class="a-memo-item"><input data-check="7" type="checkbox"/><span>地上・中心軸上の y＝0, z＝0 を代入できる</span></label><label class="a-memo-item"><input data-check="8" type="checkbox"/><span>He＝Hs＋ΔH（基本形）／ダウンウォッシュは別の現象</span></label><label class="a-memo-item"><input data-check="9" type="checkbox"/><span>プルーム・パフ／格子・流跡線モデルを区別</span></label><label class="a-memo-item"><input data-check="10" type="checkbox"/><span>長期平均濃度では風向頻度（16方位等）を用いる</span></label><label class="a-memo-item"><input data-check="11" type="checkbox"/><span>SCR＝脱硝、ESP＝集じん、湿式脱硫＝SOx</span></label><label class="a-memo-item"><input data-check="12" type="checkbox"/><span>低低温ESPとGGHの代表的な配置を理解</span></label><label class="a-memo-item"><input data-check="13" type="checkbox"/><span>製油所のH2Sは硫黄回収／浮屋根はVOC対策</span></label><label class="a-memo-item"><input data-check="14" type="checkbox"/><span>鉄鋼の焼結炉とセメントキルンの対策を区別</span></label><label class="a-memo-item"><input data-check="15" type="checkbox"/><span>都市ごみのHCl・Hg・NOx・ダイオキシン対策を区別</span></label></div><div class="a-memo-footer"><div><b id="checkedCount">0</b> / 16 <span>確認できた項目</span></div><button class="a-btn" id="resetChecks" type="button">チェックをリセット ↺</button></div><p class="a-note">プライベートブラウズや端末の設定によってはチェック結果が保存されない場合があります。</p></div></section>
+<section class="a-source"><div class="wrap"><div class="a-caption" style="color:#b1d5b6">SOURCE &amp; METHODOLOGY</div><h2 style="font-size:clamp(25px,3.4vw,42px);margin:10px 0 17px;letter-spacing:-.05em">分類方法・参考情報について</h2>
+<p>対象：平成28年度〜令和7年度の大規模大気特論、各10問の計100問。<strong>2026年10月時点</strong>で参照サイトの問題ページを確認し、各設問の中心的な論点を10種類に<strong>独自分類</strong>して集計しました。設問に複数論点がある場合も1問を1件に数えています。S/A/Bランクは本サイト独自の学習優先度であり、主題分類・件数は公式統計ではありません。試験制度・設備技術・法令は変更される場合があります。</p>
+<p>参考：<a href="https://yaku-tik.com/kougai/" rel="noopener noreferrer" target="_blank">公害防止管理者試験まとめました（やくチキ） ↗</a> ／ <a href="https://www.jemai.or.jp/polconman/examination/past.html" rel="noopener noreferrer" target="_blank">産業環境管理協会・過去問題案内 ↗</a> ／ <a href="pollution-air.html">大気5科目一覧 ↗</a></p>
+<p>設問の原文、選択肢、解説の転載は行っていません。マップの各セルから参照元の当該問題を確認できます。転載・再配布の権利については各出典に従ってください。画像・図解の新規制作は別工程で追加する想定です。</p>
+</div></section>
+</main><footer class="cql-footer"><div class="wrap cql-footer-inner"><strong>CHEMICAL<br>QUALIFICATION LAB.</br></strong><small>© 2026 CQL / 化学資格研究所</small></div></footer><script>
+(()=>{
+ const cards=[...document.querySelectorAll('.a-rankcard')],buttons=[...document.querySelectorAll('.a-chip')],search=document.getElementById('rankSearch');let current='すべて';
+ const filter=()=>{const term=search.value.toLowerCase().trim();let n=0;cards.forEach(c=>{const match=(current==='すべて'||c.dataset.cat===current)&&c.dataset.search.includes(term);c.hidden=!match;n+=Number(match)});document.getElementById('rankNomatch').hidden=n!==0};
+ buttons.forEach(b=>b.addEventListener('click',()=>{current=b.dataset.category;buttons.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));filter()}));search.addEventListener('input',filter);
+ const filters=[...document.querySelectorAll('.la-tab')],trs=[...document.querySelectorAll('.la-year-row')];filters.forEach(b=>b.addEventListener('click',()=>{const yy=b.dataset.year;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));trs.forEach(row=>row.hidden=yy!=='all'&&row.dataset.year!==yy)}));
+ const boxes=[...document.querySelectorAll('input[data-check]')],key='cql-large-air-analysis-v1';try{const stored=JSON.parse(localStorage.getItem(key)||'[]');boxes.forEach(box=>box.checked=stored.includes(box.dataset.check))}catch(e){}
+ const update=()=>{document.getElementById('checkedCount').textContent=boxes.filter(b=>b.checked).length;try{localStorage.setItem(key,JSON.stringify(boxes.filter(b=>b.checked).map(b=>b.dataset.check)))}catch(e){}};
+ boxes.forEach(box=>box.addEventListener('change',update));document.getElementById('resetChecks').addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);update()});update();
+})();
+</script></body></html>
