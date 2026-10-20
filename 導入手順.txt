@@ -1,21 +1,26 @@
-【化学資格研究所｜大気有害物質特論 過去10年100問徹底分析】追加セット
+化学資格研究所／大気有害物質特論 27テーマ追加セット
 
-■ 内容
-- pollution-air-harmful-analysis.html：メイン記事（出題構造／S8テーマ／A6テーマ／一覧表／図解6枚／学習順／直前チェック）
-- assets/analysis-harmful/01.webp ～ 06.webp：ページで使用する図解
-- トップページ等に追加するリンク例.txt：既存サイトへの導線
+【セット内容】
+- 画像：topic-07.webp 〜 topic-27.webp（21枚）
+- 個別解説ページ：pollution-air-harmful-topic-07.html 〜 -27.html（21ページ）
+- 更新したテーマ一覧：pollution-air-harmful-topics.html（全27テーマ）
+- 既存⑥ページの次テーマへのリンク：pollution-air-harmful-topic-06.html
+- 更新したトップ／大気／有害物質特論ページ：index.html / pollution-air.html / pollution-air-harmful.html
 
-■ 反映手順（GitHub Desktop）
-1. 公開中サイトのローカルフォルダを丸ごとバックアップ。
+【操作方法（GitHub Desktop）】
+1. 念のため既存の kagaku-shikaku-site フォルダをコピーしてバックアップ。
 2. このZIPを右クリックして「すべて展開」。
-3. 画像の入ったassetsフォルダとHTMLファイルを、index.htmlがあるフォルダにコピー（assetsはフォルダ統合）。
-4. index.html または pollution-air-harmful.html の適切な箇所に案内リンクを追加（リンク例.txt参照）。
-5. ブラウザで pollution-air-harmful-analysis.html を開いて表示確認。
-6. GitHub Desktopで Commit to main → Push origin。
-7. Pagesの反映後、https://chemical-license-lab.github.io/kagaku-shikaku-site/pollution-air-harmful-analysis.html を確認。
+3. 展開された「化学資格研究所_27テーマ追加セット」フォルダの中身を全部選択してコピー。
+4. PCの GitHub\kagaku-shikaku-site フォルダに貼り付け。同じ名前のファイルは上書き。
+   ★重要：ZIPファイルやフォルダを丸ごと内側に入れるのではなく、中身（htmlとassets）を既存サイトの直下に貼る。
+5. GitHub Desktopで変更ファイルを確認（画像21＋新HTML21＋更新HTML5＝47件の見込み）。
+6. Summary に「Add 21 visual study topics (27 total)」と入力→Commit to main→Push origin。
+7. 数分後、以下を確認：
+   https://chemical-license-lab.github.io/kagaku-shikaku-site/pollution-air-harmful-topics.html
+   最初のテーマ①、最後のテーマ㉗、カテゴリ絞り込み、検索・画像拡大も確認。
 
-■ 注意
-元サイトのHTMLを上書きしない安全な追加セットです。トップなどへの案内リンクの追加のみ、既存HTMLの編集が必要です。
-現行のサイトコードを受領していないため、既存ヘッダーをもとにしたデザイン統一は行っていますが、更新後の最新版デザインと完全一致は未検証です。
-本ページは過去10年間の独自分類をもとにした学習用の分析です。公的な出題予測ではありません。
-図解中の化学反応・測定方法・安全情報については一次資料との照合をおすすめします。
+【注意】
+- 以前制作した6テーマの画像・01〜05ページ、年度別30問は削除・上書きしません。
+- index.htmlなど4つの既存HTMLは更新のため上書きされます。前回のv0.9を基にしているので、その後あなたが編集していた場合は上書きに注意してください。
+- JIS、法令、数値・化学式・危険物の応急処置を含む図解は、公開前に最新の一次資料による校閲を推奨します。
+- このセットはGitHubへのアップロードを自動実行しません。
