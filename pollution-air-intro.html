@@ -1,0 +1,546 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>大気概論｜過去10年100問・S/Aランク徹底分析 | 化学資格研究所</title>
+<meta name="description" content="公害防止管理者・大気概論の平成28〜令和7年度100問を設問別に分析。S/Aランクの要点、環境基準、法令、年度別100問マップを公開。"/><style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+}
+
+
+/* v0.6: illustrated past papers */
+:root{color-scheme:light}
+.cql-crumb{padding:22px 0;font-size:12px;color:#65716a;letter-spacing:.04em;}
+.cql-crumb a{text-decoration:underline;text-underline-offset:4px}
+.cql-hero{padding:90px 0 64px;background:#0a0c0b;color:#fff;overflow:hidden}
+.cql-label{display:inline-block;letter-spacing:.18em;text-transform:uppercase;font-weight:800;font-size:12px;color:#aab5ad}
+.cql-hero h1{font-size:clamp(44px,7.4vw,94px);line-height:1.14;margin:20px 0 25px;letter-spacing:-.055em}
+.cql-hero h1 em{font-style:normal;color:var(--lime)}
+.cql-hero p{max-width:740px;color:#c5cec8;font-size:16px;line-height:1.9}
+.cql-hero-note{font-size:12px;color:#a5b0aa;margin-top:22px}
+.cql-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.cql-button{border-radius:100px;padding:13px 21px;display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:800;background:var(--lime);color:#141814;border:1px solid var(--lime);transition:transform .15s}
+.cql-button:hover{transform:translateY(-2px)}
+.cql-button.ghost{background:transparent;color:#fff;border-color:#5b655e}
+.cql-listing{padding:70px 0 105px}
+.cql-result-header{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.cql-result-header h2{font-size:clamp(30px,4.4vw,55px);margin:4px 0 0;letter-spacing:-.05em;line-height:1.15}
+.cql-count{font-size:13px;color:#5e6c64;white-space:nowrap}
+.cql-input{width:100%;max-width:560px;border:1px solid #cbd4cb;background:#fff;border-radius:12px;margin:28px 0 30px;padding:16px 19px;color:#141914;font:inherit;outline-offset:3px}
+.cql-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.cql-card{display:block;border:1px solid #d6ddd5;border-radius:17px;background:white;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.cql-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+.cql-card[hidden]{display:none!important}
+.cql-card-cover{overflow:hidden;background:#e5ecf4;aspect-ratio:4 / 3}
+.cql-card-cover img{display:block;width:100%;height:100%;object-fit:cover}
+.cql-card-info{padding:25px 25px 27px}
+.cql-card-number{font-size:11px;letter-spacing:.12em;font-weight:800;color:#596760}
+.cql-card h3{font-size:clamp(20px,2.2vw,28px);line-height:1.35;letter-spacing:-.045em;margin:9px 0 12px}
+.cql-card p{font-size:13px;color:#58655f;margin:0}
+.cql-tags{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0 0}
+.cql-tags span{padding:5px 9px;border-radius:50px;background:#edf3ea;color:#3e5044;font-weight:700;font-size:11px}
+.cql-card-bottom{border-top:1px solid #e4e8e2;padding-top:16px;margin-top:19px;font-size:13px;font-weight:800;display:flex;justify-content:space-between}
+.cql-statement{padding:22px 24px;border:1px solid #cbd8cd;border-radius:15px;background:#edf3e9;margin:28px 0;font-size:14px;color:#334239}
+.cql-reading{padding:60px 0 98px}
+.cql-reading .heading{font-size:clamp(31px,4.8vw,60px);line-height:1.2;letter-spacing:-.05em;margin:15px 0}
+.cql-reading .sub{font-size:16px;color:#526258;max-width:740px}
+.cql-figure-card{background:#fff;border:1px solid #d4ddd4;border-radius:18px;padding:18px;margin-top:34px}
+.cql-figure-card img{display:block;width:100%;height:auto}
+.cql-figure-caption{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:15px 0 2px;font-size:12px;color:#627167}
+.cql-figure-caption a{font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.cql-pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:50px 0 30px}
+.cql-pager a{padding:20px;border:1px solid #cdd6cc;border-radius:12px;display:flex;flex-direction:column;gap:7px;font-weight:800}
+.cql-pager a:hover{background:#e5eddd}
+.cql-pager small{font-size:11px;color:#7a877b}
+.cql-back{margin:20px 0 0;display:inline-flex;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.cql-footer{background:#0a0c0b;color:#fff;padding:42px 0;margin-top:0}
+.cql-footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+.cql-footer strong{font-size:23px;letter-spacing:-.04em}
+.cql-footer small{color:#96a39a}
+.cql-mini-banner{padding:28px;border-radius:18px;background:#0a0c0b;color:white;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.cql-mini-banner h3{margin:7px 0 5px;font-size:clamp(22px,3vw,35px);line-height:1.25}
+.cql-mini-banner p{margin:0;color:#c2cec4;font-size:14px}
+.cql-mini-banner .cql-button{white-space:nowrap}
+@media(max-width:720px){
+  .cql-hero{padding:57px 0 50px}
+  .cql-card-grid{grid-template-columns:1fr}
+  .cql-listing{padding:50px 0}
+  .cql-figure-card{padding:10px;border-radius:12px}
+  .cql-figure-caption{flex-direction:column;align-items:flex-start}
+  .cql-mini-banner{flex-direction:column;align-items:flex-start}
+  .cql-pager{grid-template-columns:1fr}
+  .cql-result-header{align-items:flex-start}
+  .cql-reading{padding:40px 0 60px}
+  .cql-figure-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;border-radius:4px;border:1px solid #e1e5e1}
+  .cql-figure-scroll img{min-width:980px;max-width:none}
+  .cql-footer-inner{display:block}
+  .cql-footer-inner small{display:block;margin-top:10px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
+
+:root{--paper:#f3f5ef;--ink:#0b0d0c;--line:#d7dfd6;--lime:#c8ff4d;--mint:#b7f7df;--cyan:#9de9ff;--violet:#bfc6fd;--tint:#f9fbf8}
+body{line-height:1.65}section{scroll-margin-top:90px}
+.a-hero{background:#101512;color:#fff;padding:73px 0 76px;position:relative;overflow:hidden;border-bottom:1px solid #3e443e}
+.a-hero:before{content:'';position:absolute;right:-160px;top:-180px;width:570px;height:570px;border:1px solid #4b554d;border-radius:50%;box-shadow:0 0 0 80px #ffffff07,0 0 0 160px #ffffff05;pointer-events:none}
+.a-eyebrow{display:inline-flex;align-items:center;gap:10px;color:#a9c9b4;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.a-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#c8ff4d;box-shadow:0 0 0 4px #c8ff4d22}
+.a-hero h1{font-size:clamp(38px,6.6vw,86px);line-height:1.12;letter-spacing:-.067em;max-width:1040px;margin:21px 0 20px;font-weight:900}
+.a-hero h1 em{font-style:normal;color:#c8ff4d}
+.a-hero p{max-width:840px;color:#cbd7ce;font-size:clamp(15px,2vw,19px);line-height:1.9;margin:0}
+.a-actions{display:flex;flex-wrap:wrap;gap:11px;margin:26px 0 0}
+.a-btn{border:1px solid #4a5b4b;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:12px 17px;border-radius:999px;background:#fff;color:#132218;font-weight:900;font-size:13px;cursor:pointer;transition:transform .15s,background .15s}
+.a-btn:hover{background:#c8ff4d;transform:translateY(-2px)}.a-btn.dark{background:#c8ff4d;border-color:#c8ff4d;color:#101811}.a-btn.dark:hover{background:white}
+.a-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:48px;border-top:1px solid #4a554c;border-bottom:1px solid #4a554c;max-width:850px}
+.a-hero-stat{padding:22px 18px 20px 0}.a-hero-stat + .a-hero-stat{border-left:1px solid #4a554c;padding-left:26px}
+.a-hero-stat b{font-size:clamp(32px,5.7vw,65px);line-height:1.1;letter-spacing:-.07em;display:block;color:#c8ff4d}
+.a-hero-stat small{display:block;color:#bfcac0;font-size:11px;font-weight:700;letter-spacing:.05em;margin-top:5px}
+.a-subnav{position:sticky;top:76px;z-index:20;background:#f3f5eff7;backdrop-filter:blur(10px);border-bottom:1px solid #d9e2da;overflow-x:auto;scrollbar-width:thin}
+.a-subnav .wrap{display:flex;gap:24px;white-space:nowrap;min-height:54px;align-items:center}
+.a-subnav a{font-weight:850;font-size:12px;color:#55685c}.a-subnav a:hover{color:#102a18}
+.a-section{padding:84px 0;border-bottom:1px solid #d9dfd8}.a-section.alt{background:#eaf0ea}.a-section.dark{background:#111915;color:white}
+.a-caption{font-size:11px;font-weight:950;letter-spacing:.17em;color:#53705b}.a-section.dark .a-caption{color:#a9d6b7}
+.a-section-title{font-size:clamp(30px,4.8vw,58px);font-weight:900;letter-spacing:-.06em;line-height:1.2;margin:12px 0 14px}
+.a-lead{font-size:16px;color:#465b4b;line-height:1.9;max-width:780px;margin:0 0 35px}.a-section.dark .a-lead{color:#c5cfc6}
+.a-flexhead{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:25px}
+.a-positions{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;margin:20px 0 17px}
+.a-pos{border:1px solid #bfcabf;min-height:145px;padding:17px 7px 12px;border-radius:13px;display:flex;flex-direction:column;justify-content:space-between;align-items:center;gap:12px;text-align:center}
+.a-pos b{font-size:25px;line-height:1}.a-pos span{font-size:12px;font-weight:850;line-height:1.45}
+.a-pos.pc1{background:#e3f5d5}.a-pos.pc2{background:#dff4f9}.a-pos.pc3{background:#ffe5d6}.a-pos.pc4{background:#dfe3fd}
+.a-legend{display:flex;gap:14px;flex-wrap:wrap;margin:13px 0 0;font-size:12px;font-weight:800;color:#4f6254}
+.a-legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.a-grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.a-statbox{padding:27px;background:white;border:1px solid #d4ded3;border-radius:17px;display:flex;align-items:center;gap:23px}
+.a-statnumber{font-size:clamp(46px,6vw,78px);line-height:.95;letter-spacing:-.08em;font-weight:950;white-space:nowrap}.a-statcontent h3{font-size:18px;line-height:1.3;letter-spacing:-.03em;margin:0 0 9px}.a-statcontent p{margin:0;color:#627065;font-size:13px}
+.a-note{font-size:12px;line-height:1.75;color:#667169;margin-top:21px;padding:12px 16px;border-left:3px solid #86a48d;background:#ffffff8f}
+.a-ranklegend{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 22px}
+.a-ranklegend article{border-radius:15px;border:1px solid #d5e0d5;background:#fff;padding:18px 21px}
+.a-ranklegend b{font-size:25px;font-weight:950}.a-ranklegend p{font-size:13px;color:#637064;margin:8px 0 0}
+.a-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:23px}.a-search{flex:1;min-width:220px;padding:12px 15px;border-radius:12px;border:1px solid #b8c9b8;font:inherit;color:var(--ink);background:#fff}
+.a-chip{border-radius:99px;padding:9px 14px;font-size:12px;font-weight:900;cursor:pointer;border:1px solid #aebfad;background:white;color:#294735}.a-chip[aria-pressed=true]{background:#1b3725;color:white;border-color:#1b3725}
+.a-rankgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.a-rankcard{background:white;border:1px solid #d4dfd3;border-radius:17px;padding:25px 26px 18px;min-width:0;display:flex;flex-direction:column}
+.a-rankcard[hidden],.a-nomatch[hidden]{display:none!important}.a-rankcard-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:10px}
+.a-sid{display:inline-block;padding:5px 12px;color:#102313;background:#c8ff4d;border-radius:8px;font-size:14px;font-weight:950}
+.a-category{font-size:11px;font-weight:800;color:#607368}.a-rankcard h3{font-size:24px;letter-spacing:-.04em;line-height:1.28;margin:7px 0 8px}
+.a-rankcard .hint{font-size:13px;color:#53695a;margin:0 0 12px}.a-rankcard details{border-top:1px solid #e7ece7;margin-top:auto;padding-top:12px}
+.a-rankcard summary{font-size:13px;font-weight:900;cursor:pointer;list-style:none;color:#184a30}.a-rankcard summary::-webkit-details-marker{display:none}
+.a-rankcard summary:after{content:' ＋';float:right}.a-rankcard details[open] summary:after{content:' −'}
+.a-rankcard ul{margin:12px 0 9px;padding-left:20px;font-size:14px;line-height:1.75}.a-rankcard li+li{margin-top:7px}
+.a-caution{font-size:12px;background:#f1f5ea;border-radius:9px;padding:11px 12px;color:#4b6151;margin:14px 0 5px}
+.a-arows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.a-acard{background:#fff;border:1px solid #d7dfd5;border-radius:14px;padding:23px}
+.a-acard h3{font-size:19px;margin:10px 0}.a-acard p{font-size:13px;line-height:1.8;color:#53685b;margin:0}
+.a-acard .a-anum{font-size:13px;font-weight:950;color:#176244;background:#def6e9;padding:6px 10px;border-radius:6px}
+.a-analysis-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #cad8c9;border-radius:16px;overflow:hidden;line-height:1.6}
+.a-analysis-table th,.a-analysis-table td{text-align:left;border-bottom:1px solid #e0e9e0;padding:17px 19px;font-size:14px}
+.a-analysis-table thead{background:#183325;color:white}.a-analysis-table th{font-weight:900}.a-analysis-table tr:last-child td{border-bottom:0}
+.a-deck{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.a-figurecard{background:white;border:1px solid #cfdcd0;border-radius:16px;overflow:hidden;text-align:left;cursor:pointer;padding:0;color:inherit;font:inherit}
+.a-figurecard:hover{box-shadow:0 13px 27px #2c503120}.a-figurecard img{width:100%;aspect-ratio:4/3;display:block;object-fit:cover}.a-figurecard span{display:block;padding:15px 18px;font-size:14px;font-weight:850}
+.a-figurecard small{color:#51735b;display:block;font-weight:700;font-size:11px}
+.a-route{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.a-route-step{background:#fff;border:1px solid #d5e1d4;border-radius:14px;padding:19px 15px}
+.a-route-step b{font-size:28px;color:#2e6941}.a-route-step h3{font-size:17px;line-height:1.45;margin:9px 0}.a-route-step p{font-size:12px;margin:0;color:#59715d}
+.a-memo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.a-memo-item{display:flex;align-items:flex-start;gap:11px;border-radius:11px;background:#fff;border:1px solid #d7e1d5;padding:15px 16px;cursor:pointer}
+.a-memo-item input{width:19px;height:19px;margin:2px 0 0;accent-color:#2b7244}.a-memo-item span{font-size:14px;font-weight:700;line-height:1.6}
+.a-memo-item:has(input:checked){background:#e4f7dc}.a-memo-item:has(input:checked) span{text-decoration:line-through;color:#627967}
+.a-lastbar{margin-top:20px;padding:19px 22px;border:1px solid #bfd1bc;background:#fff;border-radius:13px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.a-lastbar strong{font-size:20px}
+.a-source{padding:40px 0 58px;background:#111b16;color:#eef5ef}.a-source a{color:#c8ff4d;text-decoration:underline;text-underline-offset:4px}
+.a-source p{font-size:13px;color:#bbcabe;line-height:1.8;max-width:920px}
+.a-mini{font-size:11px;line-height:1.75;color:#607363}
+.a-lightbox{border:0;border-radius:14px;padding:10px;background:#fdfdfd;max-width:min(96vw,1350px);max-height:94vh;box-shadow:0 25px 80px #0006}.a-lightbox::backdrop{background:#07150bc9}
+.a-lightbox img{max-width:100%;max-height:82vh;display:block;object-fit:contain}.a-close{margin:0 0 7px auto;display:block;cursor:pointer;background:#101811;color:white;border:0;padding:8px 13px;border-radius:10px;font-weight:800}
+.a-btn:focus-visible,.a-chip:focus-visible,.a-rankcard summary:focus-visible,.a-figurecard:focus-visible{outline:3px solid #477c58;outline-offset:3px}
+@media(max-width:900px){.a-rankgrid,.a-deck{grid-template-columns:repeat(2,1fr)}.a-arows{grid-template-columns:repeat(2,1fr)}.a-route{grid-template-columns:repeat(3,1fr)}.a-positions{gap:4px}.a-pos{min-height:125px;padding:12px 3px}.a-pos span{font-size:10px}}
+@media(max-width:660px){.a-hero{padding:44px 0 51px}.a-hero h1{font-size:clamp(37px,9vw,54px)}.a-section{padding:58px 0}.a-hero-stats{gap:0}.a-hero-stat{padding:19px 8px 19px 0}.a-hero-stat+.a-hero-stat{padding-left:12px}.a-hero-stat b{font-size:38px}.a-hero-stat small{font-size:10px}.a-rankgrid,.a-grid2,.a-memo{grid-template-columns:1fr}.a-deck,.a-arows,.a-route{grid-template-columns:1fr 1fr}.a-ranklegend{grid-template-columns:1fr}.a-pos{min-height:91px;padding:8px 2px;border-radius:6px}.a-pos b{font-size:14px}.a-pos span{font-size:8px;word-break:keep-all}.a-positions{gap:3px}.a-positions span{line-height:1.25}.a-section-title{font-size:36px}.a-rankcard{padding:22px}.a-rankcard h3{font-size:22px}.a-analysis-table th,.a-analysis-table td{padding:10px 8px;font-size:12px}.a-statbox{padding:23px}}
+@media(max-width:400px){.a-deck,.a-arows,.a-route{grid-template-columns:1fr}.a-hero-stat b{font-size:33px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.la-mapguide{display:flex;flex-wrap:wrap;gap:9px;margin-top:19px}
+.la-mapguide span{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:750;background:#fff;border:1px solid #ddd;padding:7px 10px;border-radius:100px}
+.la-mapguide i{width:13px;height:13px;display:inline-block;border-radius:4px;border:1px solid rgba(0,0,0,.08)}
+.la-map-scroll{overflow-x:auto;overscroll-behavior-x:contain;padding:2px 0 12px}
+.la-map{border-collapse:separate;border-spacing:5px;width:100%;min-width:680px;table-layout:fixed}
+.la-map th{font-weight:900;font-size:11px;text-align:center;padding:9px 2px}
+.la-map th:first-child{width:66px}
+.la-map td{padding:0;vertical-align:middle;text-align:center}
+.la-cell{color:#102018;display:flex;justify-content:center;align-items:center;min-height:48px;text-decoration:none;font-size:10px;line-height:1.24;font-weight:850;border:1px solid rgba(0,0,0,.11);border-radius:9px;padding:4px 3px;transition:transform .15s,outline .15s}
+.la-cell:hover,.la-cell:focus-visible{transform:scale(1.055);outline:2px solid #0b0d0c;position:relative;z-index:2}
+.la-map-year{font-size:14px;font-weight:950;letter-spacing:.03em;text-align:left!important}
+.la-distribution{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0}
+.la-panel{background:#fff;border:1px solid #d5dfd5;border-radius:14px;padding:24px}
+.la-panel h3{font-size:20px;margin:0 0 18px;letter-spacing:-.04em}
+.la-bar{display:grid;grid-template-columns:130px minmax(0,1fr) 42px;align-items:center;gap:11px;margin:11px 0;font-size:11px;font-weight:800}
+.la-bar-track{height:12px;background:#edf0eb;overflow:hidden;border-radius:100px}
+.la-bar-fill{height:100%;border-radius:100px;background:#202a21}
+.la-bar strong{font-variant-numeric:tabular-nums;text-align:right}
+
+
+/* Harmful substances 10-year map. Same UI design as large-air analysis. */
+.la-year-row[hidden]{display:none!important}
+.la-mapguide{margin-bottom:20px}
+.la-map .la-cell{min-height:70px;padding:7px 4px}
+.la-map .la-cell span{overflow-wrap:anywhere}
+.la-frequency{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:25px}
+.la-frequency-item{background:#fff;border:1px solid #d8e3d8;border-radius:12px;padding:14px 16px}
+.la-frequency-item b{font-size:30px;line-height:1.2;display:block;letter-spacing:-.05em}
+.la-frequency-item small{display:block;font-size:12px;color:#5c6a60;line-height:1.55;margin-top:5px}
+.a-roadmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:24px}
+.a-roadmap-group{padding:20px 20px 16px;border:1px solid #d5e0d6;background:white;border-radius:14px}
+.a-roadmap-group h3{margin:0 0 13px;font-size:15px;letter-spacing:-.03em}
+.a-roadmap-group ol{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.a-roadmap-group li{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:720;line-height:1.4;color:#4c5c51}
+.a-roadmap-group li b{font-size:11px;color:#607267;flex:none}
+.a-roadmap-group li.published{color:#122b20;font-weight:850}
+.a-roadmap-group li.published b{color:#145e40}
+.a-roadmap-group .status{margin-left:auto;white-space:nowrap;color:#155a36;background:#c8ff4d;border-radius:20px;padding:2px 6px;font-size:9px}
+@media(max-width:800px){.a-roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}.la-frequency{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.a-roadmap{grid-template-columns:1fr}.la-map .la-cell{min-height:64px}.la-frequency-item{padding:12px}.la-frequency-item b{font-size:24px}}
+
+/* Harmful specialty integrated homepage — same CQL analysis visual system as 大規模大気特論 */
+.a-published-tag{background:#d9ff95;border-radius:99px;padding:9px 15px;font-size:12px;font-weight:900;color:#18361f;white-space:nowrap}
+.a-topic-filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}
+.a-topic-filter{cursor:pointer;padding:10px 14px;border:1px solid #c6d5c7;background:#fff;border-radius:99px;font:inherit;font-size:12px;font-weight:800;color:#344639}
+.a-topic-filter[aria-pressed=true]{background:#12231a;border-color:#12231a;color:white}
+.a-topic-collection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.a-topic-tile{position:relative;overflow:hidden;border-radius:15px;background:#fff;border:1px solid #d2dfd2;min-height:167px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:22px 22px 24px;transition:transform .16s,box-shadow .16s}
+.a-topic-tile:nth-child(5n+1){border-top:4px solid #8cdbb0}
+.a-topic-tile:nth-child(5n+2){border-top:4px solid #8bd4ef}
+.a-topic-tile:nth-child(5n+3){border-top:4px solid #c8ff4d}
+.a-topic-tile:nth-child(5n+4){border-top:4px solid #ffc3b4}
+.a-topic-tile:nth-child(5n){border-top:4px solid #b3adfa}
+.a-topic-tile:hover{transform:translateY(-3px);box-shadow:0 12px 26px #173d241a}
+.a-topic-tile[hidden]{display:none!important}
+.a-topic-tile-no{font-size:11px;letter-spacing:.15em;font-weight:950;color:#5b7964}
+.a-topic-tile strong{font-size:19px;letter-spacing:-.04em;line-height:1.38;margin-top:6px;max-width:95%}
+.a-topic-tile-meta{margin-top:auto;font-size:11px;color:#607668;font-weight:760}
+.a-topic-tile-arrow{position:absolute;right:17px;bottom:16px;font-size:22px;font-weight:900;color:#2e6240}
+.a-learning-note{margin:20px 0 0;padding:20px 22px;border:1px solid #b9d4b7;background:#eff8e9;border-radius:13px;display:flex;gap:12px;flex-direction:column}
+.a-learning-note strong{font-size:16px}.a-learning-note span{font-size:13px;color:#536e56}
+.a-roadmap-link{display:flex;align-items:center;gap:10px;width:100%;min-width:0;text-decoration:none}
+.a-roadmap-link:hover{color:#086e44}
+.a-roadmap-group li{padding:3px 0}
+.a-roadmap-group .status{flex-shrink:0}
+.a-rankcard details{padding-top:13px}
+.a-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:880px){.a-topic-collection{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.a-topic-collection{grid-template-columns:1fr}.a-hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.a-published-tag{white-space:normal}.a-topic-tile{min-height:144px}}
+
+/* Independent dust lesson layout additions; base theme follows air-harmful page */
+.la-tabline{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:17px 0 22px}
+.la-tab{border:1px solid #bfd0c2;border-radius:999px;padding:10px 17px;background:white;color:#1b3524;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.la-tab[aria-pressed="true"]{background:#122b1b;border-color:#122b1b;color:white}
+.la-tab:hover{border-color:#326249;background:#dffbda;color:#132a1b}
+.la-tab[aria-pressed="true"]:hover{background:#122b1b;color:#fff}
+.dust-pos-scroll{width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;padding-bottom:9px}
+.dust-positions{display:grid;grid-template-columns:repeat(15,minmax(87px,1fr));gap:6px;min-width:1140px}
+.dust-positions .a-pos{padding:10px 5px;min-height:91px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center}
+.dust-positions .a-pos b{font-size:22px}.dust-positions .a-pos span{font-size:10px;font-weight:850;line-height:1.35}
+.dust-positions .pc1{background:#d7eeff}.dust-positions .pc2{background:#ced6ff}.dust-positions .pc3{background:#ffd7df}.dust-positions .pc4{background:#e5d8f6}
+.la-map-scroll{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.la-map{min-width:1580px}
+.la-map th{min-width:60px}.la-map td{min-width:92px}
+.la-cell{min-height:59px}
+.dust-mapmeta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:23px 0 10px}
+.dust-mapmeta>div{border:1px solid #d3ded5;background:white;border-radius:16px;padding:18px 22px;display:flex;flex-direction:column}
+.dust-mapmeta strong{font-size:37px;line-height:1;font-weight:900}.dust-mapmeta span{font-size:12px;color:#697a6e;margin-top:7px}
+.dust-schematic{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:34px 0}
+.dust-schematic article{background:#fff;border:1px solid #d8e3d8;border-radius:15px;padding:14px;text-align:center}
+.dust-device{height:132px;display:flex;align-items:center;justify-content:center}.dust-device svg{max-width:100%;height:100%}
+.dust-schematic strong{font-size:16px}.dust-schematic p{color:#5f7162;margin:4px 0 0;font-size:12px}
+.dust-table-wrap{overflow-x:auto}.a-compare{min-width:660px}
+.dust-formulagrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:30px}
+.dust-formula{border:1px solid #d5dfd6;border-radius:17px;background:#fff;padding:24px}
+.dust-formula small{display:block;font-size:12px;color:#5f7765;font-weight:900;margin-bottom:10px}
+.dust-formula strong{font-size:clamp(17px,2.4vw,29px);font-weight:900;letter-spacing:-.03em;overflow-wrap:anywhere}
+.dust-formula p{font-size:13px;color:#5d6e61;line-height:1.8;margin-bottom:0}
+@media(max-width:700px){.dust-schematic{grid-template-columns:repeat(2,minmax(0,1fr))}.dust-mapmeta{gap:7px}.dust-mapmeta>div{padding:13px}.dust-mapmeta strong{font-size:29px}.dust-mapmeta span{font-size:10px}.dust-formulagrid{grid-template-columns:1fr}.dust-formula{padding:20px}}
+.a-rankcard[hidden],.la-year-row[hidden]{display:none!important}
+
+/* Air technology detail tuning; honor parent CQL components */
+.map-estimate{opacity:.68;border:1px dashed rgba(10,10,10,.27)!important}
+.map-verified{outline:1px solid rgba(12,45,17,.18);outline-offset:-1px}
+.formula-text{display:block;font-size:clamp(13px,1.8vw,18px);margin:9px 0;color:#172e27;line-height:1.65;overflow-wrap:anywhere}
+.a-source p{max-width:980px;line-height:1.85}
+.a-source a{text-decoration:underline;text-underline-offset:3px}
+.a-table-scroll{overflow-x:auto;border-radius:14px;margin-top:18px}
+.a-compare{width:100%;min-width:660px;border-collapse:collapse;background:#fff}
+.a-compare th,.a-compare td{padding:16px;border:1px solid #dbe4db;text-align:left;font-size:13px;vertical-align:top}
+.a-compare thead th{background:#1b2a20;color:white}
+.a-compare tbody th{background:#eef6e9}
+.a-rankcard[hidden],.la-year-row[hidden]{display:none!important}
+@media(max-width:720px){.la-map-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.a-lastbar{flex-wrap:wrap;gap:12px}.a-hero h1{overflow-wrap:break-word}}
+
+/* Accuracy revision: verified classification & compact frequency bars */
+.verified-pos{border:1px solid rgba(11,30,20,.17);padding:12px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.verified-pos b{font-size:18px}
+.verified-pos span{font-size:11px;text-align:center;line-height:1.3}
+.verified-pos small{font-size:9px;font-weight:800;color:#3b5040;line-height:1.2;text-align:center}
+.la-map .map-verified{opacity:1;box-shadow:inset 0 0 0 1px rgba(20,52,25,.10)}
+.accurate-counts{margin:31px 0;padding:26px;border-radius:16px;background:white;border:1px solid #d4dfd4}
+.accurate-counts h3{font-size:clamp(22px,3vw,35px);line-height:1.24;margin:9px 0}
+.count-list{display:grid;gap:13px;margin-top:24px}
+.count-row{display:grid;grid-template-columns:minmax(150px,240px) minmax(80px,1fr) 62px;gap:12px;align-items:center}
+.count-label{font-size:13px;font-weight:820}
+.count-track{height:15px;background:#eef1eb;border-radius:50px;overflow:hidden}
+.count-fill{height:100%;min-width:1px;border:1px solid rgba(10,10,10,.13);border-radius:50px}
+.count-row>b{font-size:21px;text-align:right;font-variant-numeric:tabular-nums}
+.count-row>b small{font-size:11px;color:#526357;padding-left:3px}
+.rank-evidence{padding:17px 0 3px;margin-top:16px;border-top:1px solid #e0e7de}
+.rank-evidence>b{font-size:12px;color:#486e56}
+.rank-evidence>div{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+.rank-evidence a{padding:7px 11px;border-radius:50px;background:#e5f4d9;font-size:12px;font-weight:800;color:#163d21;text-decoration:none}
+.rank-evidence a:hover{background:#c8ff4d}
+@media(max-width:700px){.accurate-counts{padding:17px}.count-row{grid-template-columns:110px minmax(40px,1fr) 48px;gap:8px}.count-label{font-size:11px}.count-row>b{font-size:18px}.verified-pos{padding:8px 3px}.verified-pos b{font-size:15px}.verified-pos span{font-size:10px}}
+
+
+/* Air overview content overrides / independent site module */
+.a-hero .a-note{background:rgba(255,255,255,.04);color:#c4d5c7;border-left-color:#c8ff4d;}
+.intro-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:32px 0}
+.intro-highlights article{padding:25px;background:#fff;border:1px solid #d3ddd3;border-radius:15px}
+.intro-highlights strong{display:block;font-size:clamp(34px,5vw,58px);line-height:1;font-weight:950;letter-spacing:-.06em}
+.intro-highlights span{font-size:12px;font-weight:800;color:#607063}
+.intro-posline{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:8px;margin:25px 0}
+.intro-pos{background:var(--tint);border-radius:12px;border:1px solid #10161124;padding:14px 7px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;min-height:100px}
+.intro-pos b{font-size:19px;line-height:1}.intro-pos span{font-size:11px;font-weight:900;line-height:1.35;margin:9px 0}.intro-pos small{font-size:10px}
+.intro-bar{padding:27px;background:#fff;border-radius:18px;border:1px solid #dce5db}
+.intro-barline{display:grid;grid-template-columns:225px 1fr 40px;gap:18px;align-items:center;margin:15px 0}
+.intro-barname{font-size:13px;font-weight:800;display:flex;align-items:center;gap:10px}.intro-barname i,.intro-legend i{display:inline-block;width:13px;height:13px;flex:0 0 13px;border-radius:4px}
+.intro-track{background:#e8eeea;min-height:16px;border-radius:99px;overflow:hidden}.intro-track div{height:16px;border-radius:99px}.intro-barline b{font-size:16px;text-align:right}
+.intro-small{font-size:12px;line-height:1.9;color:#5d6a60}.intro-warning{background:#e9ffd8;border:1px solid #a6d887;border-radius:18px;padding:27px;margin:27px 0}
+.intro-warning h3{margin:0 0 8px;font-size:23px}.intro-warning p{line-height:1.8;margin:0;color:#29452d}
+.intro-flexnote{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:26px 0}
+.intro-flexnote>div{border-radius:14px;border:1px solid #d9e4da;padding:25px;background:#fff}
+.intro-flexnote b{font-size:18px}.intro-flexnote p{font-size:14px;margin:8px 0 0;color:#4d6151}
+.intro-legendbox{display:flex;flex-wrap:wrap;gap:9px 16px;margin:25px 0}
+.intro-legend{background:#fff;border-radius:30px;border:1px solid #d6dfd6;display:inline-flex;gap:8px;align-items:center;padding:7px 11px;font-size:12px;font-weight:850}
+.intro-filter{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 14px}
+.intro-filter button{background:white;border:1px solid #b9c7b9;border-radius:99px;padding:8px 15px;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+.intro-filter button[aria-pressed=true]{background:#111c13;color:white}
+.intro-map-scroll{overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;border:1px solid #cfdbce;border-radius:14px;background:#fff}
+.intro-map{border-collapse:separate;border-spacing:5px;width:100%;min-width:990px;padding:10px;table-layout:fixed}
+.intro-map th:first-child{width:72px;text-align:left}.intro-map th{font-size:12px;white-space:nowrap;text-align:center;padding:12px 3px}
+.intro-map td{padding:0}.intro-map tbody th{font-size:16px;color:#26392a;padding-left:7px}.intro-map tbody th small{display:block;font-size:11px;color:#778477}
+.intro-cell{display:flex;align-items:center;justify-content:center;border-radius:8px;text-align:center;min-height:68px;padding:4px;color:#17231b;font-size:10px;font-weight:850;line-height:1.35;border:1px solid rgba(11,15,11,.08)}
+.intro-cell:hover,.intro-cell:focus-visible{outline:3px solid #131c14;outline-offset:2px}
+.intro-year-row[hidden]{display:none!important}
+.intro-summarytable{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:13px;overflow:hidden;border:1px solid #cfdbce}
+.intro-summarytable th,.intro-summarytable td{padding:13px;border-bottom:1px solid #e1e9e1;text-align:left;vertical-align:top}.intro-summarytable th{background:#182219;color:#fff}
+.intro-inline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:20px 0}.intro-pill{font-size:12px;background:#d7f4cb;padding:7px 12px;border-radius:99px;font-weight:900}
+.intro-rankgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.intro-rank[hidden]{display:none!important}
+.air-ref{display:inline-flex;border:1px solid #b8d5b9;border-radius:99px;padding:6px 10px;margin-right:5px;margin-top:4px;font-size:12px;font-weight:850}.air-ref:hover{background:#d8f7c8}
+.intro-search{min-width:260px;padding:12px 16px;border:1px solid #bfcebd;border-radius:10px;background:#fff;font:inherit}
+.intro-comparisons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.intro-comparisons>div{background:#fff;padding:20px;border-radius:14px;border:1px solid #d5ded5}.intro-comparisons b{font-size:17px}.intro-comparisons p{color:#536156;font-size:13px;line-height:1.8}
+.intro-steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}.intro-steps li{padding:19px;background:#fff;border:1px solid #d4dfd3;border-radius:14px;font-size:13px;font-weight:800}.intro-steps li b{display:block;color:#376342;font-size:23px;line-height:1.6}
+.intro-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.intro-checks label{background:#fff;border:1px solid #dae2d9;padding:13px 15px;border-radius:11px;display:flex;align-items:center;gap:11px;font-size:13px;font-weight:700;cursor:pointer}.intro-checks input{width:18px;height:18px;accent-color:#354936;flex:none}
+.intro-complete{margin:20px 0;font-weight:900;font-size:20px}.intro-meter{height:10px;border-radius:99px;background:#dce6d9;overflow:hidden}.intro-meter>div{height:100%;background:#84ca45;width:0;transition:width .2s}
+.intro-sources{list-style:none;padding:0;line-height:2}.intro-sources a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:840px){.intro-posline{grid-template-columns:repeat(5,1fr)}.intro-barline{grid-template-columns:160px 1fr 35px;gap:7px}.intro-comparisons{grid-template-columns:1fr}.intro-steps{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:580px){.intro-highlights{grid-template-columns:1fr 1fr}.intro-highlights article:last-child{grid-column:1/-1}.intro-posline{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.intro-pos{padding:12px 3px;min-height:100px}.intro-pos span{font-size:10px}.intro-barline{grid-template-columns:120px 1fr 31px;gap:4px}.intro-barname{font-size:11px;gap:5px}.intro-bar{padding:12px}.intro-rankgrid,.intro-flexnote,.intro-checks{grid-template-columns:1fr}.intro-steps{grid-template-columns:1fr 1fr}.intro-comparisons{grid-template-columns:1fr}.intro-summarytable{font-size:12px}.intro-summarytable th,.intro-summarytable td{padding:9px}.intro-warning{padding:18px}}
+</style></head><body><header class="header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="mark">CQL</span><span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span></a><nav class="nav"><a href="index.html#qualifications">QUALIFICATIONS</a><a href="pollution.html">POLLUTION</a><a href="profile.html">ABOUT</a></nav></div></header><main>
+<div class="a-hero"><div class="wrap"><div class="a-eyebrow"><span class="dot"></span> EXAM ANALYSIS / AIR POLLUTION OVERVIEW</div>
+<h1>大気概論。<br><em>過去10年を徹底分析。</em></h1>
+<p>平成28年度〜令和7年度の<strong>全100問</strong>を年度別に整理。問題の主題を1問ずつ確認して作った色分けマップに、元noteのS/Aランク要点と2026年の基準改正情報を統合しました。</p>
+<div class="a-actions"><a class="a-btn dark" href="#yearmap">100問マップを見る ↓</a><a class="a-btn" href="#rank-s">Sランク ↓</a><a class="a-btn" href="#standards">環境基準を比較 ↓</a><a class="a-btn" href="pollution-air.html">大気5科目一覧 ↗</a></div>
+<div class="a-hero-stats"><div class="a-hero-stat"><b>10</b><small>YEARS / H28–R7</small></div><div class="a-hero-stat"><b>100</b><small>QUESTION TOPICS</small></div><div class="a-hero-stat"><b>57<span>%</span></b><small>LAW + STANDARDS / NOTE</small></div></div>
+<p class="a-note" style="color:#b8c9bb">※ 57%は元noteの独自集計（法令30問＋環境基準・大気汚染状況27問）。下記のマップは本ページ独自の7区分で再整理しています。</p></div></div>
+<section class="a-section" id="overview"><div class="wrap"><div class="a-caption">01 / STUDY PRIORITIES</div><h2 class="a-section-title">まず、得点源の重心を知る。</h2>
+<p class="a-lead">元note記事では、法令と環境基準・大気汚染状況の2分野が全体の過半数。暗記する順番を先に決めると、10問の勉強を効率化できます。</p>
+<div class="intro-highlights"><article><strong>30問</strong><span>法令（元note独自集計）</span></article><article><strong>27問</strong><span>環境基準・大気汚染状況（元note独自集計）</span></article><article><strong>57%</strong><span>上記2分野の合計</span></article></div>
+<div class="intro-bar"><b>100問を、本ページの7分野で分類すると</b><div class="intro-barline"><div class="intro-barname"><i style="background:#a7ebba"></i>法令・公害防止制度</div><div class="intro-track"><div style="width:103.33%;background:#a7ebba"></div></div><b>31問</b></div><div class="intro-barline"><div class="intro-barname"><i style="background:#c8ff4d"></i>環境基準・指針値</div><div class="intro-track"><div style="width:43.33%;background:#c8ff4d"></div></div><b>13問</b></div><div class="intro-barline"><div class="intro-barname"><i style="background:#9ddfee"></i>測定結果・達成状況</div><div class="intro-track"><div style="width:40.0%;background:#9ddfee"></div></div><b>12問</b></div><div class="intro-barline"><div class="intro-barname"><i style="background:#ffdb93"></i>排出源・排出統計</div><div class="intro-track"><div style="width:50.0%;background:#ffdb93"></div></div><b>15問</b></div><div class="intro-barline"><div class="intro-barname"><i style="background:#d7c4f2"></i>大気化学・二次生成</div><div class="intro-track"><div style="width:16.67%;background:#d7c4f2"></div></div><b>5問</b></div><div class="intro-barline"><div class="intro-barname"><i style="background:#f0b4c8"></i>温暖化・オゾン層</div><div class="intro-track"><div style="width:40.0%;background:#f0b4c8"></div></div><b>12問</b></div><div class="intro-barline"><div class="intro-barname"><i style="background:#febbb0"></i>健康・植物への影響</div><div class="intro-track"><div style="width:40.0%;background:#febbb0"></div></div><b>12問</b></div><p class="intro-small">本ページのマップは1問を主題1区分に分類しています。元noteの「法令30／環境基準・汚染状況27」とは分類基準が異なるため、数値は一致しない場合があります。</p></div></div></section>
+<section class="a-section alt" id="positions"><div class="wrap"><div class="a-caption">02 / QUESTION POSITION</div><h2 class="a-section-title">出題位置には、傾向がある。</h2><p class="a-lead">各問番号の最多分野を表示。配置を丸暗記するのではなく、下の100問マップで年度差を確認しよう。</p>
+<div class="intro-posline"><div class="intro-pos" style="--tint:#c8ff4d"><b>01</b><span>環境基準</span><small>7/10年</small></div><div class="intro-pos" style="--tint:#a7ebba"><b>02</b><span>法令</span><small>10/10年</small></div><div class="intro-pos" style="--tint:#a7ebba"><b>03</b><span>法令</span><small>8/10年</small></div><div class="intro-pos" style="--tint:#a7ebba"><b>04</b><span>法令</span><small>10/10年</small></div><div class="intro-pos" style="--tint:#9ddfee"><b>05</b><span>測定結果</span><small>8/10年</small></div><div class="intro-pos" style="--tint:#f0b4c8"><b>06</b><span>温暖化</span><small>3/10年</small></div><div class="intro-pos" style="--tint:#f0b4c8"><b>07</b><span>温暖化</span><small>4/10年</small></div><div class="intro-pos" style="--tint:#ffdb93"><b>08</b><span>排出源</span><small>5/10年</small></div><div class="intro-pos" style="--tint:#ffdb93"><b>09</b><span>排出源</span><small>7/10年</small></div><div class="intro-pos" style="--tint:#febbb0"><b>10</b><span>健康</span><small>8/10年</small></div></div><div class="intro-flexnote"><div><b>問1〜4は、制度・規制・基準が中心</b><p>施設の種類、環境基準、排出規制、公害防止組織を区別する。</p></div><div><b>問5〜10は、監視・地球環境・影響も重要</b><p>濃度の推移、反応・排出源、温暖化、人体・植物影響を横断的に学ぶ。</p></div></div></div></section>
+<section class="a-section" id="yearmap"><div class="wrap"><div class="a-caption">03 / ALL 100 QUESTIONS</div><h2 class="a-section-title">10年100問を、ひと目で比較する。</h2>
+<p class="a-lead">H28〜R7の実際の設問テーマを独自の短い言葉で表示。各マスをクリックすると、参考にした外部サイト「やくチキ」の該当問題が別タブで開きます。</p>
+<div class="intro-legendbox"><span class="intro-legend"><i style="background:#a7ebba"></i>法令・公害防止制度</span><span class="intro-legend"><i style="background:#c8ff4d"></i>環境基準・指針値</span><span class="intro-legend"><i style="background:#9ddfee"></i>測定結果・達成状況</span><span class="intro-legend"><i style="background:#ffdb93"></i>排出源・排出統計</span><span class="intro-legend"><i style="background:#d7c4f2"></i>大気化学・二次生成</span><span class="intro-legend"><i style="background:#f0b4c8"></i>温暖化・オゾン層</span><span class="intro-legend"><i style="background:#febbb0"></i>健康・植物への影響</span></div><div class="intro-filter" id="introYearFilters"><button data-year="all" aria-pressed="true" type="button">全年表示</button><button class="la-tab" data-year="R7" aria-pressed="false" type="button">R7</button><button class="la-tab" data-year="R6" aria-pressed="false" type="button">R6</button><button class="la-tab" data-year="R5" aria-pressed="false" type="button">R5</button><button class="la-tab" data-year="R4" aria-pressed="false" type="button">R4</button><button class="la-tab" data-year="R3" aria-pressed="false" type="button">R3</button><button class="la-tab" data-year="R2" aria-pressed="false" type="button">R2</button><button class="la-tab" data-year="R1" aria-pressed="false" type="button">R1</button><button class="la-tab" data-year="H30" aria-pressed="false" type="button">H30</button><button class="la-tab" data-year="H29" aria-pressed="false" type="button">H29</button><button class="la-tab" data-year="H28" aria-pressed="false" type="button">H28</button></div>
+<p class="intro-small">スマートフォンではマップを左右にスクロールできます。色は本ページ独自の分類で、公式の分類ではありません。問題文・選択肢は掲載していません。</p>
+<div class="intro-map-scroll" role="region" aria-label="年度別100問マップ" tabindex="0"><table class="intro-map"><thead><tr><th scope="col">年度</th><th scope="col">問1</th><th scope="col">問2</th><th scope="col">問3</th><th scope="col">問4</th><th scope="col">問5</th><th scope="col">問6</th><th scope="col">問7</th><th scope="col">問8</th><th scope="col">問9</th><th scope="col">問10</th></tr></thead><tbody><tr class="intro-year-row" data-year="R7"><th scope="row">R7<small>2025</small></th><td><a href="https://yaku-tik.com/kougai/r7-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="NO₂環境基準と達成期間・別サイトで設問を見る" aria-label="R7 問1 NO₂環境基準と達成期間（やくチキに移動）"><span>NO₂環境基準と達成期間</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙施設設置の届出手続・別サイトで設問を見る" aria-label="R7 問2 ばい煙施設設置の届出手続（やくチキに移動）"><span>ばい煙施設設置の届出手続</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="VOC排出抑制制度・別サイトで設問を見る" aria-label="R7 問3 VOC排出抑制制度（やくチキに移動）"><span>VOC排出抑制制度</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="一般粉じん施設の規模要件・別サイトで設問を見る" aria-label="R7 問4 一般粉じん施設の規模要件（やくチキに移動）"><span>一般粉じん施設の規模要件</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="主要汚染物質の環境基準達成率・別サイトで設問を見る" aria-label="R7 問5 主要汚染物質の環境基準達成率（やくチキに移動）"><span>主要汚染物質の環境基準達成率</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-06/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="フロン類の反応性と大気寿命・別サイトで設問を見る" aria-label="R7 問6 フロン類の反応性と大気寿命（やくチキに移動）"><span>フロン類の反応性と大気寿命</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-07/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="CO₂・CH₄・N₂O濃度の推移・別サイトで設問を見る" aria-label="R7 問7 CO₂・CH₄・N₂O濃度の推移（やくチキに移動）"><span>CO₂・CH₄・N₂O濃度の推移</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-08/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="産業別ばい煙排出量・別サイトで設問を見る" aria-label="R7 問8 産業別ばい煙排出量（やくチキに移動）"><span>産業別ばい煙排出量</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="VOC排出源と成分・別サイトで設問を見る" aria-label="R7 問9 VOC排出源と成分（やくチキに移動）"><span>VOC排出源と成分</span></a></td><td><a href="https://yaku-tik.com/kougai/r7-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="粒子状物質の肺内沈着・別サイトで設問を見る" aria-label="R7 問10 粒子状物質の肺内沈着（やくチキに移動）"><span>粒子状物質の肺内沈着</span></a></td></tr><tr class="intro-year-row" data-year="R6"><th scope="row">R6<small>2024</small></th><td><a href="https://yaku-tik.com/kougai/r6-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="光化学Oxの旧環境基準・別サイトで設問を見る" aria-label="R6 問1 光化学Oxの旧環境基準（やくチキに移動）"><span>光化学Oxの旧環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="水銀排出施設の制度・別サイトで設問を見る" aria-label="R6 問2 水銀排出施設の制度（やくチキに移動）"><span>水銀排出施設の制度</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙・特定粉じんの法規制・別サイトで設問を見る" aria-label="R6 問3 ばい煙・特定粉じんの法規制（やくチキに移動）"><span>ばい煙・特定粉じんの法規制</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="大気関係の施設該当要件・別サイトで設問を見る" aria-label="R6 問4 大気関係の施設該当要件（やくチキに移動）"><span>大気関係の施設該当要件</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質の観測値・別サイトで設問を見る" aria-label="R6 問5 有害大気汚染物質の観測値（やくチキに移動）"><span>有害大気汚染物質の観測値</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-06/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="フロン類の濃度変化・別サイトで設問を見る" aria-label="R6 問6 フロン類の濃度変化（やくチキに移動）"><span>フロン類の濃度変化</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-07/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="人為起源CO₂の収支・別サイトで設問を見る" aria-label="R6 問7 人為起源CO₂の収支（やくチキに移動）"><span>人為起源CO₂の収支</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-08/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="排出工程と汚染物質の対応・別サイトで設問を見る" aria-label="R6 問8 排出工程と汚染物質の対応（やくチキに移動）"><span>排出工程と汚染物質の対応</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-09/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質の発がん性・別サイトで設問を見る" aria-label="R6 問9 有害大気汚染物質の発がん性（やくチキに移動）"><span>有害大気汚染物質の発がん性</span></a></td><td><a href="https://yaku-tik.com/kougai/r6-taigai-10/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="規制対象施設の全国件数・別サイトで設問を見る" aria-label="R6 問10 規制対象施設の全国件数（やくチキに移動）"><span>規制対象施設の全国件数</span></a></td></tr><tr class="intro-year-row" data-year="R5"><th scope="row">R5<small>2023</small></th><td><a href="https://yaku-tik.com/kougai/r5-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質4種類の基準・別サイトで設問を見る" aria-label="R5 問1 有害大気汚染物質4種類の基準（やくチキに移動）"><span>有害大気汚染物質4種類の基準</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙排出基準の区分・別サイトで設問を見る" aria-label="R5 問2 ばい煙排出基準の区分（やくチキに移動）"><span>ばい煙排出基準の区分</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="事故時の応急措置・別サイトで設問を見る" aria-label="R5 問3 事故時の応急措置（やくチキに移動）"><span>事故時の応急措置</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="一般粉じん発生施設の要件・別サイトで設問を見る" aria-label="R5 問4 一般粉じん発生施設の要件（やくチキに移動）"><span>一般粉じん発生施設の要件</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="Ox・PM2.5の達成状況・別サイトで設問を見る" aria-label="R5 問5 Ox・PM2.5の達成状況（やくチキに移動）"><span>Ox・PM2.5の達成状況</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-06/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="ハロカーボンの観測濃度・別サイトで設問を見る" aria-label="R5 問6 ハロカーボンの観測濃度（やくチキに移動）"><span>ハロカーボンの観測濃度</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-07/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="温室効果ガスと温暖化係数・別サイトで設問を見る" aria-label="R5 問7 温室効果ガスと温暖化係数（やくチキに移動）"><span>温室効果ガスと温暖化係数</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-08/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="SOxの業種別排出状況・別サイトで設問を見る" aria-label="R5 問8 SOxの業種別排出状況（やくチキに移動）"><span>SOxの業種別排出状況</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="NOxの主な発生源・別サイトで設問を見る" aria-label="R5 問9 NOxの主な発生源（やくチキに移動）"><span>NOxの主な発生源</span></a></td><td><a href="https://yaku-tik.com/kougai/r5-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="大気汚染物質による植物症状・別サイトで設問を見る" aria-label="R5 問10 大気汚染物質による植物症状（やくチキに移動）"><span>大気汚染物質による植物症状</span></a></td></tr><tr class="intro-year-row" data-year="R4"><th scope="row">R4<small>2022</small></th><td><a href="https://yaku-tik.com/kougai/r4-taigai-01/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="環境基準の達成状況・経年比較・別サイトで設問を見る" aria-label="R4 問1 環境基準の達成状況・経年比較（やくチキに移動）"><span>環境基準の達成状況・経年比較</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙排出規制の適用条件・別サイトで設問を見る" aria-label="R4 問2 ばい煙排出規制の適用条件（やくチキに移動）"><span>ばい煙排出規制の適用条件</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="事故に関係する特定物質・別サイトで設問を見る" aria-label="R4 問3 事故に関係する特定物質（やくチキに移動）"><span>事故に関係する特定物質</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="公害防止管理者の法定業務・別サイトで設問を見る" aria-label="R4 問4 公害防止管理者の法定業務（やくチキに移動）"><span>公害防止管理者の法定業務</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-05/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="PM2.5の環境基準と達成率・別サイトで設問を見る" aria-label="R4 問5 PM2.5の環境基準と達成率（やくチキに移動）"><span>PM2.5の環境基準と達成率</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-06/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質の環境基準・別サイトで設問を見る" aria-label="R4 問6 有害大気汚染物質の環境基準（やくチキに移動）"><span>有害大気汚染物質の環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-07/" class="intro-cell" style="background:#d7c4f2" target="_blank" rel="noopener noreferrer" title="酸性雨と大気中の化学反応・別サイトで設問を見る" aria-label="R4 問7 酸性雨と大気中の化学反応（やくチキに移動）"><span>酸性雨と大気中の化学反応</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-08/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="ばい煙発生施設の全国統計・別サイトで設問を見る" aria-label="R4 問8 ばい煙発生施設の全国統計（やくチキに移動）"><span>ばい煙発生施設の全国統計</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="工程と排出物質の対応・別サイトで設問を見る" aria-label="R4 問9 工程と排出物質の対応（やくチキに移動）"><span>工程と排出物質の対応</span></a></td><td><a href="https://yaku-tik.com/kougai/r4-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="SO₂に敏感な植物の種類・別サイトで設問を見る" aria-label="R4 問10 SO₂に敏感な植物の種類（やくチキに移動）"><span>SO₂に敏感な植物の種類</span></a></td></tr><tr class="intro-year-row" data-year="R3"><th scope="row">R3<small>2021</small></th><td><a href="https://yaku-tik.com/kougai/r3-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="主要物質の環境基準値・別サイトで設問を見る" aria-label="R3 問1 主要物質の環境基準値（やくチキに移動）"><span>主要物質の環境基準値</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="大気汚染防止法の目的・別サイトで設問を見る" aria-label="R3 問2 大気汚染防止法の目的（やくチキに移動）"><span>大気汚染防止法の目的</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="SOx総量規制の考え方・別サイトで設問を見る" aria-label="R3 問3 SOx総量規制の考え方（やくチキに移動）"><span>SOx総量規制の考え方</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="公害防止組織の対象施設・別サイトで設問を見る" aria-label="R3 問4 公害防止組織の対象施設（やくチキに移動）"><span>公害防止組織の対象施設</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="一般局・自排局の測定・別サイトで設問を見る" aria-label="R3 問5 一般局・自排局の測定（やくチキに移動）"><span>一般局・自排局の測定</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-06/" class="intro-cell" style="background:#d7c4f2" target="_blank" rel="noopener noreferrer" title="NOx・VOCからのオゾン生成・別サイトで設問を見る" aria-label="R3 問6 NOx・VOCからのオゾン生成（やくチキに移動）"><span>NOx・VOCからのオゾン生成</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-07/" class="intro-cell" style="background:#d7c4f2" target="_blank" rel="noopener noreferrer" title="酸性雨と生成反応・別サイトで設問を見る" aria-label="R3 問7 酸性雨と生成反応（やくチキに移動）"><span>酸性雨と生成反応</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-08/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="温室効果と放射強制力・別サイトで設問を見る" aria-label="R3 問8 温室効果と放射強制力（やくチキに移動）"><span>温室効果と放射強制力</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="事業場別ばい煙排出統計・別サイトで設問を見る" aria-label="R3 問9 事業場別ばい煙排出統計（やくチキに移動）"><span>事業場別ばい煙排出統計</span></a></td><td><a href="https://yaku-tik.com/kougai/r3-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="植物に影響する大気汚染物質・別サイトで設問を見る" aria-label="R3 問10 植物に影響する大気汚染物質（やくチキに移動）"><span>植物に影響する大気汚染物質</span></a></td></tr><tr class="intro-year-row" data-year="R2"><th scope="row">R2<small>2020</small></th><td><a href="https://yaku-tik.com/kougai/r2-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="PM2.5の環境基準・別サイトで設問を見る" aria-label="R2 問1 PM2.5の環境基準（やくチキに移動）"><span>PM2.5の環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="一般粉じん発生施設の届出・別サイトで設問を見る" aria-label="R2 問2 一般粉じん発生施設の届出（やくチキに移動）"><span>一般粉じん発生施設の届出</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質対策の制度・別サイトで設問を見る" aria-label="R2 問3 有害大気汚染物質対策の制度（やくチキに移動）"><span>有害大気汚染物質対策の制度</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙発生施設の法的区分・別サイトで設問を見る" aria-label="R2 問4 ばい煙発生施設の法的区分（やくチキに移動）"><span>ばい煙発生施設の法的区分</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-05/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="水銀排出の規制・測定・別サイトで設問を見る" aria-label="R2 問5 水銀排出の規制・測定（やくチキに移動）"><span>水銀排出の規制・測定</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-06/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="大気環境基準の数値比較・別サイトで設問を見る" aria-label="R2 問6 大気環境基準の数値比較（やくチキに移動）"><span>大気環境基準の数値比較</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-07/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="環境基準達成率の統計・別サイトで設問を見る" aria-label="R2 問7 環境基準達成率の統計（やくチキに移動）"><span>環境基準達成率の統計</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-08/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="温室効果ガスとGWP・別サイトで設問を見る" aria-label="R2 問8 温室効果ガスとGWP（やくチキに移動）"><span>温室効果ガスとGWP</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="製造工程と排出源の対応・別サイトで設問を見る" aria-label="R2 問9 製造工程と排出源の対応（やくチキに移動）"><span>製造工程と排出源の対応</span></a></td><td><a href="https://yaku-tik.com/kougai/r2-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="大気汚染物質による人体影響・別サイトで設問を見る" aria-label="R2 問10 大気汚染物質による人体影響（やくチキに移動）"><span>大気汚染物質による人体影響</span></a></td></tr><tr class="intro-year-row" data-year="R1"><th scope="row">R1<small>2019</small></th><td><a href="https://yaku-tik.com/kougai/r1-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="NO₂の環境基準・別サイトで設問を見る" aria-label="R1 問1 NO₂の環境基準（やくチキに移動）"><span>NO₂の環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="常時監視と測定義務・別サイトで設問を見る" aria-label="R1 問2 常時監視と測定義務（やくチキに移動）"><span>常時監視と測定義務</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙排出改善命令・別サイトで設問を見る" aria-label="R1 問3 ばい煙排出改善命令（やくチキに移動）"><span>ばい煙排出改善命令</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="一般粉じん施設の規模基準・別サイトで設問を見る" aria-label="R1 問4 一般粉じん施設の規模基準（やくチキに移動）"><span>一般粉じん施設の規模基準</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="光化学Oxの達成状況・別サイトで設問を見る" aria-label="R1 問5 光化学Oxの達成状況（やくチキに移動）"><span>光化学Oxの達成状況</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-06/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="PM2.5の監視・達成状況・別サイトで設問を見る" aria-label="R1 問6 PM2.5の監視・達成状況（やくチキに移動）"><span>PM2.5の監視・達成状況</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-07/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質の測定結果・別サイトで設問を見る" aria-label="R1 問7 有害大気汚染物質の測定結果（やくチキに移動）"><span>有害大気汚染物質の測定結果</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-08/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="成層圏オゾン破壊物質の経年変化・別サイトで設問を見る" aria-label="R1 問8 成層圏オゾン破壊物質の経年変化（やくチキに移動）"><span>成層圏オゾン破壊物質の経年変化</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="規制施設数とVOC排出状況・別サイトで設問を見る" aria-label="R1 問9 規制施設数とVOC排出状況（やくチキに移動）"><span>規制施設数とVOC排出状況</span></a></td><td><a href="https://yaku-tik.com/kougai/r1-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="石綿と健康影響・別サイトで設問を見る" aria-label="R1 問10 石綿と健康影響（やくチキに移動）"><span>石綿と健康影響</span></a></td></tr><tr class="intro-year-row" data-year="H30"><th scope="row">H30<small>2018</small></th><td><a href="https://yaku-tik.com/kougai/h30-taigai-01/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙の排出規制・別サイトで設問を見る" aria-label="H30 問1 ばい煙の排出規制（やくチキに移動）"><span>ばい煙の排出規制</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="特定物質の種類・別サイトで設問を見る" aria-label="H30 問2 特定物質の種類（やくチキに移動）"><span>特定物質の種類</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-03/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="SPMの環境基準・別サイトで設問を見る" aria-label="H30 問3 SPMの環境基準（やくチキに移動）"><span>SPMの環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="規制対象施設の種類・規模・別サイトで設問を見る" aria-label="H30 問4 規制対象施設の種類・規模（やくチキに移動）"><span>規制対象施設の種類・規模</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="環境基準達成率の年次状況・別サイトで設問を見る" aria-label="H30 問5 環境基準達成率の年次状況（やくチキに移動）"><span>環境基準達成率の年次状況</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-06/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="NOxの排出源と動向・別サイトで設問を見る" aria-label="H30 問6 NOxの排出源と動向（やくチキに移動）"><span>NOxの排出源と動向</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-07/" class="intro-cell" style="background:#d7c4f2" target="_blank" rel="noopener noreferrer" title="自然起源物質と人工化合物・別サイトで設問を見る" aria-label="H30 問7 自然起源物質と人工化合物（やくチキに移動）"><span>自然起源物質と人工化合物</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-08/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="オゾン層破壊とフロン類・別サイトで設問を見る" aria-label="H30 問8 オゾン層破壊とフロン類（やくチキに移動）"><span>オゾン層破壊とフロン類</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-09/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="健康影響とリスク評価・別サイトで設問を見る" aria-label="H30 問9 健康影響とリスク評価（やくチキに移動）"><span>健康影響とリスク評価</span></a></td><td><a href="https://yaku-tik.com/kougai/h30-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="オゾンに弱い植物・別サイトで設問を見る" aria-label="H30 問10 オゾンに弱い植物（やくチキに移動）"><span>オゾンに弱い植物</span></a></td></tr><tr class="intro-year-row" data-year="H29"><th scope="row">H29<small>2017</small></th><td><a href="https://yaku-tik.com/kougai/h29-taigai-01/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙排出基準・別サイトで設問を見る" aria-label="H29 問1 ばい煙排出基準（やくチキに移動）"><span>ばい煙排出基準</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="一般粉じん発生施設の要件・別サイトで設問を見る" aria-label="H29 問2 一般粉じん発生施設の要件（やくチキに移動）"><span>一般粉じん発生施設の要件</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-03/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="ベンゼンの環境基準・別サイトで設問を見る" aria-label="H29 問3 ベンゼンの環境基準（やくチキに移動）"><span>ベンゼンの環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="公害防止管理者の業務・別サイトで設問を見る" aria-label="H29 問4 公害防止管理者の業務（やくチキに移動）"><span>公害防止管理者の業務</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="Ox・PM2.5の達成状況・別サイトで設問を見る" aria-label="H29 問5 Ox・PM2.5の達成状況（やくチキに移動）"><span>Ox・PM2.5の達成状況</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-06/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="有害大気汚染物質の基準値・別サイトで設問を見る" aria-label="H29 問6 有害大気汚染物質の基準値（やくチキに移動）"><span>有害大気汚染物質の基準値</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-07/" class="intro-cell" style="background:#d7c4f2" target="_blank" rel="noopener noreferrer" title="酸性雨と沈着過程・別サイトで設問を見る" aria-label="H29 問7 酸性雨と沈着過程（やくチキに移動）"><span>酸性雨と沈着過程</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-08/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="フロン類の大気中濃度・別サイトで設問を見る" aria-label="H29 問8 フロン類の大気中濃度（やくチキに移動）"><span>フロン類の大気中濃度</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-09/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="ばい煙排出施設の種類・別サイトで設問を見る" aria-label="H29 問9 ばい煙排出施設の種類（やくチキに移動）"><span>ばい煙排出施設の種類</span></a></td><td><a href="https://yaku-tik.com/kougai/h29-taigai-10/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="粒子状物質の呼吸器影響・別サイトで設問を見る" aria-label="H29 問10 粒子状物質の呼吸器影響（やくチキに移動）"><span>粒子状物質の呼吸器影響</span></a></td></tr><tr class="intro-year-row" data-year="H28"><th scope="row">H28<small>2016</small></th><td><a href="https://yaku-tik.com/kougai/h28-taigai-01/" class="intro-cell" style="background:#c8ff4d" target="_blank" rel="noopener noreferrer" title="光化学Oxの旧環境基準・別サイトで設問を見る" aria-label="H28 問1 光化学Oxの旧環境基準（やくチキに移動）"><span>光化学Oxの旧環境基準</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-02/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="ばい煙排出基準の種類・別サイトで設問を見る" aria-label="H28 問2 ばい煙排出基準の種類（やくチキに移動）"><span>ばい煙排出基準の種類</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-03/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="事故に関係する特定物質・別サイトで設問を見る" aria-label="H28 問3 事故に関係する特定物質（やくチキに移動）"><span>事故に関係する特定物質</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-04/" class="intro-cell" style="background:#a7ebba" target="_blank" rel="noopener noreferrer" title="公害防止管理者の法定業務・別サイトで設問を見る" aria-label="H28 問4 公害防止管理者の法定業務（やくチキに移動）"><span>公害防止管理者の法定業務</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-05/" class="intro-cell" style="background:#9ddfee" target="_blank" rel="noopener noreferrer" title="環境基準達成率の読み方・別サイトで設問を見る" aria-label="H28 問5 環境基準達成率の読み方（やくチキに移動）"><span>環境基準達成率の読み方</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-06/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="水銀化合物の有害性と指針・別サイトで設問を見る" aria-label="H28 問6 水銀化合物の有害性と指針（やくチキに移動）"><span>水銀化合物の有害性と指針</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-07/" class="intro-cell" style="background:#f0b4c8" target="_blank" rel="noopener noreferrer" title="温暖化係数とCO₂濃度・別サイトで設問を見る" aria-label="H28 問7 温暖化係数とCO₂濃度（やくチキに移動）"><span>温暖化係数とCO₂濃度</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-08/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="SOx排出量と発生源・別サイトで設問を見る" aria-label="H28 問8 SOx排出量と発生源（やくチキに移動）"><span>SOx排出量と発生源</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-09/" class="intro-cell" style="background:#febbb0" target="_blank" rel="noopener noreferrer" title="植物影響の典型症状・別サイトで設問を見る" aria-label="H28 問9 植物影響の典型症状（やくチキに移動）"><span>植物影響の典型症状</span></a></td><td><a href="https://yaku-tik.com/kougai/h28-taigai-10/" class="intro-cell" style="background:#ffdb93" target="_blank" rel="noopener noreferrer" title="VOC規制施設の設置件数・別サイトで設問を見る" aria-label="H28 問10 VOC規制施設の設置件数（やくチキに移動）"><span>VOC規制施設の設置件数</span></a></td></tr></tbody></table></div>
+<div class="intro-warning"><h3>外部サイトへのリンクについて</h3><p>各設問の分類は「化学資格研究所」による独自編集です。各マスは外部サイト「やくチキ」の問題解説を新しいタブで開きます。両サイトに提携関係はありません。</p></div></div></section>
+<section class="a-section alt" id="rank-s"><div class="wrap"><div class="a-caption">04 / PRIORITY S</div><h2 class="a-section-title">Sランク｜まず6つを固める。</h2>
+<p class="a-lead">法令と環境基準を最優先に、元noteのSランク要点を6つの学習テーマに整理。元noteの「S＝20%以上」は<strong>大分類の出題割合</strong>を指し、以下の各カードが個別に20%以上出題されたという意味ではありません。</p>
+<div class="a-toolbar"><input id="introSearch" class="intro-search" type="search" aria-label="S/Aテーマを検索" placeholder="重要テーマを検索（例：VOC、Ox、粉じん）" /></div>
+<div class="intro-rankgrid" id="introRankGrid"><article class="a-rankcard intro-rank" data-cat="環境基準" data-search="大気環境基準の基本数値 環境基準 so₂・co・spm・pm2.5の「評価時間」と「数値」を一緒に覚える。 so₂：1日平均0.04 ppm以下、かつ1時間値0.1 ppm以下。 co：1日平均10 ppm以下、かつ8時間平均20 ppm以下。 spm：1日平均0.10 mg/m³以下、かつ1時間値0.20 mg/m³以下。 pm2.5：年平均15 µg/m³以下、かつ日平均35 µg/m³以下。 no₂：1日平均が0.04～0.06 ppmのゾーン内、またはそれ以下。">
+ <div class="a-rankcard-top"><span class="a-sid">S1</span><span class="a-category">環境基準</span></div><h3>大気環境基準の基本数値</h3><p class="hint">SO₂・CO・SPM・PM2.5の「評価時間」と「数値」を一緒に覚える。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>SO₂：1日平均0.04 ppm以下、かつ1時間値0.1 ppm以下。</li><li>CO：1日平均10 ppm以下、かつ8時間平均20 ppm以下。</li><li>SPM：1日平均0.10 mg/m³以下、かつ1時間値0.20 mg/m³以下。</li><li>PM2.5：年平均15 µg/m³以下、かつ日平均35 µg/m³以下。</li><li>NO₂：1日平均が0.04～0.06 ppmのゾーン内、またはそれ以下。</li></ul><p class="a-caution">単位と平均時間を交換しない。Oxは2026年改正を別枠で確認する。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r7-taigai-01/" target="_blank" rel="noopener noreferrer" class="air-ref">R7問1 ↗</a><a href="https://yaku-tik.com/kougai/h30-taigai-03/" target="_blank" rel="noopener noreferrer" class="air-ref">H30問3 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="環境基準" data-search="有害大気汚染物質4種の環境基準 環境基準 覚える数値は4物質×年平均。 ベンゼン：3 µg/m³以下（年平均）。 トリクロロエチレン：130 µg/m³以下（年平均）。 テトラクロロエチレン：200 µg/m³以下（年平均）。 ジクロロメタン：150 µg/m³以下（年平均）。">
+ <div class="a-rankcard-top"><span class="a-sid">S2</span><span class="a-category">環境基準</span></div><h3>有害大気汚染物質4種の環境基準</h3><p class="hint">覚える数値は4物質×年平均。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>ベンゼン：3 µg/m³以下（年平均）。</li><li>トリクロロエチレン：130 µg/m³以下（年平均）。</li><li>テトラクロロエチレン：200 µg/m³以下（年平均）。</li><li>ジクロロメタン：150 µg/m³以下（年平均）。</li></ul><p class="a-caution">3・130・200・150。すべて年平均、単位はµg/m³。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r5-taigai-01/" target="_blank" rel="noopener noreferrer" class="air-ref">R5問1 ↗</a><a href="https://yaku-tik.com/kougai/r4-taigai-06/" target="_blank" rel="noopener noreferrer" class="air-ref">R4問6 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="監視・統計" data-search="環境基準の達成状況 監視・統計 達成率の「高い・低い」という傾向を押さえる。 過去のox旧基準の達成率は非常に低いことが多い。 co・no₂・so₂・spmは多くの年に高い達成率を示す。 pm2.5の達成状況は年によって変動する。 一般環境大気測定局と自動車排出ガス測定局を区別する。">
+ <div class="a-rankcard-top"><span class="a-sid">S3</span><span class="a-category">監視・統計</span></div><h3>環境基準の達成状況</h3><p class="hint">達成率の「高い・低い」という傾向を押さえる。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>過去のOx旧基準の達成率は非常に低いことが多い。</li><li>CO・NO₂・SO₂・SPMは多くの年に高い達成率を示す。</li><li>PM2.5の達成状況は年によって変動する。</li><li>一般環境大気測定局と自動車排出ガス測定局を区別する。</li></ul><p class="a-caution">2026年からの新Ox基準の達成率を旧基準の数字と直接比べない。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/h28-taigai-05/" target="_blank" rel="noopener noreferrer" class="air-ref">H28問5 ↗</a><a href="https://yaku-tik.com/kougai/r7-taigai-05/" target="_blank" rel="noopener noreferrer" class="air-ref">R7問5 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="法令・制度" data-search="公害防止管理者の7つの業務 法令・制度 法律上の「操作・点検・測定・応急」をセットで理解する。 燃料・原材料の検査。 ばい煙発生施設の点検。 ばい煙処理施設と附属設備の操作・点検・補修。 ばい煙量・濃度の測定、結果の記録。 測定機器の点検・補修。 特定施設の事故時の応急措置。 緊急時の排出削減や施設使用制限など。">
+ <div class="a-rankcard-top"><span class="a-sid">S4</span><span class="a-category">法令・制度</span></div><h3>公害防止管理者の7つの業務</h3><p class="hint">法律上の「操作・点検・測定・応急」をセットで理解する。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>燃料・原材料の検査。</li><li>ばい煙発生施設の点検。</li><li>ばい煙処理施設と附属設備の操作・点検・補修。</li><li>ばい煙量・濃度の測定、結果の記録。</li><li>測定機器の点検・補修。</li><li>特定施設の事故時の応急措置。</li><li>緊急時の排出削減や施設使用制限など。</li></ul><p class="a-caution">設備の新設・配置改善と、法定の管理業務を混同しない。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/h28-taigai-04/" target="_blank" rel="noopener noreferrer" class="air-ref">H28問4 ↗</a><a href="https://yaku-tik.com/kougai/r4-taigai-04/" target="_blank" rel="noopener noreferrer" class="air-ref">R4問4 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="法令・制度" data-search="一般粉じん・特定粉じん施設 法令・制度 施設種類と規模の組合せを覚える。 コークス炉：原料処理能力50 t/日以上。 鉱物等の堆積場：面積1,000 m²以上。 ベルトコンベア：ベルト幅75 cm以上。 バケットコンベア：バケット容積0.03 m³以上。 破砕機・摩砕機：原動機定格出力75 kw以上。 ふるい：原動機定格出力15 kw以上。">
+ <div class="a-rankcard-top"><span class="a-sid">S5</span><span class="a-category">法令・制度</span></div><h3>一般粉じん・特定粉じん施設</h3><p class="hint">施設種類と規模の組合せを覚える。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>コークス炉：原料処理能力50 t/日以上。</li><li>鉱物等の堆積場：面積1,000 m²以上。</li><li>ベルトコンベア：ベルト幅75 cm以上。</li><li>バケットコンベア：バケット容積0.03 m³以上。</li><li>破砕機・摩砕機：原動機定格出力75 kW以上。</li><li>ふるい：原動機定格出力15 kW以上。</li></ul><p class="a-caution">特定粉じんとして石綿（アスベスト）も区別する。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r7-taigai-04/" target="_blank" rel="noopener noreferrer" class="air-ref">R7問4 ↗</a><a href="https://yaku-tik.com/kougai/h29-taigai-02/" target="_blank" rel="noopener noreferrer" class="air-ref">H29問2 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="法令・制度" data-search="ばい煙排出規制と事故時対応 法令・制度 sox・ばいじん・有害物質では規制の考え方が異なる。 soxの排出基準：地域ごとのk値と補正した排出口高さを使う規制方式。 ばいじん：施設の種類・規模などで濃度基準を設定する。 有害物質：対象物質や対象施設の種類に応じた基準を区別する。 施設設置時の届出と、特定物質の事故時対応を分けて覚える。">
+ <div class="a-rankcard-top"><span class="a-sid">S6</span><span class="a-category">法令・制度</span></div><h3>ばい煙排出規制と事故時対応</h3><p class="hint">SOx・ばいじん・有害物質では規制の考え方が異なる。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>SOxの排出基準：地域ごとのK値と補正した排出口高さを使う規制方式。</li><li>ばいじん：施設の種類・規模などで濃度基準を設定する。</li><li>有害物質：対象物質や対象施設の種類に応じた基準を区別する。</li><li>施設設置時の届出と、特定物質の事故時対応を分けて覚える。</li></ul><p class="a-caution">「施設種類」「規模」「地域」「排出口高さ」を問題ごとに確認する。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/h28-taigai-02/" target="_blank" rel="noopener noreferrer" class="air-ref">H28問2 ↗</a><a href="https://yaku-tik.com/kougai/r5-taigai-03/" target="_blank" rel="noopener noreferrer" class="air-ref">R5問3 ↗</a></div></div></details></article></div></div></section>
+<section class="a-section" id="rank-a"><div class="wrap"><div class="a-caption">05 / PRIORITY A</div><h2 class="a-section-title">Aランク｜周辺5テーマを押さえる。</h2>
+<p class="a-lead">温暖化、健康影響、PM2.5、植物影響などを重要ポイント中心に整理。問題ごとの細かな数値・植物種は必要に応じて過去問で確認しよう。</p>
+<div class="intro-rankgrid" id="introRankGridA"><article class="a-rankcard intro-rank" data-cat="温暖化・オゾン層" data-search="温室効果ガスとオゾン層破壊物質 温暖化・オゾン層 co₂基準のgwpと、オゾン層破壊の有無を区別する。 温室効果ガスにはco₂、ch₄、n₂o、hfc、pfc、sf₆、nf₃など。 温暖化係数（gwp）は、同じ質量での温暖化寄与をco₂＝1として比較する指標。 cfc・hcfcはオゾン層破壊に関係し、hfcは塩素を含まない。 大気中濃度や排出量の数値は観測年度・対象ガスを確認する。">
+ <div class="a-rankcard-top"><span class="a-sid">A1</span><span class="a-category">温暖化・オゾン層</span></div><h3>温室効果ガスとオゾン層破壊物質</h3><p class="hint">CO₂基準のGWPと、オゾン層破壊の有無を区別する。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>温室効果ガスにはCO₂、CH₄、N₂O、HFC、PFC、SF₆、NF₃など。</li><li>温暖化係数（GWP）は、同じ質量での温暖化寄与をCO₂＝1として比較する指標。</li><li>CFC・HCFCはオゾン層破壊に関係し、HFCは塩素を含まない。</li><li>大気中濃度や排出量の数値は観測年度・対象ガスを確認する。</li></ul><p class="a-caution">オゾン層破壊と温室効果は別の評価軸。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r7-taigai-07/" target="_blank" rel="noopener noreferrer" class="air-ref">R7問7 ↗</a><a href="https://yaku-tik.com/kougai/h28-taigai-07/" target="_blank" rel="noopener noreferrer" class="air-ref">H28問7 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="人体影響" data-search="健康影響と物質ごとの作用 人体影響 coとヘモグロビン、so₂・no₂と呼吸器への刺激。 coはヘモグロビンと強く結合し、酸素運搬を妨げる。 so₂やno₂は呼吸器への刺激・障害が重要。 オゾンなどの光化学oxは眼・鼻・のど等を刺激する。 石綿などの粒子状物質は吸入と長期影響を区別する。">
+ <div class="a-rankcard-top"><span class="a-sid">A2</span><span class="a-category">人体影響</span></div><h3>健康影響と物質ごとの作用</h3><p class="hint">COとヘモグロビン、SO₂・NO₂と呼吸器への刺激。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>COはヘモグロビンと強く結合し、酸素運搬を妨げる。</li><li>SO₂やNO₂は呼吸器への刺激・障害が重要。</li><li>オゾンなどの光化学Oxは眼・鼻・のど等を刺激する。</li><li>石綿などの粒子状物質は吸入と長期影響を区別する。</li></ul><p class="a-caution">原因物質と作用部位を1対1で暗記する。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r2-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">R2問10 ↗</a><a href="https://yaku-tik.com/kougai/r1-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">R1問10 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="微小粒子" data-search="pm2.5と二次粒子生成 微小粒子 粒径と発生源、二次生成を関連付ける。 pm2.5は空気動力学径が概ね2.5 µm以下の粒子状物質。 硫酸塩・硝酸塩・二次有機エアロゾルは前駆ガスから生成することがある。 一次粒子は燃焼や機械的発じんなどから直接排出される。 粒径が小さいほど呼吸器深部への到達が問題となる。">
+ <div class="a-rankcard-top"><span class="a-sid">A3</span><span class="a-category">微小粒子</span></div><h3>PM2.5と二次粒子生成</h3><p class="hint">粒径と発生源、二次生成を関連付ける。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>PM2.5は空気動力学径が概ね2.5 µm以下の粒子状物質。</li><li>硫酸塩・硝酸塩・二次有機エアロゾルは前駆ガスから生成することがある。</li><li>一次粒子は燃焼や機械的発じんなどから直接排出される。</li><li>粒径が小さいほど呼吸器深部への到達が問題となる。</li></ul><p class="a-caution">「直接排出＝一次」「大気中で生成＝二次」。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/h29-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">H29問10 ↗</a><a href="https://yaku-tik.com/kougai/r7-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">R7問10 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="植物影響" data-search="植物への毒性の強さ 植物影響 o₃・pan・hf・cl₂・エチレンの影響を比較する。 オゾンやpanなどは比較的低濃度でも植物に影響する。 so₂やno₂も濃度と暴露条件により葉への障害を起こす。 植物の種類や成長段階によって感受性が変わる。">
+ <div class="a-rankcard-top"><span class="a-sid">A4</span><span class="a-category">植物影響</span></div><h3>植物への毒性の強さ</h3><p class="hint">O₃・PAN・HF・Cl₂・エチレンの影響を比較する。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>オゾンやPANなどは比較的低濃度でも植物に影響する。</li><li>SO₂やNO₂も濃度と暴露条件により葉への障害を起こす。</li><li>植物の種類や成長段階によって感受性が変わる。</li></ul><p class="a-caution">植物への毒性の強さは「人への毒性」や腐食性の順位と同じではない。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r3-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">R3問10 ↗</a><a href="https://yaku-tik.com/kougai/h30-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">H30問10 ↗</a></div></div></details></article><article class="a-rankcard intro-rank" data-cat="植物影響" data-search="植物被害の典型的な症状 植物影響 葉に現れる症状を汚染物質と対応させる。 o₃：小斑点、漂白斑点など。 pan：葉の裏側の金属光沢様変化。 hf：葉先や葉縁の枯死。 so₂：葉脈間の障害やクロロシス。 エチレン：成熟・落葉など生理的作用。">
+ <div class="a-rankcard-top"><span class="a-sid">A5</span><span class="a-category">植物影響</span></div><h3>植物被害の典型的な症状</h3><p class="hint">葉に現れる症状を汚染物質と対応させる。</p>
+ <details><summary>重要ポイントを確認</summary><ul><li>O₃：小斑点、漂白斑点など。</li><li>PAN：葉の裏側の金属光沢様変化。</li><li>HF：葉先や葉縁の枯死。</li><li>SO₂：葉脈間の障害やクロロシス。</li><li>エチレン：成熟・落葉など生理的作用。</li></ul><p class="a-caution">葉先・葉裏・葉脈間という位置が識別ポイント。</p>
+ <div class="rank-evidence"><b>関連する過去問の例（別サイト）</b><div><a href="https://yaku-tik.com/kougai/r5-taigai-10/" target="_blank" rel="noopener noreferrer" class="air-ref">R5問10 ↗</a><a href="https://yaku-tik.com/kougai/h28-taigai-09/" target="_blank" rel="noopener noreferrer" class="air-ref">H28問9 ↗</a></div></div></details></article></div>
+<p class="intro-small">Bランク相当の扱い：個別年度の設備件数や局別の小数点以下の達成率、珍しい植物種、例外的数値は、基礎事項を固めてから取り組む。</p>
+</div></section>
+<section class="a-section alt" id="standards"><div class="wrap"><div class="a-caption">06 / ENVIRONMENTAL STANDARD</div><h2 class="a-section-title">環境基準を、数値で比較。</h2><p class="a-lead">試験で迷いやすい「時間」「単位」を一つの表に集めた。光化学オキシダントは2026年4月施行の改正を別扱いにする。</p>
+<div style="overflow-x:auto;border-radius:14px"><table class="intro-summarytable"><thead><tr><th>対象</th><th>基準値</th><th>評価時間</th><th>単位</th></tr></thead><tbody>
+<tr><td>SO₂</td><td>0.04 / 0.1</td><td>日平均 / 1時間</td><td>ppm</td></tr><tr><td>CO</td><td>10 / 20</td><td>日平均 / 8時間平均</td><td>ppm</td></tr><tr><td>SPM</td><td>0.10 / 0.20</td><td>日平均 / 1時間</td><td>mg/m³</td></tr><tr><td>PM2.5</td><td>15 / 35</td><td>年平均 / 日平均</td><td>µg/m³</td></tr><tr><td>NO₂</td><td>0.04〜0.06以下のゾーンまたはそれ以下</td><td>日平均</td><td>ppm</td></tr><tr><td>光化学Ox（現行：オゾンとして）</td><td>0.07 / 0.04</td><td>8時間値 / 日最高8時間値の年平均</td><td>ppm</td></tr></tbody></table></div>
+<div class="intro-warning"><h3>2026年4月1日施行｜光化学Oxの基準が変更</h3><p><strong>過去問での旧基準：</strong>1時間値 0.06 ppm以下。<br><strong>現行基準：</strong>オゾンとして8時間値 0.07 ppm以下、かつ日最高8時間値の年平均 0.04 ppm以下。試験年度の設問と現行法令を分けて読むこと。<br><a href="https://www.env.go.jp/hourei/04/000105.html" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">環境省の告示を確認 ↗</a></p></div>
+<div class="intro-comparisons"><div><b>環境基準 ≠ 排出基準</b><p>環境基準は地域の大気環境に関する目標、排出基準は施設の排出口で守る規制値。</p></div><div><b>達成率は観測年度で変わる</b><p>局の種類や対象年度を必ず読む。特にOxの旧／新基準を無理に比較しない。</p></div><div><b>粉じんの2つの制度</b><p>一般粉じん発生施設の規模要件と、石綿を扱う特定粉じん規制を区別する。</p></div></div></div></section>
+<section class="a-section" id="method"><div class="wrap"><div class="a-caption">07 / HOW TO STUDY</div><h2 class="a-section-title">この5段階で、得点を積み上げる。</h2><ol class="intro-steps"><li><b>01</b>環境基準の数値</li><li><b>02</b>法令・施設・業務</li><li><b>03</b>100問マップで傾向把握</li><li><b>04</b>人体・植物・温暖化</li><li><b>05</b>実際の過去問で反復</li></ol><p class="intro-small">目標は「Sの数値を見ただけで答えられる」状態。環境基準と法令を軸に、Aの物性・影響を繋げて覚える。</p></div></section>
+<section class="a-section alt" id="lastcheck"><div class="wrap"><div class="a-caption">08 / FINAL REVIEW</div><h2 class="a-section-title">試験直前の16項目。</h2><p class="a-lead">理解できた項目にチェックを入れて、自分の残り課題を可視化しよう。チェック状態はこの画面の表示中に保持されます。</p><div class="intro-complete" id="introCheckedCount">0 / 16 項目を確認</div><div class="intro-meter"><div id="introMeter"></div></div><div class="intro-checks" id="introChecks" style="margin-top:24px"><label><input type="checkbox" class="intro-checkbox"><span>SO₂・CO・SPMの2つの環境基準値を説明できる</span></label><label><input type="checkbox" class="intro-checkbox"><span>PM2.5の年平均・日平均と単位を覚えた</span></label><label><input type="checkbox" class="intro-checkbox"><span>NO₂の0.04〜0.06 ppmの扱いを理解した</span></label><label><input type="checkbox" class="intro-checkbox"><span>2026年改正後のOx基準と旧基準を区別できる</span></label><label><input type="checkbox" class="intro-checkbox"><span>ベンゼン3 µg/m³を覚えた</span></label><label><input type="checkbox" class="intro-checkbox"><span>トリクロロエチレン130・テトラクロロエチレン200を覚えた</span></label><label><input type="checkbox" class="intro-checkbox"><span>ジクロロメタン150 µg/m³を覚えた</span></label><label><input type="checkbox" class="intro-checkbox"><span>光化学Oxの旧達成率が低い傾向を理解した</span></label><label><input type="checkbox" class="intro-checkbox"><span>公害防止管理者の7つの法定業務を説明できる</span></label><label><input type="checkbox" class="intro-checkbox"><span>一般粉じんの堆積場・コンベアの規模値を確認した</span></label><label><input type="checkbox" class="intro-checkbox"><span>破砕機・ふるいの原動機出力を覚えた</span></label><label><input type="checkbox" class="intro-checkbox"><span>SOxのK値規制とばいじんの施設規制を区別できる</span></label><label><input type="checkbox" class="intro-checkbox"><span>COの血液への影響を説明できる</span></label><label><input type="checkbox" class="intro-checkbox"><span>一次・二次のPM2.5発生を区別できる</span></label><label><input type="checkbox" class="intro-checkbox"><span>オゾン・PAN・HFによる植物症状を見分けられる</span></label><label><input type="checkbox" class="intro-checkbox"><span>温室効果ガスとオゾン層破壊物質を区別できる</span></label></div></div></section>
+<section class="a-section" id="sources"><div class="wrap"><div class="a-caption">SOURCE & METHODOLOGY</div><h2 class="a-section-title">出題分析の方法と参考資料。</h2><div class="intro-flexnote"><div><b>出題マップ</b><p>H28〜R7の大気概論・各10問、計100問。設問の主題を独自に短く要約し、1問を中心分野1つで分類。各マスの外部リンクから原文を確認できます。</p></div><div><b>学習ランク</b><p>S/Aの優先順位はご本人のnote記事を基礎とし、2026年時点の環境省の告示を補足しました。個々のSカードへの出題件数を意味するものではありません。</p></div></div><ul class="intro-sources"><li>・<a href="https://note.com/apt_mango5105/n/n32130f7d23b0" target="_blank" rel="noopener noreferrer">元note｜大気概論 S/Aランク要点まとめ ↗</a></li><li>・<a href="https://yaku-tik.com/kougai/" target="_blank" rel="noopener noreferrer">やくチキ｜公害防止管理者試験・過去問一覧 ↗</a></li><li>・<a href="https://www.env.go.jp/hourei/04/000105.html" target="_blank" rel="noopener noreferrer">環境省｜大気の汚染に係る環境基準について ↗</a></li></ul><p class="intro-small">各設問の分類、表、要点解説は独自に編集したものです。問題文・選択肢・他サイトの画像は転載していません。出題頻度は過去の実績を示し、将来の出題を保証しません。</p><div class="a-actions"><a href="pollution-air.html" class="a-btn">← 大気5科目一覧へ</a><a href="#yearmap" class="a-btn dark">100問マップに戻る ↑</a></div></div></section></main><footer class="cql-footer"><div class="wrap cql-footer-inner"><strong>CHEMICAL<br/>QUALIFICATION LAB.</strong><small>© 2026 CQL / 化学資格研究所</small></div></footer><script>
+(function(){
+ const box=document.getElementById('introYearFilters');const trs=[...document.querySelectorAll('.intro-year-row')];
+ if(box){box.addEventListener('click',(ev)=>{const b=ev.target.closest('button[data-year]');if(!b)return;box.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));let yy=b.dataset.year;trs.forEach(r=>r.hidden=yy!=='all'&&r.dataset.year!==yy)})}
+ const query=document.getElementById('introSearch');const articles=[...document.querySelectorAll('.intro-rank')];
+ if(query){query.addEventListener('input',()=>{const q=query.value.toLocaleLowerCase().replace(/\s+/g,'');for(const el of articles)el.hidden=!el.dataset.search.replace(/\s+/g,'').includes(q)})}
+ const checks=[...document.querySelectorAll('.intro-checkbox')],display=document.getElementById('introCheckedCount'),meter=document.getElementById('introMeter');
+ function refresh(){const n=checks.filter(x=>x.checked).length;display.textContent=n+' / '+checks.length+' 項目を確認';meter.style.width=(n/checks.length*100)+'%'}
+ checks.forEach(c=>c.addEventListener('change',refresh));refresh()
+})();</script></body></html>
