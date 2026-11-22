@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="危険物取扱者・乙種第4類（乙4）法令の学習ガイド。Sランク14テーマ・Aランク7テーマ、指定数量と倍数計算、図解制作予定、比較表、オリジナル演習と直前チェックを掲載。" name="description"/>
+<meta content="危険物乙4｜法令の重要テーマ S/Aランク別学習ガイド | 化学資格研究所" property="og:title"/><title>危険物乙4｜法令 Sランク14・Aランク7の重要テーマ | 化学資格研究所</title>
+<style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+}
+
+
+
+
+:root{--bg:#f3f5ef;--lime:#c8ff4d;--ink:#0b0d0c;--muted:#607065;--line:#d7dfd6;--forest:#10251a}
+body{line-height:1.7} [id]{scroll-margin-top:150px}
+.skip{position:absolute;top:-70px;left:12px;z-index:100;background:#fff;padding:10px}.skip:focus{top:5px}
+.breadcrumb{padding:20px 0;font-size:12px}.breadcrumb a{text-decoration:underline;text-underline-offset:3px}
+.a-hero{background:#101512;color:#fff;padding:73px 0 75px;position:relative;overflow:hidden;border-bottom:1px solid #3e443e}
+.a-hero:before{content:'';position:absolute;right:-140px;top:-165px;width:530px;height:530px;border:1px solid #4b554d;border-radius:50%;box-shadow:0 0 0 80px #ffffff07,0 0 0 160px #ffffff05;pointer-events:none}
+.a-eyebrow{display:flex;align-items:center;gap:11px;color:#a9c9b4;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.a-eyebrow .dot{width:8px;height:8px;background:var(--lime);box-shadow:0 0 0 4px #c8ff4d22;border-radius:50%}
+.a-hero h1{font-size:clamp(39px,6.3vw,82px);font-weight:900;line-height:1.13;margin:22px 0;letter-spacing:-.065em;max-width:1000px}
+.a-hero h1 em{color:var(--lime);font-style:normal}.a-hero p{color:#ced8cf;font-size:clamp(15px,1.65vw,18px);line-height:1.95;max-width:870px}
+.a-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}.a-btn{border:1px solid #dce7df;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:12px 19px;border-radius:99px;background:#fff;color:#102118;font-size:12px;font-weight:900;transition:.2s}
+.a-btn.dark{background:var(--lime);border-color:var(--lime)}.a-btn:hover{transform:translateY(-2px)}.a-hero-stats{max-width:880px;display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #4d5b52;margin-top:47px}
+.a-hero-stat{padding:19px 20px 19px 0}.a-hero-stat+.a-hero-stat{border-left:1px solid #4d5b52;padding-left:22px}
+.a-hero-stat b{display:block;color:var(--lime);font-size:clamp(38px,5.2vw,65px);line-height:1.15;letter-spacing:-.07em}.a-hero-stat small{font-size:11px;color:#becdc0;font-weight:700}
+.a-subnav{position:sticky;top:76px;z-index:20;background:#f3f5eff7;backdrop-filter:blur(10px);border-bottom:1px solid #d7e0d8;overflow-x:auto;scrollbar-width:thin}
+.a-subnav .wrap{display:flex;align-items:center;gap:24px;min-height:56px;white-space:nowrap}.a-subnav a{font-size:12px;font-weight:850;color:#43584a}.a-subnav a:hover{color:#0c2b19}
+.a-section{padding:84px 0;border-bottom:1px solid #d9dfd8}.a-section.alt{background:#eaf0ea}.a-section-title{font-size:clamp(30px,4.7vw,56px);letter-spacing:-.06em;line-height:1.2;margin:12px 0 16px;font-weight:900}
+.a-caption{font-size:11px;font-weight:950;letter-spacing:.16em;color:#496952}.a-lead{max-width:830px;color:#46594b;font-size:15px;line-height:1.95;margin:0 0 28px}
+.note{font-size:12px;color:#526759;line-height:1.8;padding:15px 19px;border-left:3px solid #86a48d;background:#ffffffbd;margin:22px 0}
+.intro-cards,.flow-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.intro-card,.flow-card{background:#fff;border:1px solid #d4e0d4;border-radius:16px;padding:22px;min-width:0}
+.intro-card small{color:#4a7050;font-size:11px;font-weight:900;letter-spacing:.08em}.intro-card h3{font-size:19px;margin:13px 0 8px;line-height:1.3;letter-spacing:-.03em}.intro-card p,.flow-card p{font-size:12px;line-height:1.85;color:#526557;margin:0}
+.flow-card b{display:block;color:#3b774c;font-size:30px;line-height:1}.flow-card h3{font-size:17px;line-height:1.4;margin:11px 0}
+.sample-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:24px}.sample-tile{border-radius:12px;border:1px solid #ccd8ce;background:var(--tile);padding:13px;display:flex;flex-direction:column;gap:12px;min-height:132px;transition:transform .15s}
+.sample-tile:hover{transform:translateY(-3px)}.sample-tile b{font-size:18px}.sample-tile span{font-size:12px;font-weight:850;line-height:1.5}.sample-tile small{font-size:10px;color:#3d5042;margin-top:auto}
+.section-mini{font-size:23px;line-height:1.4;letter-spacing:-.045em;margin:34px 0 13px}
+.table-scroll{overflow-x:auto;border:1px solid #d3dfd4;border-radius:16px;background:#fff;margin:22px 0}.compare{border-collapse:collapse;min-width:650px;width:100%;font-size:13px}.compare th,.compare td{text-align:left;padding:13px 17px;border-bottom:1px solid #e1e8e1;vertical-align:middle;line-height:1.6}.compare th{font-weight:900}.compare thead th{background:#152a1c;color:white}.compare tbody th{background:#eff7ec}.compare tbody tr:last-child>*{border-bottom:0}.compare .water{background:#edf8fe}.compare .nonwater{background:#f3fae8}
+.numaccent{font-size:19px;font-weight:950;letter-spacing:-.03em;white-space:nowrap}.compare-sub{font-size:11px;color:#52665b}
+.boundaries{display:grid;grid-template-columns:1fr 4fr;gap:8px;margin:27px 0 0}.boundary{padding:17px 12px;border-radius:12px;border:1px solid #b7cdb9;text-align:center;font-size:12px;font-weight:850;line-height:1.5}.boundary small{display:block;margin-top:6px;color:#536d5b;font-size:10px;font-weight:650}.boundary.light{background:#edf4e9}.boundary.bold{background:#d9f3d0}
+.calculator{margin-top:34px;padding:27px;border-radius:18px;background:#fff;border:1px solid #cfdccf}.calc-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.calc-head h3{font-size:24px;margin:0 0 9px}.calc-head p{font-size:12px;margin:0;color:#52675a}.calc-row{display:grid;grid-template-columns:1.7fr 1fr .9fr 1fr 34px;gap:10px;align-items:center;margin-top:10px}.calc-row.calc-labels{font-size:11px;font-weight:900;color:#5b6e60}.calc-row select,.calc-row input{min-width:0;width:100%;border:1px solid #cad6ca;background:#fff;border-radius:9px;padding:12px 10px;color:#142c1e;font:inherit;font-size:13px}.calc-row output{font-variant-numeric:tabular-nums;font-weight:850;text-align:right;white-space:nowrap;font-size:13px}.calc-row .calc-del{background:#f3f5f1;border:1px solid #cdd6ca;border-radius:8px;padding:9px;cursor:pointer;font-size:17px}.calc-footer{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid #e3ebe3;margin-top:20px;padding-top:19px}.calc-result{font-size:14px;color:#36483c}.calc-result b{font-size:32px;line-height:1;font-weight:950;color:#152a1d}.calc-threshold{font-size:12px;max-width:500px;color:#465e4c}.calc-add{background:#173c28;color:#fff;border-radius:22px;border:0;padding:12px 17px;font-size:12px;font-weight:900;cursor:pointer}
+.rank-intro{display:flex;gap:10px;flex-wrap:wrap;margin:27px 0}.rank-intro span{border:1px solid #c8d6c9;border-radius:12px;padding:12px 16px;background:#fff;font-size:13px;color:#425949}
+.rank-intro strong{font-weight:950;color:#163c22}.rank-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 24px}.rank-search{flex:1;min-width:min(270px,100%);border:1px solid #b9cdbb;background:#fff;padding:13px 15px;border-radius:10px;font:inherit;font-size:13px}
+.cat-buttons{display:flex;flex-wrap:wrap;gap:6px}.cat-btn{background:#fff;border:1px solid #a8bea9;border-radius:99px;color:#20432c;padding:10px 13px;font:inherit;font-size:12px;font-weight:850;cursor:pointer}.cat-btn[aria-pressed=true]{background:#163b25;color:white}.rank-count{font-size:12px;color:#536859;font-weight:850;margin:0 0 16px}
+.rank-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.rank-card{min-width:0;background:#fff;border:1px solid #cdd9ce;border-radius:16px;padding:25px;display:flex;flex-direction:column;gap:11px}.rank-card[hidden]{display:none!important}
+.rank-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.rank-pill{display:inline-block;border-radius:7px;background:#c8ff4d;padding:4px 10px;font-weight:950;font-size:13px;color:#142a1c}.rank-card.a .rank-pill{background:#d7e5ff}.rank-category{font-size:11px;color:#536d5a;font-weight:800}.rank-card h3{font-size:clamp(20px,2.2vw,25px);line-height:1.35;margin:3px 0;letter-spacing:-.04em}.rank-summary{font-size:13px;line-height:1.8;margin:0 0 2px;color:#495e50}.rank-card details{border-top:1px solid #e2e9e2;padding-top:11px;margin-top:3px}.rank-card summary{font-size:13px;font-weight:900;color:#165330;cursor:pointer}.rank-card ul{font-size:13px;line-height:1.75;color:#3d5543;padding-left:20px}.rank-card li+li{margin-top:7px}.rank-caution{background:#f1f7ed;border-radius:9px;padding:12px;display:flex;gap:4px;flex-direction:column;font-size:12px;line-height:1.7;color:#475e4a}.rank-caution b{color:#245c35}.rank-evidence{font-size:11px;color:#718271;margin-top:auto;padding-top:9px;border-top:1px solid #e4ece4}.rank-evidence span{display:inline-block}
+.notfound{padding:15px;background:white;border:1px solid #d3ddd1;border-radius:12px;font-size:13px}.notfound[hidden]{display:none}
+.matrix-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.matrix-card{background:#fff;border:1px solid #d4ded4;border-radius:16px;padding:24px}.matrix-card h3{font-size:19px;margin:0 0 14px}.matrix-card p{font-size:13px;color:#4a5d4c;line-height:1.85}.matrix-card b{color:#19452a}.mini-table{border-collapse:collapse;width:100%;font-size:12px}.mini-table tr+tr{border-top:1px solid #e2eae1}.mini-table td,.mini-table th{text-align:left;padding:10px 5px;vertical-align:top}.mini-table th{width:37%;color:#244932;font-weight:900}
+.quiz-box{padding:28px;background:#fff;border:1px solid #c9d8c9;border-radius:18px;max-width:910px}.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.quiz-top .tag{font-size:11px;background:#e4f5db;color:#16492b;border-radius:50px;padding:7px 12px;font-weight:900}.quiz-counter{font-size:13px;color:#62705f;font-weight:800}.quiz-box h3{font-size:24px;letter-spacing:-.035em;line-height:1.5}.quiz-options{display:grid;gap:10px}.quiz-option{border:1px solid #cdd9cd;border-radius:12px;text-align:left;font:inherit;background:white;padding:13px 16px;font-size:14px;line-height:1.7;cursor:pointer}.quiz-option:hover{background:#f0f9eb}.quiz-option.selected{outline:2px solid #1c5b35;outline-offset:1px}.quiz-option.correct{border-color:#4b9a65;background:#e6f8e8}.quiz-option.wrong{border-color:#b96363;background:#fff0ee}.quiz-option:disabled{cursor:default}.quiz-answer{margin:16px 0;padding:17px;border-radius:12px;background:#eff6ec;font-size:13px;line-height:1.8}.quiz-answer[hidden]{display:none}.quiz-controls{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:18px}.quiz-controls button{border:1px solid #254b32;background:#153821;color:#fff;border-radius:22px;padding:11px 17px;font:inherit;font-size:12px;cursor:pointer;font-weight:900}.quiz-score{font-size:12px;color:#53695b}
+.fig-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.fig-tile{background:#fff;border:1px solid #d4dfd5;border-top:4px solid var(--fig);padding:22px;border-radius:15px;min-height:152px;display:flex;flex-direction:column;gap:10px;transition:transform .15s}.fig-tile:hover{transform:translateY(-3px)}.fig-num{font-size:11px;font-weight:900;color:#54735b;letter-spacing:.12em}.fig-tile strong{font-size:18px;letter-spacing:-.03em;line-height:1.4}.fig-tile small{font-size:11px;color:#617d6a;margin-top:auto}
+.study-route{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.study-step{background:#fff;border:1px solid #d5ded2;border-radius:14px;padding:18px}.study-step b{font-size:28px;color:#3a7a4b}.study-step h3{font-size:16px;margin:7px 0}.study-step p{font-size:12px;margin:0;color:#596b5c}.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}.check-grid label{padding:14px 15px;display:flex;align-items:flex-start;gap:11px;border:1px solid #d5dfd5;background:#fff;border-radius:12px;cursor:pointer;font-size:13px;font-weight:750}.check-grid input{width:19px;height:19px;accent-color:#276d3a;flex:0 0 19px;margin-top:2px}.check-grid label:has(input:checked){background:#e5f8dc}.check-progress{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:18px;font-weight:850;color:#244a2c;font-size:13px}.progress-track{width:min(290px,100%);height:12px;border-radius:99px;background:#dde7da;overflow:hidden}.progress-fill{width:0;background:#2c7546;height:100%;border-radius:99px;transition:width .2s}
+.sources{background:#101b14;color:#fff;padding:62px 0 72px}.sources h2{font-size:clamp(29px,3.5vw,48px);margin:12px 0}.sources p{font-size:13px;color:#cad7cc;max-width:940px;line-height:1.9}.sources a{color:#d9ffb6;text-decoration:underline;text-underline-offset:4px}.sources ul{font-size:13px;line-height:2.15;padding-left:20px}.foot{background:#0a0c0b;color:white}.foot .btn{color:white;border-color:white}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1000px){.intro-cards,.sample-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.fig-grid{grid-template-columns:repeat(2,1fr)}.study-route{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:780px){.a-section{padding:62px 0}.a-hero{padding:48px 0 57px}.rank-grid,.matrix-wrap{grid-template-columns:1fr}.intro-cards,.study-route{grid-template-columns:repeat(2,1fr)}.sample-grid{grid-template-columns:repeat(3,1fr)}.calc-row{grid-template-columns:1.4fr .8fr 1fr 1fr 30px;gap:5px}.calc-row select,.calc-row input{padding:9px 4px;font-size:12px}.calc-row output{font-size:11px}.calc-row.calc-labels{font-size:10px}}
+@media(max-width:510px){.wrap{width:min(1180px,calc(100% - 30px))}.a-hero h1{font-size:clamp(35px,9.1vw,50px)}.a-hero-stat{padding-right:8px}.a-hero-stat+.a-hero-stat{padding-left:10px}.a-hero-stat b{font-size:clamp(30px,9vw,41px)}.a-hero-stat small{font-size:10px}.intro-cards,.sample-grid,.fig-grid,.study-route,.check-grid{grid-template-columns:1fr 1fr}.intro-card,.flow-card{padding:15px}.intro-card h3{font-size:16px}.sample-tile{min-height:118px;padding:11px}.sample-tile span{font-size:11px}.fig-tile{padding:15px;min-height:133px}.fig-tile strong{font-size:14px}.rank-card{padding:20px}.calculator{padding:15px 10px}.calc-row{grid-template-columns:1.3fr .65fr .7fr .7fr 24px;gap:4px}.calc-row.calc-labels{display:none}.calc-row:not(.calc-labels){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,.8fr);gap:7px;background:#f5f9f4;border:1px solid #dbe6d9;padding:10px;border-radius:10px;margin-top:10px}.calc-row select{grid-column:1/3;grid-row:1;font-size:12px;padding:10px 8px}.calc-row .calc-del{grid-column:3;grid-row:1;justify-self:end;padding:7px 12px}.calc-row input{grid-column:1;grid-row:2;font-size:12px;padding:9px 6px}.calc-row .lim{grid-column:2;grid-row:2}.calc-row .ratio{grid-column:3;grid-row:2}.calc-row output{font-size:12px;line-height:1.5}.calc-row .lim:before{content:'指定数量';display:block;font-size:10px;color:#647968}.calc-row .ratio:before{content:'倍数';display:block;font-size:10px;color:#647968}.a-section-title{font-size:34px}.quiz-box{padding:18px}.quiz-box h3{font-size:20px}.boundary{font-size:10px;padding:10px 5px}.boundary small{font-size:9px}}
+@media(max-width:370px){.intro-cards,.sample-grid,.fig-grid,.study-route{grid-template-columns:1fr 1fr}.a-actions{gap:6px}.a-btn{padding:10px 11px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Revision: learning-first navigation, related illustrated topics and final review */
+.hero-disclaimer{max-width:870px!important;margin:12px 0 0!important;padding:13px 17px;border-left:3px solid #c8ff4d;background:rgba(200,255,77,.09);color:#dce9d9!important;font-size:12px!important;line-height:1.8!important}
+.rank-useful-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:11px}
+.rank-useful-links a{border:1px solid #c9dcc9;border-radius:999px;padding:7px 11px;background:#f1f8ed;color:#1a5b33;font-size:11px;font-weight:850;text-decoration:none}
+.rank-useful-links a:hover{background:#d9f5c5}
+.rank-useful-links a:focus-visible{outline:3px solid #398559;outline-offset:3px}
+.fig-tile{scroll-margin-top:152px}
+.final-review{margin-top:54px;padding-top:44px;border-top:1px solid #cad9ca;scroll-margin-top:156px}
+.final-review h3{font-size:clamp(24px,3.5vw,37px);line-height:1.3;letter-spacing:-.045em;margin:12px 0}
+.final-review .review-lead{font-size:14px;color:#4f6755;max-width:800px;line-height:1.9}
+@media(max-width:510px){.hero-disclaimer{font-size:11px!important;padding:12px 13px}.rank-useful-links a{font-size:10px}.final-review{margin-top:38px;padding-top:30px}}
+</style></head><body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="mark">CQL</span><span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span></a><nav class="nav"><a href="index.html#qualifications">QUALIFICATIONS</a><a href="hazardous.html">HAZARDOUS</a><a href="profile.html">ABOUT</a></nav></div></header>
+<main id="main"><div class="wrap breadcrumb"><a href="index.html">HOME</a> / <a href="hazardous.html">危険物取扱者</a> / <a href="hazardous-otsu4.html">乙種第4類</a> / 法令</div>
+<div class="a-hero"><div class="wrap"><div class="a-eyebrow"><span class="dot"></span> STUDY GUIDE / OTSU-4 LAW</div>
+<h1>乙4の法令。<br/><em>S・Aランクで学ぶ。</em></h1>
+<p>危険物の分類、指定数量、施設の基準、保安管理、手続きと検査。最初にSランク、次にAランクを学び、指定数量の計算・図解・比較・演習へ進める学習ガイドです。</p><p class="hero-disclaimer">法令は15問・科目ごとの合格基準は60％以上（9問以上正解）。S/Aランクは基礎性・知識のつながり・誤解しやすさを基準にした独自の学習優先度であり、過去問の出題頻度を示すものではありません。</p>
+<div class="a-actions"><a class="a-btn dark" href="#rank-s">Sランク14テーマ ↓</a><a class="a-btn" href="#rank-a">Aランク7テーマ ↓</a><a class="a-btn" href="#quantities">指定数量・倍数計算 ↓</a><a class="a-btn" href="#illustrated-lessons">図解の制作予定 ↓</a><a class="a-btn" href="#comparison">比較で整理 ↓</a><a class="a-btn" href="#practice">オリジナル演習 ↓</a><a class="a-btn" href="hazardous-otsu4.html">乙4の科目一覧 ↗</a></div>
+<div class="a-hero-stats"><div class="a-hero-stat"><b>15<span style="font-size:.38em">問</span></b><small>法令の試験問題数</small></div><div class="a-hero-stat"><b>14</b><small>Sランク：最優先テーマ</small></div><div class="a-hero-stat"><b>07</b><small>Aランク：次に固めるテーマ</small></div></div></div></div>
+<nav aria-label="ページ内メニュー" class="a-subnav"><div class="wrap"><a href="#rank-s">Sランク</a><a href="#rank-a">Aランク</a><a href="#quantities">指定数量・計算</a><a href="#illustrated-lessons">図解予定</a><a href="#comparison">比較で整理</a><a href="#practice">演習</a><a href="#lastcheck">直前チェック</a></div></nav>
+<section class="a-section" id="rank-s"><div class="wrap"><div class="a-caption">01 / S RANK</div><h2 class="a-section-title">最優先で固める、Sランク14テーマ。</h2><p class="a-lead">指定数量だけ覚えて終わりにせず、施設区分・必要な許可・保安管理まで、つながりとして理解することを目指します。カードを開くと学習ポイントと間違えやすい点を確認できます。</p>
+<div class="rank-intro"><span><strong>Sランク</strong>　最初に理解を固める内容</span><span><strong>根拠</strong>　試験範囲・公式公開例題・知識の汎用性から独自選定</span></div>
+<div class="rank-actions"><input aria-label="重要テーマを検索" class="rank-search" id="rank-search" placeholder="キーワードでS/Aテーマを検索（例：指定数量、保安距離）" type="search"/><div class="cat-buttons" id="cat-buttons"><button aria-pressed="true" class="cat-btn" data-cat="all" type="button">全分野</button><button aria-pressed="false" class="cat-btn" data-cat="基礎・分類" type="button">基礎・分類</button><button aria-pressed="false" class="cat-btn" data-cat="指定数量" type="button">指定数量</button><button aria-pressed="false" class="cat-btn" data-cat="施設・設備" type="button">施設・設備</button><button aria-pressed="false" class="cat-btn" data-cat="資格・保安" type="button">資格・保安</button><button aria-pressed="false" class="cat-btn" data-cat="取扱・運搬" type="button">取扱・運搬</button></div></div><p aria-live="polite" class="rank-count" id="rank-count">S14テーマ・A7テーマを表示中</p>
+<div class="rank-grid" id="s-cards"><article class="rank-card s" data-cat="基礎・分類" data-rank="S" data-search="消防法の危険物・第1類〜第6類 「何が燃えるか」だけでなく、酸化・自己反応・禁水などの危険性で分類する。 第1類＝酸化性固体、第2類＝可燃性固体、第3類＝自然発火性物質及び禁水性物質。 第4類＝引火性液体、第5類＝自己反応性物質、第6類＝酸化性液体。 第4類の主な危険は可燃性蒸気の引火。固体・液体という区分と危険性の区分を混同しない。 アルキルアルミニウムなど第3類の品名を第4類と取り違えない。 基礎・分類" id="s01">
+<div class="rank-top"><span class="rank-pill">S－01</span><span class="rank-category">基礎・分類</span></div>
+<h3>消防法の危険物・第1類〜第6類</h3><p class="rank-summary">「何が燃えるか」だけでなく、酸化・自己反応・禁水などの危険性で分類する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>第1類＝酸化性固体、第2類＝可燃性固体、第3類＝自然発火性物質及び禁水性物質。</li><li>第4類＝引火性液体、第5類＝自己反応性物質、第6類＝酸化性液体。</li><li>第4類の主な危険は可燃性蒸気の引火。固体・液体という区分と危険性の区分を混同しない。</li><li>アルキルアルミニウムなど第3類の品名を第4類と取り違えない。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>第1類と第6類はともに酸化性だが、前者は固体、後者は液体。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s01">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問1 に関連</span></div></article>
+<article class="rank-card s" data-cat="基礎・分類" data-rank="S" data-search="第4類危険物の7品名と代表物質 第4類の品名は「引火点の区分＋水溶性の扱い」で覚える。 特殊引火物／第一石油類／アルコール類／第二石油類／第三石油類／第四石油類／動植物油類の7品名。 ガソリン＝第一石油類、灯油・軽油＝第二石油類、重油は通常第三石油類として扱う。 ジエチルエーテル・二硫化炭素は特殊引火物。水溶性の分類と個別物質の品名を区別する。 引火点だけで一律に分類できない例や除外規定もあるため、法令に定める品名の要件で判定する。 基礎・分類" id="s02">
+<div class="rank-top"><span class="rank-pill">S－02</span><span class="rank-category">基礎・分類</span></div>
+<h3>第4類危険物の7品名と代表物質</h3><p class="rank-summary">第4類の品名は「引火点の区分＋水溶性の扱い」で覚える。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>特殊引火物／第一石油類／アルコール類／第二石油類／第三石油類／第四石油類／動植物油類の7品名。</li><li>ガソリン＝第一石油類、灯油・軽油＝第二石油類、重油は通常第三石油類として扱う。</li><li>ジエチルエーテル・二硫化炭素は特殊引火物。水溶性の分類と個別物質の品名を区別する。</li><li>引火点だけで一律に分類できない例や除外規定もあるため、法令に定める品名の要件で判定する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「水に溶ける＝すべてアルコール類」ではない。アセトンは第一石油類（水溶性液体）。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s02">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問1 に関連</span></div></article>
+<article class="rank-card s" data-cat="指定数量" data-rank="S" data-search="第4類の指定数量一覧 数量は絶対値で覚え、同じ石油類でも水溶性で数値が変わることを理解する。 特殊引火物50L、第一石油類は非水溶性200L・水溶性400L、アルコール類400L。 第二石油類は非水溶性1,000L・水溶性2,000L。 第三石油類は非水溶性2,000L・水溶性4,000L。 第四石油類6,000L、動植物油類10,000L。 指定数量" id="s03">
+<div class="rank-top"><span class="rank-pill">S－03</span><span class="rank-category">指定数量</span></div>
+<h3>第4類の指定数量一覧</h3><p class="rank-summary">数量は絶対値で覚え、同じ石油類でも水溶性で数値が変わることを理解する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>特殊引火物50L、第一石油類は非水溶性200L・水溶性400L、アルコール類400L。</li><li>第二石油類は非水溶性1,000L・水溶性2,000L。</li><li>第三石油類は非水溶性2,000L・水溶性4,000L。</li><li>第四石油類6,000L、動植物油類10,000L。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「第一石油類200L」をすべてに当てはめない。水溶性液体は400L。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s03">対応する図解の制作予定を見る →</a><a href="#quantities">指定数量一覧・計算へ →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問3 に関連</span></div></article>
+<article class="rank-card s" data-cat="指定数量" data-rank="S" data-search="指定数量の倍数計算 物質ごとに「貯蔵・取扱量 ÷ 指定数量」を計算してから合計する。 倍数＝Σ（各品名の数量／各品名の指定数量）。 ガソリン100Lと灯油500Lなら100÷200＋500÷1,000＝1.0倍。 数量の単位をそろえる。合計量を「指定数量の合計」で割る方法は誤り。 下の計算ツールで、品名を変えたときの倍数を確認する。 指定数量" id="s04">
+<div class="rank-top"><span class="rank-pill">S－04</span><span class="rank-category">指定数量</span></div>
+<h3>指定数量の倍数計算</h3><p class="rank-summary">物質ごとに「貯蔵・取扱量 ÷ 指定数量」を計算してから合計する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>倍数＝Σ（各品名の数量／各品名の指定数量）。</li><li>ガソリン100Lと灯油500Lなら100÷200＋500÷1,000＝1.0倍。</li><li>数量の単位をそろえる。合計量を「指定数量の合計」で割る方法は誤り。</li><li>下の計算ツールで、品名を変えたときの倍数を確認する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>複数の危険物をまとめて扱う場合も、まずそれぞれの指定数量で割る。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s04">対応する図解の制作予定を見る →</a><a href="#quantities">指定数量一覧・計算へ →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問3 に関連</span></div></article>
+<article class="rank-card s" data-cat="指定数量" data-rank="S" data-search="指定数量と規制の境界・仮貯蔵 許可を受けた製造所等の規制と、市町村の火災予防条例による規制を分ける。 指定数量以上の貯蔵・取扱いは、原則として許可を受けた製造所等で行う。 指定数量の5分の1以上、指定数量未満の「少量危険物」には、市町村の火災予防条例に基づく規制がある。 指定数量未満なら無条件に自由、というわけではない。 例外的な仮貯蔵・仮取扱いは、所轄消防長又は消防署長の承認を受け、10日以内の期間に限る。 指定数量" id="s05">
+<div class="rank-top"><span class="rank-pill">S－05</span><span class="rank-category">指定数量</span></div>
+<h3>指定数量と規制の境界・仮貯蔵</h3><p class="rank-summary">許可を受けた製造所等の規制と、市町村の火災予防条例による規制を分ける。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>指定数量以上の貯蔵・取扱いは、原則として許可を受けた製造所等で行う。</li><li>指定数量の5分の1以上、指定数量未満の「少量危険物」には、市町村の火災予防条例に基づく規制がある。</li><li>指定数量未満なら無条件に自由、というわけではない。</li><li>例外的な仮貯蔵・仮取扱いは、所轄消防長又は消防署長の承認を受け、10日以内の期間に限る。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>指定数量「以上」と「未満」の境界、および「許可」と「承認」の違い。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s05">対応する図解の制作予定を見る →</a><a href="#quantities">指定数量一覧・計算へ →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問3 に関連</span></div></article>
+<article class="rank-card s" data-cat="資格・保安" data-rank="S" data-search="甲種・乙種・丙種の取扱いと立会い 免状ごとの「自分で扱える範囲」と「他人の取扱いに立ち会えるか」を区別する。 甲種：すべての類の危険物について取扱い・立会いができる。 乙種：免状を受けた類について取扱い・立会いができる。乙4なら第4類。 丙種：政令で定める第4類の一部のみを取り扱え、立会いはできない。 無資格者の取扱いが認められる場合も、甲種又は該当する乙種の危険物取扱者の立会いが要る。 資格・保安" id="s06">
+<div class="rank-top"><span class="rank-pill">S－06</span><span class="rank-category">資格・保安</span></div>
+<h3>甲種・乙種・丙種の取扱いと立会い</h3><p class="rank-summary">免状ごとの「自分で扱える範囲」と「他人の取扱いに立ち会えるか」を区別する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>甲種：すべての類の危険物について取扱い・立会いができる。</li><li>乙種：免状を受けた類について取扱い・立会いができる。乙4なら第4類。</li><li>丙種：政令で定める第4類の一部のみを取り扱え、立会いはできない。</li><li>無資格者の取扱いが認められる場合も、甲種又は該当する乙種の危険物取扱者の立会いが要る。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>乙4は「第4類に限る」が、丙種は「第4類全部」ではない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s06">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>基礎知識として補完</span></div></article>
+<article class="rank-card s" data-cat="施設・設備" data-rank="S" data-search="製造所・貯蔵所・取扱所の区分 「何をする場所か」で3区分し、その下位の施設名称を整理する。 製造所＝危険物を製造する施設。 貯蔵所＝屋内貯蔵所、屋外貯蔵所、屋外・屋内・地下・簡易・移動タンク貯蔵所の7種類。 取扱所＝給油取扱所、販売取扱所、移送取扱所、一般取扱所の4種類。 移動タンク貯蔵所は「貯蔵所」。移送取扱所は「取扱所」で、名称が似ていても別の施設。 施設・設備" id="s07">
+<div class="rank-top"><span class="rank-pill">S－07</span><span class="rank-category">施設・設備</span></div>
+<h3>製造所・貯蔵所・取扱所の区分</h3><p class="rank-summary">「何をする場所か」で3区分し、その下位の施設名称を整理する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>製造所＝危険物を製造する施設。</li><li>貯蔵所＝屋内貯蔵所、屋外貯蔵所、屋外・屋内・地下・簡易・移動タンク貯蔵所の7種類。</li><li>取扱所＝給油取扱所、販売取扱所、移送取扱所、一般取扱所の4種類。</li><li>移動タンク貯蔵所は「貯蔵所」。移送取扱所は「取扱所」で、名称が似ていても別の施設。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>屋外貯蔵所と屋外タンク貯蔵所を同じものとして扱わない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s07">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問2 に関連</span></div></article>
+<article class="rank-card s" data-cat="施設・設備" data-rank="S" data-search="保安距離と保有空地 「周囲の建物を守る距離」と「施設周囲に確保する空地」を別物として理解する。 保安距離は、学校・病院等の保安対象物から一定距離を離す基準。 保有空地は、延焼防止・消防活動等のため、危険物施設の周囲に確保する空間。 施設区分によって適用要否や必要な寸法・緩和条件が異なる。 製造所と屋外タンク貯蔵所などで、基準の考え方を比較する。 施設・設備" id="s08">
+<div class="rank-top"><span class="rank-pill">S－08</span><span class="rank-category">施設・設備</span></div>
+<h3>保安距離と保有空地</h3><p class="rank-summary">「周囲の建物を守る距離」と「施設周囲に確保する空地」を別物として理解する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>保安距離は、学校・病院等の保安対象物から一定距離を離す基準。</li><li>保有空地は、延焼防止・消防活動等のため、危険物施設の周囲に確保する空間。</li><li>施設区分によって適用要否や必要な寸法・緩和条件が異なる。</li><li>製造所と屋外タンク貯蔵所などで、基準の考え方を比較する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>保安距離＝敷地境界からの一律の距離、ではない。対象施設と保安対象物の組合せを確認。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s08">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問4 に関連</span></div></article>
+<article class="rank-card s" data-cat="施設・設備" data-rank="S" data-search="製造所の位置・構造・設備の基準 漏えい・加熱・圧力上昇・静電気などの危険に対する設計思想をつかむ。 機械器具・設備は危険物の漏れ、あふれ、飛散を防止する構造とする。 温度が変化する危険物取扱設備には、定められた温度測定装置などが必要。 圧力が上昇するおそれのある設備には、圧力計と所定の安全装置。 静電気のおそれのある設備には、有効な除去措置が求められる。 施設・設備" id="s09">
+<div class="rank-top"><span class="rank-pill">S－09</span><span class="rank-category">施設・設備</span></div>
+<h3>製造所の位置・構造・設備の基準</h3><p class="rank-summary">漏えい・加熱・圧力上昇・静電気などの危険に対する設計思想をつかむ。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>機械器具・設備は危険物の漏れ、あふれ、飛散を防止する構造とする。</li><li>温度が変化する危険物取扱設備には、定められた温度測定装置などが必要。</li><li>圧力が上昇するおそれのある設備には、圧力計と所定の安全装置。</li><li>静電気のおそれのある設備には、有効な除去措置が求められる。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「加熱設備はすべて直火で加熱する」のような、危険性を高める断定に注意。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s09">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問6 に関連</span></div></article>
+<article class="rank-card s" data-cat="施設・設備" data-rank="S" data-search="設置・変更許可と完成検査 設置・変更の流れと「工事前／使用前」の手続きを順番で理解する。 製造所等の設置・一定の変更は、市町村長等の許可を要する。 原則は許可→工事→完成検査→完成検査済証の交付→使用。 タンク等では、対象部分について完成検査前検査が必要となる場合がある。 必要な変更許可と、軽微な変更等に関する扱いを区別する。 施設・設備" id="s10">
+<div class="rank-top"><span class="rank-pill">S－10</span><span class="rank-category">施設・設備</span></div>
+<h3>設置・変更許可と完成検査</h3><p class="rank-summary">設置・変更の流れと「工事前／使用前」の手続きを順番で理解する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>製造所等の設置・一定の変更は、市町村長等の許可を要する。</li><li>原則は許可→工事→完成検査→完成検査済証の交付→使用。</li><li>タンク等では、対象部分について完成検査前検査が必要となる場合がある。</li><li>必要な変更許可と、軽微な変更等に関する扱いを区別する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「設置届出だけでよい」「工事後に初めて許可をもらう」という理解は誤り。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s10">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問7 に関連</span></div></article>
+<article class="rank-card s" data-cat="資格・保安" data-rank="S" data-search="危険物保安監督者などの保安体制 施設規模と種類に応じて、選任すべき保安担当者が異なる。 危険物保安監督者は、一定の製造所等で選任され、保安の監督にあたる。 危険物保安監督者には、甲種又は乙種の資格と6か月以上の危険物取扱いの実務経験が必要。 危険物施設保安員・危険物保安統括管理者は別の制度。 指定数量の倍数だけで選任の要否を断定せず、施設区分・取扱物・例外条件を確認する。 資格・保安" id="s11">
+<div class="rank-top"><span class="rank-pill">S－11</span><span class="rank-category">資格・保安</span></div>
+<h3>危険物保安監督者などの保安体制</h3><p class="rank-summary">施設規模と種類に応じて、選任すべき保安担当者が異なる。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>危険物保安監督者は、一定の製造所等で選任され、保安の監督にあたる。</li><li>危険物保安監督者には、甲種又は乙種の資格と6か月以上の危険物取扱いの実務経験が必要。</li><li>危険物施設保安員・危険物保安統括管理者は別の制度。</li><li>指定数量の倍数だけで選任の要否を断定せず、施設区分・取扱物・例外条件を確認する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「30倍を超えたらすべての施設で保安監督者が必要」といった一般化はしない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s11">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問11 に関連</span></div></article>
+<article class="rank-card s" data-cat="資格・保安" data-rank="S" data-search="定期点検・保安検査・完成検査 名称が似た「点検・検査」の目的・実施主体・対象施設を区別する。 完成検査：設置・変更の工事が基準に適合するかを使用前に確認する。 定期点検：対象施設の基準適合や安全状態を継続して確認し、点検記録を作成・保存する。 保安検査：一定規模の屋外タンク貯蔵所・移送取扱所などが対象になる。 対象施設・点検周期・記録事項は一律でないため、試験では条件を丁寧に読む。 資格・保安" id="s12">
+<div class="rank-top"><span class="rank-pill">S－12</span><span class="rank-category">資格・保安</span></div>
+<h3>定期点検・保安検査・完成検査</h3><p class="rank-summary">名称が似た「点検・検査」の目的・実施主体・対象施設を区別する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>完成検査：設置・変更の工事が基準に適合するかを使用前に確認する。</li><li>定期点検：対象施設の基準適合や安全状態を継続して確認し、点検記録を作成・保存する。</li><li>保安検査：一定規模の屋外タンク貯蔵所・移送取扱所などが対象になる。</li><li>対象施設・点検周期・記録事項は一律でないため、試験では条件を丁寧に読む。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「定期点検」と「保安検査」を同一視しない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s12">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問9・13 に関連</span></div></article>
+<article class="rank-card s" data-cat="取扱・運搬" data-rank="S" data-search="貯蔵・取扱い・運搬・移送の違い 容器に入れて運ぶ場合と、移動タンク貯蔵所で移送する場合を区別する。 貯蔵・取扱い：製造所等の位置・構造・設備基準、貯蔵・取扱基準に従う。 運搬：運搬容器、積載方法、混載、表示など、移動時の基準に従う。 移送：移動タンク貯蔵所（タンクローリー等）による危険物の移動。 移送では危険物取扱者の乗車・免状携帯など、運搬とは異なる規定を確認する。 取扱・運搬" id="s13">
+<div class="rank-top"><span class="rank-pill">S－13</span><span class="rank-category">取扱・運搬</span></div>
+<h3>貯蔵・取扱い・運搬・移送の違い</h3><p class="rank-summary">容器に入れて運ぶ場合と、移動タンク貯蔵所で移送する場合を区別する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>貯蔵・取扱い：製造所等の位置・構造・設備基準、貯蔵・取扱基準に従う。</li><li>運搬：運搬容器、積載方法、混載、表示など、移動時の基準に従う。</li><li>移送：移動タンク貯蔵所（タンクローリー等）による危険物の移動。</li><li>移送では危険物取扱者の乗車・免状携帯など、運搬とは異なる規定を確認する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>移送時の危険物取扱者の乗車義務を「危険等級Ⅰだけ」と限定しない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s13">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問12 に関連</span></div></article>
+<article class="rank-card s" data-cat="取扱・運搬" data-rank="S" data-search="消火設備の第1種〜第5種 設備の種類と、取り扱う危険物への適応性を別々に覚える。 第1種＝屋内・屋外消火栓設備、第2種＝スプリンクラー設備など。 第3種＝水噴霧・泡・不活性ガス・ハロゲン化物・粉末等の消火設備。 第4種・第5種は主として大型・小型消火器などの区分に関係する。 消火剤がどの危険物に適応するかは個別に判定する。すべての危険物に同じ消火器が適するわけではない。 取扱・運搬" id="s14">
+<div class="rank-top"><span class="rank-pill">S－14</span><span class="rank-category">取扱・運搬</span></div>
+<h3>消火設備の第1種〜第5種</h3><p class="rank-summary">設備の種類と、取り扱う危険物への適応性を別々に覚える。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>第1種＝屋内・屋外消火栓設備、第2種＝スプリンクラー設備など。</li><li>第3種＝水噴霧・泡・不活性ガス・ハロゲン化物・粉末等の消火設備。</li><li>第4種・第5種は主として大型・小型消火器などの区分に関係する。</li><li>消火剤がどの危険物に適応するかは個別に判定する。すべての危険物に同じ消火器が適するわけではない。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「消火設備の種別」と「危険物の類別」は別の番号体系。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-s14">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問5 に関連</span></div></article></div><p class="notfound" hidden="" id="notfound">該当するテーマがありません。検索語や分野を変えてみてください。</p></div></section><section class="a-section alt" id="rank-a"><div class="wrap"><div class="a-caption">02 / A RANK</div><h2 class="a-section-title">次に固める、Aランク7テーマ。</h2><p class="a-lead">法令の個別規定は、名前・対象・例外が似ていて混同しやすい分野です。Sランクで全体の仕組みを理解してから、個別条件を詰めましょう。上の検索・分野フィルターはAランクにも反映されます。</p><div class="rank-grid" id="a-cards"><article class="rank-card a" data-cat="資格・保安" data-rank="A" data-search="免状の書換え・再交付・保安講習 「免状に変更がある場合」と「免状をなくした場合」を分けて整理する。 書換え：氏名・本籍等の所定事項の変更や写真書換えなど。 再交付：紛失・汚損等の場合。申請できる都道府県の範囲が異なる。 保安講習：製造所等で取扱作業に従事する危険物取扱者が対象となる制度。 住所変更のみで書換えが必要か、写真書換えの時期などを区別する。 資格・保安" id="a01">
+<div class="rank-top"><span class="rank-pill">A－01</span><span class="rank-category">資格・保安</span></div>
+<h3>免状の書換え・再交付・保安講習</h3><p class="rank-summary">「免状に変更がある場合」と「免状をなくした場合」を分けて整理する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>書換え：氏名・本籍等の所定事項の変更や写真書換えなど。</li><li>再交付：紛失・汚損等の場合。申請できる都道府県の範囲が異なる。</li><li>保安講習：製造所等で取扱作業に従事する危険物取扱者が対象となる制度。</li><li>住所変更のみで書換えが必要か、写真書換えの時期などを区別する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>申請先をすべて「今住んでいる都道府県」と覚えない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a01">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問10 に関連</span></div></article>
+<article class="rank-card a" data-cat="施設・設備" data-rank="A" data-search="屋内貯蔵所と屋外貯蔵所 建屋内で保管するか、屋外に置けるか。危険物の種類ごとの制約を確認する。 屋内貯蔵所＝建築物内の所定の構造・設備で貯蔵する施設。 屋外貯蔵所＝屋外で貯蔵できる危険物が法令で限定される。 第4類の危険物ならすべて屋外貯蔵所に貯蔵できる、という理解は誤り。 保管形態と危険物の品名・危険性を対応づけて覚える。 施設・設備" id="a02">
+<div class="rank-top"><span class="rank-pill">A－02</span><span class="rank-category">施設・設備</span></div>
+<h3>屋内貯蔵所と屋外貯蔵所</h3><p class="rank-summary">建屋内で保管するか、屋外に置けるか。危険物の種類ごとの制約を確認する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>屋内貯蔵所＝建築物内の所定の構造・設備で貯蔵する施設。</li><li>屋外貯蔵所＝屋外で貯蔵できる危険物が法令で限定される。</li><li>第4類の危険物ならすべて屋外貯蔵所に貯蔵できる、という理解は誤り。</li><li>保管形態と危険物の品名・危険性を対応づけて覚える。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>屋外タンク貯蔵所は、屋外貯蔵所とは異なる施設区分。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a02">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問2 に関連</span></div></article>
+<article class="rank-card a" data-cat="施設・設備" data-rank="A" data-search="タンク貯蔵所の種類と用途 場所とタンク形状を絵で比較すると記憶しやすい。 屋外タンク・屋内タンク・地下タンク・簡易タンク・移動タンク貯蔵所を区別。 移動タンク貯蔵所にはタンクローリーなどが含まれる。 屋外・屋内・地下では構造基準、防油・漏えい対策、検査の扱いが異なる。 製造所等の3区分のうち、すべて「貯蔵所」に属する。 施設・設備" id="a03">
+<div class="rank-top"><span class="rank-pill">A－03</span><span class="rank-category">施設・設備</span></div>
+<h3>タンク貯蔵所の種類と用途</h3><p class="rank-summary">場所とタンク形状を絵で比較すると記憶しやすい。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>屋外タンク・屋内タンク・地下タンク・簡易タンク・移動タンク貯蔵所を区別。</li><li>移動タンク貯蔵所にはタンクローリーなどが含まれる。</li><li>屋外・屋内・地下では構造基準、防油・漏えい対策、検査の扱いが異なる。</li><li>製造所等の3区分のうち、すべて「貯蔵所」に属する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>「移動タンク貯蔵所」と「移送取扱所」は別物。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a03">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問12・13 に関連</span></div></article>
+<article class="rank-card a" data-cat="資格・保安" data-rank="A" data-search="予防規程と自衛消防組織 施設の日常的な保安と火災等への組織的な対応を分ける。 予防規程は、対象施設の火災予防・保安上の事項を定める。 自衛消防組織は、一定の事業所に設置が求められる組織。 すべての製造所等に一律で必要というわけではない。 保安監督者・施設保安員と制度の目的を比較する。 資格・保安" id="a04">
+<div class="rank-top"><span class="rank-pill">A－04</span><span class="rank-category">資格・保安</span></div>
+<h3>予防規程と自衛消防組織</h3><p class="rank-summary">施設の日常的な保安と火災等への組織的な対応を分ける。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>予防規程は、対象施設の火災予防・保安上の事項を定める。</li><li>自衛消防組織は、一定の事業所に設置が求められる組織。</li><li>すべての製造所等に一律で必要というわけではない。</li><li>保安監督者・施設保安員と制度の目的を比較する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>選任・設置義務は施設区分や規模で変わる。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a04">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問8 に関連</span></div></article>
+<article class="rank-card a" data-cat="資格・保安" data-rank="A" data-search="許可取消し・使用停止命令などの行政措置 どの違反に対して、どのような行政措置が可能なのかを整理する。 危険物規制には、命令・許可取消しなど複数の行政措置がある。 無許可変更、保安体制上の違反、技術基準違反などの扱いは同一でない。 使用停止命令の事由は法令で定められている。 違反内容と行政措置の対応を、単語だけでなく表で比較する。 資格・保安" id="a05">
+<div class="rank-top"><span class="rank-pill">A－05</span><span class="rank-category">資格・保安</span></div>
+<h3>許可取消し・使用停止命令などの行政措置</h3><p class="rank-summary">どの違反に対して、どのような行政措置が可能なのかを整理する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>危険物規制には、命令・許可取消しなど複数の行政措置がある。</li><li>無許可変更、保安体制上の違反、技術基準違反などの扱いは同一でない。</li><li>使用停止命令の事由は法令で定められている。</li><li>違反内容と行政措置の対応を、単語だけでなく表で比較する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>すべての義務違反に直ちに同じ使用停止命令が出るわけではない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a05">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問8 に関連</span></div></article>
+<article class="rank-card a" data-cat="取扱・運搬" data-rank="A" data-search="運搬容器の表示と運搬時の注意事項 第4類なら「火気厳禁」を基本として、類別・品名などの表示も確認する。 危険物の運搬には、容器の性能、収納、積載、表示等の基準がある。 第4類危険物の運搬容器には、所定の注意事項として「火気厳禁」を表示する。 他類の注意事項と混同しない。 容器による運搬と、移動タンク貯蔵所による移送の基準を区別する。 取扱・運搬" id="a06">
+<div class="rank-top"><span class="rank-pill">A－06</span><span class="rank-category">取扱・運搬</span></div>
+<h3>運搬容器の表示と運搬時の注意事項</h3><p class="rank-summary">第4類なら「火気厳禁」を基本として、類別・品名などの表示も確認する。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>危険物の運搬には、容器の性能、収納、積載、表示等の基準がある。</li><li>第4類危険物の運搬容器には、所定の注意事項として「火気厳禁」を表示する。</li><li>他類の注意事項と混同しない。</li><li>容器による運搬と、移動タンク貯蔵所による移送の基準を区別する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>標識・掲示板・運搬容器表示は、目的と記載項目が異なる。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a06">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問14 に関連</span></div></article>
+<article class="rank-card a" data-cat="取扱・運搬" data-rank="A" data-search="セルフ給油取扱所の安全設備と表示 給油設備と灯油用注油設備では、表示・管理方法が異なる。 セルフ給油所は、顧客自らが給油・注油を行うための追加の安全基準がある。 顧客用固定給油設備と顧客用固定注油設備を区別する。 灯油用の顧客用固定注油設備を彩色する場合、所定の色の基準がある（青色）。 監視・制御、誤操作防止、静電気・漏えい対策も目的とともに理解する。 取扱・運搬" id="a07">
+<div class="rank-top"><span class="rank-pill">A－07</span><span class="rank-category">取扱・運搬</span></div>
+<h3>セルフ給油取扱所の安全設備と表示</h3><p class="rank-summary">給油設備と灯油用注油設備では、表示・管理方法が異なる。</p>
+<details><summary>学ぶべきポイントを詳しく見る</summary><ul><li>セルフ給油所は、顧客自らが給油・注油を行うための追加の安全基準がある。</li><li>顧客用固定給油設備と顧客用固定注油設備を区別する。</li><li>灯油用の顧客用固定注油設備を彩色する場合、所定の色の基準がある（青色）。</li><li>監視・制御、誤操作防止、静電気・漏えい対策も目的とともに理解する。</li></ul><div class="rank-caution"><b>間違えやすい点</b><span>色の設問は「灯油」か「ガソリン」か、「給油」か「注油」かを読み落とさない。</span></div></details>
+<div class="rank-useful-links"><a href="#fig-a07">対応する図解の制作予定を見る →</a></div><div class="rank-evidence"><span>公式公開例題：法令 問15 に関連</span></div></article></div></div></section><section class="a-section" id="quantities"><div class="wrap"><div class="a-caption">03 / DESIGNATED QUANTITY</div><h2 class="a-section-title">指定数量を、一覧と計算で定着させる。</h2><p class="a-lead">指定数量とは、危険物の危険性に応じて政令で定められた数量。少ない数量から規制の対象になる物質ほど、指定数量が小さく設定されています。物質の品名と水溶性を混同しないことが重要です。</p>
+<div class="table-scroll"><table class="compare"><thead><tr><th scope="col">第4類の品名</th><th scope="col">区分</th><th scope="col">指定数量</th><th scope="col">代表例・補足</th></tr></thead><tbody>
+<tr><th scope="row">特殊引火物</th><td>―</td><td class="numaccent">50 L</td><td>ジエチルエーテル、二硫化炭素</td></tr>
+<tr><th rowspan="2" scope="row">第一石油類</th><td class="nonwater">非水溶性液体</td><td class="numaccent">200 L</td><td>ガソリン・ベンゼンなど</td></tr><tr><td class="water">水溶性液体</td><td class="numaccent">400 L</td><td>アセトンなど</td></tr>
+<tr><th scope="row">アルコール類</th><td>―</td><td class="numaccent">400 L</td><td>メタノール、エタノールなど</td></tr>
+<tr><th rowspan="2" scope="row">第二石油類</th><td class="nonwater">非水溶性液体</td><td class="numaccent">1,000 L</td><td>灯油、軽油など</td></tr><tr><td class="water">水溶性液体</td><td class="numaccent">2,000 L</td><td>水溶性の第二石油類</td></tr>
+<tr><th rowspan="2" scope="row">第三石油類</th><td class="nonwater">非水溶性液体</td><td class="numaccent">2,000 L</td><td>重油など</td></tr><tr><td class="water">水溶性液体</td><td class="numaccent">4,000 L</td><td>水溶性の第三石油類</td></tr>
+<tr><th scope="row">第四石油類</th><td>―</td><td class="numaccent">6,000 L</td><td>ギヤー油など</td></tr><tr><th scope="row">動植物油類</th><td>―</td><td class="numaccent">10,000 L</td><td>植物油・動物油など（法令上の該当要件に従う）</td></tr>
+</tbody></table></div><p class="note">法令に定める品名の該当要件・例外は個別に確認してください。品名が同じでも、水溶性の区分によって指定数量が変わる場合があります。数値の根拠は危険物の規制に関する政令 別表第三です。</p>
+<h3 class="section-mini">覚えておくべき式</h3><div class="matrix-card" style="margin:14px 0 0"><p style="font-weight:900;font-size:clamp(17px,2.3vw,25px);color:#142c1d;overflow-wrap:anywhere;margin:4px 0">指定数量の倍数 ＝ Σ［各危険物の数量（L） ÷ 各危険物の指定数量（L）］</p><p>例：ガソリン100L＋灯油500L → 100÷200＋500÷1,000＝<b>1.0倍</b>。分母の指定数量を合算してから割るわけではありません。</p></div>
+<div class="calculator" id="calculator"><div class="calc-head"><div><h3>指定数量の倍数｜計算ツール</h3><p>品名と数量を入れると、品名ごとの倍数と合計が計算されます。練習用の独自ツールです。</p></div><button class="calc-add" id="add-calc" type="button">＋ 行を追加</button></div><div aria-hidden="true" class="calc-row calc-labels"><span>危険物の品名・区分</span><span>数量（L）</span><span>指定数量</span><span>倍数</span><span></span></div><div id="calc-lines"></div><div class="calc-footer"><div class="calc-result">合計：<b id="calc-total">1.000</b> 倍</div><div aria-live="polite" class="calc-threshold" id="calc-status"></div></div><p class="note" style="margin-bottom:0">※ 法令上の適用可否は、実際の物品の分類・同一場所での取扱いの扱い・自治体の条例等によります。計算結果だけで施設の適法性を判断しないでください。</p></div>
+<h3 class="section-mini">指定数量の境界を整理する</h3><div class="boundaries"><div class="boundary light">1/5倍未満<small>数量に応じた条例等を確認</small></div><div class="boundary bold">1/5倍以上〜1倍未満：少量危険物<small>市町村の火災予防条例に基づく規制</small></div></div><div class="boundary" style="background:#d4efe2;margin-top:8px">1倍以上：指定数量以上<small>原則として許可を受けた製造所等で貯蔵・取扱い。例外的な仮貯蔵・仮取扱いには別の承認制度。</small></div>
+</div></section><section class="a-section alt" id="illustrated-lessons"><div class="wrap"><div class="a-caption">04 / ILLUSTRATED LESSONS</div><h2 class="a-section-title">図解で学ぶ、21テーマの制作予定。</h2><p class="a-lead">S・Aランクで整理した21テーマを、公害防止管理者と同じ「図解でわかる！」シリーズとして順次制作します。各カードから対応する学習ポイントへ戻れます。現在は制作予定の一覧であり、図解画像は未公開です。</p><div class="fig-grid"><a class="fig-tile" href="#s01" id="fig-s01" style="--fig:#dbf6d5"><span class="fig-num">01 / S</span><strong>消防法の危険物・第1類〜第6類</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s02" id="fig-s02" style="--fig:#dbf6d5"><span class="fig-num">02 / S</span><strong>第4類危険物の7品名と代表物質</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s03" id="fig-s03" style="--fig:#a8e7f7"><span class="fig-num">03 / S</span><strong>第4類の指定数量一覧</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s04" id="fig-s04" style="--fig:#a8e7f7"><span class="fig-num">04 / S</span><strong>指定数量の倍数計算</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s05" id="fig-s05" style="--fig:#a8e7f7"><span class="fig-num">05 / S</span><strong>指定数量と規制の境界・仮貯蔵</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s06" id="fig-s06" style="--fig:#dddffa"><span class="fig-num">06 / S</span><strong>甲種・乙種・丙種の取扱いと立会い</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s07" id="fig-s07" style="--fig:#f7e6c6"><span class="fig-num">07 / S</span><strong>製造所・貯蔵所・取扱所の区分</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s08" id="fig-s08" style="--fig:#f7e6c6"><span class="fig-num">08 / S</span><strong>保安距離と保有空地</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s09" id="fig-s09" style="--fig:#f7e6c6"><span class="fig-num">09 / S</span><strong>製造所の位置・構造・設備の基準</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s10" id="fig-s10" style="--fig:#f7e6c6"><span class="fig-num">10 / S</span><strong>設置・変更許可と完成検査</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s11" id="fig-s11" style="--fig:#dddffa"><span class="fig-num">11 / S</span><strong>危険物保安監督者などの保安体制</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s12" id="fig-s12" style="--fig:#dddffa"><span class="fig-num">12 / S</span><strong>定期点検・保安検査・完成検査</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s13" id="fig-s13" style="--fig:#f9d8da"><span class="fig-num">13 / S</span><strong>貯蔵・取扱い・運搬・移送の違い</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#s14" id="fig-s14" style="--fig:#f9d8da"><span class="fig-num">14 / S</span><strong>消火設備の第1種〜第5種</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a01" id="fig-a01" style="--fig:#dddffa"><span class="fig-num">15 / A</span><strong>免状の書換え・再交付・保安講習</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a02" id="fig-a02" style="--fig:#f7e6c6"><span class="fig-num">16 / A</span><strong>屋内貯蔵所と屋外貯蔵所</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a03" id="fig-a03" style="--fig:#f7e6c6"><span class="fig-num">17 / A</span><strong>タンク貯蔵所の種類と用途</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a04" id="fig-a04" style="--fig:#dddffa"><span class="fig-num">18 / A</span><strong>予防規程と自衛消防組織</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a05" id="fig-a05" style="--fig:#dddffa"><span class="fig-num">19 / A</span><strong>許可取消し・使用停止命令などの行政措置</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a06" id="fig-a06" style="--fig:#f9d8da"><span class="fig-num">20 / A</span><strong>運搬容器の表示と運搬時の注意事項</strong><small>関連する学習ポイントを見る ↗</small></a><a class="fig-tile" href="#a07" id="fig-a07" style="--fig:#f9d8da"><span class="fig-num">21 / A</span><strong>セルフ給油取扱所の安全設備と表示</strong><small>関連する学習ポイントを見る ↗</small></a></div></div></section><section class="a-section" id="comparison"><div class="wrap"><div class="a-caption">05 / COMPARISON</div><h2 class="a-section-title">混同しやすい用語を、比較で覚える。</h2><p class="a-lead">法令問題は、似た用語の区別ができるかを問う形式が多くあります。ここでは規制の目的を中心に整理します。</p>
+<div class="matrix-wrap">
+<article class="matrix-card"><h3>許可・承認・届出・検査</h3><table class="mini-table"><tbody><tr><th>設置・変更の許可</th><td>製造所等の新設や所定の変更を、原則として工事前に許可する手続き。</td></tr><tr><th>仮貯蔵等の承認</th><td>指定数量以上の危険物を10日以内、例外的に仮に貯蔵・取扱いする制度。</td></tr><tr><th>届出</th><td>危険物の品名・数量・指定数量倍数の変更など、法令に定められた事項を届け出る。</td></tr><tr><th>完成検査</th><td>設置・変更後、使用前の適合を確認する検査。</td></tr></tbody></table></article>
+<article class="matrix-card"><h3>保安距離と保有空地</h3><table class="mini-table"><tbody><tr><th>保安距離</th><td>学校・病院等の保安対象物から離すための距離基準。</td></tr><tr><th>保有空地</th><td>火災拡大防止・消防活動等のため施設周辺に設ける空地。</td></tr><tr><th>試験のポイント</th><td>施設種別ごとに、必要かどうか・必要な寸法を確認。</td></tr></tbody></table></article>
+<article class="matrix-card"><h3>貯蔵所と取扱所</h3><table class="mini-table"><tbody><tr><th>貯蔵所</th><td>屋内・屋外貯蔵所、各種タンク貯蔵所。</td></tr><tr><th>取扱所</th><td>給油・販売・移送・一般取扱所。</td></tr><tr><th>混同注意</th><td>「移動タンク貯蔵所」は貯蔵所、「移送取扱所」は取扱所。</td></tr></tbody></table></article>
+<article class="matrix-card"><h3>定期点検と保安検査</h3><table class="mini-table"><tbody><tr><th>定期点検</th><td>施設の維持管理として行う点検。対象施設は法令で定められる。</td></tr><tr><th>保安検査</th><td>一定規模の屋外タンク貯蔵所・移送取扱所等を対象とする法令上の検査。</td></tr><tr><th>混同注意</th><td>周期・対象・実施主体を一括りにして覚えない。</td></tr></tbody></table></article>
+</div></div></section><section class="a-section alt" id="practice"><div class="wrap"><div class="a-caption">06 / ORIGINAL PRACTICE</div><h2 class="a-section-title">理解できたか、オリジナル問題で確認。</h2><p class="a-lead">試験の実際の問題文・選択肢を転載せず、テーマの理解を確かめる独自の練習問題を用意しました。重要テーマを読んだ後のチェックに使ってください。</p>
+<div class="quiz-box"><div class="quiz-top"><span class="tag" id="quiz-cat">指定数量</span><span class="quiz-counter" id="quiz-counter">1 / 8</span></div><h3 id="quiz-q"></h3><div class="quiz-options" id="quiz-opts"></div><div aria-live="polite" class="quiz-answer" hidden="" id="quiz-answer"></div><div class="quiz-controls"><span class="quiz-score" id="quiz-score">正解：0 / 0</span><div><button id="quiz-reset" style="background:white;color:#153821;margin-right:8px" type="button">最初から</button><button id="quiz-next" type="button">次の問題 →</button></div></div></div><p class="note">※ 練習問題は本サイトが独自に作成したもので、公式の出題予測・再現問題ではありません。</p><div class="final-review" id="lastcheck"><div class="a-caption">FINAL REVIEW / 復習チェック</div><h3>最後に、12項目で知識の抜けを確認する。</h3><p class="review-lead">S・Aランクの重要ポイントを自分の言葉で説明できるかチェック。確認した項目はこのブラウザに保存されます。</p><div class="check-grid" id="check-grid">
+<label><input data-check="classification" type="checkbox"/><span>第1類〜第6類の特徴を区別できる</span></label>
+<label><input data-check="types" type="checkbox"/><span>第4類の7品名と代表物質を整理できる</span></label>
+<label><input data-check="values" type="checkbox"/><span>指定数量を水溶性・非水溶性で区別できる</span></label>
+<label><input data-check="calc" type="checkbox"/><span>複数物質の指定数量の倍数を計算できる</span></label>
+<label><input data-check="boundary" type="checkbox"/><span>指定数量以上・少量危険物・仮貯蔵を説明できる</span></label>
+<label><input data-check="license" type="checkbox"/><span>甲種・乙種・丙種の取扱いと立会いを区別できる</span></label>
+<label><input data-check="facility" type="checkbox"/><span>製造所・貯蔵所・取扱所を区別できる</span></label>
+<label><input data-check="distance" type="checkbox"/><span>保安距離と保有空地を説明できる</span></label>
+<label><input data-check="process" type="checkbox"/><span>設置・変更許可と完成検査の流れを説明できる</span></label>
+<label><input data-check="supervisor" type="checkbox"/><span>保安監督者・保安員・自衛消防組織を区別できる</span></label>
+<label><input data-check="inspection" type="checkbox"/><span>定期点検と保安検査を混同しない</span></label>
+<label><input data-check="shipping" type="checkbox"/><span>運搬と移送、表示と消火設備を区別できる</span></label>
+</div><div class="check-progress"><span id="check-text">0 / 12 項目確認</span><div aria-label="復習チェックの進捗" aria-valuemax="12" aria-valuemin="0" aria-valuenow="0" class="progress-track" id="check-progress" role="progressbar"><div class="progress-fill" id="check-fill"></div></div><button class="calc-add" id="check-clear" type="button">チェックをリセット</button></div></div></div></section><section class="sources" id="sources"><div class="wrap"><div class="a-caption" style="color:#b9d7bc">REFERENCES / SOURCES &amp; NOTES</div><h2>参照資料と、本ページの考え方。</h2><p>ここでのS/Aは化学資格研究所が独自に設定した「学習の優先度」であり、公式の出題頻度や過去10年間の統計を示していません。公的資料に示された法令、試験科目、公開例題の論点を参照して解説しています。消防法、危険物の規制に関する政令・規則および市町村条例は改正されることがあります。実際の施設設計・届出・取扱いでは最新の法令・所轄消防機関の案内をご確認ください。</p>
+<ul><li><a href="https://www.shoubo-shiken.or.jp/kikenbutsu/annai/subject.html" rel="noopener noreferrer" target="_blank">消防試験研究センター：試験科目と問題数</a></li>
+<li><a href="https://www.shoubo-shiken.or.jp/kikenbutsu/annai/way.html" rel="noopener noreferrer" target="_blank">消防試験研究センター：試験の方法と合格基準</a></li>
+<li><a href="https://www.shoubo-shiken.or.jp/content/kikenbutsu_otsu4.pdf" rel="noopener noreferrer" target="_blank">消防試験研究センター：過去に出題された問題（乙種第4類・PDF）</a></li>
+<li><a href="https://www.fdma.go.jp/laws/laws/laws003.html" rel="noopener noreferrer" target="_blank">総務省消防庁：「危険物」とは？（第1類〜第6類）</a></li>
+<li><a href="https://laws.e-gov.go.jp/law/323AC1000000186" rel="noopener noreferrer" target="_blank">e-Gov法令検索：消防法</a></li>
+<li><a href="https://laws.e-gov.go.jp/law/334CO0000000306" rel="noopener noreferrer" target="_blank">e-Gov法令検索：危険物の規制に関する政令（別表第三：指定数量）</a></li>
+<li><a href="https://laws.e-gov.go.jp/law/334M50000002055" rel="noopener noreferrer" target="_blank">e-Gov法令検索：危険物の規制に関する規則</a></li></ul>
+<p>※ 掲載内容は理解を助ける独自解説です。公式公開問題の問題文・選択肢・解答の転載は行わず、練習問題は独自作成しています。</p>
+</div></section></main>
+<footer class="foot"><div class="wrap foot-inner"><div class="foot-big">HAZARDOUS<br/>MATERIALS</div><a class="btn" href="hazardous-otsu4.html">← 乙4 科目一覧へ</a></div></footer>
+<script>
+'use strict';
+const ALL_CARDS=Array.from(document.querySelectorAll('.rank-card'));
+const search=document.getElementById('rank-search');let activeCat='all';
+function filterCards(){const q=search.value.toLocaleLowerCase('ja-JP').trim();let ns=0,na=0;for(const c of ALL_CARDS){const ok=(activeCat==='all'||c.dataset.cat===activeCat)&&(!q||c.dataset.search.toLocaleLowerCase('ja-JP').includes(q));c.hidden=!ok;if(ok){if(c.dataset.rank==='S')ns++;else na++;}}document.getElementById('rank-count').textContent=`S${ns}テーマ・A${na}テーマを表示中`;document.getElementById('notfound').hidden=(ns+na)!==0;}
+search.addEventListener('input',filterCards);document.getElementById('cat-buttons').addEventListener('click',e=>{const b=e.target.closest('.cat-btn');if(!b)return;activeCat=b.dataset.cat;document.querySelectorAll('.cat-btn').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));filterCards();});
+const kinds=[["特殊引火物", 50], ["第一石油類（非水溶性）", 200], ["第一石油類（水溶性）", 400], ["アルコール類", 400], ["第二石油類（非水溶性）", 1000], ["第二石油類（水溶性）", 2000], ["第三石油類（非水溶性）", 2000], ["第三石油類（水溶性）", 4000], ["第四石油類", 6000], ["動植物油類", 10000]];
+let calcItems=[{type:1,q:100},{type:4,q:500}];
+function renderCalc(){const root=document.getElementById('calc-lines');root.replaceChildren();let total=0;calcItems.forEach((item,i)=>{const row=document.createElement('div');row.className='calc-row';const sel=document.createElement('select');sel.setAttribute('aria-label',`行${i+1}の危険物の品名`);kinds.forEach(([name,amt],j)=>{const op=new Option(name,String(j));op.selected=(j===item.type);sel.add(op);});sel.addEventListener('change',()=>{item.type=Number(sel.value);renderCalc()});const inp=document.createElement('input');inp.type='number';inp.placeholder='数量（L）';inp.min='0';inp.step='any';inp.inputMode='decimal';inp.setAttribute('aria-label',`行${i+1}の数量（L）`);inp.value=String(item.q);inp.addEventListener('input',()=>{item.q=Math.max(0,Number(inp.value)||0);updateCalcOutputs()});const lim=document.createElement('output');lim.className='lim';lim.textContent=kinds[item.type][1].toLocaleString('ja-JP')+' L';const ratio=document.createElement('output');ratio.className='ratio';ratio.setAttribute('aria-label',`行${i+1}の指定数量の倍数`);const del=document.createElement('button');del.type='button';del.className='calc-del';del.textContent='×';del.title='この行を削除';del.setAttribute('aria-label',`行${i+1}を削除`);del.addEventListener('click',()=>{if(calcItems.length===1){calcItems[0]={type:1,q:0};}else calcItems.splice(i,1);renderCalc();});row.append(sel,inp,lim,ratio,del);root.append(row);});updateCalcOutputs();}
+function updateCalcOutputs(){let total=0;document.querySelectorAll('#calc-lines .calc-row').forEach((row,i)=>{const item=calcItems[i];const r=(Number(item.q)||0)/kinds[item.type][1];total+=r;row.querySelector('.ratio').textContent=r.toFixed(3)+' 倍';});document.getElementById('calc-total').textContent=total.toFixed(3);const x=document.getElementById('calc-status');x.textContent=total>=1?'指定数量以上の水準です。原則として許可を受けた製造所等での貯蔵・取扱いが必要です。':total>=0.2?'指定数量の1/5以上、1倍未満です。少量危険物として条例上の規制を確認してください。':'指定数量の1/5未満です。危険物が無規制になるという意味ではありません。';}
+document.getElementById('add-calc').addEventListener('click',()=>{if(calcItems.length>=10)return;calcItems.push({type:1,q:0});renderCalc();});renderCalc();
+const quiz=[{"category": "指定数量", "q": "ガソリン100Lと灯油500Lを同じ場所で貯蔵する場合、指定数量の倍数は合計いくつか。", "options": ["0.5倍", "1.0倍", "1.5倍", "3.0倍"], "answer": 1, "why": "ガソリン100÷200＝0.5倍、灯油500÷1,000＝0.5倍。合計1.0倍。個別に割って合計する。"}, {"category": "資格・保安", "q": "乙種第4類の危険物取扱者が、免状の範囲内で立ち会える取扱いはどれか。", "options": ["第4類の危険物", "第1類〜第6類のすべて", "第2類のみ", "危険物すべてについて立会いできない"], "answer": 0, "why": "乙種は免状を受けた類について取扱い・立会いができる。乙4は第4類。"}, {"category": "基礎・分類", "q": "次のうち、第4類の品名に含まれるものはどれか。", "options": ["アルキルアルミニウム", "過酸化水素", "アルコール類", "金属ナトリウム"], "answer": 2, "why": "アルコール類は第4類。アルキルアルミニウムと金属ナトリウムは第3類、過酸化水素は第6類に分類される。"}, {"category": "指定数量", "q": "第二石油類の非水溶性液体の指定数量はどれか。", "options": ["200L", "400L", "1,000L", "2,000L"], "answer": 2, "why": "第二石油類の非水溶性液体は1,000L、水溶性液体は2,000L。"}, {"category": "施設・設備", "q": "移動タンク貯蔵所は、製造所等のどの区分に属するか。", "options": ["製造所", "貯蔵所", "取扱所", "どれにも属さない"], "answer": 1, "why": "移動タンク貯蔵所は貯蔵所の一種。移送取扱所とは名称が似ているが異なる。"}, {"category": "施設・設備", "q": "保安距離と保有空地について、適切な説明はどれか。", "options": ["両者は同じものを指す", "保安距離は保安対象物との距離に関する基準", "保有空地は免状保管のための場所", "いずれも全施設に同じ距離で適用する"], "answer": 1, "why": "保安距離は学校・病院などの保安対象物との距離に関する基準。保有空地は施設の周囲に設ける空間。"}, {"category": "施設・設備", "q": "製造所等の新設で、原則として使用できるタイミングはどれか。", "options": ["図面を描いた時点", "設置許可の申請をした時点", "設置工事を開始した時点", "完成検査で適合が認められ、完成検査済証の交付を受けた後"], "answer": 3, "why": "原則として設置許可を受け、工事を実施し、完成検査に合格して完成検査済証を受けた後に使用できる。"}, {"category": "取扱・運搬", "q": "第4類危険物の運搬容器に表示する所定の注意事項として適切なものはどれか。", "options": ["火気厳禁", "禁水", "衝撃注意", "空気接触注意"], "answer": 0, "why": "第4類危険物の運搬容器は「火気厳禁」。容器の所定表示と、施設の標識・掲示を区別する。"}];let quizIndex=0,quizAnswered=0,quizCorrect=0,selected=-1;
+function showQuiz(){const it=quiz[quizIndex];document.getElementById('quiz-cat').textContent=it.category;document.getElementById('quiz-counter').textContent=`${quizIndex+1} / ${quiz.length}`;document.getElementById('quiz-q').textContent=it.q;const root=document.getElementById('quiz-opts');root.replaceChildren();selected=-1;document.getElementById('quiz-answer').hidden=true;document.getElementById('quiz-next').textContent=quizIndex===quiz.length-1?'最初に戻る →':'次の問題 →';it.options.forEach((o,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option';b.textContent=`${i+1}. ${o}`;b.addEventListener('click',()=>chooseAnswer(i));root.append(b);});updateScore();}
+function chooseAnswer(i){if(selected>=0)return;selected=i;quizAnswered++;if(i===quiz[quizIndex].answer)quizCorrect++;const arr=Array.from(document.querySelectorAll('.quiz-option'));arr.forEach((b,j)=>{b.disabled=true;if(j===quiz[quizIndex].answer)b.classList.add('correct');if(j===i){b.classList.add('selected');if(i!==quiz[quizIndex].answer)b.classList.add('wrong');}});const fb=document.getElementById('quiz-answer');fb.hidden=false;fb.textContent=(i===quiz[quizIndex].answer?'正解！':'不正解。')+' '+quiz[quizIndex].why;updateScore();}
+function updateScore(){document.getElementById('quiz-score').textContent=`正解：${quizCorrect} / ${quizAnswered}`;}
+document.getElementById('quiz-next').addEventListener('click',()=>{if(quizIndex===quiz.length-1){quizIndex=0;quizAnswered=0;quizCorrect=0;}else quizIndex++;showQuiz();});document.getElementById('quiz-reset').addEventListener('click',()=>{quizIndex=0;quizAnswered=0;quizCorrect=0;showQuiz();});showQuiz();
+const checks=Array.from(document.querySelectorAll('#check-grid input'));const storageKey='cql_otsu4_law_checks_v1';try{const stored=JSON.parse(localStorage.getItem(storageKey)||'[]');checks.forEach(el=>el.checked=stored.includes(el.dataset.check));}catch(e){}
+function checkUpdate(){const n=checks.filter(x=>x.checked).length;document.getElementById('check-text').textContent=`${n} / ${checks.length} 項目確認`;document.getElementById('check-fill').style.width=(n/checks.length*100)+'%';document.getElementById('check-progress').setAttribute('aria-valuenow',String(n));try{localStorage.setItem(storageKey,JSON.stringify(checks.filter(x=>x.checked).map(x=>x.dataset.check)));}catch(e){}}
+checks.forEach(x=>x.addEventListener('change',checkUpdate));document.getElementById('check-clear').addEventListener('click',()=>{checks.forEach(x=>x.checked=false);checkUpdate();});checkUpdate();
+
+// When following a planned-illustration link, restore a filtered-out card.
+document.querySelectorAll('.fig-tile[href^="#"]').forEach(link=>{
+  link.addEventListener('click',()=>{
+    const target=document.getElementById(link.getAttribute('href').slice(1));
+    if(!target || !target.hidden)return;
+    search.value='';activeCat='all';
+    document.querySelectorAll('.cat-btn').forEach(x=>x.setAttribute('aria-pressed',x.dataset.cat==='all'?'true':'false'));
+    filterCards();
+  });
+});
+</script></body></html>
