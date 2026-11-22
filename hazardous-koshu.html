@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="危険物取扱者甲種。法令・物理化学・性質と消火・重要問題を図解で学ぶ。">
+<title>甲種｜法令・物理化学・性質と消火・演習 | 化学資格研究所</title>
+<style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+
+.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}
+.topic p{color:var(--muted);margin:0 0 20px}
+.topic .btn{margin-top:8px}
+.topic .btn.primary{background:var(--black);color:var(--white)}
+.topic .btn.ghost{color:var(--muted);border-color:var(--line);background:transparent;cursor:default}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+/* Child course pages retain the same site style and card pattern. */
+.course-hero h1{font-size:clamp(42px,6.6vw,94px);line-height:1.12;letter-spacing:-.055em;overflow-wrap:anywhere}
+.course-hero p{max-width:850px;line-height:1.9}
+.course-kicker{font-size:12px;letter-spacing:.12em;color:var(--muted);font-weight:800;margin:0 0 8px}
+.course-intro{margin:0 0 32px 204px;color:var(--muted);max-width:780px;font-size:15px}
+.subject-caption{color:var(--muted);font-size:12px;margin:20px 0 0}
+.page-return{margin-top:38px}
+a:focus-visible{outline:3px solid #397cb5;outline-offset:4px}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+  .course-intro{margin-left:0}
+  .page-hero{padding:75px 0 65px}
+  .course-hero h1{font-size:clamp(36px,8vw,66px)}
+}
+@media(max-width:480px){
+  .wrap{width:calc(100% - 32px)}
+  .page-hero h1{font-size:clamp(43px,11vw,62px);line-height:1.1}
+  .course-hero h1{font-size:clamp(34px,8vw,48px)}
+  .section h2{font-size:clamp(38px,9vw,56px)}
+  .topic{padding:24px}
+  .foot-big{overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <span class="mark">CQL</span>
+      <span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#qualifications">QUALIFICATIONS</a>
+      <a href="index.html#principle">PRINCIPLE</a>
+      <a href="profile.html">ABOUT</a>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="wrap breadcrumb"><a href="index.html">HOME</a> / <a href="hazardous.html">危険物取扱者</a> / 甲種</div>
+<section class="page-hero course-hero">
+  <div class="wrap">
+    <div class="kicker">HAZARDOUS MATERIALS / KOSHU</div>
+    <h1>甲種。<br>全6類を、体系的に。</h1>
+    <p>第1類〜第6類の危険物を対象に、法令・物理化学・性質と消火を体系的に学ぶ。乙4との共通事項を土台に、甲種で必要な知識を深めていきます。</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sec-no">01 / SUBJECT INDEX</div>
+      <div><h2>科目を選ぶ。</h2></div>
+    </div>
+    <p class="course-intro">3つの試験科目に加え、重要問題・演習を設けています。図解と問題を結びつけながら学べるよう、コンテンツを順次追加していきます。</p>
+    <div class="topic-grid">
+      <div class="topic">
+        <div class="sec-no">01</div>
+        <h3>法令</h3>
+        <p>危険物全般に共通する分類・指定数量・製造所等の基準や保安管理を整理します。</p>
+        <span class="btn ghost" aria-label="公開準備中">COMING SOON</span>
+      </div>
+<div class="topic">
+        <div class="sec-no">02</div>
+        <h3>物理・化学</h3>
+        <p>化学反応・熱化学・物質の構造と性質など、甲種に必要な基礎を解説します。</p>
+        <span class="btn ghost" aria-label="公開準備中">COMING SOON</span>
+      </div>
+<div class="topic">
+        <div class="sec-no">03</div>
+        <h3>性質・消火</h3>
+        <p>第1類〜第6類の特徴、混触危険、貯蔵・取扱いと消火方法を比較します。</p>
+        <span class="btn ghost" aria-label="公開準備中">COMING SOON</span>
+      </div>
+<div class="topic">
+        <div class="sec-no">04</div>
+        <h3>重要問題・演習</h3>
+        <p>重要論点をS/Aランク別に整理し、独自の確認問題と解説で理解を定着させます。</p>
+        <span class="btn ghost" aria-label="公開準備中">COMING SOON</span>
+      </div>
+    </div>
+    <p class="subject-caption">※ 重要度のS/Aランクは独自の学習優先度です。年度別の過去問出題回数を示すものではありません。</p>
+    <div class="page-return"><a class="btn" href="hazardous.html">← 危険物取扱者に戻る</a></div>
+  </div>
+</section>
+</main>
+<footer class="foot dark"><div class="wrap foot-inner"><div class="foot-big">HAZARDOUS MATERIALS</div><a class="btn" style="color:white;border-color:white" href="index.html">← HOME</a></div></footer>
+</body>
+</html>
