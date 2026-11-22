@@ -1,0 +1,473 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="化学資格研究所の危険物乙4『危険物の性質・消火』学習ガイド。Sランク13テーマ、Aランク9テーマ、代表物性の比較表、図解予定、オリジナル演習で体系的に学ぶ。"><meta property="og:title" content="乙4｜危険物の性質・消火｜S/Aランク重要テーマ | 化学資格研究所"><title>乙4｜危険物の性質・消火｜S/Aランク重要テーマ | 化学資格研究所</title><style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+}
+
+
+
+
+:root{--bg:#f3f5ef;--lime:#c8ff4d;--ink:#0b0d0c;--muted:#607065;--line:#d7dfd6;--forest:#10251a}
+body{line-height:1.7} [id]{scroll-margin-top:150px}
+.skip{position:absolute;top:-70px;left:12px;z-index:100;background:#fff;padding:10px}.skip:focus{top:5px}
+.breadcrumb{padding:20px 0;font-size:12px}.breadcrumb a{text-decoration:underline;text-underline-offset:3px}
+.a-hero{background:#101512;color:#fff;padding:73px 0 75px;position:relative;overflow:hidden;border-bottom:1px solid #3e443e}
+.a-hero:before{content:'';position:absolute;right:-140px;top:-165px;width:530px;height:530px;border:1px solid #4b554d;border-radius:50%;box-shadow:0 0 0 80px #ffffff07,0 0 0 160px #ffffff05;pointer-events:none}
+.a-eyebrow{display:flex;align-items:center;gap:11px;color:#a9c9b4;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.a-eyebrow .dot{width:8px;height:8px;background:var(--lime);box-shadow:0 0 0 4px #c8ff4d22;border-radius:50%}
+.a-hero h1{font-size:clamp(39px,6.3vw,82px);font-weight:900;line-height:1.13;margin:22px 0;letter-spacing:-.065em;max-width:1000px}
+.a-hero h1 em{color:var(--lime);font-style:normal}.a-hero p{color:#ced8cf;font-size:clamp(15px,1.65vw,18px);line-height:1.95;max-width:870px}
+.a-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}.a-btn{border:1px solid #dce7df;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:12px 19px;border-radius:99px;background:#fff;color:#102118;font-size:12px;font-weight:900;transition:.2s}
+.a-btn.dark{background:var(--lime);border-color:var(--lime)}.a-btn:hover{transform:translateY(-2px)}.a-hero-stats{max-width:880px;display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #4d5b52;margin-top:47px}
+.a-hero-stat{padding:19px 20px 19px 0}.a-hero-stat+.a-hero-stat{border-left:1px solid #4d5b52;padding-left:22px}
+.a-hero-stat b{display:block;color:var(--lime);font-size:clamp(38px,5.2vw,65px);line-height:1.15;letter-spacing:-.07em}.a-hero-stat small{font-size:11px;color:#becdc0;font-weight:700}
+.a-subnav{position:sticky;top:76px;z-index:20;background:#f3f5eff7;backdrop-filter:blur(10px);border-bottom:1px solid #d7e0d8;overflow-x:auto;scrollbar-width:thin}
+.a-subnav .wrap{display:flex;align-items:center;gap:24px;min-height:56px;white-space:nowrap}.a-subnav a{font-size:12px;font-weight:850;color:#43584a}.a-subnav a:hover{color:#0c2b19}
+.a-section{padding:84px 0;border-bottom:1px solid #d9dfd8}.a-section.alt{background:#eaf0ea}.a-section-title{font-size:clamp(30px,4.7vw,56px);letter-spacing:-.06em;line-height:1.2;margin:12px 0 16px;font-weight:900}
+.a-caption{font-size:11px;font-weight:950;letter-spacing:.16em;color:#496952}.a-lead{max-width:830px;color:#46594b;font-size:15px;line-height:1.95;margin:0 0 28px}
+.note{font-size:12px;color:#526759;line-height:1.8;padding:15px 19px;border-left:3px solid #86a48d;background:#ffffffbd;margin:22px 0}
+.intro-cards,.flow-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.intro-card,.flow-card{background:#fff;border:1px solid #d4e0d4;border-radius:16px;padding:22px;min-width:0}
+.intro-card small{color:#4a7050;font-size:11px;font-weight:900;letter-spacing:.08em}.intro-card h3{font-size:19px;margin:13px 0 8px;line-height:1.3;letter-spacing:-.03em}.intro-card p,.flow-card p{font-size:12px;line-height:1.85;color:#526557;margin:0}
+.flow-card b{display:block;color:#3b774c;font-size:30px;line-height:1}.flow-card h3{font-size:17px;line-height:1.4;margin:11px 0}
+.sample-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:24px}.sample-tile{border-radius:12px;border:1px solid #ccd8ce;background:var(--tile);padding:13px;display:flex;flex-direction:column;gap:12px;min-height:132px;transition:transform .15s}
+.sample-tile:hover{transform:translateY(-3px)}.sample-tile b{font-size:18px}.sample-tile span{font-size:12px;font-weight:850;line-height:1.5}.sample-tile small{font-size:10px;color:#3d5042;margin-top:auto}
+.section-mini{font-size:23px;line-height:1.4;letter-spacing:-.045em;margin:34px 0 13px}
+.table-scroll{overflow-x:auto;border:1px solid #d3dfd4;border-radius:16px;background:#fff;margin:22px 0}.compare{border-collapse:collapse;min-width:650px;width:100%;font-size:13px}.compare th,.compare td{text-align:left;padding:13px 17px;border-bottom:1px solid #e1e8e1;vertical-align:middle;line-height:1.6}.compare th{font-weight:900}.compare thead th{background:#152a1c;color:white}.compare tbody th{background:#eff7ec}.compare tbody tr:last-child>*{border-bottom:0}.compare .water{background:#edf8fe}.compare .nonwater{background:#f3fae8}
+.numaccent{font-size:19px;font-weight:950;letter-spacing:-.03em;white-space:nowrap}.compare-sub{font-size:11px;color:#52665b}
+.boundaries{display:grid;grid-template-columns:1fr 4fr;gap:8px;margin:27px 0 0}.boundary{padding:17px 12px;border-radius:12px;border:1px solid #b7cdb9;text-align:center;font-size:12px;font-weight:850;line-height:1.5}.boundary small{display:block;margin-top:6px;color:#536d5b;font-size:10px;font-weight:650}.boundary.light{background:#edf4e9}.boundary.bold{background:#d9f3d0}
+.calculator{margin-top:34px;padding:27px;border-radius:18px;background:#fff;border:1px solid #cfdccf}.calc-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.calc-head h3{font-size:24px;margin:0 0 9px}.calc-head p{font-size:12px;margin:0;color:#52675a}.calc-row{display:grid;grid-template-columns:1.7fr 1fr .9fr 1fr 34px;gap:10px;align-items:center;margin-top:10px}.calc-row.calc-labels{font-size:11px;font-weight:900;color:#5b6e60}.calc-row select,.calc-row input{min-width:0;width:100%;border:1px solid #cad6ca;background:#fff;border-radius:9px;padding:12px 10px;color:#142c1e;font:inherit;font-size:13px}.calc-row output{font-variant-numeric:tabular-nums;font-weight:850;text-align:right;white-space:nowrap;font-size:13px}.calc-row .calc-del{background:#f3f5f1;border:1px solid #cdd6ca;border-radius:8px;padding:9px;cursor:pointer;font-size:17px}.calc-footer{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid #e3ebe3;margin-top:20px;padding-top:19px}.calc-result{font-size:14px;color:#36483c}.calc-result b{font-size:32px;line-height:1;font-weight:950;color:#152a1d}.calc-threshold{font-size:12px;max-width:500px;color:#465e4c}.calc-add{background:#173c28;color:#fff;border-radius:22px;border:0;padding:12px 17px;font-size:12px;font-weight:900;cursor:pointer}
+.rank-intro{display:flex;gap:10px;flex-wrap:wrap;margin:27px 0}.rank-intro span{border:1px solid #c8d6c9;border-radius:12px;padding:12px 16px;background:#fff;font-size:13px;color:#425949}
+.rank-intro strong{font-weight:950;color:#163c22}.rank-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 24px}.rank-search{flex:1;min-width:min(270px,100%);border:1px solid #b9cdbb;background:#fff;padding:13px 15px;border-radius:10px;font:inherit;font-size:13px}
+.cat-buttons{display:flex;flex-wrap:wrap;gap:6px}.cat-btn{background:#fff;border:1px solid #a8bea9;border-radius:99px;color:#20432c;padding:10px 13px;font:inherit;font-size:12px;font-weight:850;cursor:pointer}.cat-btn[aria-pressed=true]{background:#163b25;color:white}.rank-count{font-size:12px;color:#536859;font-weight:850;margin:0 0 16px}
+.rank-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.rank-card{min-width:0;background:#fff;border:1px solid #cdd9ce;border-radius:16px;padding:25px;display:flex;flex-direction:column;gap:11px}.rank-card[hidden]{display:none!important}
+.rank-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.rank-pill{display:inline-block;border-radius:7px;background:#c8ff4d;padding:4px 10px;font-weight:950;font-size:13px;color:#142a1c}.rank-card.a .rank-pill{background:#d7e5ff}.rank-category{font-size:11px;color:#536d5a;font-weight:800}.rank-card h3{font-size:clamp(20px,2.2vw,25px);line-height:1.35;margin:3px 0;letter-spacing:-.04em}.rank-summary{font-size:13px;line-height:1.8;margin:0 0 2px;color:#495e50}.rank-card details{border-top:1px solid #e2e9e2;padding-top:11px;margin-top:3px}.rank-card summary{font-size:13px;font-weight:900;color:#165330;cursor:pointer}.rank-card ul{font-size:13px;line-height:1.75;color:#3d5543;padding-left:20px}.rank-card li+li{margin-top:7px}.rank-caution{background:#f1f7ed;border-radius:9px;padding:12px;display:flex;gap:4px;flex-direction:column;font-size:12px;line-height:1.7;color:#475e4a}.rank-caution b{color:#245c35}.rank-evidence{font-size:11px;color:#718271;margin-top:auto;padding-top:9px;border-top:1px solid #e4ece4}.rank-evidence span{display:inline-block}
+.notfound{padding:15px;background:white;border:1px solid #d3ddd1;border-radius:12px;font-size:13px}.notfound[hidden]{display:none}
+.matrix-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.matrix-card{background:#fff;border:1px solid #d4ded4;border-radius:16px;padding:24px}.matrix-card h3{font-size:19px;margin:0 0 14px}.matrix-card p{font-size:13px;color:#4a5d4c;line-height:1.85}.matrix-card b{color:#19452a}.mini-table{border-collapse:collapse;width:100%;font-size:12px}.mini-table tr+tr{border-top:1px solid #e2eae1}.mini-table td,.mini-table th{text-align:left;padding:10px 5px;vertical-align:top}.mini-table th{width:37%;color:#244932;font-weight:900}
+.quiz-box{padding:28px;background:#fff;border:1px solid #c9d8c9;border-radius:18px;max-width:910px}.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.quiz-top .tag{font-size:11px;background:#e4f5db;color:#16492b;border-radius:50px;padding:7px 12px;font-weight:900}.quiz-counter{font-size:13px;color:#62705f;font-weight:800}.quiz-box h3{font-size:24px;letter-spacing:-.035em;line-height:1.5}.quiz-options{display:grid;gap:10px}.quiz-option{border:1px solid #cdd9cd;border-radius:12px;text-align:left;font:inherit;background:white;padding:13px 16px;font-size:14px;line-height:1.7;cursor:pointer}.quiz-option:hover{background:#f0f9eb}.quiz-option.selected{outline:2px solid #1c5b35;outline-offset:1px}.quiz-option.correct{border-color:#4b9a65;background:#e6f8e8}.quiz-option.wrong{border-color:#b96363;background:#fff0ee}.quiz-option:disabled{cursor:default}.quiz-answer{margin:16px 0;padding:17px;border-radius:12px;background:#eff6ec;font-size:13px;line-height:1.8}.quiz-answer[hidden]{display:none}.quiz-controls{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:18px}.quiz-controls button{border:1px solid #254b32;background:#153821;color:#fff;border-radius:22px;padding:11px 17px;font:inherit;font-size:12px;cursor:pointer;font-weight:900}.quiz-score{font-size:12px;color:#53695b}
+.fig-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.fig-tile{background:#fff;border:1px solid #d4dfd5;border-top:4px solid var(--fig);padding:22px;border-radius:15px;min-height:152px;display:flex;flex-direction:column;gap:10px;transition:transform .15s}.fig-tile:hover{transform:translateY(-3px)}.fig-num{font-size:11px;font-weight:900;color:#54735b;letter-spacing:.12em}.fig-tile strong{font-size:18px;letter-spacing:-.03em;line-height:1.4}.fig-tile small{font-size:11px;color:#617d6a;margin-top:auto}
+.study-route{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.study-step{background:#fff;border:1px solid #d5ded2;border-radius:14px;padding:18px}.study-step b{font-size:28px;color:#3a7a4b}.study-step h3{font-size:16px;margin:7px 0}.study-step p{font-size:12px;margin:0;color:#596b5c}.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}.check-grid label{padding:14px 15px;display:flex;align-items:flex-start;gap:11px;border:1px solid #d5dfd5;background:#fff;border-radius:12px;cursor:pointer;font-size:13px;font-weight:750}.check-grid input{width:19px;height:19px;accent-color:#276d3a;flex:0 0 19px;margin-top:2px}.check-grid label:has(input:checked){background:#e5f8dc}.check-progress{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:18px;font-weight:850;color:#244a2c;font-size:13px}.progress-track{width:min(290px,100%);height:12px;border-radius:99px;background:#dde7da;overflow:hidden}.progress-fill{width:0;background:#2c7546;height:100%;border-radius:99px;transition:width .2s}
+.sources{background:#101b14;color:#fff;padding:62px 0 72px}.sources h2{font-size:clamp(29px,3.5vw,48px);margin:12px 0}.sources p{font-size:13px;color:#cad7cc;max-width:940px;line-height:1.9}.sources a{color:#d9ffb6;text-decoration:underline;text-underline-offset:4px}.sources ul{font-size:13px;line-height:2.15;padding-left:20px}.foot{background:#0a0c0b;color:white}.foot .btn{color:white;border-color:white}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1000px){.intro-cards,.sample-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.fig-grid{grid-template-columns:repeat(2,1fr)}.study-route{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:780px){.a-section{padding:62px 0}.a-hero{padding:48px 0 57px}.rank-grid,.matrix-wrap{grid-template-columns:1fr}.intro-cards,.study-route{grid-template-columns:repeat(2,1fr)}.sample-grid{grid-template-columns:repeat(3,1fr)}.calc-row{grid-template-columns:1.4fr .8fr 1fr 1fr 30px;gap:5px}.calc-row select,.calc-row input{padding:9px 4px;font-size:12px}.calc-row output{font-size:11px}.calc-row.calc-labels{font-size:10px}}
+@media(max-width:510px){.wrap{width:min(1180px,calc(100% - 30px))}.a-hero h1{font-size:clamp(35px,9.1vw,50px)}.a-hero-stat{padding-right:8px}.a-hero-stat+.a-hero-stat{padding-left:10px}.a-hero-stat b{font-size:clamp(30px,9vw,41px)}.a-hero-stat small{font-size:10px}.intro-cards,.sample-grid,.fig-grid,.study-route,.check-grid{grid-template-columns:1fr 1fr}.intro-card,.flow-card{padding:15px}.intro-card h3{font-size:16px}.sample-tile{min-height:118px;padding:11px}.sample-tile span{font-size:11px}.fig-tile{padding:15px;min-height:133px}.fig-tile strong{font-size:14px}.rank-card{padding:20px}.calculator{padding:15px 10px}.calc-row{grid-template-columns:1.3fr .65fr .7fr .7fr 24px;gap:4px}.calc-row.calc-labels{display:none}.calc-row:not(.calc-labels){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,.8fr);gap:7px;background:#f5f9f4;border:1px solid #dbe6d9;padding:10px;border-radius:10px;margin-top:10px}.calc-row select{grid-column:1/3;grid-row:1;font-size:12px;padding:10px 8px}.calc-row .calc-del{grid-column:3;grid-row:1;justify-self:end;padding:7px 12px}.calc-row input{grid-column:1;grid-row:2;font-size:12px;padding:9px 6px}.calc-row .lim{grid-column:2;grid-row:2}.calc-row .ratio{grid-column:3;grid-row:2}.calc-row output{font-size:12px;line-height:1.5}.calc-row .lim:before{content:'指定数量';display:block;font-size:10px;color:#647968}.calc-row .ratio:before{content:'倍数';display:block;font-size:10px;color:#647968}.a-section-title{font-size:34px}.quiz-box{padding:18px}.quiz-box h3{font-size:20px}.boundary{font-size:10px;padding:10px 5px}.boundary small{font-size:9px}}
+@media(max-width:370px){.intro-cards,.sample-grid,.fig-grid,.study-route{grid-template-columns:1fr 1fr}.a-actions{gap:6px}.a-btn{padding:10px 11px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Revision: learning-first navigation, related illustrated topics and final review */
+.hero-disclaimer{max-width:870px!important;margin:12px 0 0!important;padding:13px 17px;border-left:3px solid #c8ff4d;background:rgba(200,255,77,.09);color:#dce9d9!important;font-size:12px!important;line-height:1.8!important}
+.rank-useful-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:11px}
+.rank-useful-links a{border:1px solid #c9dcc9;border-radius:999px;padding:7px 11px;background:#f1f8ed;color:#1a5b33;font-size:11px;font-weight:850;text-decoration:none}
+.rank-useful-links a:hover{background:#d9f5c5}
+.rank-useful-links a:focus-visible{outline:3px solid #398559;outline-offset:3px}
+.fig-tile{scroll-margin-top:152px}
+.final-review{margin-top:54px;padding-top:44px;border-top:1px solid #cad9ca;scroll-margin-top:156px}
+.final-review h3{font-size:clamp(24px,3.5vw,37px);line-height:1.3;letter-spacing:-.045em;margin:12px 0}
+.final-review .review-lead{font-size:14px;color:#4f6755;max-width:800px;line-height:1.9}
+@media(max-width:510px){.hero-disclaimer{font-size:11px!important;padding:12px 13px}.rank-useful-links a{font-size:10px}.final-review{margin-top:38px;padding-top:30px}}
+
+
+/* OTSU-4 PHYSICS AND CHEMISTRY / consistent with the law page */
+.physics-scope{margin:24px 0 0;padding:16px 20px;border:1px solid rgba(200,255,77,.32);border-left:4px solid #c8ff4d;background:rgba(200,255,77,.08);max-width:890px;color:#d8e9d8;font-size:12px;line-height:1.9}
+.a-section{scroll-margin-top:125px}.rank-card{scroll-margin-top:155px}.fig-tile{scroll-margin-top:155px}
+.rank-useful-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:11px}
+.rank-useful-links a{border:1px solid #c9dcc9;border-radius:999px;padding:7px 11px;background:#f1f8ed;color:#1a5b33;font-size:11px;font-weight:850;text-decoration:none}
+.rank-useful-links a:hover{background:#d9f5c5}
+.a-hero-stat b{font-variant-numeric:tabular-nums}
+.formula-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.formula-card{background:#fff;border:1px solid #cfdfd2;padding:24px;border-radius:16px;min-width:0}
+.formula-card .formula-tag{display:inline-block;font-size:11px;font-weight:850;letter-spacing:.08em;color:#38604b}
+.formula-card h3{margin:10px 0 12px;font-size:20px;line-height:1.4}
+.formula-core{margin:13px 0;background:#ebf6e7;border-radius:11px;padding:18px 16px;font-size:clamp(17px,2.6vw,26px);font-weight:900;color:#15331e;line-height:1.65;letter-spacing:-.03em;overflow-wrap:anywhere}
+.formula-card p,.formula-card li{font-size:13px;color:#4a5f50;line-height:1.85}
+.formula-card ol{padding-left:22px}
+.calc-panel{background:white;border:1px solid #c9d8ca;border-radius:18px;padding:26px;margin:24px 0}
+.calc-panel h3{font-size:23px;margin:0 0 10px}
+.calc-inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.calc-inputs label{font-size:12px;font-weight:850;color:#385440;display:flex;flex-direction:column;gap:7px}
+.calc-inputs input{width:100%;min-width:0;padding:11px 12px;border:1px solid #afc3b4;border-radius:10px;font:inherit;color:#193326;background:#fafff9}
+.calc-result-physics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}
+.calc-result-physics div{background:#eef7e8;border-radius:12px;padding:19px 21px}
+.calc-result-physics small{font-size:11px;color:#4c7052;display:block;font-weight:900}
+.calc-result-physics strong{display:block;font-size:clamp(26px,4vw,38px);letter-spacing:-.05em;line-height:1.4;color:#183923}
+.calc-note{font-size:12px;line-height:1.8;color:#54705a}
+.principle-demo{margin:26px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.principle-demo article{background:white;border:1px solid #d0ddd1;border-radius:15px;padding:22px;text-align:center}
+.principle-demo b{font-size:16px;display:block;color:#173821}
+.principle-demo .visual{height:90px;display:flex;align-items:center;justify-content:center;font-size:40px;gap:9px}
+.principle-demo p{color:#627568;font-size:12px;line-height:1.7;margin:0}
+.pill-soft{display:inline-flex;padding:6px 11px;background:#e5f3da;border-radius:99px;font-size:11px;font-weight:850;color:#22512e}
+.rank-study-map{background:#f0f7ee;border:1px solid #c7dcc7;padding:18px 21px;border-radius:13px;font-size:13px;color:#3c5a42;line-height:1.9;margin-top:22px}
+.styled-compare{background:white;border:1px solid #d5e0d5;border-radius:17px;overflow:hidden}
+.styled-compare table{width:100%;border-collapse:collapse}
+.styled-compare th,.styled-compare td{padding:16px 18px;border-bottom:1px solid #e2e9e3;text-align:left;vertical-align:top;font-size:13px;line-height:1.75}
+.styled-compare thead{background:#193923;color:white}.styled-compare tbody th{width:22%;background:#f0f8ee;color:#1f4c30}
+.styled-compare tr:last-child th,.styled-compare tr:last-child td{border-bottom:0}
+.review-lead{font-size:13px;color:#4b6754;line-height:1.8}
+.final-review{padding:42px 0 0}.final-review h3{font-size:clamp(24px,3.1vw,37px);line-height:1.35;margin:11px 0}
+.check-progress progress{height:11px;accent-color:#2b7545}
+.sources li{margin:8px 0}.sources .ref-note{font-size:12px;border-left:3px solid #b9ff82;padding-left:13px}
+@media(max-width:810px){.formula-stack{grid-template-columns:1fr}.calc-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.principle-demo{grid-template-columns:1fr}.principle-demo article{text-align:left;padding:16px}.principle-demo .visual{height:65px;justify-content:flex-start}.styled-compare{overflow-x:auto}.styled-compare table{min-width:610px}}
+@media(max-width:370px){.calc-inputs{grid-template-columns:1fr}.calc-result-physics{grid-template-columns:1fr}}
+
+
+/* OTSU4 PROPERTIES additions; common foundation inherited from completed physics page */
+:root { --subject-accent:#c8ff4d; }
+.properties-scope{border-left:3px solid #c8ff4d;background:#efffeb0e;padding:15px 18px;color:#d9e4da;max-width:1000px;font-size:13px;line-height:1.85;margin-top:24px}
+.properties-table-wrap{overflow-x:auto;border:1px solid #d3e0d4;border-radius:15px;background:#fff;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.properties-table{width:100%;border-collapse:collapse;min-width:770px;background:#fff;font-size:13px;line-height:1.6}
+.properties-table thead{background:#163522;color:#f7fff7}
+.properties-table th,.properties-table td{padding:15px 14px;text-align:left;border-bottom:1px solid #e0e8df;vertical-align:top}
+.properties-table th{font-weight:900;white-space:nowrap}.properties-table tbody tr:nth-child(even){background:#f6faf4}
+.properties-table tr:last-child td{border-bottom:none}
+.properties-table td:first-child{font-weight:850;color:#1b4227}
+.properties-note{font-size:12px;line-height:1.85;color:#53675b;padding:16px 20px;background:#edf6e9;border-left:3px solid #8ac19c;border-radius:0 10px 10px 0;margin:18px 0 30px}
+.matter-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:28px 0}
+.matter-card{padding:25px 24px;border:1px solid #cfdbd0;background:#fff;border-radius:17px}
+.matter-card h3{font-size:21px;margin:0 0 8px}.matter-card p{font-size:13px;color:#536657;margin:0;line-height:1.85}
+.matter-card .big-number{display:block;font-size:35px;font-weight:950;letter-spacing:-.055em;color:#19412a;line-height:1.15;margin-bottom:11px}
+.matter-chain{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:25px 0 33px}
+.matter-step{border-radius:13px;padding:20px 17px;background:#fff;border:1px solid #d1ddcf}
+.matter-step b{font-size:13px;color:#2b7340}.matter-step h3{font-size:17px;line-height:1.45;margin:9px 0}.matter-step p{font-size:12px;color:#617362;margin:0;line-height:1.75}
+.properties-highlight{background:#112a1d;color:#fff;border-radius:17px;padding:24px 28px;margin:28px 0}
+.properties-highlight h3{margin:0 0 9px;color:#d7ffa4;font-size:21px}
+.properties-highlight p{margin:0;font-size:13px;line-height:1.9;color:#c9dfcd}
+.material-filter{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:18px 0 20px}
+.material-filter label{font-size:13px;font-weight:900;color:#395943}
+.material-filter input{width:min(320px,100%);padding:12px 14px;border:1px solid #b7cabb;background:white;border-radius:10px;font:inherit;font-size:13px}
+.material-filter .material-count{font-size:12px;color:#667c68;font-weight:800;margin-left:auto}
+#material-empty[hidden]{display:none!important}
+#material-empty{font-size:13px;color:#607666;padding:15px}
+@media(max-width:730px){.matter-grid{grid-template-columns:1fr}.matter-chain{grid-template-columns:1fr}.matter-card{padding:20px}.properties-highlight{padding:19px 21px}.properties-table th,.properties-table td{padding:11px 10px;font-size:12px}}
+</style></head><body><header class="header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="mark">CQL</span><span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span></a><nav class="nav"><a href="index.html#qualifications">QUALIFICATIONS</a><a href="hazardous.html">HAZARDOUS</a><a href="profile.html">ABOUT</a></nav></div></header><main id="main"><div class="wrap breadcrumb"><a href="index.html">HOME</a> / <a href="hazardous.html">危険物取扱者</a> / <a href="hazardous-otsu4.html">乙種第4類</a> / 性質・消火</div>
+<div class="a-hero"><div class="wrap">
+<div class="a-eyebrow"><span class="dot"></span> STUDY GUIDE / OTSU-4 PROPERTIES & FIRE PREVENTION</div>
+<h1>乙4の性質・消火。<br><em>物性から、危険を理解する。</em></h1>
+<p>なぜガソリンの蒸気は危険なのか。アセトンは水に溶けるのに、なぜ燃えるのか。同じ第4類でも、適切な消火方法が違うのはなぜか。代表物質の性質を理解し、貯蔵・火災予防・消火へつなげる学習ガイドです。</p>
+<div class="properties-scope">乙4「危険物の性質並びにその火災予防及び消火の方法」は<strong>10問・科目ごとに60％以上（6問以上）</strong>が合格基準です。S/Aランクは本サイト独自の<strong>学習優先度</strong>であり、過去問の出題頻度・出題予測ではありません。物性の代表値は純度・組成・測定法で変化します。現場での安全管理は必ず製品SDS・法令・消防計画に従ってください。</div>
+<div class="a-actions"><a class="a-btn dark" href="#rank-s">Sランク13テーマ ↓</a><a class="a-btn" href="#rank-a">Aランク9テーマ ↓</a><a class="a-btn" href="#materials">分類・物性早見 ↓</a><a class="a-btn" href="#illustrated-lessons">図解予定 ↓</a><a class="a-btn" href="#comparison">比較で整理 ↓</a><a class="a-btn" href="#practice">オリジナル演習 ↓</a><a class="a-btn" href="hazardous-otsu4.html">乙4の科目一覧 ↗</a></div>
+<div class="a-hero-stats"><div class="a-hero-stat"><b>10<span style="font-size:.38em">問</span></b><small>性質・消火の試験問題数</small></div><div class="a-hero-stat"><b>13</b><small>Sランク｜最優先</small></div><div class="a-hero-stat"><b>09</b><small>Aランク｜重要知識</small></div></div></div></div>
+<nav class="a-subnav" aria-label="ページ内ナビゲーション"><div class="wrap"><a href="#rank-s">Sランク</a><a href="#rank-a">Aランク</a><a href="#materials">分類・物性</a><a href="#illustrated-lessons">図解</a><a href="#comparison">比較</a><a href="#practice">演習</a><a href="#lastcheck">直前チェック</a></div></nav>
+<section class="a-section" id="rank-s"><div class="wrap"><div class="a-caption">01 / S RANK</div><h2 class="a-section-title">最優先で固める、Sランク13テーマ。</h2><p class="a-lead">第4類の分類から、燃料ごとの物性、蒸気の危険、消火剤の選び方まで。まず全体のつながりを理解し、その後に個別物質を比較します。</p>
+<div class="rank-intro"><span><strong>Sランク</strong>　物性と安全対策をつなぐ最重要知識</span><span><strong>分類基準</strong>　基礎性・応用性・混同の起こりやすさ（独自評価）</span></div>
+<div class="rank-actions"><input id="rank-search" class="rank-search" type="search" aria-label="S/Aテーマを検索" placeholder="例：ガソリン、二硫化炭素、耐アルコール泡…"><div class="cat-buttons" id="cat-buttons" role="group" aria-label="カテゴリーで絞り込む"><button type="button" class="cat-btn" data-cat="すべて" aria-pressed="true">すべて</button><button type="button" class="cat-btn" data-cat="分類・総論" aria-pressed="false">分類・総論</button><button type="button" class="cat-btn" data-cat="代表物質" aria-pressed="false">代表物質</button><button type="button" class="cat-btn" data-cat="個別物質" aria-pressed="false">個別物質</button><button type="button" class="cat-btn" data-cat="物性の読み方" aria-pressed="false">物性の読み方</button><button type="button" class="cat-btn" data-cat="火災予防" aria-pressed="false">火災予防</button><button type="button" class="cat-btn" data-cat="消火" aria-pressed="false">消火</button></div></div><p id="rank-count" class="a-mini" aria-live="polite">S13テーマ・A9テーマを表示中</p>
+<div class="rank-grid"><article class="rank-card" id="s01" data-rank="S" data-cat="分類・総論" data-search="第4類の7品名と共通する危険性 分類・総論 第4類は引火性液体。7つの品名を、代表物質と引火のしやすさで結びつける。 「第4類はすべて水より軽い／すべて水に不溶／消火方法が同じ」は誤り。 消防法上の7品名は「特殊引火物・第一石油類・アルコール類・第二石油類・第三石油類・第四石油類・動植物油類」。 危険の中心は、液面等から生じる可燃性蒸気に着火すること。温度、引火点、蒸気の拡散条件を関連づける。 同じ第4類でも、水への混和性・液比重・発火点・適応消火剤は同一ではない。 「特殊引火物」「石油類」等は法令上の品名であり、日常語の石油製品だけに限らない。" style="--rank-accent:#adf0ca">
+ <div class="rank-top"><span class="rank-pill">S-01</span><span class="rank-category">分類・総論</span></div>
+ <h3>第4類の7品名と共通する危険性</h3><p class="rank-summary">第4類は引火性液体。7つの品名を、代表物質と引火のしやすさで結びつける。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>消防法上の7品名は「特殊引火物・第一石油類・アルコール類・第二石油類・第三石油類・第四石油類・動植物油類」。</li><li>危険の中心は、液面等から生じる可燃性蒸気に着火すること。温度、引火点、蒸気の拡散条件を関連づける。</li><li>同じ第4類でも、水への混和性・液比重・発火点・適応消火剤は同一ではない。</li><li>「特殊引火物」「石油類」等は法令上の品名であり、日常語の石油製品だけに限らない。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「第4類はすべて水より軽い／すべて水に不溶／消火方法が同じ」は誤り。</span></div>
+ <div class="rank-evidence">照合資料：NITE（消防法の分類）、消防法別表第一。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s01">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s02" data-rank="S" data-cat="代表物質" data-search="ガソリンの物性と引火危険 代表物質 引火点が極めて低く、常温でも可燃性蒸気が生じやすい。 「ガソリンが淡青色」という説明は不適切。ガソリンと灯油は名称でなく性状も比較。 自動車ガソリンは通常、第一石油類・非水溶性液体に該当する炭化水素の混合物。 引火点は一般に−40℃以下。室温では液面上に引火性蒸気が生じ、離れた火源まで蒸気が到達するおそれがある。 水より軽く、水と混ざりにくい。棒状の水を直接当てると液が流出して火災を広げることがある。 流動・給油時は静電気の蓄積に注意し、密栓・換気・点火源の管理を徹底する。" style="--rank-accent:#b3e7f9">
+ <div class="rank-top"><span class="rank-pill">S-02</span><span class="rank-category">代表物質</span></div>
+ <h3>ガソリンの物性と引火危険</h3><p class="rank-summary">引火点が極めて低く、常温でも可燃性蒸気が生じやすい。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>自動車ガソリンは通常、第一石油類・非水溶性液体に該当する炭化水素の混合物。</li><li>引火点は一般に−40℃以下。室温では液面上に引火性蒸気が生じ、離れた火源まで蒸気が到達するおそれがある。</li><li>水より軽く、水と混ざりにくい。棒状の水を直接当てると液が流出して火災を広げることがある。</li><li>流動・給油時は静電気の蓄積に注意し、密栓・換気・点火源の管理を徹底する。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「ガソリンが淡青色」という説明は不適切。ガソリンと灯油は名称でなく性状も比較。</span></div>
+ <div class="rank-evidence">照合資料：公式公開問題のガソリン論点、消防研究所の物性例。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s02">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s03" data-rank="S" data-cat="代表物質" data-search="灯油・軽油・重油の違い 代表物質 石油製品は混合物。一般にガソリンより引火点が高いが、加熱時は危険。 石油製品の品名・引火点は組成で変わる。全製品に固定した温度をあてはめない。 灯油・軽油は一般に第二石油類の代表例、重油は一般に第三石油類の代表例として扱う。 灯油の引火点は製品組成により幅がある（例：38〜52℃の測定例）。製品別のSDS値を確認する。 液温が上昇すると蒸発が増し、引火・流出・ミスト形成などで火災リスクが高まる。 重油や潤滑油も「引火点が高い＝燃えない」ではない。高温表面・噴霧・漏えいに注意する。" style="--rank-accent:#b3e7f9">
+ <div class="rank-top"><span class="rank-pill">S-03</span><span class="rank-category">代表物質</span></div>
+ <h3>灯油・軽油・重油の違い</h3><p class="rank-summary">石油製品は混合物。一般にガソリンより引火点が高いが、加熱時は危険。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>灯油・軽油は一般に第二石油類の代表例、重油は一般に第三石油類の代表例として扱う。</li><li>灯油の引火点は製品組成により幅がある（例：38〜52℃の測定例）。製品別のSDS値を確認する。</li><li>液温が上昇すると蒸発が増し、引火・流出・ミスト形成などで火災リスクが高まる。</li><li>重油や潤滑油も「引火点が高い＝燃えない」ではない。高温表面・噴霧・漏えいに注意する。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>石油製品の品名・引火点は組成で変わる。全製品に固定した温度をあてはめない。</span></div>
+ <div class="rank-evidence">照合資料：NITE（品名例）、ICSC 0663（灯油）。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s03">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s04" data-rank="S" data-cat="代表物質" data-search="メタノールとエタノール 代表物質 水と任意の割合で混ざるアルコール類。火災と健康影響を分けて理解する。 「水に溶ける＝燃えない」「水溶性なら普通の泡で十分」は誤り。 メタノール(CH₃OH)とエタノール(C₂H₅OH)は、第4類のアルコール類の代表例。 ともに水と任意の割合で混ざり、通常の炭化水素用泡が壊されやすいので、耐アルコール泡を考える。 いずれも室温付近で引火の危険があり、火気・静電気の管理が必要。 メタノールは特に有毒で、失明等の重篤な健康被害を起こしうる。エタノールと安全性を同一視しない。" style="--rank-accent:#b3e7f9">
+ <div class="rank-top"><span class="rank-pill">S-04</span><span class="rank-category">代表物質</span></div>
+ <h3>メタノールとエタノール</h3><p class="rank-summary">水と任意の割合で混ざるアルコール類。火災と健康影響を分けて理解する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>メタノール(CH₃OH)とエタノール(C₂H₅OH)は、第4類のアルコール類の代表例。</li><li>ともに水と任意の割合で混ざり、通常の炭化水素用泡が壊されやすいので、耐アルコール泡を考える。</li><li>いずれも室温付近で引火の危険があり、火気・静電気の管理が必要。</li><li>メタノールは特に有毒で、失明等の重篤な健康被害を起こしうる。エタノールと安全性を同一視しない。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「水に溶ける＝燃えない」「水溶性なら普通の泡で十分」は誤り。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0057（メタノール）、ICSC 0044（エタノール）。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s04">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s05" data-rank="S" data-cat="代表物質" data-search="アセトンの物性 代表物質 低引火点・高揮発性・水と完全混和。臭いと物性を正しく覚える。 アルコール類ではなく、第一石油類（水溶性）。「水溶性＝アルコール類」ではない。 アセトン(CH₃COCH₃)はケトンで、法令上は第一石油類の水溶性液体として扱われる代表例。 無色だが、特有の臭いをもつ。無臭と覚えない。 水と任意の割合で混ざる一方、引火点は約−18℃（密閉式）。常温でも引火性蒸気を生じる。 強い酸化剤との接触など、混触危険を避ける。保管・消火は個別SDSに従う。" style="--rank-accent:#b3e7f9">
+ <div class="rank-top"><span class="rank-pill">S-05</span><span class="rank-category">代表物質</span></div>
+ <h3>アセトンの物性</h3><p class="rank-summary">低引火点・高揮発性・水と完全混和。臭いと物性を正しく覚える。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>アセトン(CH₃COCH₃)はケトンで、法令上は第一石油類の水溶性液体として扱われる代表例。</li><li>無色だが、特有の臭いをもつ。無臭と覚えない。</li><li>水と任意の割合で混ざる一方、引火点は約−18℃（密閉式）。常温でも引火性蒸気を生じる。</li><li>強い酸化剤との接触など、混触危険を避ける。保管・消火は個別SDSに従う。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>アルコール類ではなく、第一石油類（水溶性）。「水溶性＝アルコール類」ではない。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0087（アセトン）、NITE（品名）。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s05">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s06" data-rank="S" data-cat="特殊引火物" data-search="ジエチルエーテルと二硫化炭素 特殊引火物 どちらも特殊引火物。ただし危険性の中心は同じではない。 ジエチルエーテルは水に「全く溶けない」わけではない（部分的に溶解）。二硫化炭素の液比重は1より大。 ジエチルエーテルは引火点約−45℃・沸点約35℃と低く、蒸気が非常に発生しやすい。 ジエチルエーテルは保存中に過酸化物を生じることがあり、長期保存・濃縮時の管理が必要。 二硫化炭素(CS₂)は液比重が約1.26と水より重く、発火点が約90℃と著しく低い。 二硫化炭素の低い発火点は、火炎だけでなく温かい設備・表面も危険な点火源となりうることを示す。" style="--rank-accent:#c8ff4d">
+ <div class="rank-top"><span class="rank-pill">S-06</span><span class="rank-category">特殊引火物</span></div>
+ <h3>ジエチルエーテルと二硫化炭素</h3><p class="rank-summary">どちらも特殊引火物。ただし危険性の中心は同じではない。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>ジエチルエーテルは引火点約−45℃・沸点約35℃と低く、蒸気が非常に発生しやすい。</li><li>ジエチルエーテルは保存中に過酸化物を生じることがあり、長期保存・濃縮時の管理が必要。</li><li>二硫化炭素(CS₂)は液比重が約1.26と水より重く、発火点が約90℃と著しく低い。</li><li>二硫化炭素の低い発火点は、火炎だけでなく温かい設備・表面も危険な点火源となりうることを示す。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>ジエチルエーテルは水に「全く溶けない」わけではない（部分的に溶解）。二硫化炭素の液比重は1より大。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0355（エーテル）、ICSC 0022（二硫化炭素）。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s06">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s07" data-rank="S" data-cat="代表物質" data-search="ベンゼン・トルエン・キシレン 代表物質 芳香族炭化水素の類似点と、物性・健康影響の違いを押さえる。 キシレンを「淡黄色の液体」とするのは誤り。 ベンゼン(C₆H₆)、トルエン(C₇H₈)、キシレン(C₈H₁₀)は芳香族炭化水素。 一般に水に溶けにくく、可燃性蒸気を生じる。換気・火気管理を徹底する。 キシレンは通常無色の液体。異性体・混合物により物性値には幅がある。 ベンゼンには発がん性があり、火災対策とは別に曝露防止が重要。" style="--rank-accent:#b3e7f9">
+ <div class="rank-top"><span class="rank-pill">S-07</span><span class="rank-category">代表物質</span></div>
+ <h3>ベンゼン・トルエン・キシレン</h3><p class="rank-summary">芳香族炭化水素の類似点と、物性・健康影響の違いを押さえる。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>ベンゼン(C₆H₆)、トルエン(C₇H₈)、キシレン(C₈H₁₀)は芳香族炭化水素。</li><li>一般に水に溶けにくく、可燃性蒸気を生じる。換気・火気管理を徹底する。</li><li>キシレンは通常無色の液体。異性体・混合物により物性値には幅がある。</li><li>ベンゼンには発がん性があり、火災対策とは別に曝露防止が重要。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>キシレンを「淡黄色の液体」とするのは誤り。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0084–0086（キシレン）、公式公開問題。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s07">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s08" data-rank="S" data-cat="物性の読み方" data-search="水溶性・非水溶性の判断 物性の読み方 水との混和性は、泡の選定や流出・回収方法に直結する。 部分溶解する物質もある。「溶ける／溶けない」を極端に二分しない。 メタノール・エタノール・アセトンは水と任意の割合で混ざる代表例。 ガソリン・灯油などの炭化水素系液体は一般に水と混ざりにくい。 水溶性の燃料には耐アルコール泡など、泡が壊れない適切な薬剤を考える。 水に溶けることと、液体が燃えにくいことは別の性質。混合濃度によって引火危険は変わる。" style="--rank-accent:#c7c9ff">
+ <div class="rank-top"><span class="rank-pill">S-08</span><span class="rank-category">物性の読み方</span></div>
+ <h3>水溶性・非水溶性の判断</h3><p class="rank-summary">水との混和性は、泡の選定や流出・回収方法に直結する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>メタノール・エタノール・アセトンは水と任意の割合で混ざる代表例。</li><li>ガソリン・灯油などの炭化水素系液体は一般に水と混ざりにくい。</li><li>水溶性の燃料には耐アルコール泡など、泡が壊れない適切な薬剤を考える。</li><li>水に溶けることと、液体が燃えにくいことは別の性質。混合濃度によって引火危険は変わる。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>部分溶解する物質もある。「溶ける／溶けない」を極端に二分しない。</span></div>
+ <div class="rank-evidence">照合資料：厚労省リスクアセスメント入門、ICSC。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s08">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s09" data-rank="S" data-cat="物性の読み方" data-search="液比重と蒸気比重 物性の読み方 「液体が水に浮くか」と「蒸気がどこにたまるか」は別の指標。 「液比重＞1だから蒸気も水より重い」のように比較対象を混同しない。 液比重は水に対する液体の密度比。ガソリンは水より軽く、二硫化炭素とグリセリンは水より重い。 蒸気比重は空気を1とした蒸気の密度比。多くの代表的な第4類液体の蒸気は空気より重い。 重い蒸気はピット・溝・地下など低所に滞留し、離れた火源で着火する危険がある。 風や換気で実際の広がりは変化する。蒸気比重だけで滞留位置を断定しない。" style="--rank-accent:#c7c9ff">
+ <div class="rank-top"><span class="rank-pill">S-09</span><span class="rank-category">物性の読み方</span></div>
+ <h3>液比重と蒸気比重</h3><p class="rank-summary">「液体が水に浮くか」と「蒸気がどこにたまるか」は別の指標。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>液比重は水に対する液体の密度比。ガソリンは水より軽く、二硫化炭素とグリセリンは水より重い。</li><li>蒸気比重は空気を1とした蒸気の密度比。多くの代表的な第4類液体の蒸気は空気より重い。</li><li>重い蒸気はピット・溝・地下など低所に滞留し、離れた火源で着火する危険がある。</li><li>風や換気で実際の広がりは変化する。蒸気比重だけで滞留位置を断定しない。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「液比重＞1だから蒸気も水より重い」のように比較対象を混同しない。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0022（CS₂）、ICSC 0624（グリセリン）。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s09">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s10" data-rank="S" data-cat="火災予防" data-search="可燃性蒸気の滞留と換気 火災予防 蒸気の逃げ道と点火源の位置をセットで考える。 「蒸気は屋外の低い所に放出すれば安全」は誤り。 第4類の液体は液面から蒸発し、空気と混ざって燃焼範囲を形成すると着火しうる。 特に空気より重い蒸気は低所に広がりやすい。排出場所・排気口・ピット・排水溝に注意する。 換気は、安全な排出先と点火源の隔離を前提に設計する。低所にみだりに排出してはならない。 漏えいした燃料蒸気は、電気火花・静電気放電・高温表面などに触れて火災になる。" style="--rank-accent:#ffe0af">
+ <div class="rank-top"><span class="rank-pill">S-10</span><span class="rank-category">火災予防</span></div>
+ <h3>可燃性蒸気の滞留と換気</h3><p class="rank-summary">蒸気の逃げ道と点火源の位置をセットで考える。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>第4類の液体は液面から蒸発し、空気と混ざって燃焼範囲を形成すると着火しうる。</li><li>特に空気より重い蒸気は低所に広がりやすい。排出場所・排気口・ピット・排水溝に注意する。</li><li>換気は、安全な排出先と点火源の隔離を前提に設計する。低所にみだりに排出してはならない。</li><li>漏えいした燃料蒸気は、電気火花・静電気放電・高温表面などに触れて火災になる。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「蒸気は屋外の低い所に放出すれば安全」は誤り。</span></div>
+ <div class="rank-evidence">照合資料：公式公開問題、厚労省ガイドブック。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s10">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s11" data-rank="S" data-cat="火災予防" data-search="静電気対策と着火源管理 火災予防 帯電を減らす、逃がす、着火条件を作らない。 接地だけであらゆる状況の帯電がゼロになるわけではない。 液体の移送・攪拌・ろ過・噴出などでは帯電が生じることがある。 接地・ボンディング、流速管理、導電性の管理、適切な防爆設備等を組み合わせる。 人体の帯電も放電の原因になるので、適切な服装・履物・除電手順に注意する。 気化した燃料が燃焼範囲に入る前に、火気・電気火花・高温物との接触を防ぐ。" style="--rank-accent:#ffe0af">
+ <div class="rank-top"><span class="rank-pill">S-11</span><span class="rank-category">火災予防</span></div>
+ <h3>静電気対策と着火源管理</h3><p class="rank-summary">帯電を減らす、逃がす、着火条件を作らない。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>液体の移送・攪拌・ろ過・噴出などでは帯電が生じることがある。</li><li>接地・ボンディング、流速管理、導電性の管理、適切な防爆設備等を組み合わせる。</li><li>人体の帯電も放電の原因になるので、適切な服装・履物・除電手順に注意する。</li><li>気化した燃料が燃焼範囲に入る前に、火気・電気火花・高温物との接触を防ぐ。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>接地だけであらゆる状況の帯電がゼロになるわけではない。</span></div>
+ <div class="rank-evidence">照合資料：公式公開問題、厚労省ガイドブック。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s11">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s12" data-rank="S" data-cat="消火" data-search="泡・粉末・二酸化炭素の作用 消火 消火剤は「何を断つか」と「どの物質に使うか」を一緒に覚える。 「第4類なら消火方法は全部同じ」「CO₂は人に無害」は誤り。 泡消火剤は液面を覆い、主として燃料蒸気と空気との接触を抑える。 粉末消火剤は主として燃焼の連鎖反応を抑制し、広い種類の初期火災に用いられる。 二酸化炭素は酸素濃度を低下させる効果があるが、高濃度は人体に危険であり閉鎖空間での取扱いに注意。 適応消火剤は燃料の水溶性、火災規模、設備条件などで変わる。" style="--rank-accent:#ffcab6">
+ <div class="rank-top"><span class="rank-pill">S-12</span><span class="rank-category">消火</span></div>
+ <h3>泡・粉末・二酸化炭素の作用</h3><p class="rank-summary">消火剤は「何を断つか」と「どの物質に使うか」を一緒に覚える。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>泡消火剤は液面を覆い、主として燃料蒸気と空気との接触を抑える。</li><li>粉末消火剤は主として燃焼の連鎖反応を抑制し、広い種類の初期火災に用いられる。</li><li>二酸化炭素は酸素濃度を低下させる効果があるが、高濃度は人体に危険であり閉鎖空間での取扱いに注意。</li><li>適応消火剤は燃料の水溶性、火災規模、設備条件などで変わる。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「第4類なら消火方法は全部同じ」「CO₂は人に無害」は誤り。</span></div>
+ <div class="rank-evidence">照合資料：厚労省ガイドブック、公式公開問題。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s12">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card" id="s13" data-rank="S" data-cat="消火" data-search="水溶性液体の泡と棒状注水 消火 通常泡の消泡と、液面に棒状注水する危険を区別する。 「すべての水を絶対に使わない」も誤り。棒状注水・水噴霧・冷却を区別する。 アルコール・アセトンなどの水溶性液体では、通常の泡が壊れやすい。適合する耐アルコール泡を用いる。 ガソリンなどの液面へ棒状の水を直接かけると、燃料を押し広げて火災を拡大させるおそれがある。 水噴霧は容器冷却や蒸気抑制などに用いられる場合があるが、用途・設備・燃料ごとに判断する。 実火災での放水判断は消防計画・設備基準・現場指揮の指示に従い、学習上の一般則を自己判断で適用しない。" style="--rank-accent:#ffcab6">
+ <div class="rank-top"><span class="rank-pill">S-13</span><span class="rank-category">消火</span></div>
+ <h3>水溶性液体の泡と棒状注水</h3><p class="rank-summary">通常泡の消泡と、液面に棒状注水する危険を区別する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>アルコール・アセトンなどの水溶性液体では、通常の泡が壊れやすい。適合する耐アルコール泡を用いる。</li><li>ガソリンなどの液面へ棒状の水を直接かけると、燃料を押し広げて火災を拡大させるおそれがある。</li><li>水噴霧は容器冷却や蒸気抑制などに用いられる場合があるが、用途・設備・燃料ごとに判断する。</li><li>実火災での放水判断は消防計画・設備基準・現場指揮の指示に従い、学習上の一般則を自己判断で適用しない。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「すべての水を絶対に使わない」も誤り。棒状注水・水噴霧・冷却を区別する。</span></div>
+ <div class="rank-evidence">照合資料：厚労省リスクアセスメント入門、公式公開問題。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-s13">対応する図解テーマへ ↓</a></div></article></div><div class="notfound" id="notfound" hidden>該当するテーマがありません。検索条件を変更してください。</div></div></section>
+<section class="a-section alt" id="rank-a"><div class="wrap"><div class="a-caption">02 / A RANK</div><h2 class="a-section-title">次に理解を広げる、Aランク9テーマ。</h2><p class="a-lead">アセトアルデヒド・グリセリン・エチレングリコールなど、個別の代表物質と注意点を整理します。Sランクの基礎と照らし合わせて覚えましょう。</p><div class="rank-grid"><article class="rank-card a" id="a01" data-rank="A" data-cat="個別物質" data-search="アセトアルデヒドの物性 個別物質 沸点が約20℃、引火点が低い特殊引火物。 「アセトアルデヒドが熱分解すると必ずメタンとCO₂を発生」は誤り。 アセトアルデヒド(CH₃CHO)は無色で刺激臭のある揮発性の高い物質。 常圧沸点は約20.2℃、引火点は約−38℃。常温付近で非常に揮発しやすい。 水と混ざり、酸化されると酢酸(CH₃COOH)になる。 混触・加熱で重合等の反応を起こすことがあり、保存条件に注意する。" style="--rank-accent:#d9e7ff">
+ <div class="rank-top"><span class="rank-pill">A-01</span><span class="rank-category">個別物質</span></div>
+ <h3>アセトアルデヒドの物性</h3><p class="rank-summary">沸点が約20℃、引火点が低い特殊引火物。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>アセトアルデヒド(CH₃CHO)は無色で刺激臭のある揮発性の高い物質。</li><li>常圧沸点は約20.2℃、引火点は約−38℃。常温付近で非常に揮発しやすい。</li><li>水と混ざり、酸化されると酢酸(CH₃COOH)になる。</li><li>混触・加熱で重合等の反応を起こすことがあり、保存条件に注意する。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「アセトアルデヒドが熱分解すると必ずメタンとCO₂を発生」は誤り。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0009、公式公開問題。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a01">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a02" data-rank="A" data-cat="個別物質" data-search="グリセリンの性質 個別物質 粘性・吸湿性・水溶性・比重をセットで覚える。 「芳香（よい香り）」は特徴ではない。無臭の粘性液体。 グリセリン（グリセロール）は無色で粘り気のある液体で、吸湿性がある。 液比重は約1.26（水より重い）。水やエタノールによく混ざる。 高い引火点（例：176℃、密閉式）をもつが、加熱条件によって火災危険は残る。 一般に第三石油類（水溶性）の代表例として扱われる。" style="--rank-accent:#d9e7ff">
+ <div class="rank-top"><span class="rank-pill">A-02</span><span class="rank-category">個別物質</span></div>
+ <h3>グリセリンの性質</h3><p class="rank-summary">粘性・吸湿性・水溶性・比重をセットで覚える。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>グリセリン（グリセロール）は無色で粘り気のある液体で、吸湿性がある。</li><li>液比重は約1.26（水より重い）。水やエタノールによく混ざる。</li><li>高い引火点（例：176℃、密閉式）をもつが、加熱条件によって火災危険は残る。</li><li>一般に第三石油類（水溶性）の代表例として扱われる。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「芳香（よい香り）」は特徴ではない。無臭の粘性液体。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0624、公式公開問題。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a02">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a03" data-rank="A" data-cat="個別物質" data-search="エチレングリコールの性質 個別物質 水溶性・粘性と人体への有害性も理解する。 引火点だけで「毒性が低い」と判断しない。 エチレングリコール(HOCH₂CH₂OH)は無色・粘性で、吸湿性があり、水と任意の割合で混ざる。 冷却液などに用いられ、純物質の引火点はおおむね110℃前後（試験法で変動）。 飲用すると重篤な中毒を起こす。エタノールやグリセリンと同じ安全性ではない。 一般に第三石油類（水溶性）の代表例だが、製剤の組成により法令上の取扱いは変わる。" style="--rank-accent:#d9e7ff">
+ <div class="rank-top"><span class="rank-pill">A-03</span><span class="rank-category">個別物質</span></div>
+ <h3>エチレングリコールの性質</h3><p class="rank-summary">水溶性・粘性と人体への有害性も理解する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>エチレングリコール(HOCH₂CH₂OH)は無色・粘性で、吸湿性があり、水と任意の割合で混ざる。</li><li>冷却液などに用いられ、純物質の引火点はおおむね110℃前後（試験法で変動）。</li><li>飲用すると重篤な中毒を起こす。エタノールやグリセリンと同じ安全性ではない。</li><li>一般に第三石油類（水溶性）の代表例だが、製剤の組成により法令上の取扱いは変わる。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>引火点だけで「毒性が低い」と判断しない。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0270、CDC NIOSH。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a03">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a04" data-rank="A" data-cat="個別物質" data-search="酢酸・ギ酸と有機酸 個別物質 水に混ざる酸でも引火の危険がある。 「酸なので燃えない」「水溶性なので引火しない」は誤り。 酢酸(CH₃COOH)はカルボン酸。氷酢酸は水と混ざり、引火点が約39℃（密閉式）。 ギ酸(HCOOH)も水と混ざる酸で、腐食性がある。純度・濃度で物性値や分類は変わる。 酸という化学的性質と、引火性という火災上の性質を別々に考える。 濃度の異なる水溶液に純物質の引火点や指定数量をそのまま適用しない。" style="--rank-accent:#d9e7ff">
+ <div class="rank-top"><span class="rank-pill">A-04</span><span class="rank-category">個別物質</span></div>
+ <h3>酢酸・ギ酸と有機酸</h3><p class="rank-summary">水に混ざる酸でも引火の危険がある。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>酢酸(CH₃COOH)はカルボン酸。氷酢酸は水と混ざり、引火点が約39℃（密閉式）。</li><li>ギ酸(HCOOH)も水と混ざる酸で、腐食性がある。純度・濃度で物性値や分類は変わる。</li><li>酸という化学的性質と、引火性という火災上の性質を別々に考える。</li><li>濃度の異なる水溶液に純物質の引火点や指定数量をそのまま適用しない。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「酸なので燃えない」「水溶性なので引火しない」は誤り。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0363（酢酸）、ICSC 0485（ギ酸）。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a04">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a05" data-rank="A" data-cat="個別物質" data-search="動植物油類と自然発火 個別物質 酸化発熱が蓄積する条件と、法令上の「動植物油類」を区別する。 自然発火には外部の火炎が必要ないことがある。 動植物油類は脂肪・種子・果肉など由来の油で、法令上の品名該当には性状・除外条件がある。 乾性油などが付着した布を大量に重ねると、酸化発熱が蓄積して自然発火につながることがある。 「油なら必ず自然発火する」わけではなく、油種・表面積・空気の供給・保管形状・放熱による。 汚れた布の処理では、自治体・事業場の安全手順に従い適切に管理する。" style="--rank-accent:#d9e7ff">
+ <div class="rank-top"><span class="rank-pill">A-05</span><span class="rank-category">個別物質</span></div>
+ <h3>動植物油類と自然発火</h3><p class="rank-summary">酸化発熱が蓄積する条件と、法令上の「動植物油類」を区別する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>動植物油類は脂肪・種子・果肉など由来の油で、法令上の品名該当には性状・除外条件がある。</li><li>乾性油などが付着した布を大量に重ねると、酸化発熱が蓄積して自然発火につながることがある。</li><li>「油なら必ず自然発火する」わけではなく、油種・表面積・空気の供給・保管形状・放熱による。</li><li>汚れた布の処理では、自治体・事業場の安全手順に従い適切に管理する。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>自然発火には外部の火炎が必要ないことがある。</span></div>
+ <div class="rank-evidence">照合資料：消防法別表第一、消防機関の自然発火解説。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a05">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a06" data-rank="A" data-cat="分類・総論" data-search="第三・第四石油類の性質 分類・総論 引火点による分類と、用途・粘度だけの分類を混同しない。 「粘度が高いから第4石油類」とは限らない。法令上の判定は試験法と性状による。 第三石油類は原則として引火点70℃以上200℃未満の液体（特定の除外等あり）。 第四石油類は原則として引火点200℃以上250℃未満の液体（特定の除外等あり）。 代表例には重油、ギヤー油・シリンダー油などがあるが、配合物の組成と実際の試験値を確認する。 高引火点液体も、加熱・噴霧・漏えい時は火災につながる。" style="--rank-accent:#adf0ca">
+ <div class="rank-top"><span class="rank-pill">A-06</span><span class="rank-category">分類・総論</span></div>
+ <h3>第三・第四石油類の性質</h3><p class="rank-summary">引火点による分類と、用途・粘度だけの分類を混同しない。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>第三石油類は原則として引火点70℃以上200℃未満の液体（特定の除外等あり）。</li><li>第四石油類は原則として引火点200℃以上250℃未満の液体（特定の除外等あり）。</li><li>代表例には重油、ギヤー油・シリンダー油などがあるが、配合物の組成と実際の試験値を確認する。</li><li>高引火点液体も、加熱・噴霧・漏えい時は火災につながる。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「粘度が高いから第4石油類」とは限らない。法令上の判定は試験法と性状による。</span></div>
+ <div class="rank-evidence">照合資料：NITE（分類）、消防法別表第一。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a06">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a07" data-rank="A" data-cat="火災予防" data-search="密栓・貯蔵温度・換気の考え方 火災予防 液面と蒸気、熱源と容器内圧を組み合わせて管理する。 「密栓して絶対安全」「引火点以下なら必ず安全」は不適切。 適切な容器の密栓は通常、揮発・漏えいを抑える基本対策。ただし装置・貯槽には圧力安全設計も必要。 「引火点以下に冷やせば自然発火しない」という考え方は誤り。引火点と発火点は別の指標。 貯蔵場所は温度管理と換気を行い、可燃性蒸気が滞留する条件をつくらない。 漏えいを見つけたときは独断で火源へ近づかず、施設の緊急手順に従う。" style="--rank-accent:#ffe0af">
+ <div class="rank-top"><span class="rank-pill">A-07</span><span class="rank-category">火災予防</span></div>
+ <h3>密栓・貯蔵温度・換気の考え方</h3><p class="rank-summary">液面と蒸気、熱源と容器内圧を組み合わせて管理する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>適切な容器の密栓は通常、揮発・漏えいを抑える基本対策。ただし装置・貯槽には圧力安全設計も必要。</li><li>「引火点以下に冷やせば自然発火しない」という考え方は誤り。引火点と発火点は別の指標。</li><li>貯蔵場所は温度管理と換気を行い、可燃性蒸気が滞留する条件をつくらない。</li><li>漏えいを見つけたときは独断で火源へ近づかず、施設の緊急手順に従う。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「密栓して絶対安全」「引火点以下なら必ず安全」は不適切。</span></div>
+ <div class="rank-evidence">照合資料：公式公開問題、厚労省ガイドブック。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a07">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a08" data-rank="A" data-cat="火災予防" data-search="酸化剤との混触危険 火災予防 引火性液体と酸化性物質は同じ場所に置く前に反応性を確認する。 「第4類同士は必ず混ぜてもよい」も誤り。混触危険は具体的な物質で判断する。 引火性液体は燃料となり、強酸化剤と接触すると激しい反応・発熱につながることがある。 アセトンなどは強酸化剤との混触に注意が必要とされている。 酸化性物質が全部同じ危険性というわけではなく、組合せ・濃度・温度によって異なる。 SDSの「取扱い及び保管上の注意」「安定性及び反応性」を確認する。" style="--rank-accent:#ffe0af">
+ <div class="rank-top"><span class="rank-pill">A-08</span><span class="rank-category">火災予防</span></div>
+ <h3>酸化剤との混触危険</h3><p class="rank-summary">引火性液体と酸化性物質は同じ場所に置く前に反応性を確認する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>引火性液体は燃料となり、強酸化剤と接触すると激しい反応・発熱につながることがある。</li><li>アセトンなどは強酸化剤との混触に注意が必要とされている。</li><li>酸化性物質が全部同じ危険性というわけではなく、組合せ・濃度・温度によって異なる。</li><li>SDSの「取扱い及び保管上の注意」「安定性及び反応性」を確認する。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>「第4類同士は必ず混ぜてもよい」も誤り。混触危険は具体的な物質で判断する。</span></div>
+ <div class="rank-evidence">照合資料：ICSC 0087、厚労省ガイドブック。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a08">対応する図解テーマへ ↓</a></div></article>
+<article class="rank-card a" id="a09" data-rank="A" data-cat="物性の読み方" data-search="SDSと製品による物性差 物性の読み方 純物質の数値と商品名・混合物の実測値は区別する。 代表値の暗記だけで実製品の危険性を決めない。 混合燃料（ガソリン・灯油・重油等）の引火点や蒸留範囲は配合・規格で変化する。 キシレンには異性体や混合キシレンがあり、引火点等は1つの固定値ではない。 同じ品名でも危険等級・水溶性・引火点・適応消火剤は製品SDSで照合する。 本ページの代表値は勉強の目安。現場の消防・保安判断には法令・SDS・設備基準を優先する。" style="--rank-accent:#c7c9ff">
+ <div class="rank-top"><span class="rank-pill">A-09</span><span class="rank-category">物性の読み方</span></div>
+ <h3>SDSと製品による物性差</h3><p class="rank-summary">純物質の数値と商品名・混合物の実測値は区別する。</p>
+ <details><summary>重要ポイント・理由を確認する</summary><ul><li>混合燃料（ガソリン・灯油・重油等）の引火点や蒸留範囲は配合・規格で変化する。</li><li>キシレンには異性体や混合キシレンがあり、引火点等は1つの固定値ではない。</li><li>同じ品名でも危険等級・水溶性・引火点・適応消火剤は製品SDSで照合する。</li><li>本ページの代表値は勉強の目安。現場の消防・保安判断には法令・SDS・設備基準を優先する。</li></ul><div class="rank-caution"><b>混同・誤解に注意</b><span>代表値の暗記だけで実製品の危険性を決めない。</span></div>
+ <div class="rank-evidence">照合資料：NITE、ILO-ICSC、厚労省ガイドブック。<a href="#sources">参照資料を見る ↗</a></div></details>
+ <div class="rank-useful-links"><a href="#fig-a09">対応する図解テーマへ ↓</a></div></article></div></div></section>
+<section class="a-section" id="materials"><div class="wrap"><div class="a-caption">03 / CLASSIFICATION &amp; PROPERTIES</div><h2 class="a-section-title">第4類の分類と代表物性を、一覧でつかむ。</h2><p class="a-lead">「品名」と「物質の特徴」を混同しないことが大切です。引火点が低いほど常温で引火しやすい傾向にありますが、水溶性や消火剤の適応は別に判断します。</p>
+<div class="properties-highlight"><h3>重要：引火点だけでは消火方法は決まらない</h3><p>（1）どの物質か → （2）水に混ざるか・液比重はどうか → （3）蒸気の滞留や着火源はどこか → （4）適応する消火剤・設備を選ぶ、の順に考えましょう。消火は常に施設の消防計画と現場指揮を優先します。</p></div>
+<h3 class="content-h3">第4類の7品名と代表例</h3><div class="properties-table-wrap" role="region" tabindex="0" aria-label="第4類の7品名と指定数量の表（横スクロール可能）"><table class="properties-table"><thead><tr><th>品名</th><th>代表物質</th><th>物性・分類の目安</th><th>指定数量（参考）</th></tr></thead><tbody><tr><td>特殊引火物</td><td>ジエチルエーテル／二硫化炭素</td><td>非常に引火しやすい。個別物性に大きな違いがある</td><td>50 L</td></tr><tr><td>第一石油類</td><td>ガソリン（非水溶性）／アセトン（水溶性）</td><td>一般に引火点21℃未満</td><td>200／400 L</td></tr><tr><td>アルコール類</td><td>メタノール／エタノール</td><td>水と混ざり、耐アルコール泡を検討</td><td>400 L</td></tr><tr><td>第二石油類</td><td>灯油／軽油／酢酸</td><td>原則、引火点21℃以上70℃未満</td><td>1,000／2,000 L</td></tr><tr><td>第三石油類</td><td>重油／グリセリン</td><td>原則、引火点70℃以上200℃未満</td><td>2,000／4,000 L</td></tr><tr><td>第四石油類</td><td>ギヤー油／シリンダー油</td><td>原則、引火点200℃以上250℃未満</td><td>6,000 L</td></tr><tr><td>動植物油類</td><td>植物油・動物油の一部</td><td>油種や性状で該当性が変わる</td><td>10,000 L</td></tr></tbody></table></div>
+<p class="properties-note">※ 指定数量は分類確認の補助として掲載。第二・第三石油類は左が非水溶性、右が水溶性。第一石油類も同様。配合・濃度や法令上の除外規定によって判定が異なる場合があります。法令の詳しい計算は<a href="hazardous-otsu4-law.html#quantities"><b>法令ページの指定数量セクション ↗</b></a>へ。</p>
+<h3 class="content-h3">代表物質の性質を比較する</h3><p class="a-lead" style="font-size:14px;margin-bottom:12px">数値は主にICSC・消防研究センター資料の代表例。製品や測定方式で変化するため、暗記した数値だけで実製品の危険性を判定しないでください。</p>
+<div class="material-filter"><label for="material-search">物質名で絞り込む</label><input id="material-search" type="search" placeholder="例：アセトン、灯油、二硫化炭素"><span class="material-count" id="material-count">10物質</span></div><div class="properties-table-wrap" role="region" tabindex="0" aria-label="代表10物質の性質比較（横スクロール可能）"><table class="properties-table" id="material-table"><thead><tr><th>物質</th><th>分類の目安</th><th>引火点</th><th>水との関係等</th><th>覚えるポイント</th></tr></thead><tbody><tr data-substance="ガソリン"><td>ガソリン</td><td>第一石油類／非水溶性</td><td>引火点およそ−40℃以下</td><td>水より軽い</td><td>低温でも蒸気が引火しやすい</td></tr><tr data-substance="灯油"><td>灯油</td><td>第二石油類／非水溶性</td><td>引火点例：38〜52℃</td><td>水より軽い</td><td>製品組成・加熱条件で変わる</td></tr><tr data-substance="メタノール"><td>メタノール</td><td>アルコール類／水溶性</td><td>引火点およそ11〜12℃</td><td>水と混ざる</td><td>毒性に注意。耐アルコール泡</td></tr><tr data-substance="エタノール"><td>エタノール</td><td>アルコール類／水溶性</td><td>引火点およそ12℃（無水）</td><td>水と混ざる</td><td>耐アルコール泡などを検討</td></tr><tr data-substance="アセトン"><td>アセトン</td><td>第一石油類／水溶性</td><td>引火点およそ−18℃</td><td>水と混ざる</td><td>特有の臭いをもつ</td></tr><tr data-substance="ジエチルエーテル"><td>ジエチルエーテル</td><td>特殊引火物</td><td>引火点およそ−45℃</td><td>水に部分的に溶ける</td><td>低沸点・過酸化物生成にも注意</td></tr><tr data-substance="二硫化炭素"><td>二硫化炭素</td><td>特殊引火物</td><td>引火点およそ−30℃</td><td>液比重約1.26</td><td>発火点約90℃</td></tr><tr data-substance="アセトアルデヒド"><td>アセトアルデヒド</td><td>特殊引火物</td><td>引火点およそ−38℃</td><td>水と混ざる</td><td>常圧沸点約20.2℃</td></tr><tr data-substance="キシレン"><td>キシレン</td><td>第二石油類／非水溶性</td><td>異性体・混合比で異なる</td><td>水に溶けにくい</td><td>通常無色の液体</td></tr><tr data-substance="グリセリン"><td>グリセリン</td><td>第三石油類／水溶性</td><td>引火点例：約176℃</td><td>液比重約1.26</td><td>粘性・吸湿性がある</td></tr></tbody></table></div><p id="material-empty" hidden>一致する物質がありません。</p>
+<div class="matter-chain"><article class="matter-step"><b>STEP 01</b><h3>引火しやすさ</h3><p>引火点・温度・蒸気圧・燃焼範囲を考える。</p></article><article class="matter-step"><b>STEP 02</b><h3>漏えいの広がり</h3><p>水溶性・液比重・蒸気比重と周辺構造を考える。</p></article><article class="matter-step"><b>STEP 03</b><h3>安全対策と消火</h3><p>火気・換気・静電気・適合する消火設備へつなぐ。</p></article></div>
+</div></section>
+<section class="a-section alt" id="illustrated-lessons"><div class="wrap"><div class="a-caption">04 / ILLUSTRATED LESSONS</div><h2 class="a-section-title">図解でわかる！ 22テーマの制作予定。</h2><p class="a-lead">「図解でわかる！」シリーズとして制作するテーマを整理しました。現在は図解画像を未掲載です。各カードから対応するS・Aランクの学習ポイントに戻れます。画像完成後に順次掲載します。</p><div class="fig-grid"><a class="fig-tile" href="#s01" id="fig-s01" style="--fig:#adf0ca"><span class="fig-num">01 / S</span><strong>第4類の7品名と共通する危険性</strong><small>分類・総論｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s02" id="fig-s02" style="--fig:#b3e7f9"><span class="fig-num">02 / S</span><strong>ガソリンの物性と引火危険</strong><small>代表物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s03" id="fig-s03" style="--fig:#b3e7f9"><span class="fig-num">03 / S</span><strong>灯油・軽油・重油の違い</strong><small>代表物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s04" id="fig-s04" style="--fig:#b3e7f9"><span class="fig-num">04 / S</span><strong>メタノールとエタノール</strong><small>代表物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s05" id="fig-s05" style="--fig:#b3e7f9"><span class="fig-num">05 / S</span><strong>アセトンの物性</strong><small>代表物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s06" id="fig-s06" style="--fig:#c8ff4d"><span class="fig-num">06 / S</span><strong>ジエチルエーテルと二硫化炭素</strong><small>特殊引火物｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s07" id="fig-s07" style="--fig:#b3e7f9"><span class="fig-num">07 / S</span><strong>ベンゼン・トルエン・キシレン</strong><small>代表物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s08" id="fig-s08" style="--fig:#c7c9ff"><span class="fig-num">08 / S</span><strong>水溶性・非水溶性の判断</strong><small>物性の読み方｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s09" id="fig-s09" style="--fig:#c7c9ff"><span class="fig-num">09 / S</span><strong>液比重と蒸気比重</strong><small>物性の読み方｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s10" id="fig-s10" style="--fig:#ffe0af"><span class="fig-num">10 / S</span><strong>可燃性蒸気の滞留と換気</strong><small>火災予防｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s11" id="fig-s11" style="--fig:#ffe0af"><span class="fig-num">11 / S</span><strong>静電気対策と着火源管理</strong><small>火災予防｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s12" id="fig-s12" style="--fig:#ffcab6"><span class="fig-num">12 / S</span><strong>泡・粉末・二酸化炭素の作用</strong><small>消火｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#s13" id="fig-s13" style="--fig:#ffcab6"><span class="fig-num">13 / S</span><strong>水溶性液体の泡と棒状注水</strong><small>消火｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a01" id="fig-a01" style="--fig:#d9e7ff"><span class="fig-num">01 / A</span><strong>アセトアルデヒドの物性</strong><small>個別物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a02" id="fig-a02" style="--fig:#d9e7ff"><span class="fig-num">02 / A</span><strong>グリセリンの性質</strong><small>個別物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a03" id="fig-a03" style="--fig:#d9e7ff"><span class="fig-num">03 / A</span><strong>エチレングリコールの性質</strong><small>個別物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a04" id="fig-a04" style="--fig:#d9e7ff"><span class="fig-num">04 / A</span><strong>酢酸・ギ酸と有機酸</strong><small>個別物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a05" id="fig-a05" style="--fig:#d9e7ff"><span class="fig-num">05 / A</span><strong>動植物油類と自然発火</strong><small>個別物質｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a06" id="fig-a06" style="--fig:#adf0ca"><span class="fig-num">06 / A</span><strong>第三・第四石油類の性質</strong><small>分類・総論｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a07" id="fig-a07" style="--fig:#ffe0af"><span class="fig-num">07 / A</span><strong>密栓・貯蔵温度・換気の考え方</strong><small>火災予防｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a08" id="fig-a08" style="--fig:#ffe0af"><span class="fig-num">08 / A</span><strong>酸化剤との混触危険</strong><small>火災予防｜学習ポイントに戻る ↗</small></a>
+<a class="fig-tile" href="#a09" id="fig-a09" style="--fig:#c7c9ff"><span class="fig-num">09 / A</span><strong>SDSと製品による物性差</strong><small>物性の読み方｜学習ポイントに戻る ↗</small></a></div><p class="properties-note">※ この一覧は学習テーマの目次です。画像を公開済みであることを意味しません。</p></div></section>
+<section class="a-section" id="comparison"><div class="wrap"><div class="a-caption">05 / COMPARISON</div><h2 class="a-section-title">間違いやすい違いを、比較で整理する。</h2><p class="a-lead">似ている名前・似ている性質を並べて確認することで、五肢択一問題の細かな誤りにも気づけるようにします。</p><div class="matrix-wrap"><article class="matrix-card"><h3>液比重と蒸気比重</h3><table class="mini-table"><tr><th>液比重</th><td>水を1として比べる。水に浮く・沈むを考える指標。</td></tr><tr><th>蒸気比重</th><td>空気を1として比べる。多くの可燃性蒸気は空気より重い。</td></tr><tr><th>例外の確認</th><td>二硫化炭素とグリセリンの液比重は1より大。</td></tr><tr><th>注意</th><td>蒸気比重だけで換気・漏えい時の挙動は決められない。</td></tr></table></article><article class="matrix-card"><h3>ガソリンと灯油・重油</h3><table class="mini-table"><tr><th>ガソリン</th><td>第一石油類の代表例。引火点が非常に低い。</td></tr><tr><th>灯油・軽油</th><td>第二石油類の代表例。ガソリンより引火点が高い。</td></tr><tr><th>重油</th><td>一般に第三石油類の例。組成による幅が大きい。</td></tr><tr><th>注意</th><td>引火点が高くても、加熱・ミスト化で危険は増す。</td></tr></table></article><article class="matrix-card"><h3>炭化水素と水溶性溶剤</h3><table class="mini-table"><tr><th>ガソリン</th><td>水と混ざりにくく、水より軽い。</td></tr><tr><th>メタノール</th><td>水と混和。アルコール類。</td></tr><tr><th>アセトン</th><td>水と混和。法令上は第一石油類。</td></tr><tr><th>消火方法</th><td>水溶性燃料には耐アルコール泡を含む適合泡を選ぶ。</td></tr></table></article><article class="matrix-card"><h3>ジエチルエーテルと二硫化炭素</h3><table class="mini-table"><tr><th>ジエチルエーテル</th><td>引火点が低く、低沸点で蒸気を生じやすい。</td></tr><tr><th>二硫化炭素</th><td>発火点が約90℃。水より重い。</td></tr><tr><th>共通点</th><td>どちらも特殊引火物である。</td></tr><tr><th>注意</th><td>同じ法令品名でも物性・貯蔵上の注意は異なる。</td></tr></table></article><article class="matrix-card"><h3>泡・粉末・二酸化炭素</h3><table class="mini-table"><tr><th>泡</th><td>燃料表面を被覆し蒸気発生・酸素接触を抑制。</td></tr><tr><th>粉末</th><td>主に燃焼の連鎖反応を抑制。</td></tr><tr><th>二酸化炭素</th><td>酸素を低下させるが高濃度は人体に危険。</td></tr><tr><th>選定</th><td>適応・容量・設置条件・現場の消防手順による。</td></tr></table></article><article class="matrix-card"><h3>棒状の水と水噴霧</h3><table class="mini-table"><tr><th>棒状注水</th><td>液面を押し広げ流出火災を拡大させるおそれ。</td></tr><tr><th>水噴霧</th><td>設備・条件によって冷却や蒸気抑制に使用する場合。</td></tr><tr><th>耐アルコール泡</th><td>水溶性燃料に適した泡膜形成を目的とする。</td></tr><tr><th>覚え方</th><td>「水」全体を一律に可・不可としない。</td></tr></table></article></div></div></section>
+<section class="a-section alt" id="practice"><div class="wrap"><div class="a-caption">06 / ORIGINAL PRACTICE</div><h2 class="a-section-title">理解を確かめる、オリジナル演習。</h2><p class="a-lead">公式の問題文・選択肢は転載せず、確認した科学・安全の基本事項から独自の五肢択一問題を作成しました。答えを選ぶと解説が表示されます。</p>
+<div class="quiz-box"><div class="quiz-top"><span class="tag" id="quiz-cat">第4類</span><span class="quiz-counter" id="quiz-counter">1 / 12</span></div><h3 id="quiz-q"></h3><div class="quiz-options" id="quiz-opts"></div><div class="quiz-answer" id="quiz-answer" aria-live="polite" hidden></div><div class="quiz-controls"><span class="quiz-score" id="quiz-score">正解：0 / 0</span><div><button type="button" id="quiz-reset" style="background:white;color:#153821;margin-right:8px">最初から</button><button type="button" id="quiz-next">次の問題 →</button></div></div></div><p class="note">※ 独自作成の学習問題です。公式過去問の復元・出題確率の予測ではありません。実際の火災対応にこの演習だけを使わないでください。</p>
+<div class="final-review" id="lastcheck"><div class="a-caption">FINAL REVIEW / 直前チェック</div><h3>最後に、12項目で学習の抜けを確認。</h3><p class="review-lead">知識を思い出せるだけでなく、「なぜ危険なのか」を説明できるか確認しましょう。チェック内容は同じブラウザに保存されます。</p><div class="check-grid" id="check-grid"><label><input type="checkbox" data-check="01"><span>第4類の7品名を順番に説明できる</span></label><label><input type="checkbox" data-check="02"><span>ガソリンの低引火点・水より軽い性質を説明できる</span></label><label><input type="checkbox" data-check="03"><span>灯油・軽油・重油の分類と引火点の相対関係がわかる</span></label><label><input type="checkbox" data-check="04"><span>メタノールとエタノールの水溶性・毒性を区別できる</span></label><label><input type="checkbox" data-check="05"><span>アセトンが第一石油類（水溶性）とわかる</span></label><label><input type="checkbox" data-check="06"><span>特殊引火物2例の危険性（揮発性／低発火点）を説明できる</span></label><label><input type="checkbox" data-check="07"><span>キシレンが通常無色であると説明できる</span></label><label><input type="checkbox" data-check="08"><span>液比重と蒸気比重の基準の違いを説明できる</span></label><label><input type="checkbox" data-check="09"><span>低所への可燃性蒸気滞留と排気先の注意がわかる</span></label><label><input type="checkbox" data-check="10"><span>接地・流速管理・点火源排除の目的がわかる</span></label><label><input type="checkbox" data-check="11"><span>水溶性液体用泡と棒状注水の違いを説明できる</span></label><label><input type="checkbox" data-check="12"><span>グリセリン・アセトアルデヒドの代表的性状を説明できる</span></label></div><div class="check-footer"><div class="check-progress-wrap"><progress max="12" value="0" id="check-progress"></progress><span id="check-text">0 / 12 項目確認</span></div><button type="button" id="check-clear">チェックをリセット</button></div></div>
+</div></section>
+<section class="sources" id="sources"><div class="wrap"><div class="a-caption" style="color:#aaceb1">REFERENCES / SOURCES &amp; NOTES</div><h2>内容の根拠と確認先。</h2><p>試験の科目範囲・代表論点は消防試験研究センターの公開資料、法令上の分類は消防法と政令、物性・消火方法は消防関係機関、厚生労働省のガイドブック、国際化学物質安全性カード（ICSC）と照合しています。S/Aは当サイト独自の学習優先度で、公式の出題頻度データから算出したものではありません。公式公開問題は論点の確認のみに使い、本文・選択肢を転載していません。</p><ul><li><a target="_blank" rel="noopener noreferrer" href="https://www.shoubo-shiken.or.jp/content/kikenbutsu_otsu4.pdf">消防試験研究センター｜乙種第4類・公式公開問題（性質・火災予防・消火の10問は論点確認のみ）</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.shoubo-shiken.or.jp/kikenbutsu/annai/subject.html">消防試験研究センター｜試験科目及び問題数</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://laws.e-gov.go.jp/law/323AC1000000186">消防法｜別表第一：第4類の7品名と分類定義</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://laws.e-gov.go.jp/law/334CO0000000306">危険物の規制に関する政令｜別表第三：指定数量</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.nite.go.jp/data/000156190.pdf">NITE｜消防法における化学物質管理（消防庁作成資料）</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://anzeninfo.mhlw.go.jp/user/anzen/kag/pdf/M2_risk-assessment-guidebook.pdf">厚生労働省｜化学物質による爆発・火災等のリスクアセスメント入門ガイドブック</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://nrifd.fdma.go.jp/public_info/gijutsusha_kaigi/gijutsusha_kaigi_62th/files/01_prcd_62_gijutsu_koenkai_18th.pdf">消防研究センター｜危険物第4類と物性比較</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0087.htm">ILO/WHO ICSC｜アセトン</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0009.htm">ILO/WHO ICSC｜アセトアルデヒド</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0057.htm">ILO/WHO ICSC｜メタノール・エタノール</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0355.htm">ILO/WHO ICSC｜ジエチルエーテル</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0022.htm">ILO/WHO ICSC｜二硫化炭素</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0663.htm">ILO/WHO ICSC｜灯油</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0624.htm">ILO/WHO ICSC｜グリセリン</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0270.htm">ILO/WHO ICSC｜エチレングリコール</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.inchem.org/documents/icsc/icsc/eics0363.htm">ILO/WHO ICSC｜酢酸</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.ilo.org/dyn/icsc/showcard.display?p_card_id=0485&amp;p_lang=en">ILO/WHO ICSC｜ギ酸</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://mfs.sa.gov.au/community-safety/safety-and-education/fact-sheets/self-heating-and-spontaneous-ignition">消防機関｜自己発熱・自然発火の説明</a></li></ul><p>物性表の数値は試験方法・温度・純度・組成により変化します。危険物の分類や現場の消火対応は、現行法令・各製品のSDS・所轄消防機関・施設の計画を優先してください。</p></div></section></main><footer class="foot"><div class="wrap foot-inner"><div class="foot-big">OTSU-4 / PROPERTIES</div><a class="btn" href="hazardous-otsu4.html">← 乙4の科目一覧</a></div></footer><script>
+'use strict';
+const ALL_CARDS=Array.from(document.querySelectorAll('.rank-card'));
+const search=document.getElementById('rank-search');let activeCat='すべて';
+function filterCards(){const q=search.value.toLocaleLowerCase('ja-JP').trim();let ns=0,na=0;for(const c of ALL_CARDS){const ok=(activeCat==='すべて'||c.dataset.cat===activeCat)&&(!q||c.dataset.search.toLocaleLowerCase('ja-JP').includes(q));c.hidden=!ok;if(ok){if(c.dataset.rank==='S')ns++;else na++;}}document.getElementById('rank-count').textContent=`S${ns}テーマ・A${na}テーマを表示中`;document.getElementById('notfound').hidden=(ns+na)!==0;}
+search.addEventListener('input',filterCards);
+document.getElementById('cat-buttons').addEventListener('click',e=>{const b=e.target.closest('.cat-btn');if(!b)return;activeCat=b.dataset.cat;document.querySelectorAll('.cat-btn').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));filterCards();});
+const materialSearch=document.getElementById('material-search');const materialRows=Array.from(document.querySelectorAll('#material-table tbody tr'));
+materialSearch.addEventListener('input',()=>{const q=materialSearch.value.toLocaleLowerCase('ja-JP').trim();let count=0;for(const tr of materialRows){tr.hidden=!!q&&!tr.textContent.toLocaleLowerCase('ja-JP').includes(q);if(!tr.hidden)count++;}document.getElementById('material-count').textContent=`${count}物質`;document.getElementById('material-empty').hidden=count!==0;});
+const quiz=[{"category": "第4類の共通性質", "q": "第4類の危険物について最も適切なものはどれか。", "options": ["すべて水溶性である", "すべて水より軽い", "引火性液体であり、蒸気への着火などに注意する", "すべて同じ消火剤だけを使う", "燃焼時に酸素供給源は不要"], "answer": 2, "why": "第4類は引火性液体ですが、水溶性・液比重・適応消火剤は物質で異なります。"}, {"category": "ガソリン", "q": "ガソリンの一般的な性質として正しいものはどれか。", "options": ["水と任意の割合で混ざる", "室温では蒸気を生じない", "通常は水より重い", "一般に引火点が−40℃以下である", "普通の棒状放水が液面火災の第一選択である"], "answer": 3, "why": "ガソリンは引火点が非常に低く、常温でも可燃性蒸気を生じます。"}, {"category": "灯油とガソリン", "q": "ガソリンと灯油の違いについて正しいものはどれか。", "options": ["灯油は通常ガソリンより引火点が高い", "灯油は加熱しても引火しない", "ガソリンは第二石油類の代表例である", "どちらも水に完全に溶ける", "灯油の引火点はすべての製品で必ず同じ"], "answer": 0, "why": "灯油の引火点は通常ガソリンより高いものの、組成と温度で危険性が変わります。"}, {"category": "アルコール類", "q": "メタノールとエタノールに共通する特徴として正しいものはどれか。", "options": ["水と混ざらない", "水に混ざり、可燃性蒸気による引火の危険がある", "第3類危険物である", "人体への有害性は完全に同じ", "通常の泡は必ず破壊されない"], "answer": 1, "why": "両者は水と任意割合で混ざり、引火性を持ちます。メタノールには特に強い毒性があります。"}, {"category": "アセトン", "q": "アセトンの説明として正しいものはどれか。", "options": ["無色無臭である", "水と混ざらない", "アルコール類の品名に分類される", "第一石油類の水溶性液体で、特有の臭いがある", "発火点は−18℃である"], "answer": 3, "why": "アセトンは第一石油類（水溶性）で、無色・特有の臭いを持ちます。約−18℃は引火点の代表値です。"}, {"category": "特殊引火物", "q": "二硫化炭素に関して正しいものはどれか。", "options": ["液比重は1より小さい", "発火点は約90℃で、比較的低い", "水と任意割合で混ざる", "第4石油類である", "常温では全く蒸発しない"], "answer": 1, "why": "二硫化炭素は特殊引火物で、液比重は約1.26。発火点が低い点が特徴です。"}, {"category": "キシレン", "q": "キシレンについて正しいものはどれか。", "options": ["通常無色で、水には溶けにくい", "水と任意の割合で混ざる", "通常は鮮やかな黄色の液体である", "発火に酸素は不要", "常にメタノールより揮発しやすい"], "answer": 0, "why": "キシレンは通常無色の芳香族系液体で、水に溶けにくく、引火の危険があります。"}, {"category": "比重の違い", "q": "液比重と蒸気比重の説明で正しいものはどれか。", "options": ["液比重は常に空気を基準にする", "蒸気比重は常に水を基準にする", "液比重が1未満なら蒸気比重も必ず1未満", "液比重は水、蒸気比重は空気を基準とする", "液比重が大きいほど必ず引火点が低い"], "answer": 3, "why": "基準が異なります。液体の浮沈と蒸気の滞留は分けて考えます。"}, {"category": "可燃性蒸気", "q": "可燃性蒸気の換気について適切なのはどれか。", "options": ["屋外の低所なら無条件に排出してよい", "換気の排出先と点火源の位置を確認する", "蒸気比重が大きくても低所に集まることはない", "蒸気は離れた火源で着火しない", "密栓は蒸気漏えい対策に無関係"], "answer": 1, "why": "安全な排気先・滞留防止・点火源隔離を考えます。低い場所への無計画な排気は危険です。"}, {"category": "消火剤", "q": "水溶性の引火性液体火災に対し、泡消火剤の選定で重要なのはどれか。", "options": ["普通の泡は水溶性燃料でも必ず安定", "泡は燃料と接触させてはならない", "耐アルコール泡など適合する泡を検討する", "泡は酸素供給量を増やすために使う", "水溶性燃料は燃えないため消火剤が不要"], "answer": 2, "why": "水溶性燃料では通常泡が壊れやすいため、耐アルコール泡などを使用します。"}, {"category": "棒状注水", "q": "ガソリンなどの液面火災で、棒状の水を直接当てる際の危険性はどれか。", "options": ["必ず燃料が完全に消える", "水がすぐ蒸発するので一切問題ない", "燃料を押し広げ火災を拡大させるおそれがある", "燃料が自動的に不燃物に変わる", "静電気が必ずゼロになる"], "answer": 2, "why": "棒状の注水は燃料を押し広げるおそれがあります。容器冷却などの水噴霧とは区別します。"}, {"category": "グリセリン", "q": "グリセリンの一般的な性質として正しいものはどれか。", "options": ["特有の強い芳香がある", "水に溶けない", "無色で粘性・吸湿性があり、液比重は1より大きい", "常温で気体である", "ジエチルエーテルと同じ低沸点を持つ"], "answer": 2, "why": "グリセリンは無色で粘性・吸湿性があり、水と混ざり、液比重約1.26です。"}];
+let quizIndex=0,quizAnswered=0,quizCorrect=0,selected=-1;
+function updateScore(){document.getElementById('quiz-score').textContent=`正解：${quizCorrect} / ${quizAnswered}`;}
+function showQuiz(){const x=quiz[quizIndex];document.getElementById('quiz-cat').textContent=x.category;document.getElementById('quiz-counter').textContent=`${quizIndex+1} / ${quiz.length}`;document.getElementById('quiz-q').textContent=x.q;const opts=document.getElementById('quiz-opts');opts.replaceChildren();selected=-1;document.getElementById('quiz-answer').hidden=true;document.getElementById('quiz-next').textContent=quizIndex===quiz.length-1?'最初に戻る →':'次の問題 →';x.options.forEach((option,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option';b.textContent=`${i+1}. ${option}`;b.addEventListener('click',()=>chooseAnswer(i));opts.append(b);});updateScore();}
+function chooseAnswer(i){if(selected>=0)return;selected=i;quizAnswered++;if(i===quiz[quizIndex].answer)quizCorrect++;document.querySelectorAll('.quiz-option').forEach((b,j)=>{b.disabled=true;if(j===quiz[quizIndex].answer)b.classList.add('correct');if(j===i){b.classList.add('selected');if(i!==quiz[quizIndex].answer)b.classList.add('wrong');}});const fb=document.getElementById('quiz-answer');fb.hidden=false;fb.textContent=(i===quiz[quizIndex].answer?'正解です。':'不正解です。')+' '+quiz[quizIndex].why;updateScore();}
+document.getElementById('quiz-next').addEventListener('click',()=>{if(quizIndex===quiz.length-1){quizIndex=0;quizAnswered=0;quizCorrect=0;}else quizIndex++;showQuiz();});
+document.getElementById('quiz-reset').addEventListener('click',()=>{quizIndex=0;quizAnswered=0;quizCorrect=0;showQuiz();});showQuiz();
+const checks=Array.from(document.querySelectorAll('#check-grid input'));const storageKey='cql_otsu4_properties_checks_v1';try{const stored=JSON.parse(localStorage.getItem(storageKey)||'[]');checks.forEach(x=>x.checked=stored.includes(x.dataset.check));}catch(e){}
+function updateChecks(){let n=checks.filter(x=>x.checked).length;document.getElementById('check-text').textContent=`${n} / ${checks.length} 項目確認`;document.getElementById('check-progress').value=n;try{localStorage.setItem(storageKey,JSON.stringify(checks.filter(x=>x.checked).map(x=>x.dataset.check)));}catch(e){}}
+checks.forEach(x=>x.addEventListener('change',updateChecks));document.getElementById('check-clear').addEventListener('click',()=>{checks.forEach(x=>x.checked=false);updateChecks();});updateChecks();
+// Re-enable a hidden rank card before navigating from a figure index link.
+document.querySelectorAll('.fig-tile[href^="#"]').forEach(a=>a.addEventListener('click',()=>{const target=document.getElementById(a.getAttribute('href').slice(1));if(target&&target.hidden){search.value='';activeCat='すべて';document.querySelectorAll('.cat-btn').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cat==='すべて'?'true':'false'));filterCards();}}));
+</script></body></html>
