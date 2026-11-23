@@ -1,0 +1,530 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="危険物取扱者甲種の物理・化学をSランク17テーマ、Aランク9テーマに整理。気体の法則・分圧・化学量論・燃焼熱・電池・炎色反応・有機化学を公式の意味から解説。独自の計算ツールと演習付き。">
+<meta property="og:title" content="危険物甲種｜物理・化学 重要テーマと計算演習 | 化学資格研究所"><title>危険物甲種｜物理・化学 Sランク17・Aランク9 | 化学資格研究所</title>
+<style>
+:root{
+  --bg:#f3f5ef;
+  --ink:#0b0d0c;
+  --muted:#66706a;
+  --line:rgba(11,13,12,.15);
+  --lime:#c8ff4d;
+  --mint:#b7f7df;
+  --cyan:#9de9ff;
+  --yellow:#ffe66b;
+  --rose:#ffb7a8;
+  --white:#fff;
+  --black:#0a0c0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
+.header{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:blur(14px);
+  background:rgba(243,245,239,.82);
+  border-bottom:1px solid var(--line)
+}
+.header-inner{
+  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
+}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
+.mark{
+  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
+}
+.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
+.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--ink)}
+.hero{
+  min-height:calc(100vh - 76px);display:grid;align-items:center;
+  border-bottom:1px solid var(--line);position:relative
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+h1{
+  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
+}
+h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
+.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
+  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
+}
+.btn.primary{background:var(--ink);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.atom{
+  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
+}
+.atom::before,.atom::after,.orbit{
+  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
+}
+.atom::before{transform:rotate(60deg) scaleX(.48)}
+.atom::after{transform:rotate(-60deg) scaleX(.48)}
+.orbit{transform:scaleX(.48)}
+.nucleus{
+  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
+  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
+}
+.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
+.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
+.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.section.dark{background:var(--black);color:var(--white)}
+.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
+.dark .sec-no{color:#89908c}
+.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
+.lead{max-width:760px;font-size:18px;color:#4f5953}
+.dark .lead{color:#bdc4c0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:32px 0}
+.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
+.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
+.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
+.qual-list{border-top:1px solid rgba(255,255,255,.22)}
+.qual{
+  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
+  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
+}
+.qual:hover{padding-left:12px}
+.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
+.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
+.qtag{font-size:11px;color:#9ca39f}
+.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
+.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
+.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
+.pcard b{font-size:42px;letter-spacing:-.05em}
+.pcard h3{font-size:24px;margin:0 0 10px}
+.pcard p{margin:0;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.timeline{border-top:1px solid var(--line)}
+.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
+.foot{padding:50px 0}
+.foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
+.foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
+.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
+.page-hero h1{font-size:clamp(60px,11vw,140px)}
+.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
+.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
+.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+@media(max-width:800px){
+  .nav{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .atom{width:76vw;max-width:340px}
+  .section-head{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
+  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
+  .principles,.topic-grid{grid-template-columns:1fr}
+  .section{padding:80px 0}
+  .hero-grid{padding:60px 0}
+  .foot-inner{display:block}
+}
+
+
+
+
+:root{--bg:#f3f5ef;--lime:#c8ff4d;--ink:#0b0d0c;--muted:#607065;--line:#d7dfd6;--forest:#10251a}
+body{line-height:1.7} [id]{scroll-margin-top:150px}
+.skip{position:absolute;top:-70px;left:12px;z-index:100;background:#fff;padding:10px}.skip:focus{top:5px}
+.breadcrumb{padding:20px 0;font-size:12px}.breadcrumb a{text-decoration:underline;text-underline-offset:3px}
+.a-hero{background:#101512;color:#fff;padding:73px 0 75px;position:relative;overflow:hidden;border-bottom:1px solid #3e443e}
+.a-hero:before{content:'';position:absolute;right:-140px;top:-165px;width:530px;height:530px;border:1px solid #4b554d;border-radius:50%;box-shadow:0 0 0 80px #ffffff07,0 0 0 160px #ffffff05;pointer-events:none}
+.a-eyebrow{display:flex;align-items:center;gap:11px;color:#a9c9b4;font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.a-eyebrow .dot{width:8px;height:8px;background:var(--lime);box-shadow:0 0 0 4px #c8ff4d22;border-radius:50%}
+.a-hero h1{font-size:clamp(39px,6.3vw,82px);font-weight:900;line-height:1.13;margin:22px 0;letter-spacing:-.065em;max-width:1000px}
+.a-hero h1 em{color:var(--lime);font-style:normal}.a-hero p{color:#ced8cf;font-size:clamp(15px,1.65vw,18px);line-height:1.95;max-width:870px}
+.a-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:29px}.a-btn{border:1px solid #dce7df;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:12px 19px;border-radius:99px;background:#fff;color:#102118;font-size:12px;font-weight:900;transition:.2s}
+.a-btn.dark{background:var(--lime);border-color:var(--lime)}.a-btn:hover{transform:translateY(-2px)}.a-hero-stats{max-width:880px;display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #4d5b52;margin-top:47px}
+.a-hero-stat{padding:19px 20px 19px 0}.a-hero-stat+.a-hero-stat{border-left:1px solid #4d5b52;padding-left:22px}
+.a-hero-stat b{display:block;color:var(--lime);font-size:clamp(38px,5.2vw,65px);line-height:1.15;letter-spacing:-.07em}.a-hero-stat small{font-size:11px;color:#becdc0;font-weight:700}
+.a-subnav{position:sticky;top:76px;z-index:20;background:#f3f5eff7;backdrop-filter:blur(10px);border-bottom:1px solid #d7e0d8;overflow-x:auto;scrollbar-width:thin}
+.a-subnav .wrap{display:flex;align-items:center;gap:24px;min-height:56px;white-space:nowrap}.a-subnav a{font-size:12px;font-weight:850;color:#43584a}.a-subnav a:hover{color:#0c2b19}
+.a-section{padding:84px 0;border-bottom:1px solid #d9dfd8}.a-section.alt{background:#eaf0ea}.a-section-title{font-size:clamp(30px,4.7vw,56px);letter-spacing:-.06em;line-height:1.2;margin:12px 0 16px;font-weight:900}
+.a-caption{font-size:11px;font-weight:950;letter-spacing:.16em;color:#496952}.a-lead{max-width:830px;color:#46594b;font-size:15px;line-height:1.95;margin:0 0 28px}
+.note{font-size:12px;color:#526759;line-height:1.8;padding:15px 19px;border-left:3px solid #86a48d;background:#ffffffbd;margin:22px 0}
+.intro-cards,.flow-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.intro-card,.flow-card{background:#fff;border:1px solid #d4e0d4;border-radius:16px;padding:22px;min-width:0}
+.intro-card small{color:#4a7050;font-size:11px;font-weight:900;letter-spacing:.08em}.intro-card h3{font-size:19px;margin:13px 0 8px;line-height:1.3;letter-spacing:-.03em}.intro-card p,.flow-card p{font-size:12px;line-height:1.85;color:#526557;margin:0}
+.flow-card b{display:block;color:#3b774c;font-size:30px;line-height:1}.flow-card h3{font-size:17px;line-height:1.4;margin:11px 0}
+.sample-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:24px}.sample-tile{border-radius:12px;border:1px solid #ccd8ce;background:var(--tile);padding:13px;display:flex;flex-direction:column;gap:12px;min-height:132px;transition:transform .15s}
+.sample-tile:hover{transform:translateY(-3px)}.sample-tile b{font-size:18px}.sample-tile span{font-size:12px;font-weight:850;line-height:1.5}.sample-tile small{font-size:10px;color:#3d5042;margin-top:auto}
+.section-mini{font-size:23px;line-height:1.4;letter-spacing:-.045em;margin:34px 0 13px}
+.table-scroll{overflow-x:auto;border:1px solid #d3dfd4;border-radius:16px;background:#fff;margin:22px 0}.compare{border-collapse:collapse;min-width:650px;width:100%;font-size:13px}.compare th,.compare td{text-align:left;padding:13px 17px;border-bottom:1px solid #e1e8e1;vertical-align:middle;line-height:1.6}.compare th{font-weight:900}.compare thead th{background:#152a1c;color:white}.compare tbody th{background:#eff7ec}.compare tbody tr:last-child>*{border-bottom:0}.compare .water{background:#edf8fe}.compare .nonwater{background:#f3fae8}
+.numaccent{font-size:19px;font-weight:950;letter-spacing:-.03em;white-space:nowrap}.compare-sub{font-size:11px;color:#52665b}
+.boundaries{display:grid;grid-template-columns:1fr 4fr;gap:8px;margin:27px 0 0}.boundary{padding:17px 12px;border-radius:12px;border:1px solid #b7cdb9;text-align:center;font-size:12px;font-weight:850;line-height:1.5}.boundary small{display:block;margin-top:6px;color:#536d5b;font-size:10px;font-weight:650}.boundary.light{background:#edf4e9}.boundary.bold{background:#d9f3d0}
+.calculator{margin-top:34px;padding:27px;border-radius:18px;background:#fff;border:1px solid #cfdccf}.calc-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.calc-head h3{font-size:24px;margin:0 0 9px}.calc-head p{font-size:12px;margin:0;color:#52675a}.calc-row{display:grid;grid-template-columns:1.7fr 1fr .9fr 1fr 34px;gap:10px;align-items:center;margin-top:10px}.calc-row.calc-labels{font-size:11px;font-weight:900;color:#5b6e60}.calc-row select,.calc-row input{min-width:0;width:100%;border:1px solid #cad6ca;background:#fff;border-radius:9px;padding:12px 10px;color:#142c1e;font:inherit;font-size:13px}.calc-row output{font-variant-numeric:tabular-nums;font-weight:850;text-align:right;white-space:nowrap;font-size:13px}.calc-row .calc-del{background:#f3f5f1;border:1px solid #cdd6ca;border-radius:8px;padding:9px;cursor:pointer;font-size:17px}.calc-footer{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-top:1px solid #e3ebe3;margin-top:20px;padding-top:19px}.calc-result{font-size:14px;color:#36483c}.calc-result b{font-size:32px;line-height:1;font-weight:950;color:#152a1d}.calc-threshold{font-size:12px;max-width:500px;color:#465e4c}.calc-add{background:#173c28;color:#fff;border-radius:22px;border:0;padding:12px 17px;font-size:12px;font-weight:900;cursor:pointer}
+.rank-intro{display:flex;gap:10px;flex-wrap:wrap;margin:27px 0}.rank-intro span{border:1px solid #c8d6c9;border-radius:12px;padding:12px 16px;background:#fff;font-size:13px;color:#425949}
+.rank-intro strong{font-weight:950;color:#163c22}.rank-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 24px}.rank-search{flex:1;min-width:min(270px,100%);border:1px solid #b9cdbb;background:#fff;padding:13px 15px;border-radius:10px;font:inherit;font-size:13px}
+.cat-buttons{display:flex;flex-wrap:wrap;gap:6px}.cat-btn{background:#fff;border:1px solid #a8bea9;border-radius:99px;color:#20432c;padding:10px 13px;font:inherit;font-size:12px;font-weight:850;cursor:pointer}.cat-btn[aria-pressed=true]{background:#163b25;color:white}.rank-count{font-size:12px;color:#536859;font-weight:850;margin:0 0 16px}
+.rank-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.rank-card{min-width:0;background:#fff;border:1px solid #cdd9ce;border-radius:16px;padding:25px;display:flex;flex-direction:column;gap:11px}.rank-card[hidden]{display:none!important}
+.rank-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.rank-pill{display:inline-block;border-radius:7px;background:#c8ff4d;padding:4px 10px;font-weight:950;font-size:13px;color:#142a1c}.rank-card.a .rank-pill{background:#d7e5ff}.rank-category{font-size:11px;color:#536d5a;font-weight:800}.rank-card h3{font-size:clamp(20px,2.2vw,25px);line-height:1.35;margin:3px 0;letter-spacing:-.04em}.rank-summary{font-size:13px;line-height:1.8;margin:0 0 2px;color:#495e50}.rank-card details{border-top:1px solid #e2e9e2;padding-top:11px;margin-top:3px}.rank-card summary{font-size:13px;font-weight:900;color:#165330;cursor:pointer}.rank-card ul{font-size:13px;line-height:1.75;color:#3d5543;padding-left:20px}.rank-card li+li{margin-top:7px}.rank-caution{background:#f1f7ed;border-radius:9px;padding:12px;display:flex;gap:4px;flex-direction:column;font-size:12px;line-height:1.7;color:#475e4a}.rank-caution b{color:#245c35}.rank-evidence{font-size:11px;color:#718271;margin-top:auto;padding-top:9px;border-top:1px solid #e4ece4}.rank-evidence span{display:inline-block}
+.notfound{padding:15px;background:white;border:1px solid #d3ddd1;border-radius:12px;font-size:13px}.notfound[hidden]{display:none}
+.matrix-wrap{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.matrix-card{background:#fff;border:1px solid #d4ded4;border-radius:16px;padding:24px}.matrix-card h3{font-size:19px;margin:0 0 14px}.matrix-card p{font-size:13px;color:#4a5d4c;line-height:1.85}.matrix-card b{color:#19452a}.mini-table{border-collapse:collapse;width:100%;font-size:12px}.mini-table tr+tr{border-top:1px solid #e2eae1}.mini-table td,.mini-table th{text-align:left;padding:10px 5px;vertical-align:top}.mini-table th{width:37%;color:#244932;font-weight:900}
+.quiz-box{padding:28px;background:#fff;border:1px solid #c9d8c9;border-radius:18px;max-width:910px}.quiz-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.quiz-top .tag{font-size:11px;background:#e4f5db;color:#16492b;border-radius:50px;padding:7px 12px;font-weight:900}.quiz-counter{font-size:13px;color:#62705f;font-weight:800}.quiz-box h3{font-size:24px;letter-spacing:-.035em;line-height:1.5}.quiz-options{display:grid;gap:10px}.quiz-option{border:1px solid #cdd9cd;border-radius:12px;text-align:left;font:inherit;background:white;padding:13px 16px;font-size:14px;line-height:1.7;cursor:pointer}.quiz-option:hover{background:#f0f9eb}.quiz-option.selected{outline:2px solid #1c5b35;outline-offset:1px}.quiz-option.correct{border-color:#4b9a65;background:#e6f8e8}.quiz-option.wrong{border-color:#b96363;background:#fff0ee}.quiz-option:disabled{cursor:default}.quiz-answer{margin:16px 0;padding:17px;border-radius:12px;background:#eff6ec;font-size:13px;line-height:1.8}.quiz-answer[hidden]{display:none}.quiz-controls{display:flex;gap:9px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:18px}.quiz-controls button{border:1px solid #254b32;background:#153821;color:#fff;border-radius:22px;padding:11px 17px;font:inherit;font-size:12px;cursor:pointer;font-weight:900}.quiz-score{font-size:12px;color:#53695b}
+.fig-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.fig-tile{background:#fff;border:1px solid #d4dfd5;border-top:4px solid var(--fig);padding:22px;border-radius:15px;min-height:152px;display:flex;flex-direction:column;gap:10px;transition:transform .15s}.fig-tile:hover{transform:translateY(-3px)}.fig-num{font-size:11px;font-weight:900;color:#54735b;letter-spacing:.12em}.fig-tile strong{font-size:18px;letter-spacing:-.03em;line-height:1.4}.fig-tile small{font-size:11px;color:#617d6a;margin-top:auto}
+.study-route{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.study-step{background:#fff;border:1px solid #d5ded2;border-radius:14px;padding:18px}.study-step b{font-size:28px;color:#3a7a4b}.study-step h3{font-size:16px;margin:7px 0}.study-step p{font-size:12px;margin:0;color:#596b5c}.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}.check-grid label{padding:14px 15px;display:flex;align-items:flex-start;gap:11px;border:1px solid #d5dfd5;background:#fff;border-radius:12px;cursor:pointer;font-size:13px;font-weight:750}.check-grid input{width:19px;height:19px;accent-color:#276d3a;flex:0 0 19px;margin-top:2px}.check-grid label:has(input:checked){background:#e5f8dc}.check-progress{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:18px;font-weight:850;color:#244a2c;font-size:13px}.progress-track{width:min(290px,100%);height:12px;border-radius:99px;background:#dde7da;overflow:hidden}.progress-fill{width:0;background:#2c7546;height:100%;border-radius:99px;transition:width .2s}
+.sources{background:#101b14;color:#fff;padding:62px 0 72px}.sources h2{font-size:clamp(29px,3.5vw,48px);margin:12px 0}.sources p{font-size:13px;color:#cad7cc;max-width:940px;line-height:1.9}.sources a{color:#d9ffb6;text-decoration:underline;text-underline-offset:4px}.sources ul{font-size:13px;line-height:2.15;padding-left:20px}.foot{background:#0a0c0b;color:white}.foot .btn{color:white;border-color:white}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1000px){.intro-cards,.sample-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.fig-grid{grid-template-columns:repeat(2,1fr)}.study-route{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:780px){.a-section{padding:62px 0}.a-hero{padding:48px 0 57px}.rank-grid,.matrix-wrap{grid-template-columns:1fr}.intro-cards,.study-route{grid-template-columns:repeat(2,1fr)}.sample-grid{grid-template-columns:repeat(3,1fr)}.calc-row{grid-template-columns:1.4fr .8fr 1fr 1fr 30px;gap:5px}.calc-row select,.calc-row input{padding:9px 4px;font-size:12px}.calc-row output{font-size:11px}.calc-row.calc-labels{font-size:10px}}
+@media(max-width:510px){.wrap{width:min(1180px,calc(100% - 30px))}.a-hero h1{font-size:clamp(35px,9.1vw,50px)}.a-hero-stat{padding-right:8px}.a-hero-stat+.a-hero-stat{padding-left:10px}.a-hero-stat b{font-size:clamp(30px,9vw,41px)}.a-hero-stat small{font-size:10px}.intro-cards,.sample-grid,.fig-grid,.study-route,.check-grid{grid-template-columns:1fr 1fr}.intro-card,.flow-card{padding:15px}.intro-card h3{font-size:16px}.sample-tile{min-height:118px;padding:11px}.sample-tile span{font-size:11px}.fig-tile{padding:15px;min-height:133px}.fig-tile strong{font-size:14px}.rank-card{padding:20px}.calculator{padding:15px 10px}.calc-row{grid-template-columns:1.3fr .65fr .7fr .7fr 24px;gap:4px}.calc-row.calc-labels{display:none}.calc-row:not(.calc-labels){display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,.8fr);gap:7px;background:#f5f9f4;border:1px solid #dbe6d9;padding:10px;border-radius:10px;margin-top:10px}.calc-row select{grid-column:1/3;grid-row:1;font-size:12px;padding:10px 8px}.calc-row .calc-del{grid-column:3;grid-row:1;justify-self:end;padding:7px 12px}.calc-row input{grid-column:1;grid-row:2;font-size:12px;padding:9px 6px}.calc-row .lim{grid-column:2;grid-row:2}.calc-row .ratio{grid-column:3;grid-row:2}.calc-row output{font-size:12px;line-height:1.5}.calc-row .lim:before{content:'指定数量';display:block;font-size:10px;color:#647968}.calc-row .ratio:before{content:'倍数';display:block;font-size:10px;color:#647968}.a-section-title{font-size:34px}.quiz-box{padding:18px}.quiz-box h3{font-size:20px}.boundary{font-size:10px;padding:10px 5px}.boundary small{font-size:9px}}
+@media(max-width:370px){.intro-cards,.sample-grid,.fig-grid,.study-route{grid-template-columns:1fr 1fr}.a-actions{gap:6px}.a-btn{padding:10px 11px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Revision: learning-first navigation, related illustrated topics and final review */
+.hero-disclaimer{max-width:870px!important;margin:12px 0 0!important;padding:13px 17px;border-left:3px solid #c8ff4d;background:rgba(200,255,77,.09);color:#dce9d9!important;font-size:12px!important;line-height:1.8!important}
+.rank-useful-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:11px}
+.rank-useful-links a{border:1px solid #c9dcc9;border-radius:999px;padding:7px 11px;background:#f1f8ed;color:#1a5b33;font-size:11px;font-weight:850;text-decoration:none}
+.rank-useful-links a:hover{background:#d9f5c5}
+.rank-useful-links a:focus-visible{outline:3px solid #398559;outline-offset:3px}
+.fig-tile{scroll-margin-top:152px}
+.final-review{margin-top:54px;padding-top:44px;border-top:1px solid #cad9ca;scroll-margin-top:156px}
+.final-review h3{font-size:clamp(24px,3.5vw,37px);line-height:1.3;letter-spacing:-.045em;margin:12px 0}
+.final-review .review-lead{font-size:14px;color:#4f6755;max-width:800px;line-height:1.9}
+@media(max-width:510px){.hero-disclaimer{font-size:11px!important;padding:12px 13px}.rank-useful-links a{font-size:10px}.final-review{margin-top:38px;padding-top:30px}}
+
+
+/* OTSU-4 PHYSICS AND CHEMISTRY / consistent with the law page */
+.physics-scope{margin:24px 0 0;padding:16px 20px;border:1px solid rgba(200,255,77,.32);border-left:4px solid #c8ff4d;background:rgba(200,255,77,.08);max-width:890px;color:#d8e9d8;font-size:12px;line-height:1.9}
+.a-section{scroll-margin-top:125px}.rank-card{scroll-margin-top:155px}.fig-tile{scroll-margin-top:155px}
+.rank-useful-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:11px}
+.rank-useful-links a{border:1px solid #c9dcc9;border-radius:999px;padding:7px 11px;background:#f1f8ed;color:#1a5b33;font-size:11px;font-weight:850;text-decoration:none}
+.rank-useful-links a:hover{background:#d9f5c5}
+.a-hero-stat b{font-variant-numeric:tabular-nums}
+.formula-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.formula-card{background:#fff;border:1px solid #cfdfd2;padding:24px;border-radius:16px;min-width:0}
+.formula-card .formula-tag{display:inline-block;font-size:11px;font-weight:850;letter-spacing:.08em;color:#38604b}
+.formula-card h3{margin:10px 0 12px;font-size:20px;line-height:1.4}
+.formula-core{margin:13px 0;background:#ebf6e7;border-radius:11px;padding:18px 16px;font-size:clamp(17px,2.6vw,26px);font-weight:900;color:#15331e;line-height:1.65;letter-spacing:-.03em;overflow-wrap:anywhere}
+.formula-card p,.formula-card li{font-size:13px;color:#4a5f50;line-height:1.85}
+.formula-card ol{padding-left:22px}
+.calc-panel{background:white;border:1px solid #c9d8ca;border-radius:18px;padding:26px;margin:24px 0}
+.calc-panel h3{font-size:23px;margin:0 0 10px}
+.calc-inputs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+.calc-inputs label{font-size:12px;font-weight:850;color:#385440;display:flex;flex-direction:column;gap:7px}
+.calc-inputs input{width:100%;min-width:0;padding:11px 12px;border:1px solid #afc3b4;border-radius:10px;font:inherit;color:#193326;background:#fafff9}
+.calc-result-physics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}
+.calc-result-physics div{background:#eef7e8;border-radius:12px;padding:19px 21px}
+.calc-result-physics small{font-size:11px;color:#4c7052;display:block;font-weight:900}
+.calc-result-physics strong{display:block;font-size:clamp(26px,4vw,38px);letter-spacing:-.05em;line-height:1.4;color:#183923}
+.calc-note{font-size:12px;line-height:1.8;color:#54705a}
+.principle-demo{margin:26px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.principle-demo article{background:white;border:1px solid #d0ddd1;border-radius:15px;padding:22px;text-align:center}
+.principle-demo b{font-size:16px;display:block;color:#173821}
+.principle-demo .visual{height:90px;display:flex;align-items:center;justify-content:center;font-size:40px;gap:9px}
+.principle-demo p{color:#627568;font-size:12px;line-height:1.7;margin:0}
+.pill-soft{display:inline-flex;padding:6px 11px;background:#e5f3da;border-radius:99px;font-size:11px;font-weight:850;color:#22512e}
+.rank-study-map{background:#f0f7ee;border:1px solid #c7dcc7;padding:18px 21px;border-radius:13px;font-size:13px;color:#3c5a42;line-height:1.9;margin-top:22px}
+.styled-compare{background:white;border:1px solid #d5e0d5;border-radius:17px;overflow:hidden}
+.styled-compare table{width:100%;border-collapse:collapse}
+.styled-compare th,.styled-compare td{padding:16px 18px;border-bottom:1px solid #e2e9e3;text-align:left;vertical-align:top;font-size:13px;line-height:1.75}
+.styled-compare thead{background:#193923;color:white}.styled-compare tbody th{width:22%;background:#f0f8ee;color:#1f4c30}
+.styled-compare tr:last-child th,.styled-compare tr:last-child td{border-bottom:0}
+.review-lead{font-size:13px;color:#4b6754;line-height:1.8}
+.final-review{padding:42px 0 0}.final-review h3{font-size:clamp(24px,3.1vw,37px);line-height:1.35;margin:11px 0}
+.check-progress progress{height:11px;accent-color:#2b7545}
+.sources li{margin:8px 0}.sources .ref-note{font-size:12px;border-left:3px solid #b9ff82;padding-left:13px}
+@media(max-width:810px){.formula-stack{grid-template-columns:1fr}.calc-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.principle-demo{grid-template-columns:1fr}.principle-demo article{text-align:left;padding:16px}.principle-demo .visual{height:65px;justify-content:flex-start}.styled-compare{overflow-x:auto}.styled-compare table{min-width:610px}}
+@media(max-width:370px){.calc-inputs{grid-template-columns:1fr}.calc-result-physics{grid-template-columns:1fr}}
+
+
+/* KOSHU PHYSICS: course-specific refinements */
+.header a:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #579b64;outline-offset:3px}
+.rank-card{scroll-margin-top:155px}.rank-grid{grid-auto-flow:row}.rank-card details .rank-evidence{margin-top:14px;padding-top:9px}
+.rank-evidence a{color:#19623b;text-decoration:underline;text-underline-offset:2px}
+.a-lead .important{font-weight:850;color:#17402b}
+.key-ref{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.key-ref a{display:inline-flex;align-items:center;padding:4px 8px;border-radius:7px;border:1px solid #c8d6ca;background:#f3f8f1;color:#315340;text-decoration:none;font-size:10px;line-height:1.5;font-weight:750}
+.koshu-scope{max-width:880px;padding:15px 18px;margin:20px 0 0;border:1px solid rgba(200,255,77,.3);border-left:4px solid var(--lime);background:#c8ff4d0d;color:#dfebdd;font-size:12px;line-height:1.9}
+.glyph-panel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:25px 0}
+.glyph-panel .glyph{background:#fff;border-radius:14px;border:1px solid #d5e1d4;padding:17px;min-width:0}
+.glyph-panel .glyph .number{font-size:27px;color:#246343;font-weight:950;line-height:1.2}
+.glyph-panel .glyph b{display:block;font-size:14px;margin:5px 0}
+.glyph-panel .glyph small{font-size:11px;line-height:1.75;color:#536a59}
+.formula-card .formula-core{font-variant-numeric:tabular-nums}
+.formula-card ul{padding-left:18px}
+.formula-card .formula-source{margin-top:11px;font-size:11px}
+.formula-card .formula-source a{color:#1f7446;text-decoration:underline}
+.calc-modes{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 0}
+.calc-mode{border:1px solid #a6c3ad;border-radius:999px;background:white;padding:11px 17px;font:inherit;font-size:12px;font-weight:850;color:#26513a;cursor:pointer}
+.calc-mode[aria-pressed="true"]{background:#183d29;color:white;border-color:#183d29}
+.calc-panel{margin:12px 0 0}
+.calc-panel[hidden]{display:none}
+.calc-result-physics{grid-template-columns:repeat(2,minmax(0,1fr))}
+.calc-result-physics div{min-width:0}
+.calc-result-physics strong{overflow-wrap:anywhere;font-size:clamp(20px,3.2vw,33px)}
+.calc-result-physics small{line-height:1.5}
+.calc-panel .calc-inputs{grid-template-columns:repeat(4,minmax(0,1fr))}
+.calc-panel .calc-inputs label{min-width:0}
+.explain-box{background:#f0f6ec;border:1px solid #d3e2cd;border-radius:14px;padding:19px 23px;margin:21px 0;font-size:13px;line-height:1.9;color:#344c3b}
+.explain-box b{color:#17452e}
+.styled-compare{overflow:auto}
+.styled-compare table{min-width:630px}
+.formula-matrix{margin-top:20px}
+.formula-matrix .formula-core{font-size:clamp(17px,2vw,24px)}
+.safety-note{background:#fff6e7;border-left:4px solid #d9972c;padding:15px 17px;color:#76521a;font-size:12px;line-height:1.8;margin:20px 0}
+@media(max-width:810px){.glyph-panel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.calc-panel .calc-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}.formula-matrix{display:block}}
+@media(max-width:370px){.calc-panel .calc-inputs{grid-template-columns:1fr}.glyph-panel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head><body><a class="skip" href="#main">本文へ移動</a>
+<header class="header"><div class="wrap header-inner"><a class="brand" href="index.html"><span class="mark">CQL</span><span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span></a><nav class="nav"><a href="index.html#qualifications">QUALIFICATIONS</a><a href="hazardous.html">HAZARDOUS</a><a href="profile.html">ABOUT</a></nav></div></header>
+<main id="main"><div class="wrap breadcrumb"><a href="index.html">HOME</a> / <a href="hazardous.html">危険物取扱者</a> / <a href="hazardous-koshu.html">甲種</a> / 物理・化学</div>
+<div class="a-hero"><div class="wrap"><div class="a-eyebrow"><span class="dot"></span> STUDY GUIDE / KOSHU PHYSICS &amp; CHEMISTRY</div>
+<h1>甲種の物理・化学。<br><em>原理から、得点力へ。</em></h1>
+<p>気体はなぜ圧力を生むのか。反応式から必要酸素量をどう求めるのか。電池の電圧はなぜ生まれるのか。乙4で学んだ燃焼・物性の基礎から、甲種に必要な化学量論・熱化学・電気化学まで、図解テーマと計算演習でつなげます。</p>
+<div class="koshu-scope">甲種の「物理学及び化学」は<strong>10問・科目別合格基準60％以上（6問以上）</strong>。S/Aランクは本サイト独自の学習優先度であり、公式の年度別出題頻度・出題予測ではありません。本文・問題・計算例は独自に制作し、公式公開問題を転載していません。</div>
+<div class="a-actions"><a class="a-btn dark" href="#rank-s">Sランク17テーマ ↓</a><a class="a-btn" href="#rank-a">Aランク9テーマ ↓</a><a class="a-btn" href="#formulas">重要公式・計算 ↓</a><a class="a-btn" href="#illustrated-lessons">図解予定 ↓</a><a class="a-btn" href="#comparison">比較で整理 ↓</a><a class="a-btn" href="#practice">オリジナル演習 ↓</a><a class="a-btn" href="hazardous-koshu.html">甲種の科目一覧 ↗</a></div>
+<div class="a-hero-stats"><div class="a-hero-stat"><b>10<span style="font-size:.38em">問</span></b><small>物理・化学の試験問題数</small></div><div class="a-hero-stat"><b>17</b><small>Sランク：最優先テーマ</small></div><div class="a-hero-stat"><b>09</b><small>Aランク：知識を補強</small></div></div>
+</div></div><nav class="a-subnav" aria-label="ページ内メニュー"><div class="wrap"><a href="#rank-s">Sランク</a><a href="#rank-a">Aランク</a><a href="#formulas">重要公式・計算</a><a href="#illustrated-lessons">図解</a><a href="#comparison">比較</a><a href="#practice">演習</a><a href="#lastcheck">直前チェック</a></div></nav>
+<section class="a-section" id="rank-s"><div class="wrap"><div class="a-caption">01 / S RANK</div><h2 class="a-section-title">最優先で固める、Sランク17テーマ。</h2>
+<p class="a-lead">公式を丸暗記する前に、<span class="important">現象 → 関係式 → 適用条件 → 計算</span>の順に確認します。各カードを開くと、重要ポイント、間違えやすい条件、参照資料を確認できます。</p>
+<div class="rank-intro"><span><strong>Sランク</strong>　基礎性・応用性・誤解しやすさを重視</span><span><strong>根拠</strong>　公式試験範囲＋化学教材・公的資料から独自選定</span></div>
+<div class="rank-actions"><input id="rank-search" class="rank-search" type="search" aria-label="重要テーマを検索" placeholder="例：電池、分圧、燃焼熱、アセチレン..."><div class="cat-buttons" id="cat-buttons" role="group" aria-label="カテゴリー絞り込み"><button class="cat-btn" type="button" data-cat="すべて" aria-pressed="true">すべて</button><button class="cat-btn" type="button" data-cat="燃焼・物性" aria-pressed="false">燃焼・物性</button><button class="cat-btn" type="button" data-cat="気体・計算" aria-pressed="false">気体・計算</button><button class="cat-btn" type="button" data-cat="熱化学" aria-pressed="false">熱化学</button><button class="cat-btn" type="button" data-cat="酸化還元" aria-pressed="false">酸化還元</button><button class="cat-btn" type="button" data-cat="有機・無機" aria-pressed="false">有機・無機</button></div></div>
+<p id="rank-count" class="rank-count" aria-live="polite">S17テーマ・A9テーマを表示中</p><div class="rank-grid" id="s-cards"><article class="rank-card " id="s01" data-rank="S" data-cat="燃焼・物性" data-search="燃焼の三要素と連鎖反応 燃焼・物性 可燃物・酸化剤・着火の条件と、燃焼が続く仕組みを結びつける。 通常の燃焼では、可燃物・酸素供給源・着火に必要な熱が基本的な条件となる。 火炎内のラジカル反応などの連鎖反応が燃焼の継続に関係する。 酸化剤が物質に含まれる場合、周囲の空気からの酸素供給だけを前提にできない。 液体燃料では、蒸発して生じた燃料蒸気が燃焼に関与することが多い。 三要素が存在しても、混合濃度・温度などの条件を満たさなければ燃焼が継続しない。">
+<div class="rank-top"><span class="rank-pill">S−01</span><span class="rank-category">燃焼・物性</span></div>
+<h3>燃焼の三要素と連鎖反応</h3><p class="rank-summary">可燃物・酸化剤・着火の条件と、燃焼が続く仕組みを結びつける。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>通常の燃焼では、可燃物・酸素供給源・着火に必要な熱が基本的な条件となる。</li><li>火炎内のラジカル反応などの連鎖反応が燃焼の継続に関係する。</li><li>酸化剤が物質に含まれる場合、周囲の空気からの酸素供給だけを前提にできない。</li><li>液体燃料では、蒸発して生じた燃料蒸気が燃焼に関与することが多い。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>三要素が存在しても、混合濃度・温度などの条件を満たさなければ燃焼が継続しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://nrifd.fdma.go.jp/public_info/faq/combustion/index.html">消防庁 消防研究センター｜ものはなぜ燃えるのか ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s01">対応する図解テーマへ ↓</a></div></article><article class="rank-card " id="s02" data-rank="S" data-cat="燃焼・物性" data-search="引火点・燃焼点・発火点 燃焼・物性 火種の要否と燃焼の継続条件で3つの温度を整理する。 引火点は、所定の試験方法で液面上の蒸気が点火源によって引火する最低液温。 燃焼点は、点火後に一定時間燃焼が継続する液温を表す試験指標。 発火点（自然発火温度）は、外部の火炎・火花による点火なしで着火する温度条件。 沸点は飽和蒸気圧と外圧の関係で決まり、引火点とは異なる物性。 引火点は絶対的な安全境界ではなく、試験法・噴霧・混合条件で危険性は変化する。">
+<div class="rank-top"><span class="rank-pill">S−02</span><span class="rank-category">燃焼・物性</span></div>
+<h3>引火点・燃焼点・発火点</h3><p class="rank-summary">火種の要否と燃焼の継続条件で3つの温度を整理する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>引火点は、所定の試験方法で液面上の蒸気が点火源によって引火する最低液温。</li><li>燃焼点は、点火後に一定時間燃焼が継続する液温を表す試験指標。</li><li>発火点（自然発火温度）は、外部の火炎・火花による点火なしで着火する温度条件。</li><li>沸点は飽和蒸気圧と外圧の関係で決まり、引火点とは異なる物性。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>引火点は絶対的な安全境界ではなく、試験法・噴霧・混合条件で危険性は変化する。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions">OpenStax Chemistry 2e 10.3｜蒸気圧・状態変化 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s02">対応する図解テーマへ ↓</a></div></article><article class="rank-card " id="s03" data-rank="S" data-cat="燃焼・物性" data-search="燃焼範囲と爆発限界 燃焼・物性 燃料蒸気の濃度と酸素供給の関係を考える。 爆発下限界（LFL/LEL）は火炎が伝播可能となる燃料濃度の下限、上限界（UFL/UEL）は上限。 濃度は通常、空気中の燃料ガスの体積分率（vol％）として示される。 下限より薄いと燃料不足、上限より濃いと酸素不足で火炎伝播が難しくなる傾向がある。 温度・圧力・酸素濃度・不活性ガスによって燃焼範囲は変わり得る。 上限より濃くても、漏えいして空気と混ざる過程で燃焼範囲に入る。">
+<div class="rank-top"><span class="rank-pill">S−03</span><span class="rank-category">燃焼・物性</span></div>
+<h3>燃焼範囲と爆発限界</h3><p class="rank-summary">燃料蒸気の濃度と酸素供給の関係を考える。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>爆発下限界（LFL/LEL）は火炎が伝播可能となる燃料濃度の下限、上限界（UFL/UEL）は上限。</li><li>濃度は通常、空気中の燃料ガスの体積分率（vol％）として示される。</li><li>下限より薄いと燃料不足、上限より濃いと酸素不足で火炎伝播が難しくなる傾向がある。</li><li>温度・圧力・酸素濃度・不活性ガスによって燃焼範囲は変わり得る。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>上限より濃くても、漏えいして空気と混ざる過程で燃焼範囲に入る。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://anzeninfo.mhlw.go.jp/user/anzen/kag/kagaku_index.html">厚生労働省｜職場のあんぜんサイト・化学物質情報 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s03">対応する図解テーマへ ↓</a></div></article><article class="rank-card " id="s04" data-rank="S" data-cat="燃焼・物性" data-search="蒸気圧と温度・気液平衡 燃焼・物性 分子の蒸発・凝縮から蒸気圧と沸騰を説明する。 密閉された純液体では、気液平衡に達すると温度に対応した飽和蒸気圧が定まる。 多くの液体で温度が上がるほど飽和蒸気圧が高くなる。 純液体は、飽和蒸気圧が外圧に等しくなる条件で沸騰する。 外圧を高くすると通常は沸点が高くなり、減圧すると低くなる。 「蒸気圧が高い」と「沸点が高い」は同義ではない。混合物では組成も影響する。">
+<div class="rank-top"><span class="rank-pill">S−04</span><span class="rank-category">燃焼・物性</span></div>
+<h3>蒸気圧と温度・気液平衡</h3><p class="rank-summary">分子の蒸発・凝縮から蒸気圧と沸騰を説明する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>密閉された純液体では、気液平衡に達すると温度に対応した飽和蒸気圧が定まる。</li><li>多くの液体で温度が上がるほど飽和蒸気圧が高くなる。</li><li>純液体は、飽和蒸気圧が外圧に等しくなる条件で沸騰する。</li><li>外圧を高くすると通常は沸点が高くなり、減圧すると低くなる。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「蒸気圧が高い」と「沸点が高い」は同義ではない。混合物では組成も影響する。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions">OpenStax Chemistry 2e 10.3｜蒸気圧・状態変化 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s04">対応する図解テーマへ ↓</a></div></article><article class="rank-card " id="s05" data-rank="S" data-cat="気体・計算" data-search="理想気体の状態方程式 気体・計算 PV＝nRTの物理的意味、絶対温度と単位を整理する。 理想気体の式：PV＝nRT。Pは絶対圧[Pa]、Vは[m³]、nは[mol]、Tは[K]。 R＝約8.314 J/(mol·K)。この単位系で用いるとPVの単位はJになる。 T[K]＝t[℃]＋273.15。絶対温度を摂氏温度のまま代入しない。 高圧・低温などでは実在気体が理想気体からずれることがある。 「標準状態1mol＝22.4L」は0℃・1atmの場合。0℃・1barの値は約22.7L。">
+<div class="rank-top"><span class="rank-pill">S−05</span><span class="rank-category">気体・計算</span></div>
+<h3>理想気体の状態方程式</h3><p class="rank-summary">PV＝nRTの物理的意味、絶対温度と単位を整理する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>理想気体の式：PV＝nRT。Pは絶対圧[Pa]、Vは[m³]、nは[mol]、Tは[K]。</li><li>R＝約8.314 J/(mol·K)。この単位系で用いるとPVの単位はJになる。</li><li>T[K]＝t[℃]＋273.15。絶対温度を摂氏温度のまま代入しない。</li><li>高圧・低温などでは実在気体が理想気体からずれることがある。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「標準状態1mol＝22.4L」は0℃・1atmの場合。0℃・1barの値は約22.7L。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">OpenStax Chemistry 2e 9.2｜理想気体 ↗</a><a target="_blank" rel="noopener noreferrer" href="https://goldbook.iupac.org/terms/view/S05910">IUPAC Gold Book｜気体の標準状態（0℃・1bar） ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s05">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s06" data-rank="S" data-cat="気体・計算" data-search="ボイル・シャルルの法則 気体・計算 どの条件を一定にしているのかが公式より重要。 温度・物質量一定の理想気体では、圧力と体積の積PVは一定（ボイルの法則）。 圧力・物質量一定では、V/Tは一定（シャルルの法則）。 体積・物質量一定では、P/Tは一定。Tは絶対温度[K]。 状態1と状態2の比較では、一定のnならP₁V₁/T₁＝P₂V₂/T₂。 圧力は絶対圧を使う。温度一定でないのに「圧力2倍→体積半分」を適用しない。">
+<div class="rank-top"><span class="rank-pill">S−06</span><span class="rank-category">気体・計算</span></div>
+<h3>ボイル・シャルルの法則</h3><p class="rank-summary">どの条件を一定にしているのかが公式より重要。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>温度・物質量一定の理想気体では、圧力と体積の積PVは一定（ボイルの法則）。</li><li>圧力・物質量一定では、V/Tは一定（シャルルの法則）。</li><li>体積・物質量一定では、P/Tは一定。Tは絶対温度[K]。</li><li>状態1と状態2の比較では、一定のnならP₁V₁/T₁＝P₂V₂/T₂。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>圧力は絶対圧を使う。温度一定でないのに「圧力2倍→体積半分」を適用しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">OpenStax Chemistry 2e 9.2｜理想気体 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s06">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s07" data-rank="S" data-cat="気体・計算" data-search="混合気体の分圧と全圧 気体・計算 各成分の分圧をモル分率から計算する。 反応しない理想気体の混合物では、全圧P＝各成分の分圧の和（ダルトンの法則）。 モル分率yᵢ＝nᵢ/n全体、各成分の分圧pᵢ＝yᵢP。 例：窒素2mol＋酸素1mol、全圧90kPaなら酸素の分圧は30kPa。 水上置換で集めた気体は、水蒸気の分圧も全圧に含まれる。 「空気の酸素は常に21kPa」ではない。酸素分圧は全圧と組成に依存する。">
+<div class="rank-top"><span class="rank-pill">S−07</span><span class="rank-category">気体・計算</span></div>
+<h3>混合気体の分圧と全圧</h3><p class="rank-summary">各成分の分圧をモル分率から計算する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>反応しない理想気体の混合物では、全圧P＝各成分の分圧の和（ダルトンの法則）。</li><li>モル分率yᵢ＝nᵢ/n全体、各成分の分圧pᵢ＝yᵢP。</li><li>例：窒素2mol＋酸素1mol、全圧90kPaなら酸素の分圧は30kPa。</li><li>水上置換で集めた気体は、水蒸気の分圧も全圧に含まれる。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「空気の酸素は常に21kPa」ではない。酸素分圧は全圧と組成に依存する。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions">OpenStax Chemistry 2e 9.3｜分圧・気体混合 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s07">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s08" data-rank="S" data-cat="気体・計算" data-search="気体密度・分子量・蒸気比重 気体・計算 同温・同圧での密度を分子量と結びつける。 理想気体では、密度ρ＝PM/(RT)。Mはモル質量。 同じ温度・圧力では、気体密度はモル質量に比例する。 空気に対する蒸気比重は、同温同圧の理想気体近似でM/約29。 液体比重は水に対する密度比であり、蒸気比重とは基準物質が異なる。 蒸気比重が1より大きくても、漏えい時の挙動は温度・風・換気に左右される。">
+<div class="rank-top"><span class="rank-pill">S−08</span><span class="rank-category">気体・計算</span></div>
+<h3>気体密度・分子量・蒸気比重</h3><p class="rank-summary">同温・同圧での密度を分子量と結びつける。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>理想気体では、密度ρ＝PM/(RT)。Mはモル質量。</li><li>同じ温度・圧力では、気体密度はモル質量に比例する。</li><li>空気に対する蒸気比重は、同温同圧の理想気体近似でM/約29。</li><li>液体比重は水に対する密度比であり、蒸気比重とは基準物質が異なる。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>蒸気比重が1より大きくても、漏えい時の挙動は温度・風・換気に左右される。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">OpenStax Chemistry 2e 9.2｜理想気体 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s08">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s09" data-rank="S" data-cat="気体・計算" data-search="モル・分子量・質量の換算 気体・計算 質量をmolに換えてから反応式を使う。 物質量n[mol]＝質量m[g]÷モル質量M[g/mol]。 1molには約6.022×10²³個の粒子が含まれる。 化学反応式の係数は、物質量（mol）の比を表す。 気体体積は物質量だけで決まらず、温度・圧力も必要。 化学反応式の係数を質量比と誤解しない。質量はモル質量を掛けて計算する。">
+<div class="rank-top"><span class="rank-pill">S−09</span><span class="rank-category">気体・計算</span></div>
+<h3>モル・分子量・質量の換算</h3><p class="rank-summary">質量をmolに換えてから反応式を使う。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>物質量n[mol]＝質量m[g]÷モル質量M[g/mol]。</li><li>1molには約6.022×10²³個の粒子が含まれる。</li><li>化学反応式の係数は、物質量（mol）の比を表す。</li><li>気体体積は物質量だけで決まらず、温度・圧力も必要。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>化学反応式の係数を質量比と誤解しない。質量はモル質量を掛けて計算する。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry">OpenStax Chemistry 2e 4.3｜化学量論 ↗</a><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">OpenStax Chemistry 2e 9.2｜理想気体 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s09">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s10" data-rank="S" data-cat="気体・計算" data-search="燃焼反応式と必要酸素量 気体・計算 係数合わせから酸素のmol、質量、気体体積へ進む。 完全燃焼の例：2CH₃OH＋3O₂→2CO₂＋4H₂O。 メタノール2molに酸素3molが必要。したがってメタノール1molに酸素1.5mol。 酸素1.5molは、O₂のモル質量32g/molを使うと48g。 空気量への換算では、乾燥空気中の酸素モル分率約0.21等の前提を明示する。 「燃焼に必要な酸素の体積」は気体の温度・圧力を必ず指定する。">
+<div class="rank-top"><span class="rank-pill">S−10</span><span class="rank-category">気体・計算</span></div>
+<h3>燃焼反応式と必要酸素量</h3><p class="rank-summary">係数合わせから酸素のmol、質量、気体体積へ進む。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>完全燃焼の例：2CH₃OH＋3O₂→2CO₂＋4H₂O。</li><li>メタノール2molに酸素3molが必要。したがってメタノール1molに酸素1.5mol。</li><li>酸素1.5molは、O₂のモル質量32g/molを使うと48g。</li><li>空気量への換算では、乾燥空気中の酸素モル分率約0.21等の前提を明示する。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「燃焼に必要な酸素の体積」は気体の温度・圧力を必ず指定する。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry">OpenStax Chemistry 2e 4.3｜化学量論 ↗</a><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">OpenStax Chemistry 2e 9.2｜理想気体 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s10">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s11" data-rank="S" data-cat="熱化学" data-search="燃焼熱・生成エンタルピー・ヘスの法則 熱化学 反応熱の符号と始状態・終状態を整理する。 発熱反応の反応エンタルピーΔHは負。放出した熱量の大きさを正で書く場合もある。 標準反応エンタルピーは、生成物側の標準生成エンタルピー総和から反応物側を引く。 ヘスの法則：同じ始状態・終状態なら経路によらず全体のΔHが等しい。 水が液体か水蒸気かで、同じ燃焼反応でもΔHの値は異なる。 「燃焼熱286kJ/mol」と「ΔH＝−286kJ/mol」を符号のまま混同しない。">
+<div class="rank-top"><span class="rank-pill">S−11</span><span class="rank-category">熱化学</span></div>
+<h3>燃焼熱・生成エンタルピー・ヘスの法則</h3><p class="rank-summary">反応熱の符号と始状態・終状態を整理する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>発熱反応の反応エンタルピーΔHは負。放出した熱量の大きさを正で書く場合もある。</li><li>標準反応エンタルピーは、生成物側の標準生成エンタルピー総和から反応物側を引く。</li><li>ヘスの法則：同じ始状態・終状態なら経路によらず全体のΔHが等しい。</li><li>水が液体か水蒸気かで、同じ燃焼反応でもΔHの値は異なる。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「燃焼熱286kJ/mol」と「ΔH＝−286kJ/mol」を符号のまま混同しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy">OpenStax Chemistry 2e 5.3｜反応エンタルピー ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s11">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s12" data-rank="S" data-cat="熱化学" data-search="顕熱・潜熱・比熱容量 熱化学 温度変化と相変化の熱を分けて計算する。 顕熱の近似：Q＝mcΔT（mは質量、cは比熱、ΔTは温度差）。 相変化に必要な熱は潜熱としてQ＝mLなどで別計算する。 物体の熱容量はC＝mc、したがってQ＝CΔT。 比熱は温度・相に依存するため、指定された値や条件を使う。 温度差1℃＝温度差1Kだが、絶対温度1℃＝1Kではない。">
+<div class="rank-top"><span class="rank-pill">S−12</span><span class="rank-category">熱化学</span></div>
+<h3>顕熱・潜熱・比熱容量</h3><p class="rank-summary">温度変化と相変化の熱を分けて計算する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>顕熱の近似：Q＝mcΔT（mは質量、cは比熱、ΔTは温度差）。</li><li>相変化に必要な熱は潜熱としてQ＝mLなどで別計算する。</li><li>物体の熱容量はC＝mc、したがってQ＝CΔT。</li><li>比熱は温度・相に依存するため、指定された値や条件を使う。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>温度差1℃＝温度差1Kだが、絶対温度1℃＝1Kではない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy">OpenStax Chemistry 2e 5.3｜反応エンタルピー ↗</a><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions">OpenStax Chemistry 2e 10.3｜蒸気圧・状態変化 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s12">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s13" data-rank="S" data-cat="酸化還元" data-search="酸化数・酸化還元・電子の移動 酸化還元 酸化剤と還元剤を酸化数の変化から判定する。 酸化は電子を失う反応で、酸化数は通常増加する。 還元は電子を受け取る反応で、酸化数は通常減少する。 酸化剤は相手を酸化して自分は還元され、還元剤は相手を還元して自分は酸化される。 酸化と還元は対になって起こり、電子の収支が釣り合う。 酸素が反応に登場しなくても酸化還元反応は起こる。">
+<div class="rank-top"><span class="rank-pill">S−13</span><span class="rank-category">酸化還元</span></div>
+<h3>酸化数・酸化還元・電子の移動</h3><p class="rank-summary">酸化剤と還元剤を酸化数の変化から判定する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>酸化は電子を失う反応で、酸化数は通常増加する。</li><li>還元は電子を受け取る反応で、酸化数は通常減少する。</li><li>酸化剤は相手を酸化して自分は還元され、還元剤は相手を還元して自分は酸化される。</li><li>酸化と還元は対になって起こり、電子の収支が釣り合う。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>酸素が反応に登場しなくても酸化還元反応は起こる。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/17-1-review-of-redox-chemistry">OpenStax Chemistry 2e 17.1｜酸化還元 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s13">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s14" data-rank="S" data-cat="酸化還元" data-search="電池の起電力と電極反応 酸化還元 還元電位の差と電子の流れを理解する。 放電中のガルバニ電池では、負極側のアノードで酸化、正極側のカソードで還元が起こる。 電子は外部回路で、酸化の起こる電極から還元の起こる電極へ移動する。 標準起電力 E°cell＝E°cathode−E°anode（両方とも標準還元電位）。 例：亜鉛/銅の電池はE°Cu²⁺/Cu≈＋0.34V、E°Zn²⁺/Zn≈−0.76Vより約＋1.10V。 起電力の式は両電極の「還元電位」を引き算する。電極の酸化・還元を逆にしない。">
+<div class="rank-top"><span class="rank-pill">S−14</span><span class="rank-category">酸化還元</span></div>
+<h3>電池の起電力と電極反応</h3><p class="rank-summary">還元電位の差と電子の流れを理解する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>放電中のガルバニ電池では、負極側のアノードで酸化、正極側のカソードで還元が起こる。</li><li>電子は外部回路で、酸化の起こる電極から還元の起こる電極へ移動する。</li><li>標準起電力 E°cell＝E°cathode−E°anode（両方とも標準還元電位）。</li><li>例：亜鉛/銅の電池はE°Cu²⁺/Cu≈＋0.34V、E°Zn²⁺/Zn≈−0.76Vより約＋1.10V。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>起電力の式は両電極の「還元電位」を引き算する。電極の酸化・還元を逆にしない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials">OpenStax Chemistry 2e 17.3｜電池・電極電位 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s14">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s15" data-rank="S" data-cat="酸化還元" data-search="静電気の発生・蓄積・放電 酸化還元 帯電を防ぐ手段と可燃性雰囲気の関係を説明する。 流動・摩擦・剥離などで電荷が分離し、帯電することがある。 電位差が生じると放電火花が起こり、可燃性の混合気に着火する場合がある。 導電性部分の接地・等電位ボンディングは静電気対策として重要。 絶縁性液体・粉体では、接地だけで帯電が完全に解消するとは限らない。 電子やイオン等の電荷移動を扱う。固体同士の摩擦で陽子が移動するという説明は不適切。">
+<div class="rank-top"><span class="rank-pill">S−15</span><span class="rank-category">酸化還元</span></div>
+<h3>静電気の発生・蓄積・放電</h3><p class="rank-summary">帯電を防ぐ手段と可燃性雰囲気の関係を説明する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>流動・摩擦・剥離などで電荷が分離し、帯電することがある。</li><li>電位差が生じると放電火花が起こり、可燃性の混合気に着火する場合がある。</li><li>導電性部分の接地・等電位ボンディングは静電気対策として重要。</li><li>絶縁性液体・粉体では、接地だけで帯電が完全に解消するとは限らない。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>電子やイオン等の電荷移動を扱う。固体同士の摩擦で陽子が移動するという説明は不適切。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://anzeninfo.mhlw.go.jp/user/anzen/kag/kagaku_index.html">厚生労働省｜職場のあんぜんサイト・化学物質情報 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s15">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article><article class="rank-card " id="s16" data-rank="S" data-cat="有機・無機" data-search="有機化合物と官能基 有機・無機 構造式から物質群と反応性の手がかりを得る。 アルコール：R−OH、アルデヒド：R−CHO、ケトン：R−CO−R′。 カルボン酸：R−COOH、エステル：R−COO−R′、エーテル：R−O−R′。 ニトロ基−NO₂、アミノ基−NH₂も代表的な官能基。 炭素–炭素二重結合・三重結合は付加反応に関係する。 有機化学の「アルコール」と消防法第4類の法定「アルコール類」の範囲は同じではない。">
+<div class="rank-top"><span class="rank-pill">S−16</span><span class="rank-category">有機・無機</span></div>
+<h3>有機化合物と官能基</h3><p class="rank-summary">構造式から物質群と反応性の手がかりを得る。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>アルコール：R−OH、アルデヒド：R−CHO、ケトン：R−CO−R′。</li><li>カルボン酸：R−COOH、エステル：R−COO−R′、エーテル：R−O−R′。</li><li>ニトロ基−NO₂、アミノ基−NH₂も代表的な官能基。</li><li>炭素–炭素二重結合・三重結合は付加反応に関係する。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>有機化学の「アルコール」と消防法第4類の法定「アルコール類」の範囲は同じではない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/20-summary">OpenStax Chemistry 2e 20章｜有機化学 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s16">対応する図解テーマへ ↓</a></div></article><article class="rank-card " id="s17" data-rank="S" data-cat="熱化学" data-search="反応速度・温度・発熱蓄熱 熱化学 発熱速度と放熱速度の釣合いから熱暴走を理解する。 多くの反応で温度上昇により反応速度定数が大きくなる（アレニウス型の温度依存）。 発熱速度が放熱速度を上回ると反応系の温度は上昇し得る。 温度上昇がさらに反応を速める正のフィードバックが熱暴走の一因となる。 触媒は反応速度や反応経路を変えるが、同じ始状態・終状態の反応エンタルピーを変えない。 すべての発熱反応が熱暴走するわけではない。容器、放熱面積、反応物量等も関係する。">
+<div class="rank-top"><span class="rank-pill">S−17</span><span class="rank-category">熱化学</span></div>
+<h3>反応速度・温度・発熱蓄熱</h3><p class="rank-summary">発熱速度と放熱速度の釣合いから熱暴走を理解する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>多くの反応で温度上昇により反応速度定数が大きくなる（アレニウス型の温度依存）。</li><li>発熱速度が放熱速度を上回ると反応系の温度は上昇し得る。</li><li>温度上昇がさらに反応を速める正のフィードバックが熱暴走の一因となる。</li><li>触媒は反応速度や反応経路を変えるが、同じ始状態・終状態の反応エンタルピーを変えない。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>すべての発熱反応が熱暴走するわけではない。容器、放熱面積、反応物量等も関係する。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/12-2-factors-affecting-reaction-rates">OpenStax Chemistry 2e 12.2｜反応速度に影響する因子 ↗</a><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy">OpenStax Chemistry 2e 5.3｜反応エンタルピー ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-s17">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article></div><p id="notfound" class="notfound" hidden>該当テーマがありません。キーワード・カテゴリを変更してください。</p>
+<div class="rank-study-map"><b>学習のコツ：</b>式に入れる前に、何が一定か、単位はそろっているかを確認しましょう。特に気体では絶対圧・絶対温度、熱化学ではΔHの符号、電池では酸化極と還元極が重要です。</div></div></section>
+<section class="a-section alt" id="rank-a"><div class="wrap"><div class="a-caption">02 / A RANK</div><h2 class="a-section-title">次に理解を広げる、Aランク9テーマ。</h2><p class="a-lead">燃焼形態、状態変化、炎色反応、酸塩基、分離、付加反応などを補強します。Aランクも出題対象であり、不要という意味ではありません。</p><div class="rank-grid" id="a-cards"><article class="rank-card a" id="a01" data-rank="A" data-cat="燃焼・物性" data-search="燃焼形態の比較 燃焼・物性 液体・木材・木炭では、燃焼に至る過程が異なる。 蒸発燃焼：液体の蒸気が空気と混ざって燃える。 分解燃焼：固体などが熱分解し、発生した可燃性ガスが燃える。 表面燃焼：固体表面で酸化反応が進む。 自己燃焼：分子内に酸化性の要素を含み、外部からの酸素供給なしでも反応が進み得る例がある。 「自己燃焼」と第5類の「自己反応性物質」は、用語が似ていても法定分類と燃焼機構を同一視しない。">
+<div class="rank-top"><span class="rank-pill">A−01</span><span class="rank-category">燃焼・物性</span></div>
+<h3>燃焼形態の比較</h3><p class="rank-summary">液体・木材・木炭では、燃焼に至る過程が異なる。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>蒸発燃焼：液体の蒸気が空気と混ざって燃える。</li><li>分解燃焼：固体などが熱分解し、発生した可燃性ガスが燃える。</li><li>表面燃焼：固体表面で酸化反応が進む。</li><li>自己燃焼：分子内に酸化性の要素を含み、外部からの酸素供給なしでも反応が進み得る例がある。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「自己燃焼」と第5類の「自己反応性物質」は、用語が似ていても法定分類と燃焼機構を同一視しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://nrifd.fdma.go.jp/public_info/faq/combustion/index.html">消防庁 消防研究センター｜ものはなぜ燃えるのか ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a01">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a02" data-rank="A" data-cat="燃焼・物性" data-search="蒸発・沸騰・凝縮と状態変化 燃焼・物性 蒸発する位置と潜熱の出入りの違いを理解する。 蒸発は液面で起こり、沸点以下でも起こる。 沸騰は液体内部で蒸気の気泡が形成・成長する現象。 気化では熱を吸収し、凝縮では熱を放出する。 純物質の一定圧での相変化では、温度がほぼ一定でも熱が出入りする。 相変化がある計算では、顕熱だけでなく潜熱を別に扱う。">
+<div class="rank-top"><span class="rank-pill">A−02</span><span class="rank-category">燃焼・物性</span></div>
+<h3>蒸発・沸騰・凝縮と状態変化</h3><p class="rank-summary">蒸発する位置と潜熱の出入りの違いを理解する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>蒸発は液面で起こり、沸点以下でも起こる。</li><li>沸騰は液体内部で蒸気の気泡が形成・成長する現象。</li><li>気化では熱を吸収し、凝縮では熱を放出する。</li><li>純物質の一定圧での相変化では、温度がほぼ一定でも熱が出入りする。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>相変化がある計算では、顕熱だけでなく潜熱を別に扱う。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions">OpenStax Chemistry 2e 10.3｜蒸気圧・状態変化 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a02">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a03" data-rank="A" data-cat="燃焼・物性" data-search="完全燃焼と不完全燃焼 燃焼・物性 酸素供給とCO・すすの生成の関係を整理する。 炭素を含む燃料が十分な酸素のもとで完全燃焼すると主にCO₂ができる。 酸素不足や混合不良などではCOやすすが発生する場合がある。 一酸化炭素COは有毒で、燃焼してCO₂へ酸化され得る。 完全燃焼と不完全燃焼は、燃料だけではなく燃焼条件に左右される。 「炎が青ければ必ず完全燃焼」など、炎色だけで生成物を断定しない。">
+<div class="rank-top"><span class="rank-pill">A−03</span><span class="rank-category">燃焼・物性</span></div>
+<h3>完全燃焼と不完全燃焼</h3><p class="rank-summary">酸素供給とCO・すすの生成の関係を整理する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>炭素を含む燃料が十分な酸素のもとで完全燃焼すると主にCO₂ができる。</li><li>酸素不足や混合不良などではCOやすすが発生する場合がある。</li><li>一酸化炭素COは有毒で、燃焼してCO₂へ酸化され得る。</li><li>完全燃焼と不完全燃焼は、燃料だけではなく燃焼条件に左右される。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>「炎が青ければ必ず完全燃焼」など、炎色だけで生成物を断定しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://nrifd.fdma.go.jp/public_info/faq/combustion/index.html">消防庁 消防研究センター｜ものはなぜ燃えるのか ↗</a><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry">OpenStax Chemistry 2e 4.3｜化学量論 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a03">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a04" data-rank="A" data-cat="有機・無機" data-search="原子構造・周期表・化学結合 有機・無機 元素の位置と電子構造から性質を考える。 原子番号は原子核中の陽子数を表す。 価電子の配置は化学結合や反応性と関係する。 イオン結合は主に陽イオン・陰イオンの静電相互作用、共有結合は電子対の共有に基づく。 同じ元素でも酸化数や結合状態が異なれば性質が変わる。 電子配置の規則には例外があり、周期表だけで個別化合物の危険性を断定しない。">
+<div class="rank-top"><span class="rank-pill">A−04</span><span class="rank-category">有機・無機</span></div>
+<h3>原子構造・周期表・化学結合</h3><p class="rank-summary">元素の位置と電子構造から性質を考える。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>原子番号は原子核中の陽子数を表す。</li><li>価電子の配置は化学結合や反応性と関係する。</li><li>イオン結合は主に陽イオン・陰イオンの静電相互作用、共有結合は電子対の共有に基づく。</li><li>同じ元素でも酸化数や結合状態が異なれば性質が変わる。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>電子配置の規則には例外があり、周期表だけで個別化合物の危険性を断定しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/6-4-electronic-structure-of-atoms-electron-configurations">OpenStax Chemistry 2e 6.4｜電子構造・周期性 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a04">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a05" data-rank="A" data-cat="有機・無機" data-search="炎色反応と金属元素 有機・無機 炎で励起された元素種が放出する光を比較する。 炎色反応は、熱で励起された原子・イオンなどの発光に関係する。 ナトリウム：黄、カリウム：淡紫、カルシウム：橙赤、バリウム：黄緑〜淡緑などが代表例。 観察結果は炎温度・共存物・器具の汚染に影響される。 炎色反応は元素の定性確認の手がかりであり、単独では完全な同定法ではない。 ナトリウムの強い黄色発光は微量混入でも目立ち、他元素の発光を見えにくくする。">
+<div class="rank-top"><span class="rank-pill">A−05</span><span class="rank-category">有機・無機</span></div>
+<h3>炎色反応と金属元素</h3><p class="rank-summary">炎で励起された元素種が放出する光を比較する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>炎色反応は、熱で励起された原子・イオンなどの発光に関係する。</li><li>ナトリウム：黄、カリウム：淡紫、カルシウム：橙赤、バリウム：黄緑〜淡緑などが代表例。</li><li>観察結果は炎温度・共存物・器具の汚染に影響される。</li><li>炎色反応は元素の定性確認の手がかりであり、単独では完全な同定法ではない。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>ナトリウムの強い黄色発光は微量混入でも目立ち、他元素の発光を見えにくくする。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://edu.rsc.org/infographics/how-to-carry-out-flame-tests/4024075.article">英国王立化学会RSC｜炎色反応の学習資料 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a05">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a06" data-rank="A" data-cat="有機・無機" data-search="酸・塩基・中和とpH 有機・無機 pHと中和を電子移動ではなく酸塩基反応として整理する。 ブレンステッドの酸はH⁺の供与体、塩基はH⁺の受容体。 pH＝−log₁₀ a(H⁺)（水素イオン活量を使う厳密な定義）。 希薄な水溶液・25℃付近では中性のpHはおよそ7。 中和は酸と塩基の反応であり、生成した溶液のpHが必ず7になるとは限らない。 中性pH＝7は温度に依存し、すべての温度における固定値ではない。">
+<div class="rank-top"><span class="rank-pill">A−06</span><span class="rank-category">有機・無機</span></div>
+<h3>酸・塩基・中和とpH</h3><p class="rank-summary">pHと中和を電子移動ではなく酸塩基反応として整理する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>ブレンステッドの酸はH⁺の供与体、塩基はH⁺の受容体。</li><li>pH＝−log₁₀ a(H⁺)（水素イオン活量を使う厳密な定義）。</li><li>希薄な水溶液・25℃付近では中性のpHはおよそ7。</li><li>中和は酸と塩基の反応であり、生成した溶液のpHが必ず7になるとは限らない。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>中性pH＝7は温度に依存し、すべての温度における固定値ではない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh">OpenStax Chemistry 2e 14.2｜pH・酸塩基 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a06">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a07" data-rank="A" data-cat="有機・無機" data-search="混合物の分離・精製 有機・無機 粒径、揮発性、溶解度などの差を使う。 ろ過：粒子サイズなどによって不溶性固体と液体を分ける。 蒸留：揮発性・気液平衡の差を利用して混合液を分離する。 抽出：異なる相への溶解・分配の違いを利用する。 再結晶：温度等による溶解度差を利用して固体を精製する。 蒸留は「必ず純物質に完全分離できる」わけではない。共沸などの制約がある。">
+<div class="rank-top"><span class="rank-pill">A−07</span><span class="rank-category">有機・無機</span></div>
+<h3>混合物の分離・精製</h3><p class="rank-summary">粒径、揮発性、溶解度などの差を使う。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>ろ過：粒子サイズなどによって不溶性固体と液体を分ける。</li><li>蒸留：揮発性・気液平衡の差を利用して混合液を分離する。</li><li>抽出：異なる相への溶解・分配の違いを利用する。</li><li>再結晶：温度等による溶解度差を利用して固体を精製する。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>蒸留は「必ず純物質に完全分離できる」わけではない。共沸などの制約がある。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://chem.libretexts.org/Courses/Bloomsburg_-_Commonwealth_University_of_Pennsylvania/Quantitative_Chemical_Analysis/12%253A_Chromatographic_and_Electrophoretic_Methods/12.02%253A_Classifying_Separation_Techniques">Chemistry LibreTexts｜分離手法の分類 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a07">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a08" data-rank="A" data-cat="有機・無機" data-search="不飽和炭化水素と付加反応 有機・無機 エチレン・アセチレンの多重結合と反応を整理する。 エチレンC₂H₄は炭素–炭素二重結合、アセチレンC₂H₂は三重結合を持つ。 炭素–炭素多重結合には、臭素などが付加する反応がある。 例：C₂H₄＋Br₂→C₂H₄Br₂ はエチレンへの臭素付加の量論。 アセチレンは段階的な付加が可能で、付加量や生成物は反応条件による。 多重結合がある化合物の反応が、すべて単純な付加反応だけとは限らない。">
+<div class="rank-top"><span class="rank-pill">A−08</span><span class="rank-category">有機・無機</span></div>
+<h3>不飽和炭化水素と付加反応</h3><p class="rank-summary">エチレン・アセチレンの多重結合と反応を整理する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>エチレンC₂H₄は炭素–炭素二重結合、アセチレンC₂H₂は三重結合を持つ。</li><li>炭素–炭素多重結合には、臭素などが付加する反応がある。</li><li>例：C₂H₄＋Br₂→C₂H₄Br₂ はエチレンへの臭素付加の量論。</li><li>アセチレンは段階的な付加が可能で、付加量や生成物は反応条件による。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>多重結合がある化合物の反応が、すべて単純な付加反応だけとは限らない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/20-summary">OpenStax Chemistry 2e 20章｜有機化学 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a08">対応する図解テーマへ ↓</a></div></article><article class="rank-card a" id="a09" data-rank="A" data-cat="気体・計算" data-search="濃度計算・希釈・混合物 気体・計算 質量％とmol/Lの定義を分けて計算する。 質量％＝溶質の質量÷溶液全体の質量×100。 モル濃度 c＝溶質の物質量[mol]÷溶液の体積[L]。 希釈で溶質量が保存される場合、C₁V₁＝C₂V₂が使える（同じ濃度単位・適切な前提）。 純物質と混合物では、蒸気圧・沸点などの挙動が異なる場合がある。 質量％の分母は「溶媒」ではなく「溶液全体」。希釈時の体積の単純加算も無条件には成立しない。">
+<div class="rank-top"><span class="rank-pill">A−09</span><span class="rank-category">気体・計算</span></div>
+<h3>濃度計算・希釈・混合物</h3><p class="rank-summary">質量％とmol/Lの定義を分けて計算する。</p>
+<details><summary>重要ポイント・根拠を詳しく見る</summary><ul><li>質量％＝溶質の質量÷溶液全体の質量×100。</li><li>モル濃度 c＝溶質の物質量[mol]÷溶液の体積[L]。</li><li>希釈で溶質量が保存される場合、C₁V₁＝C₂V₂が使える（同じ濃度単位・適切な前提）。</li><li>純物質と混合物では、蒸気圧・沸点などの挙動が異なる場合がある。</li></ul>
+<div class="rank-caution"><b>混同・誤解に注意</b><span>質量％の分母は「溶媒」ではなく「溶液全体」。希釈時の体積の単純加算も無条件には成立しない。</span></div>
+<div class="rank-evidence">学習事項の参照先（各内容の一次的・教科書的根拠）<div class="key-ref"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/3-3-molarity">OpenStax Chemistry 2e 3.3｜溶液濃度 ↗</a></div></div></details>
+<div class="rank-useful-links"><a href="#fig-a09">対応する図解テーマへ ↓</a><a href="#formulas">公式・計算で確認 ↓</a></div></article></div></div></section>
+<section class="a-section" id="formulas"><div class="wrap"><div class="a-caption">03 / FORMULAS &amp; CALCULATION</div><h2 class="a-section-title">公式を、意味と計算の順序で理解する。</h2><p class="a-lead">計算は<strong>与えられた条件を読む → 単位を統一 → 反応式・法則を選ぶ → 最後に数値を代入する</strong>の順で進めます。以下は原理から独自に作成した例題です。</p>
+<div class="glyph-panel"><div class="glyph"><span class="number">01</span><b>反応式</b><small>原子の数を左右で合わせ、molの比を読む</small></div><div class="glyph"><span class="number">02</span><b>気体</b><small>Pは絶対圧、TはK、圧力・体積の単位をそろえる</small></div><div class="glyph"><span class="number">03</span><b>熱</b><small>ΔHの符号を確認し、顕熱と潜熱を分ける</small></div><div class="glyph"><span class="number">04</span><b>電池</b><small>酸化極と還元極を決め、還元電位の差をとる</small></div></div>
+<div class="formula-stack">
+<article class="formula-card"><span class="formula-tag">FORMULA 01 / 気体</span><h3>理想気体の状態方程式</h3><div class="formula-core">P × V ＝ n × R × T</div><p>P：絶対圧[Pa]、V：体積[m³]、n：物質量[mol]、T：絶対温度[K]。R ≈ 8.314 J/(mol·K)。</p><ol><li>27℃は約300K。温度をKに変換する。</li><li>一定体積・一定nなら、P/Tは一定。</li><li>0℃・1atmのモル体積は約22.4L/mol、0℃・1barは約22.7L/mol。</li></ol><p>現実の高圧・低温では理想気体からのずれに注意。</p><p class="formula-source"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">根拠：OpenStax 9.2 ↗</a> / <a target="_blank" rel="noopener noreferrer" href="https://goldbook.iupac.org/terms/view/S05910">IUPAC標準状態 ↗</a></p></article>
+<article class="formula-card"><span class="formula-tag">FORMULA 02 / 分圧</span><h3>ダルトンの分圧の法則</h3><div class="formula-core">P＝p₁＋p₂＋…<br>pᵢ＝yᵢ × P</div><p>yᵢ＝nᵢ/n全体（成分のモル分率）。同じ容器・温度の理想気体混合物で考えます。</p><ol><li>N₂が2mol、O₂が1molなら合計3mol。</li><li>O₂のモル分率＝1/3。</li><li>全圧90kPaなら O₂分圧＝90×1/3＝<b>30kPa</b>。</li></ol><p>水上置換では水蒸気の分圧を差し引く必要があります。</p><p class="formula-source"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions">根拠：OpenStax 9.3 ↗</a></p></article>
+<article class="formula-card"><span class="formula-tag">FORMULA 03 / molと燃焼</span><h3>メタノールの完全燃焼</h3><div class="formula-core">2CH₃OH＋3O₂<br>→ 2CO₂＋4H₂O</div><p>係数はmol比。メタノール1molに酸素1.5molが必要です。</p><ol><li>CH₃OHが1mol（32g）ならO₂は1.5mol。</li><li>必要酸素の質量＝1.5×32＝<b>48g</b>。</li><li>乾燥空気中の酸素を21mol％と仮定すると理論空気量＝1.5/0.21 ≈ 7.14mol。</li></ol><p>体積への換算は、必ず温度・圧力を指定します。水の相状態も熱計算で重要です。</p><p class="formula-source"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry">根拠：OpenStax 4.3 ↗</a></p></article>
+<article class="formula-card"><span class="formula-tag">FORMULA 04 / 熱化学</span><h3>標準反応エンタルピー</h3><div class="formula-core">ΔH°＝ΣνΔH°f(生成物)<br>−ΣνΔH°f(反応物)</div><p>ΔH°fは標準生成エンタルピー。反応係数を掛け、生成物側から反応物側を引きます。</p><ol><li>H₂(g)＋½O₂(g)→H₂O(l)。</li><li>この反応のΔH°は約<b>−286 kJ/mol</b>。</li><li>放出した熱の大きさを正の286kJと表す場合も、ΔHの符号は負。</li></ol><p>H₂O(g)を生成すると値は変わります。</p><p class="formula-source"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy">根拠：OpenStax 5.3 ↗</a></p></article>
+<article class="formula-card"><span class="formula-tag">FORMULA 05 / 顕熱と潜熱</span><h3>加熱・相変化の熱量</h3><div class="formula-core">Q顕熱＝mcΔT<br>Q潜熱＝mL</div><p>m：質量[g]、c：比熱[J/(g·K)]、L：比潜熱[J/g]。式に使う質量・熱量の単位を統一します。</p><ol><li>水200g、比熱4.2J/(g·K)、20→30℃。</li><li>Q＝200×4.2×10＝<b>8400J（8.4kJ）</b>。</li><li>融解や蒸発がある場合は、その相変化の熱量を別に足す。</li></ol><p>「1℃の温度差＝1Kの温度差」であり、絶対温度と混同しない。</p><p class="formula-source"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions">根拠：OpenStax 10.3 ↗</a></p></article>
+<article class="formula-card"><span class="formula-tag">FORMULA 06 / 電池</span><h3>標準起電力と電極反応</h3><div class="formula-core">E°cell＝E°cathode<br>−E°anode</div><p>両方を「標準還元電位」で表して差をとります。</p><ol><li>Zn²⁺/Zn の標準還元電位：約−0.76V。</li><li>Cu²⁺/Cu の標準還元電位：約＋0.34V。</li><li>Zn/Cu電池の標準起電力＝0.34−(−0.76)＝<b>＋1.10V</b>。</li></ol><p>放電するガルバニ電池ではZn側がアノード（酸化）、Cu側がカソード（還元）。</p><p class="formula-source"><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials">根拠：OpenStax 17.3 ↗</a></p></article>
+</div>
+<div class="explain-box"><b>「標準状態」の落とし穴：</b> 日本の計算問題でよく使われる「0℃・1気圧（1atm）」の約22.4L/molと、IUPACが現在採用する「0℃・1bar」の約22.7L/molは条件が異なります。問題が指定する条件を最優先し、指定がない場合は「標準状態」の意味を確認してください。</div>
+<h3 class="section-mini">数値を変えて試す、独自の計算ツール</h3><p class="a-lead">4種類の計算を切り替えられます。結果だけでなく、途中式も確認できるようにしました。</p>
+<div class="calc-modes" role="group" aria-label="計算タイプの切替"><button class="calc-mode" type="button" data-mode="gas" aria-pressed="true">理想気体</button><button class="calc-mode" type="button" data-mode="partial" aria-pressed="false">分圧</button><button class="calc-mode" type="button" data-mode="burn" aria-pressed="false">必要酸素量</button><button class="calc-mode" type="button" data-mode="heat" aria-pressed="false">熱量</button></div>
+<div class="calc-panel" id="panel-gas" data-panel="gas"><h3>理想気体の物質量 n＝PV/(RT)</h3><p class="calc-note">P[kPa]、V[L]、T[℃]を入力。R＝8.314 kPa·L/(mol·K)として計算します。</p><div class="calc-inputs"><label>絶対圧 P [kPa]<input id="gas-p" type="number" step="any" value="101.325"></label><label>体積 V [L]<input id="gas-v" type="number" step="any" value="22.414"></label><label>温度 t [℃]<input id="gas-t" type="number" step="any" value="0"></label></div><div class="calc-result-physics"><div><small>物質量 n</small><strong id="gas-result" aria-live="polite">1.000 mol</strong></div><div><small>使用した絶対温度</small><strong id="gas-tk">273.15 K</strong></div></div><p class="calc-note" id="gas-work"></p></div>
+<div class="calc-panel" id="panel-partial" data-panel="partial" hidden><h3>混合気体の分圧 p＝(n成分/n全体)×P</h3><p class="calc-note">理想気体混合物で、成分の物質量が全体以下となるよう入力してください。</p><div class="calc-inputs"><label>全圧 P [kPa]<input id="partial-p" type="number" step="any" value="90"></label><label>成分 nᵢ [mol]<input id="partial-ni" type="number" step="any" value="1"></label><label>合計 n [mol]<input id="partial-n" type="number" step="any" value="3"></label></div><div class="calc-result-physics"><div><small>成分の分圧</small><strong id="partial-result" aria-live="polite">30.00 kPa</strong></div><div><small>モル分率</small><strong id="partial-y">0.3333</strong></div></div><p class="calc-note" id="partial-work"></p></div>
+<div class="calc-panel" id="panel-burn" data-panel="burn" hidden><h3>メタノールの完全燃焼に必要な酸素</h3><p class="calc-note">2CH₃OH＋3O₂→2CO₂＋4H₂O。理論必要量（完全燃焼・過剰酸素なし）を計算します。</p><div class="calc-inputs"><label>メタノール量 [mol]<input id="burn-n" type="number" step="any" value="1"></label><label>乾燥空気の酸素分率 [0–1]<input id="burn-y" type="number" step="any" min="0.01" max="1" value="0.21"></label></div><div class="calc-result-physics"><div><small>必要なO₂の量</small><strong id="burn-result" aria-live="polite">1.5 mol</strong></div><div><small>必要なO₂の質量</small><strong id="burn-mass">48 g</strong></div></div><p class="calc-note" id="burn-work"></p></div>
+<div class="calc-panel" id="panel-heat" data-panel="heat" hidden><h3>顕熱 Q＝mcΔT</h3><p class="calc-note">相変化なし・比熱一定の近似。Q正＝加熱に必要な熱、Q負＝冷却時に放出した熱。</p><div class="calc-inputs"><label>質量 m [g]<input id="heat-mass" type="number" step="any" value="200"></label><label>比熱 c [J/(g·K)]<input id="heat-cp" type="number" step="any" value="4.2"></label><label>開始温度 [℃]<input id="heat-start" type="number" step="any" value="20"></label><label>終了温度 [℃]<input id="heat-end" type="number" step="any" value="30"></label></div><div class="calc-result-physics"><div><small>温度差 ΔT</small><strong id="heat-delta">10 K</strong></div><div><small>顕熱 Q</small><strong id="heat-result" aria-live="polite">8.4 kJ</strong></div></div><p class="calc-note" id="heat-work"></p></div>
+<div class="safety-note">これらは学習用の理想化した計算です。実際の危険物設備の設計・運転・消火判断に用いる場合は、物性値、温度圧力、反応・安全余裕、SDSなどを個別に確認してください。</div>
+</div></section><section class="a-section alt" id="illustrated-lessons"><div class="wrap"><div class="a-caption">04 / ILLUSTRATED LESSONS</div><h2 class="a-section-title">図解で理解する、26テーマの制作予定。</h2><p class="a-lead">法令・乙4と同じ「図解でわかる！」シリーズとして順次制作する予定テーマです。現在は<strong>図解の一覧・学習カードへのリンク</strong>であり、画像そのものを公開したわけではありません。</p><div class="fig-grid"><a id="fig-s01" class="fig-tile" href="#s01" style="--fig:#fbd1bd"><span class="fig-num">01 / S</span><strong>燃焼の三要素と連鎖反応</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a01" class="fig-tile" href="#a01" style="--fig:#fbd1bd"><span class="fig-num">02 / A</span><strong>燃焼形態の比較</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s02" class="fig-tile" href="#s02" style="--fig:#fbd1bd"><span class="fig-num">03 / S</span><strong>引火点・燃焼点・発火点</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s03" class="fig-tile" href="#s03" style="--fig:#fbd1bd"><span class="fig-num">04 / S</span><strong>燃焼範囲と爆発限界</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s04" class="fig-tile" href="#s04" style="--fig:#fbd1bd"><span class="fig-num">05 / S</span><strong>蒸気圧と温度・気液平衡</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a02" class="fig-tile" href="#a02" style="--fig:#fbd1bd"><span class="fig-num">06 / A</span><strong>蒸発・沸騰・凝縮と状態変化</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s05" class="fig-tile" href="#s05" style="--fig:#bcecf8"><span class="fig-num">07 / S</span><strong>理想気体の状態方程式</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s06" class="fig-tile" href="#s06" style="--fig:#bcecf8"><span class="fig-num">08 / S</span><strong>ボイル・シャルルの法則</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s07" class="fig-tile" href="#s07" style="--fig:#bcecf8"><span class="fig-num">09 / S</span><strong>混合気体の分圧と全圧</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s08" class="fig-tile" href="#s08" style="--fig:#bcecf8"><span class="fig-num">10 / S</span><strong>気体密度・分子量・蒸気比重</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s09" class="fig-tile" href="#s09" style="--fig:#bcecf8"><span class="fig-num">11 / S</span><strong>モル・分子量・質量の換算</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s10" class="fig-tile" href="#s10" style="--fig:#bcecf8"><span class="fig-num">12 / S</span><strong>燃焼反応式と必要酸素量</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a03" class="fig-tile" href="#a03" style="--fig:#fbd1bd"><span class="fig-num">13 / A</span><strong>完全燃焼と不完全燃焼</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s11" class="fig-tile" href="#s11" style="--fig:#c8ff4d"><span class="fig-num">14 / S</span><strong>燃焼熱・生成エンタルピー・ヘスの法則</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s12" class="fig-tile" href="#s12" style="--fig:#c8ff4d"><span class="fig-num">15 / S</span><strong>顕熱・潜熱・比熱容量</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s13" class="fig-tile" href="#s13" style="--fig:#dad6ff"><span class="fig-num">16 / S</span><strong>酸化数・酸化還元・電子の移動</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s14" class="fig-tile" href="#s14" style="--fig:#dad6ff"><span class="fig-num">17 / S</span><strong>電池の起電力と電極反応</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s15" class="fig-tile" href="#s15" style="--fig:#dad6ff"><span class="fig-num">18 / S</span><strong>静電気の発生・蓄積・放電</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a04" class="fig-tile" href="#a04" style="--fig:#e4ddff"><span class="fig-num">19 / A</span><strong>原子構造・周期表・化学結合</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a05" class="fig-tile" href="#a05" style="--fig:#e4ddff"><span class="fig-num">20 / A</span><strong>炎色反応と金属元素</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a06" class="fig-tile" href="#a06" style="--fig:#e4ddff"><span class="fig-num">21 / A</span><strong>酸・塩基・中和とpH</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a07" class="fig-tile" href="#a07" style="--fig:#e4ddff"><span class="fig-num">22 / A</span><strong>混合物の分離・精製</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s16" class="fig-tile" href="#s16" style="--fig:#e4ddff"><span class="fig-num">23 / S</span><strong>有機化合物と官能基</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a08" class="fig-tile" href="#a08" style="--fig:#e4ddff"><span class="fig-num">24 / A</span><strong>不飽和炭化水素と付加反応</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-s17" class="fig-tile" href="#s17" style="--fig:#c8ff4d"><span class="fig-num">25 / S</span><strong>反応速度・温度・発熱蓄熱</strong><small>対応する学習ポイントを見る ↗</small></a><a id="fig-a09" class="fig-tile" href="#a09" style="--fig:#bcecf8"><span class="fig-num">26 / A</span><strong>濃度計算・希釈・混合物</strong><small>対応する学習ポイントを見る ↗</small></a></div><p class="note">図解の制作時は、1280×960px・4:3、白＋ネイビー／青を基本とし、原理・単位・反応式を必ず照合します。画像タイトルにテーマ番号は付けません。</p></div></section><section class="a-section" id="comparison"><div class="wrap"><div class="a-caption">05 / COMPARISON</div><h2 class="a-section-title">似た概念を、条件と意味で比べる。</h2><p class="a-lead">甲種では一部の条件が違うだけで答えが変わります。「何を一定とみなしたか」「何を基準にしたか」を比較で確認しましょう。</p><div class="matrix-wrap">
+<article class="matrix-card"><h3>気体の法則の成立条件</h3><table class="mini-table"><tr><th>ボイル</th><td>T・n一定：PV＝一定</td></tr><tr><th>シャルル</th><td>P・n一定：V/T＝一定</td></tr><tr><th>定容</th><td>V・n一定：P/T＝一定</td></tr><tr><th>状態方程式</th><td>PV＝nRT。TはK、Pは絶対圧</td></tr></table></article>
+<article class="matrix-card"><h3>気体の標準状態と1molの体積</h3><table class="mini-table"><tr><th>0℃・1atm</th><td>理想気体1mol ≈ 22.4L</td></tr><tr><th>0℃・1bar</th><td>理想気体1mol ≈ 22.7L（IUPAC）</td></tr><tr><th>25℃・1atm</th><td>理想気体1mol ≈ 24.5L</td></tr><tr><th>重要</th><td>温度・圧力条件なしに「1mol＝22.4L」を使わない</td></tr></table></article>
+<article class="matrix-card"><h3>酸化剤・還元剤・電極</h3><table class="mini-table"><tr><th>酸化</th><td>電子を失う／酸化数増加</td></tr><tr><th>還元</th><td>電子を受け取る／酸化数減少</td></tr><tr><th>アノード</th><td>酸化が起こる電極</td></tr><tr><th>カソード</th><td>還元が起こる電極</td></tr><tr><th>起電力</th><td>標準還元電位の「カソード−アノード」</td></tr></table></article>
+<article class="matrix-card"><h3>熱の式・符号・状態</h3><table class="mini-table"><tr><th>顕熱</th><td>Q＝mcΔT（温度差に関係）</td></tr><tr><th>潜熱</th><td>Q＝mL（相変化に関係）</td></tr><tr><th>発熱反応</th><td>ΔH＜0（反応系のエンタルピー減少）</td></tr><tr><th>ヘスの法則</th><td>同じ始終状態なら反応経路によらず全ΔHが同じ</td></tr></table></article>
+<article class="matrix-card"><h3>分圧・質量％・モル濃度</h3><table class="mini-table"><tr><th>分圧</th><td>理想気体ではpᵢ＝yᵢP</td></tr><tr><th>質量％</th><td>溶質質量／溶液質量×100</td></tr><tr><th>モル濃度</th><td>溶質のmol／溶液の体積[L]</td></tr><tr><th>注意</th><td>分母も単位も異なる。混ぜて使わない</td></tr></table></article>
+<article class="matrix-card"><h3>飽和・不飽和炭化水素と官能基</h3><table class="mini-table"><tr><th>飽和</th><td>炭素–炭素間に二重・三重結合を持たない炭化水素</td></tr><tr><th>不飽和</th><td>C=CまたはC≡Cを持ち、付加反応を起こし得る</td></tr><tr><th>アルデヒド</th><td>−CHOを含む（カルボニル基にHが結合）</td></tr><tr><th>ケトン</th><td>−CO−（カルボニル基の両側に炭素基）</td></tr><tr><th>カルボン酸</th><td>−COOHを持つ</td></tr></table></article>
+</div></div></section><section class="a-section alt" id="practice"><div class="wrap"><div class="a-caption">06 / ORIGINAL PRACTICE</div><h2 class="a-section-title">甲種向け15問で、理解度を確認。</h2><p class="a-lead">気体、分圧、必要酸素量、電池、反応熱、有機・無機化学などを横断した<strong>独自の五肢択一問題</strong>です。選んだ直後に正誤と理由、参照資料を確認できます。</p>
+<div class="quiz-box"><div class="quiz-top"><span class="tag" id="quiz-cat">気体</span><span class="quiz-counter" id="quiz-counter">1 / 15</span></div><h3 id="quiz-q"></h3><div class="quiz-options" id="quiz-opts"></div><div class="quiz-answer" id="quiz-answer" hidden aria-live="polite"></div><div class="quiz-controls"><span class="quiz-score" id="quiz-score">正解：0 / 0</span><div><button id="quiz-reset" type="button" style="background:white;color:#153821;margin-right:8px">最初から</button><button id="quiz-next" type="button">次の問題 →</button></div></div></div>
+<p class="note">※ 独自作問であり、公式問題の転載・再現・出題予測ではありません。各問は科目理解の確認用です。甲種本番は物理・化学10問です。</p>
+<div class="final-review" id="lastcheck"><div class="a-caption">FINAL REVIEW / 直前チェック</div><h3>最後に、14項目で理解の抜けを確認。</h3><p class="review-lead">他人に説明できるか、計算過程を再現できるかを確認します。チェック状況はこのブラウザ内に保存されます。</p><div class="check-grid" id="check-grid"><label><input type="checkbox" data-check="01"><span>燃焼の三要素・燃焼範囲・引火点を説明できる</span></label><label><input type="checkbox" data-check="02"><span>蒸気圧と温度、沸点と外圧の関係を説明できる</span></label><label><input type="checkbox" data-check="03"><span>PV＝nRTに絶対温度と絶対圧を使える</span></label><label><input type="checkbox" data-check="04"><span>ボイル・シャルルの法則の成立条件を区別できる</span></label><label><input type="checkbox" data-check="05"><span>分圧＝モル分率×全圧を計算できる</span></label><label><input type="checkbox" data-check="06"><span>0℃・1atmの約22.4Lと0℃・1barの違いを知っている</span></label><label><input type="checkbox" data-check="07"><span>g→mol→反応式の係数比→gを換算できる</span></label><label><input type="checkbox" data-check="08"><span>燃焼反応式から必要な酸素量を求められる</span></label><label><input type="checkbox" data-check="09"><span>発熱反応のΔHの符号・ヘスの法則を理解した</span></label><label><input type="checkbox" data-check="10"><span>Q＝mcΔTと潜熱Q＝mLを使い分けられる</span></label><label><input type="checkbox" data-check="11"><span>酸化数・酸化還元と電池の電極反応を説明できる</span></label><label><input type="checkbox" data-check="12"><span>炎色反応・有機官能基・不飽和結合を見分けられる</span></label><label><input type="checkbox" data-check="13"><span>ろ過・蒸留・抽出・再結晶の違いを説明できる</span></label><label><input type="checkbox" data-check="14"><span>発熱速度と放熱速度、静電気放電の危険を説明できる</span></label></div><div class="check-progress"><strong id="check-text">0 / 14 項目確認</strong><progress id="check-progress" max="14" value="0" aria-label="復習の進捗"></progress><button type="button" class="calc-add" id="check-clear">チェックをリセット</button></div></div></div></section><section class="sources" id="sources"><div class="wrap"><div class="a-caption" style="color:#aaceb1">REFERENCES / SOURCES &amp; NOTES</div><h2>科学的な根拠と、参照資料。</h2>
+<p>甲種の物理学及び化学は10問です。S/Aは「基礎性・応用性・誤解の影響」から決めた独自の学習優先度であり、年度別の出題頻度ではありません。個々の図解・練習問題は既存教材の文章・選択肢を転載せず、一般化された科学的知識をもとに作成しました。本文の計算例では、理想化した条件と単位の前提を明示しています。</p>
+<p>公式公開問題PDFは公開範囲の参考ですが、直接の全文転記は行っていません。公式公開問題は過去に出題された一部であり、このページの26テーマは公開問題から正確な出題頻度を算出したものではありません。</p><ul><li><a target="_blank" rel="noopener noreferrer" href="https://nrifd.fdma.go.jp/public_info/faq/combustion/index.html">消防庁 消防研究センター｜ものはなぜ燃えるのか</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.shoubo-shiken.or.jp/kikenbutsu/annai/way.html">消防試験研究センター｜試験の方法・合格基準</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.shoubo-shiken.or.jp/kikenbutsu/annai/subject.html">消防試験研究センター｜試験科目・問題数</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.shoubo-shiken.or.jp/kikenbutsu/exercise.html">消防試験研究センター｜公式公開問題の取扱い</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://www.shoubo-shiken.or.jp/content/kikenbutsu_kou.pdf">消防試験研究センター｜甲種公開問題（公式PDF・参照用）</a>※ 甲種公式公開問題の本文は転載せず、出題範囲確認の参考に限ります。</li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law">OpenStax Chemistry 2e 9.2｜理想気体</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions">OpenStax Chemistry 2e 9.3｜分圧・気体混合</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry">OpenStax Chemistry 2e 4.3｜化学量論</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy">OpenStax Chemistry 2e 5.3｜反応エンタルピー</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/10-3-phase-transitions">OpenStax Chemistry 2e 10.3｜蒸気圧・状態変化</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials">OpenStax Chemistry 2e 17.3｜電池・電極電位</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/17-1-review-of-redox-chemistry">OpenStax Chemistry 2e 17.1｜酸化還元</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/12-2-factors-affecting-reaction-rates">OpenStax Chemistry 2e 12.2｜反応速度に影響する因子</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/20-summary">OpenStax Chemistry 2e 20章｜有機化学</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://chem.libretexts.org/Courses/Bloomsburg_-_Commonwealth_University_of_Pennsylvania/Quantitative_Chemical_Analysis/12%253A_Chromatographic_and_Electrophoretic_Methods/12.02%253A_Classifying_Separation_Techniques">Chemistry LibreTexts｜分離手法の分類</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/6-4-electronic-structure-of-atoms-electron-configurations">OpenStax Chemistry 2e 6.4｜電子構造・周期性</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://edu.rsc.org/infographics/how-to-carry-out-flame-tests/4024075.article">英国王立化学会RSC｜炎色反応の学習資料</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/14-2-ph-and-poh">OpenStax Chemistry 2e 14.2｜pH・酸塩基</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://openstax.org/books/chemistry-2e/pages/3-3-molarity">OpenStax Chemistry 2e 3.3｜溶液濃度</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://goldbook.iupac.org/terms/view/S05910">IUPAC Gold Book｜気体の標準状態（0℃・1bar）</a></li><li><a target="_blank" rel="noopener noreferrer" href="https://anzeninfo.mhlw.go.jp/user/anzen/kag/kagaku_index.html">厚生労働省｜職場のあんぜんサイト・化学物質情報</a></li></ul>
+<p class="ref-note">最終確認：2026年11月。化学物質の具体的な危険性、消火・貯蔵・取扱いの現場判断には、対象物質の最新SDS、適用法令、設備条件、所轄機関の指導等を優先してください。本サイトは独立した学習用解説であり、試験実施団体の公式教材ではありません。</p><a href="hazardous-koshu.html" class="a-btn" style="background:#c8ff4d;color:#152319;border-color:#c8ff4d">← 甲種の科目一覧に戻る</a></div></section></main>
+<footer class="foot"><div class="wrap foot-inner"><div class="foot-big">KOSHU / PHYSICS</div><a class="btn" href="hazardous-koshu.html">← 甲種の科目一覧</a></div></footer><script>
+'use strict';
+const ALL_CARDS=Array.from(document.querySelectorAll('.rank-card'));
+const search=document.getElementById('rank-search');let activeCat='すべて';
+function filterCards(){const q=search.value.toLocaleLowerCase('ja-JP').trim();let ns=0,na=0;for(const c of ALL_CARDS){const ok=(activeCat==='すべて'||c.dataset.cat===activeCat)&&(!q||c.dataset.search.toLocaleLowerCase('ja-JP').includes(q));c.hidden=!ok;if(ok){if(c.dataset.rank==='S')ns++;else na++;}}document.getElementById('rank-count').textContent=`S${ns}テーマ・A${na}テーマを表示中`;document.getElementById('notfound').hidden=(ns+na)!==0;}
+search.addEventListener('input',filterCards);
+document.getElementById('cat-buttons').addEventListener('click',e=>{const b=e.target.closest('.cat-btn');if(!b)return;activeCat=b.dataset.cat;document.querySelectorAll('.cat-btn').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));filterCards();});
+// Interactive educational calculators. Always validate actual user-provided numeric strings.
+function readVal(id){const s=document.getElementById(id).value.trim();if(s==='')return NaN;return Number(s);}
+function val(id,text){document.getElementById(id).textContent=text;}
+function fmt(n,d=3){return Number.isFinite(n)?n.toLocaleString('ja-JP',{maximumFractionDigits:d}):'入力を確認';}
+function calculate(){
+ const p=readVal('gas-p'),v=readVal('gas-v'),t=readVal('gas-t'),tk=t+273.15;const goodGas=[p,v,t].every(Number.isFinite)&&p>=0&&v>=0&&tk>0;
+ val('gas-result',goodGas?fmt(p*v/(8.314462618*tk),4)+' mol':'入力を確認');val('gas-tk',goodGas?fmt(tk,2)+' K':'入力を確認');
+ val('gas-work',goodGas?`n＝${fmt(p,3)}×${fmt(v,3)}÷(8.31446×${fmt(tk,2)})＝${fmt(p*v/(8.314462618*tk),5)} mol`:'P・Vは0以上、温度は絶対零度より高い値を入力');
+ const pp=readVal('partial-p'),ni=readVal('partial-ni'),n=readVal('partial-n');const goodP=[pp,ni,n].every(Number.isFinite)&&pp>=0&&ni>=0&&n>0&&ni<=n;
+ const mole=ni/n;val('partial-result',goodP?fmt(pp*mole,3)+' kPa':'入力を確認');val('partial-y',goodP?fmt(mole,5):'入力を確認');
+ val('partial-work',goodP?`y＝${fmt(ni,3)}/${fmt(n,3)}＝${fmt(mole,5)}、p＝${fmt(pp,3)}×${fmt(mole,5)}＝${fmt(pp*mole,3)} kPa`:'成分molは0以上、合計molは正、成分molは合計以下にしてください');
+ const b=readVal('burn-n'),a=readVal('burn-y');const goodB=Number.isFinite(b)&&Number.isFinite(a)&&b>=0&&a>0&&a<=1;
+ val('burn-result',goodB?fmt(b*1.5,4)+' mol':'入力を確認');val('burn-mass',goodB?fmt(b*1.5*32,4)+' g':'入力を確認');
+ val('burn-work',goodB?`O₂＝${fmt(b,3)}×(3/2)＝${fmt(b*1.5,4)} mol。O₂質量＝${fmt(b*1.5,4)}×32＝${fmt(b*1.5*32,4)} g。理論乾燥空気量＝${fmt(b*1.5/a,4)} mol（酸素モル分率${fmt(a,4)}）。`:'メタノール量は0以上、酸素分率は0超1以下で入力');
+ const m=readVal('heat-mass'),c=readVal('heat-cp'),t1=readVal('heat-start'),t2=readVal('heat-end');const goodH=[m,c,t1,t2].every(Number.isFinite)&&m>=0&&c>=0;
+ const dh=t2-t1;val('heat-delta',goodH?fmt(dh,3)+' K':'入力を確認');val('heat-result',goodH?fmt(m*c*dh/1000,4)+' kJ':'入力を確認');
+ val('heat-work',goodH?`Q＝${fmt(m,4)}×${fmt(c,4)}×(${fmt(t2,3)}−${fmt(t1,3)})＝${fmt(m*c*dh,4)} J`:'質量と比熱は0以上で入力');
+}
+document.querySelectorAll('.calc-panel input').forEach(x=>x.addEventListener('input',calculate));calculate();
+document.querySelectorAll('.calc-mode').forEach(b=>b.addEventListener('click',()=>{const mode=b.dataset.mode;document.querySelectorAll('.calc-mode').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));document.querySelectorAll('[data-panel]').forEach(x=>x.hidden=(x.dataset.panel!==mode));}));
+const quiz=[{"category":"気体","q":"27℃・一定容積の理想気体について、物質量が変わらないまま絶対温度を600Kにすると圧力はどうなるか。","options":["約半分になる","約2倍になる","3倍になる","変化しない","0になる"],"answer":1,"why":"初期の絶対温度は約300K。体積と物質量一定ならP/T一定なので、600/300＝2倍。","source":"https://openstax.org/books/chemistry-2e/pages/9-2-relating-pressure-volume-amount-and-temperature-the-ideal-gas-law"},{"category":"分圧","q":"窒素2molと酸素1molの反応しない理想気体を混合し、全圧を90kPaとした。酸素の分圧はどれか。","options":["10kPa","20kPa","30kPa","45kPa","60kPa"],"answer":2,"why":"酸素のモル分率は1/3。分圧は90×1/3＝30kPa。","source":"https://openstax.org/books/chemistry-2e/pages/9-3-stoichiometry-of-gaseous-substances-mixtures-and-reactions"},{"category":"化学量論","q":"メタノールCH₃OHを1mol完全燃焼させるのに必要なO₂は何molか。","options":["0.5mol","1.0mol","1.5mol","2.0mol","3.0mol"],"answer":2,"why":"2CH₃OH＋3O₂→2CO₂＋4H₂O。CH₃OH 1molに酸素3/2＝1.5mol。","source":"https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"},{"category":"化学量論","q":"メタノール1molの完全燃焼に必要な酸素1.5molの質量は何gか。O₂＝32g/molとする。","options":["16g","24g","32g","48g","64g"],"answer":3,"why":"1.5mol×32g/mol＝48g。係数はmol比であり、質量比ではない。","source":"https://openstax.org/books/chemistry-2e/pages/4-3-reaction-stoichiometry"},{"category":"標準状態","q":"理想気体1molの体積が約22.4Lとなる条件はどれか。","options":["0℃・1気圧（101325Pa）","0℃・1bar（100000Pa）","25℃・1気圧","100℃・1bar","25℃・2bar"],"answer":0,"why":"0℃・1atmなら約22.4L。IUPACの0℃・1barでは約22.7Lなので条件を必ず明示する。","source":"https://goldbook.iupac.org/terms/view/S05910"},{"category":"電池","q":"標準還元電位がCu²⁺/Cu＝＋0.34V、Zn²⁺/Zn＝−0.76Vの電池の標準起電力はどれか。","options":["−1.10V","−0.42V","＋0.42V","＋0.76V","＋1.10V"],"answer":4,"why":"＋0.34−(−0.76)＝＋1.10V。Cu電極はカソード（還元）、Zn電極はアノード（酸化）。","source":"https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials"},{"category":"酸化還元","q":"ガルバニ電池の放電中、亜鉛電極Zn→Zn²⁺＋2e⁻が起こる電極について正しいのはどれか。","options":["カソードで還元","アノードで酸化","カソードで酸化","両電極で同じ反応","反応は起きない"],"answer":1,"why":"Znが電子を放出して酸化される。放電中のガルバニ電池のアノードは酸化が起こる負極。","source":"https://openstax.org/books/chemistry-2e/pages/17-3-electrode-and-cell-potentials"},{"category":"熱化学","q":"反応系のエンタルピー変化ΔHが−250kJである。適切な説明はどれか。","options":["反応が250kJを吸収した","反応は等温でないと起こらない","反応系が周囲に250kJを放出する発熱反応（定圧・仕事の扱い等を仮定）","触媒でΔHは必ず正になる","反応は必ず遅い"],"answer":2,"why":"発熱反応のΔHは負。定圧で仕事などの条件を定めれば、周囲への放熱量の大きさは250kJ。","source":"https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy"},{"category":"顕熱","q":"水300g（比熱4.2J/(g·K)）を20℃から30℃まで加熱したときの顕熱はどれか。","options":["1.26kJ","4.2kJ","8.4kJ","12.6kJ","126kJ"],"answer":3,"why":"300×4.2×10＝12600J＝12.6kJ。相変化や損失を無視する。","source":"https://openstax.org/books/chemistry-2e/pages/5-3-enthalpy"},{"category":"反応速度","q":"同じ反応の触媒について、一般に適切な説明はどれか。","options":["触媒は反応エンタルピーを必ず増大させる","触媒は平衡定数を変える","触媒は経路を変え速度に影響するが、同じ始終状態のΔHを変えない","触媒は反応のたびに必ず消滅する","触媒は温度の影響を一切受けない"],"answer":2,"why":"触媒は別の反応経路を与えることで反応速度を変えるが、状態関数であるΔHそのものは変えない。","source":"https://openstax.org/books/chemistry-2e/pages/12-2-factors-affecting-reaction-rates"},{"category":"無機化学","q":"代表的な炎色反応で、ナトリウムを特徴づける色はどれか。","options":["淡紫","黄","橙赤","緑","青緑"],"answer":1,"why":"Naの炎色反応は強い黄色。試料の汚染による黄色の混入に注意する。","source":"https://edu.rsc.org/infographics/how-to-carry-out-flame-tests/4024075.article"},{"category":"有機化学","q":"アセチレンC₂H₂について適切な説明はどれか。","options":["炭素-炭素単結合のみを持つ","炭素-炭素三重結合を持ち、付加反応を起こす","カルボキシ基を持つ","飽和炭化水素である","窒素を含む"],"answer":1,"why":"アセチレンは炭素–炭素三重結合をもつ不飽和炭化水素で、付加反応が可能。","source":"https://openstax.org/books/chemistry-2e/pages/20-summary"},{"category":"官能基","q":"酢酸CH₃COOHの特徴的な官能基はどれか。","options":["エーテル結合","アルデヒド基","ニトロ基","カルボキシ基","アミノ基"],"answer":3,"why":"酢酸はカルボン酸で、−COOHを持つ。","source":"https://openstax.org/books/chemistry-2e/pages/20-summary"},{"category":"分離","q":"液体混合物を、主として揮発性・気液平衡の違いによって分ける操作はどれか。","options":["ろ過","再結晶","蒸留","ふるい分け","沈降"],"answer":2,"why":"蒸留は気液平衡の差を用いる。共沸などの理由で完全分離できない系もある。","source":"https://chem.libretexts.org/Courses/Bloomsburg_-_Commonwealth_University_of_Pennsylvania/Quantitative_Chemical_Analysis/12%253A_Chromatographic_and_Electrophoretic_Methods/12.02%253A_Classifying_Separation_Techniques"},{"category":"濃度","q":"溶質20gを溶媒80gに溶かした溶液の質量パーセント濃度はどれか。","options":["10％","20％","25％","40％","80％"],"answer":1,"why":"20÷(20＋80)×100＝20％。溶媒質量80gで割らない。","source":"https://openstax.org/books/chemistry-2e/pages/3-3-molarity"}];
+let quizIndex=0,quizAnswered=0,quizCorrect=0,selected=-1;
+function updateScore(){val('quiz-score',`正解：${quizCorrect} / ${quizAnswered}`);}
+function showQuiz(){const x=quiz[quizIndex];val('quiz-cat',x.category);val('quiz-counter',`${quizIndex+1} / ${quiz.length}`);val('quiz-q',x.q);const opts=document.getElementById('quiz-opts');opts.replaceChildren();selected=-1;document.getElementById('quiz-answer').hidden=true;val('quiz-next',quizIndex===quiz.length-1?'最初に戻る →':'次の問題 →');x.options.forEach((option,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-option';b.textContent=`${i+1}. ${option}`;b.addEventListener('click',()=>chooseAnswer(i));opts.append(b);});updateScore();}
+function chooseAnswer(i){if(selected>=0)return;selected=i;quizAnswered++;if(i===quiz[quizIndex].answer)quizCorrect++;document.querySelectorAll('.quiz-option').forEach((b,j)=>{b.disabled=true;if(j===quiz[quizIndex].answer)b.classList.add('correct');if(j===i){b.classList.add('selected');if(i!==quiz[quizIndex].answer)b.classList.add('wrong');}});const fb=document.getElementById('quiz-answer');fb.hidden=false;fb.replaceChildren();const t=document.createElement('span');t.textContent=(i===quiz[quizIndex].answer?'正解です。':'不正解です。')+' '+quiz[quizIndex].why+' ';const a=document.createElement('a');a.href=quiz[quizIndex].source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='参照資料 ↗';a.style.cssText='color:#135a36;text-decoration:underline';fb.append(t,a);updateScore();}
+document.getElementById('quiz-next').addEventListener('click',()=>{if(quizIndex===quiz.length-1){quizIndex=0;quizAnswered=0;quizCorrect=0;}else quizIndex++;showQuiz();});
+document.getElementById('quiz-reset').addEventListener('click',()=>{quizIndex=0;quizAnswered=0;quizCorrect=0;showQuiz();});showQuiz();
+const checks=Array.from(document.querySelectorAll('#check-grid input'));const storageKey='cql_koshu_physics_checks_v1';try{const stored=JSON.parse(localStorage.getItem(storageKey)||'[]');checks.forEach(x=>x.checked=stored.includes(x.dataset.check));}catch(e){}
+function updateChecks(){const n=checks.filter(x=>x.checked).length;val('check-text',`${n} / ${checks.length} 項目確認`);document.getElementById('check-progress').value=n;try{localStorage.setItem(storageKey,JSON.stringify(checks.filter(x=>x.checked).map(x=>x.dataset.check)));}catch(e){}}
+checks.forEach(x=>x.addEventListener('change',updateChecks));document.getElementById('check-clear').addEventListener('click',()=>{checks.forEach(x=>x.checked=false);updateChecks();});updateChecks();
+// restore filtered cards before anchor navigation
+for(const a of document.querySelectorAll('.fig-tile[href^="#"]'))a.addEventListener('click',()=>{const target=document.getElementById(a.getAttribute('href').slice(1));if(target&&target.hidden){search.value='';activeCat='すべて';document.querySelectorAll('.cat-btn').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cat==='すべて'?'true':'false'));filterCards();}});
+</script></body></html>
