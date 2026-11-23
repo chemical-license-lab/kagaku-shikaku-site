@@ -1,190 +1,251 @@
 <!doctype html>
-<html lang="ja" data-cql-three-cards="20261025"><head>
+<html lang="ja" data-cql-three-cards="20261025" data-cql-study-guide="20261123-r2">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="公害防止管理者の大気関係第1種・水質関係第1種。公害総論を含む大気6科目・水質5科目の独自分析、テーマ図解、S/Aランク別学習ガイドを掲載。">
-<title>公害防止管理者｜大気関係第1種・水質関係第1種 | 化学資格研究所</title>
+<meta name="description" content="公害防止管理者の大気関係第1種・水質関係第1種。働きながら約2か月間学習した実体験から、暗記科目を先に始める2.5か月学習戦略、過去問・図解・計算演習の使い方、過去10年の出題分析を紹介。">
+<meta name="theme-color" content="#f3f5ef">
+<title>公害防止管理者｜はじめての学習ガイド・2.5か月の勉強法・大気／水質の出題分析 | 化学資格研究所</title>
 <style>
-:root{
-  --bg:#f3f5ef;
-  --ink:#0b0d0c;
-  --muted:#66706a;
-  --line:rgba(11,13,12,.15);
-  --lime:#c8ff4d;
-  --mint:#b7f7df;
-  --cyan:#9de9ff;
-  --yellow:#ffe66b;
-  --rose:#ffb7a8;
-  --white:#fff;
-  --black:#0a0c0b;
-}
+:root{--bg:#f3f5ef;--ink:#0b0d0c;--muted:#58635c;--line:rgba(11,13,12,.15);--lime:#c8ff4d;--mint:#b7f7df;--cyan:#9de9ff;--yellow:#ffe66b;--rose:#ffb7a8;--white:#fff;--black:#0a0c0b}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Inter, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.7;
-  overflow-x:hidden;
-}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{margin:0;font-family:Inter,"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
+a:focus-visible,summary:focus-visible{outline:3px solid #2778c3;outline-offset:4px;border-radius:4px}
 .wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
-.header{
-  position:sticky;top:0;z-index:30;
-  backdrop-filter:blur(14px);
-  background:rgba(243,245,239,.82);
-  border-bottom:1px solid var(--line)
-}
-.header-inner{
-  height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px
-}
-.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em}
-.mark{
-  width:38px;height:38px;border-radius:50%;background:var(--black);color:var(--lime);
-  display:grid;place-items:center;font-size:12px;letter-spacing:.08em
-}
+.header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(243,245,239,.91);border-bottom:1px solid var(--line)}
+.header-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.mark{width:38px;height:38px;flex:none;border-radius:50%;background:var(--black);color:var(--lime);display:grid;place-items:center;font-size:12px;letter-spacing:.08em}
 .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted)}
-.nav{display:flex;gap:26px;font-size:12px;font-weight:700;letter-spacing:.08em}
-.nav a{padding:6px 0;border-bottom:1px solid transparent}
-.nav a:hover{border-color:var(--ink)}
-.hero{
-  min-height:calc(100vh - 76px);display:grid;align-items:center;
-  border-bottom:1px solid var(--line);position:relative
-}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:80px 0}
-.kicker{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
-h1{
-  margin:0;font-size:clamp(64px,10vw,150px);line-height:.88;letter-spacing:-.07em;font-weight:900
-}
-h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;border-radius:.08em}
-.hero-copy{max-width:720px;margin-top:32px;font-size:16px;color:#303632}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-.btn{
-  display:inline-flex;align-items:center;gap:12px;padding:14px 18px;border:1px solid var(--ink);
-  border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.06em;transition:.2s
-}
-.btn.primary{background:var(--ink);color:var(--white)}
-.btn:hover{transform:translateY(-2px)}
-.atom{
-  width:min(420px,38vw);aspect-ratio:1/1;position:relative;margin:auto
-}
-.atom::before,.atom::after,.orbit{
-  content:"";position:absolute;inset:12%;border:1.5px solid var(--ink);border-radius:50%;
-}
-.atom::before{transform:rotate(60deg) scaleX(.48)}
-.atom::after{transform:rotate(-60deg) scaleX(.48)}
-.orbit{transform:scaleX(.48)}
-.nucleus{
-  position:absolute;left:50%;top:50%;width:68px;height:68px;transform:translate(-50%,-50%);
-  border-radius:50%;background:var(--lime);border:1.5px solid var(--ink);display:grid;place-items:center;font-weight:900
-}
-.e{position:absolute;width:15px;height:15px;border-radius:50%;background:var(--ink)}
-.e1{left:48%;top:10%}.e2{left:16%;top:62%}.e3{right:14%;top:65%}
-.section{padding:120px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;gap:25px;font-size:12px;font-weight:700;letter-spacing:.08em}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}.nav a:hover{border-color:var(--ink)}
+.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.page-hero{padding:92px 0 88px;border-bottom:1px solid var(--line)}
+.kicker{font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.page-hero h1{font-size:clamp(55px,10vw,134px);line-height:1;letter-spacing:-.065em;margin:0;font-weight:900}
+.page-hero p{max-width:780px;color:var(--muted);font-size:clamp(16px,2vw,19px);margin:22px 0 0}
+.hero-lower{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:38px}
+.hero-note{border-left:4px solid var(--black);padding-left:17px;font-size:13px;max-width:460px;color:#3c4740}
+.hero-note b{display:block;color:var(--ink);font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 18px;border:1px solid var(--ink);border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.03em;transition:transform .2s,background .2s;text-align:center;min-height:46px}
+.btn.primary{background:var(--ink);color:var(--white)}.btn.light{background:var(--lime)}.btn:hover{transform:translateY(-2px)}
+.hero-actions,.inline-actions{display:flex;gap:10px;flex-wrap:wrap}
+.section{padding:106px 0;border-bottom:1px solid var(--line)}
 .section.dark{background:var(--black);color:var(--white)}
-.section-head{display:grid;grid-template-columns:180px 1fr;gap:24px;margin-bottom:64px}
+.section-head{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px;margin-bottom:52px}
 .sec-no{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--muted)}
-.dark .sec-no{color:#89908c}
-.section h2{margin:0;font-size:clamp(42px,7vw,88px);line-height:.98;letter-spacing:-.055em}
-.lead{max-width:760px;font-size:18px;color:#4f5953}
-.dark .lead{color:#bdc4c0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stat{padding:32px 0}
-.stat+.stat{border-left:1px solid var(--line);padding-left:32px}
-.stat strong{display:block;font-size:clamp(42px,6vw,74px);line-height:1;font-weight:900;letter-spacing:-.05em}
-.stat span{font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:700}
-.qual-list{border-top:1px solid rgba(255,255,255,.22)}
-.qual{
-  display:grid;grid-template-columns:90px 1fr 160px 48px;gap:22px;align-items:center;
-  padding:28px 0;border-bottom:1px solid rgba(255,255,255,.22);transition:.2s
-}
-.qual:hover{padding-left:12px}
-.qno{font-size:11px;letter-spacing:.14em;color:#8b938e}
-.qname{font-size:clamp(24px,4vw,48px);font-weight:800;letter-spacing:-.035em}
-.qtag{font-size:11px;color:#9ca39f}
-.arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.35);border-radius:50%;display:grid;place-items:center}
-.chip{display:inline-flex;padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--black)}
-.c1{background:var(--mint)}.c2{background:var(--cyan)}.c3{background:var(--yellow)}.c4{background:var(--rose)}
-.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.pcard{min-height:250px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.35)}
-.pcard b{font-size:42px;letter-spacing:-.05em}
-.pcard h3{font-size:24px;margin:0 0 10px}
-.pcard p{margin:0;color:var(--muted)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
-.timeline{border-top:1px solid var(--line)}
-.trow{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
-.trow strong{font-size:20px}.trow span{color:var(--muted);font-size:13px}
-.foot{padding:50px 0}
+.dark .sec-no{color:#acb5ae}
+.section h2{margin:0;font-size:clamp(36px,6.2vw,74px);line-height:1.1;letter-spacing:-.055em}
+.lead{max-width:790px;font-size:17px;color:#4f5953;margin:20px 0 0}
+.dark .lead{color:#c4cbc5}
+/* 01: GUIDE — reader's manual */
+.guide-intro{max-width:900px;font-size:17px;margin:0 0 26px}
+.guide-intro strong{background:linear-gradient(transparent 65%,var(--lime) 65%)}
+.guide-first{padding:17px 21px;margin:0 0 18px;border:1px solid var(--line);border-radius:12px;background:#fff;display:flex;align-items:flex-start;gap:14px;font-size:14px}
+.guide-first .mini-label{flex:none;background:var(--lime);padding:4px 10px;font-size:11px;font-weight:900;border-radius:30px}
+.guide-first .first-cta{display:inline-block;margin:8px 0 0;font-weight:900;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.guide-card{border:1px solid var(--line);background:#fff;min-height:282px;padding:24px 21px;display:flex;flex-direction:column}
+.guide-step{font-size:11px;letter-spacing:.15em;font-weight:900;color:var(--muted)}
+.guide-num{font-size:66px;font-weight:900;letter-spacing:-.075em;line-height:1.05;margin:13px 0 22px}
+.guide-card:nth-child(1) .guide-num{color:#176b8a}.guide-card:nth-child(2) .guide-num{color:#27785e}.guide-card:nth-child(3) .guide-num{color:#8a6b1f}.guide-card:nth-child(4) .guide-num{color:#7261a4}
+.guide-card h3{font-size:19px;margin:0 0 9px;line-height:1.35}
+.guide-card p{font-size:13px;color:#58635c;margin:0}
+.guide-bottom{display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;padding:22px 24px;background:var(--mint);margin-top:16px;border-radius:12px}
+.guide-bottom p{margin:0;font-size:14px}
+.guide-bottom a{white-space:nowrap}
+/* 02: existing contents */
+.topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.55);min-height:200px;display:flex;align-items:flex-start;flex-direction:column}
+.topic:nth-child(3):last-child{grid-column:1 / -1;min-height:210px}
+.topic h3{font-size:29px;margin:10px 0;letter-spacing:-.03em}.topic p{color:var(--muted);margin:0 0 22px;font-size:15px;flex-grow:1}
+/* 03: Strategy */
+.strategy-top{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.pullquote{font-size:clamp(32px,4.3vw,57px);font-weight:900;letter-spacing:-.052em;line-height:1.34;margin:0}
+.pullquote mark{background:var(--lime);padding:0 .12em;color:var(--ink);box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.strategy-top p{font-size:16px;color:#c4cbc5;margin:0 0 18px}
+.strategy-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}
+.strategy-point{padding:25px;border:1px solid rgba(255,255,255,.23);border-radius:12px}
+.strategy-point b{display:block;color:var(--lime);font-size:12px;letter-spacing:.08em;margin-bottom:12px}
+.strategy-point h3{font-size:19px;line-height:1.4;margin:0 0 10px}
+.strategy-point p{font-size:13px;color:#bdc5bf;margin:0}
+.strategy-caution{margin-top:25px;padding:16px 18px;background:#1d2420;border-left:4px solid var(--lime);font-size:13px;color:#e5eee7}
+/* 04: roadmap */
+.roadmap-banner{display:flex;flex-wrap:wrap;align-items:center;gap:18px;padding:22px 26px;border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:27px}
+.roadmap-big{font-size:clamp(37px,5vw,67px);line-height:1;font-weight:900;letter-spacing:-.055em}
+.roadmap-banner p{flex:1;min-width:230px;margin:0;font-size:14px;color:#46524a}
+.roadmap-track{display:grid;grid-template-columns:2fr 5fr 3fr;gap:4px;height:14px;border-radius:99px;overflow:hidden;margin:0 0 8px}
+.roadmap-track span:nth-child(1){background:#177aa0}.roadmap-track span:nth-child(2){background:#369977}.roadmap-track span:nth-child(3){background:#e4a33a}
+.roadmap-dates{display:grid;grid-template-columns:2fr 5fr 3fr;gap:4px;text-align:center;margin-bottom:25px}
+.roadmap-dates>span{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:2px;min-width:0;line-height:1.4}
+.roadmap-dates strong{font-size:12px;font-weight:800;color:#2f3b33;white-space:nowrap}
+.roadmap-dates small{font-size:11px;color:var(--muted);white-space:nowrap}
+.phase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.phase{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.phase-top{font-weight:900;font-size:11px;letter-spacing:.13em;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.phase-top .phase-date{font-size:12px;letter-spacing:normal;background:var(--bg);border-radius:40px;padding:5px 9px}
+.phase:nth-child(1) .phase-top{color:#126e94}.phase:nth-child(2) .phase-top{color:#22765b}.phase:nth-child(3) .phase-top{color:#976318}
+.phase h3{font-size:23px;letter-spacing:-.03em;line-height:1.4;margin:16px 0 13px}
+.phase p{font-size:13px;color:#4f5953;margin:0}
+.phase em{display:block;font-style:normal;font-weight:800;font-size:12px;margin:17px 0 5px}
+.phase .phase-tip{border-top:1px solid var(--line);padding-top:12px;margin-top:17px}
+.roadmap-tip{margin:22px 0 0;font-size:13px;color:var(--muted)}
+/* 05: personal experience */
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.experience-story{font-size:16px;line-height:1.95}
+.experience-story p{margin:0 0 18px}.experience-story strong{background:linear-gradient(transparent 68%,var(--lime) 68%)}
+.time-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.time-tile{padding:22px 12px;text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px}
+.time-tile .time-label{font-size:12px;font-weight:800;color:var(--muted)}
+.time-tile strong{display:block;white-space:nowrap;font-size:clamp(22px,2.8vw,35px);line-height:1.15;letter-spacing:-.06em;margin:13px 0}
+.time-tile small{font-size:11px;color:var(--muted)}
+.week-box{background:#ebf3e8;border-radius:13px;padding:22px 23px;margin-top:15px}
+.week-box .week-head{font-size:12px;font-weight:800;color:#445b4b}
+.week-box strong{display:block;font-size:37px;line-height:1.3;letter-spacing:-.05em;margin:6px 0}
+.week-box p{font-size:12px;color:#57665c;margin:0}
+.schedule-list{border-top:1px solid var(--line);margin-top:18px}
+.schedule-row{display:grid;grid-template-columns:110px 1fr;gap:12px;border-bottom:1px solid var(--line);padding:11px 0;font-size:13px}
+.schedule-row b{font-size:12px}
+/* sources */
+.source-note{font-size:13px;color:#4f5953;max-width:880px;margin-bottom:18px}
+.sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.source-link{background:#fff;padding:19px 20px;border:1px solid var(--line);border-radius:10px;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.source-link span{font-size:13px;font-weight:800}.source-link small{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-top:3px}
+.source-link:hover{background:#ebf3e8}
+.foot{padding:50px 0;background:var(--black);color:#fff}
 .foot-inner{display:flex;justify-content:space-between;gap:20px;align-items:flex-end}
 .foot-big{font-size:clamp(36px,7vw,86px);line-height:.9;font-weight:900;letter-spacing:-.06em}
-.page-hero{padding:110px 0 80px;border-bottom:1px solid var(--line)}
-.page-hero h1{font-size:clamp(60px,11vw,140px)}
-.page-hero p{max-width:760px;color:var(--muted);font-size:18px}
-.topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.topic{padding:28px;border:1px solid var(--line);background:rgba(255,255,255,.45);min-height:180px}
-.topic h3{font-size:28px;margin:0 0 10px}.topic p{color:var(--muted);margin:0 0 20px}
-.breadcrumb{padding-top:22px;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.foot .btn{border-color:#fff;color:#fff}
+@media(max-width:980px){.guide-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-card{min-height:245px}.experience-grid{grid-template-columns:1fr;gap:28px}}
 @media(max-width:800px){
-  .nav{display:none}
-  .hero-grid,.about-grid{grid-template-columns:1fr}
-  .atom{width:76vw;max-width:340px}
-  .section-head{grid-template-columns:1fr;gap:12px}
-  .stats{grid-template-columns:1fr}
-  .stat+.stat{border-left:none;border-top:1px solid var(--line);padding-left:0}
-  .qual{grid-template-columns:58px 1fr 42px}.qtag{display:none}
-  .principles,.topic-grid{grid-template-columns:1fr}
-  .section{padding:80px 0}
-  .hero-grid{padding:60px 0}
-  .foot-inner{display:block}
+.nav{display:none}.header-inner{min-height:68px}.page-hero{padding:68px 0}.section{padding:76px 0}.section-head{grid-template-columns:1fr;gap:12px;margin-bottom:32px}
+.strategy-top{grid-template-columns:1fr;gap:26px}.strategy-points,.phase-grid{grid-template-columns:1fr}.topic-grid{grid-template-columns:1fr}.topic:nth-child(3):last-child{grid-column:auto;min-height:190px}
+.guide-bottom{grid-template-columns:1fr}.guide-bottom a{white-space:normal}.sources{grid-template-columns:1fr}.foot-inner{display:block}.foot-inner .btn{margin-top:28px}
 }
+@media(max-width:560px){
+.wrap{width:min(100% - 30px,1180px)}.brand{gap:9px}.brand small{font-size:8px}.page-hero h1{font-size:clamp(43px,10.3vw,58px)}.page-hero p{font-size:16px}.hero-actions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.hero-actions a{min-width:0;padding-inline:10px}.hero-actions a:last-child{grid-column:1/-1}.roadmap-dates strong{font-size:11px}.roadmap-dates small{font-size:10px}
+.guide-grid{grid-template-columns:1fr}.guide-card{min-height:0;padding:19px;display:grid;grid-template-columns:66px 1fr;column-gap:12px}.guide-step{grid-column:1/-1}.guide-num{grid-row:2/4;grid-column:1;font-size:46px;margin:10px 0 0}.guide-card h3{grid-column:2;margin:8px 0 5px}.guide-card p{grid-column:2}
+.guide-first{display:block}.guide-first .mini-label{display:inline-flex;margin-bottom:8px}.roadmap-banner{align-items:flex-start}.time-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.time-tile{padding:15px 5px}.time-tile strong{font-size:clamp(17px,5vw,26px)}.time-tile small{font-size:10px}.schedule-row{grid-template-columns:82px 1fr}.topic{padding:22px}.topic h3{font-size:25px}.btn{font-size:11px}
+}
+@media(max-width:340px){.roadmap-dates strong{font-size:10px}.roadmap-dates small{font-size:9px}.hero-actions{grid-template-columns:1fr}.hero-actions a:last-child{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
 </style>
-<style id="cql-3-cards-layout">@media(min-width:801px){.topic-grid>.topic:nth-child(3):last-child{grid-column:1/-1;min-height:210px}}</style></head>
+</head>
 <body>
-
 <header class="header">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="index.html" aria-label="化学資格研究所 トップページへ">
       <span class="mark">CQL</span>
       <span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span>
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="サイト共通ナビゲーション">
       <a href="index.html#qualifications">QUALIFICATIONS</a>
       <a href="index.html#principle">PRINCIPLE</a>
       <a href="profile.html">ABOUT</a>
     </nav>
   </div>
 </header>
+<main>
+  <div class="wrap breadcrumb"><a href="index.html">HOME</a> / POLLUTION CONTROL</div>
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <div class="kicker">POLLUTION CONTROL / STUDY GUIDE</div>
+      <h1 id="page-title">公害防止管理者</h1>
+      <p>環境法規と現象を、資格対策から実務につながる理解へ。<br>過去問・出題分析・図解・計算演習を、合格までの学習ルートとして活用できます。</p>
+      <div class="hero-lower">
+        <div class="hero-note"><b>はじめての方は、学習ガイドから。</b>働きながら約2か月間学習した経験をもとに、取り組む順番と復習の方法を整理しました。</div>
+        <div class="hero-actions"><a class="btn primary" href="#how-to-use">サイトの使い方 ↓</a><a class="btn" href="#study-roadmap">2.5か月学習プラン ↓</a><a class="btn" href="#learning-contents">教材・科目一覧 ↓</a></div>
+      </div>
+    </div>
+  </section>
 
-<main><section id="cql-general-link" aria-label="公害総論の分析ページへの案内" style="background: rgb(238, 247, 235);"><div style="max-width:1180px;margin:auto;padding:22px 20px"><a href="pollution-general.html" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:15px;padding:22px 26px;border-radius:17px;background:#0c1910;color:#c8ff4d;text-decoration:none;font-family:inherit;font-weight:900;font-size:clamp(17px,2.9vw,28px);border:1px solid #32523c"><span>公害総論｜10年150問の徹底分析</span><span style="font-size:16px;color:#fff">S/Aランク・出題傾向を読む ↗</span></a></div></section>
-<div class="wrap breadcrumb"><a href="index.html">HOME</a> / POLLUTION CONTROL</div>
-<section class="page-hero">
-  <div class="wrap">
-    <div class="kicker">POLLUTION CONTROL</div>
-    <h1>公害防止管理者</h1>
-    <p>環境法規と現象を、資格対策から実務につながる理解へ。</p>
-  </div>
-</section>
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><div class="sec-no">01 / CONTENTS</div><div><h2>ここから、<br>理解を深める。</h2></div></div>
-    <div class="topic-grid">
+  <section class="section" id="how-to-use" aria-labelledby="guide-title">
+    <div class="wrap">
+      <div class="section-head"><div class="sec-no">01 / START HERE</div><div><h2 id="guide-title">このサイトの、<br>使い方。</h2><p class="lead">初めての方は、まずこの順番がおすすめです。「問題を解く → 仕組みを理解する → 類題で確かめる → 復習する」を、1テーマずつ繰り返します。</p></div></div>
+      <p class="guide-intro"><strong>大切なのは、最初からすべて理解・暗記しようとしないこと。</strong>過去問を使って、何を知っていて何が分からないのかを確かめ、必要な部分を学び直します。</p>
+      <div class="guide-first"><span class="mini-label">最初に</span><span>受験科目を確認し、各科目の「過去10年分析」で頻出テーマ（S/Aランク）を把握しましょう。S/Aランクは学習の優先順位を決めるための参考であり、対象外のテーマを捨てるためのものではありません。<br><a class="first-cta" href="pollution-general.html">共通科目・公害総論の10年分析を見る →</a></span></div>
+      <div class="guide-grid">
+        <article class="guide-card"><div class="guide-step">STEP 01</div><div class="guide-num">01</div><h3>過去問を解く</h3><p>年度別・分野別の過去問を解き、知識の抜けや苦手な分野を見つけます。最初は正答率よりも「何が問われるか」を重視します。</p></article>
+        <article class="guide-card"><div class="guide-step">STEP 02</div><div class="guide-num">02</div><h3>図解で理解する</h3><p>解説だけで納得できなかった内容は、該当するテーマ図解を確認。現象の仕組みや公式の意味を押さえます。</p></article>
+        <article class="guide-card"><div class="guide-step">STEP 03</div><div class="guide-num">03</div><h3>類題に挑戦する</h3><p>同じテーマの別年度の過去問や計算演習に挑戦。数字や問い方が変わっても解けるかを試します。</p></article>
+        <article class="guide-card"><div class="guide-step">STEP 04</div><div class="guide-num">04</div><h3>日を空けて復習する</h3><p>覚えたつもりで終わらず、数日後に何も見ず思い出して再挑戦。間違えた問題を優先して繰り返します。</p></article>
+      </div>
+      <div class="guide-bottom"><p><strong>過去問は試験実施団体の公式ページから。</strong><br>このサイトは、出題分析・独自図解・独自計算演習で学習を補助します。過去問の原文を転載するのではなく、公式問題と併用してください。</p><a class="btn primary" href="https://www.jemai.or.jp/polconman/examination/past.html" target="_blank" rel="noopener noreferrer">公式の過去問を見る ↗</a></div>
+    </div>
+  </section>
 
+  <section class="section" id="learning-contents" aria-labelledby="contents-title">
+    <div class="wrap">
+      <div class="section-head"><div class="sec-no">02 / CONTENTS</div><div><h2 id="contents-title">ここから、<br>理解を深める。</h2><p class="lead">受験する分野を選んでください。過去10年の分析から重要テーマを把握し、図解や計算演習につなげます。</p></div></div>
+      <div class="topic-grid">
+        <article class="topic"><div class="sec-no">01</div><h3>大気関係第1種</h3><p>公害総論を含む6科目について、過去10年の出題傾向を独自に分析。テーマ別の図解教材とS/Aランク別の重要テーマ・学習ポイントを体系的に解説しています。</p><a class="btn primary" href="pollution-air.html">6科目の徹底分析を見る →</a></article>
+        <article class="topic"><div class="sec-no">02</div><h3>水質関係第1種</h3><p>水質概論・汚水処理特論・水質有害物質特論・大規模水質特論の4科目について、過去10年の出題傾向を独自に分析。共通科目の公害総論は大気関係のページから確認できます。</p><a class="btn primary" href="pollution-water.html">4科目の徹底分析を見る →</a></article>
+        <article class="topic"><div class="sec-no">03</div><h3>計算演習</h3><p>大気18テーマ・水質18テーマの全36テーマ、計108問を収録。公式の物理的な意味を図解と途中式で理解し、基礎・標準・応用の3段階で演習できます。</p><a class="btn primary" href="pollution-calculation-practice.html">36テーマ・108問を解く →</a></article>
+      </div>
+    </div>
+  </section>
 
-<div class="topic"><div class="sec-no">01</div><h3>大気関係第1種</h3><p>公害総論を含む6科目について、過去10年の出題傾向を独自に分析。テーマ別の図解教材とS/Aランク別の重要テーマ・学習ポイントを体系的に解説しています。</p><a class="btn primary" href="pollution-air.html">6科目の徹底分析を見る →</a></div><div class="topic"><div class="sec-no">02</div><h3>水質関係第1種</h3><p>公害総論を含む5科目について、過去10年の出題傾向を独自に分析。テーマ別の図解教材とS/Aランク別の重要テーマ・学習ポイントを体系的に解説しています。</p><a class="btn primary" href="pollution-water.html">4科目の徹底分析を見る →</a></div><div class="topic"><div class="sec-no">03</div><h3>計算演習</h3><p>大気18テーマ・水質18テーマの全36テーマ、計108問を収録。公式の物理的な意味を図解と途中式で理解し、基礎・標準・応用の3段階で演習できます。</p><a class="btn primary" href="pollution-calculation-practice.html">36テーマ・108問を解く →</a></div></div>
-  </div>
-</section>
+  <section class="section dark" id="study-strategy" aria-labelledby="strategy-title">
+    <div class="wrap">
+      <div class="section-head"><div class="sec-no">03 / STUDY STRATEGY</div><div><h2 id="strategy-title">暗記科目は、<br>最初に始める。</h2><p class="lead">公害総論・大気概論・水質概論など、暗記事項の多い科目は早めに着手。専門科目の勉強と並行して、繰り返し復習する時間を確保します。</p></div></div>
+      <div class="strategy-top"><p class="pullquote">最初に学ぶのは、<br><mark>最初に覚えきる</mark><br>ためではない。</p><div><p>暗記を直前期にまとめて残すと、覚える量に追われて他科目の復習時間を確保しにくくなります。</p><p>そこで、最初に過去問を解いて法律・基準値・用語などの暗記対象を洗い出し、会社の昼休みなどの短い時間で繰り返し復習します。</p><p>平日夜は専門科目の理解と演習、休日はまとまった時間が必要な計算問題に配分。直前期には、過去問の解き直しや弱点補強に集中できる状態を目指します。</p></div></div>
+      <div class="strategy-points">
+        <article class="strategy-point"><b>POINT 01 / EARLY START</b><h3>暗記すべき範囲を先に把握</h3><p>公害総論と受験する概論科目から始めます。最初の段階で完璧を求めず、「今後何を復習するか」を見える化します。</p></article>
+        <article class="strategy-point"><b>POINT 02 / RECALL</b><h3>昼休みに20分の想起練習</h3><p>ノートを読み返すだけでなく、問題を見て答えを思い出してから確認。間違えた項目は翌日以降にも復習します。</p></article>
+        <article class="strategy-point"><b>POINT 03 / BALANCE</b><h3>専門科目と計算を並行して学習</h3><p>暗記の復習を続けながら、原理・装置・計算を学びます。計算問題は休日中心に、平日にも短い復習を挟みます。</p></article>
+      </div>
+      <div class="strategy-caution"><strong>この順番は運営者の実践に基づく推奨法です。</strong> 間隔を空けた反復と想起練習は学習研究でも支持されていますが、「必ず暗記科目を最初にすべき」という唯一の正解が証明されているわけではありません。科目免除・既習範囲・苦手分野に応じて調整してください。</div>
+    </div>
+  </section>
+
+  <section class="section" id="study-roadmap" aria-labelledby="roadmap-title">
+    <div class="wrap">
+      <div class="section-head"><div class="sec-no">04 / STUDY ROADMAP</div><div><h2 id="roadmap-title">試験の2.5か月前から、<br>学習を始めよう。</h2><p class="lead">約10週間を一例とした学習計画です。暗記科目の復習を最初から最後まで継続し、専門科目と計算演習を計画的に進めます。</p></div></div>
+      <div class="roadmap-banner"><div class="roadmap-big">2.5か月前〜</div><p><strong>おすすめの準備開始時期</strong><br>運営者自身の試験対策は約2か月でしたが、暗記の反復や予備日を確保するため、初めて受験する方には少なくとも約2.5か月前からの着手をおすすめします。</p></div>
+      <div class="roadmap-track" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="roadmap-dates" aria-label="1〜2週目は暗記把握、3〜7週目は専門・計算、8〜10週目は総仕上げ"><span><strong>1〜2週目</strong><small>暗記把握</small></span><span><strong>3〜7週目</strong><small>専門・計算</small></span><span><strong>8〜10週目</strong><small>総仕上げ</small></span></div>
+      <div class="phase-grid">
+        <article class="phase"><div class="phase-top"><span>PHASE 01</span><span class="phase-date">1〜2週目</span></div><h3>暗記科目の全体像を把握</h3><p>公害総論と大気概論／水質概論のうち受験する科目の過去問を確認。法律・基準値・用語など、覚える項目を洗い出し、昼休みの復習を始めます。</p><div class="phase-tip"><em>この時期の目標</em><p>暗記範囲を把握して、繰り返す仕組みを作る。最初から全項目の暗記完了を目指さない。</p></div></article>
+        <article class="phase"><div class="phase-top"><span>PHASE 02</span><span class="phase-date">3〜7週目</span></div><h3>専門科目と計算を進める</h3><p>平日夜は各特論の過去問・図解を中心に学び、休日は計算問題に取り組みます。昼休みは暗記項目を繰り返し復習し、苦手分野を記録します。</p><div class="phase-tip"><em>この時期の目標</em><p>受験する全科目を一通り扱い、テーマ別の弱点が分かる状態にする。</p></div></article>
+        <article class="phase"><div class="phase-top"><span>PHASE 03</span><span class="phase-date">8〜10週目</span></div><h3>全科目を解き直し、弱点補強</h3><p>年度別の過去問などで実力を確認。ミスした論点と計算問題を優先して再演習し、法令・数値・統計など更新される事項も最新情報で確認します。</p><div class="phase-tip"><em>この時期の目標</em><p>特定科目の取りこぼしを防ぎ、試験時間内に安定して解答できる状態に近づける。</p></div></article>
+      </div>
+      <p class="roadmap-tip">※ 2.5か月は経験に基づく推奨目安であり、合格を保証する期間ではありません。基礎知識が少ない方、受験科目が多い方は3〜4か月以上の余裕を持つ方法も検討してください。試験範囲・合格基準は最新の公式情報を確認してください。</p>
+    </div>
+  </section>
+
+  <section class="section" id="my-experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <div class="section-head"><div class="sec-no">05 / MY EXPERIENCE</div><div><h2 id="experience-title">働きながら実践した、<br>約2か月の勉強法。</h2><p class="lead">ここからは、運営者が実際に行った学習の進め方です。学習期間・時間の使い方は一例として参考にしてください。</p></div></div>
+      <div class="experience-grid">
+        <div class="experience-story"><p>私は試験対策に、およそ<strong>2か月間</strong>取り組みました。平日の夜に約1.5時間、休日に1日約3時間の勉強時間を確保。さらに、会社の昼休みを約20分使い、暗記事項の復習を繰り返していました。</p><p>まず暗記項目の多い公害総論や概論に取り組み、復習すべき内容を把握。その後は<strong>昼休みに暗記を継続しながら、夜は過去問と図解、休日は計算問題</strong>という形で進めました。</p><p>実際の試験勉強で感じたのは、一度見た内容でも、繰り返し確認しなければ忘れてしまうということです。</p><p>こうした経験を踏まえて、このサイトでは、過去問から弱点を見つけ、独自のテーマ図解で仕組みを確認し、類題や計算演習で定着させる方法をおすすめしています。</p></div>
+        <div>
+          <div class="time-grid" aria-label="実践した一日の学習時間">
+            <div class="time-tile"><div class="time-label">平日・夜</div><strong>1.5時間</strong><small>過去問・理解</small></div>
+            <div class="time-tile"><div class="time-label">休日・1日</div><strong>3時間</strong><small>計算演習中心</small></div>
+            <div class="time-tile"><div class="time-label">会社の昼休み</div><strong>20分</strong><small>暗記事項の復習</small></div>
+          </div>
+          <div class="week-box"><div class="week-head">このペースを週5日勤務・休日2日で続けた場合</div><strong>週 約15時間10分</strong><p>平日夜7時間30分 ＋ 休日6時間 ＋ 昼休み1時間40分。10週間なら合計約152時間の計算です。実際の学習時間を集計した実績値ではありません。</p></div>
+          <div class="schedule-list"><div class="schedule-row"><b>平日・昼休み</b><span>法律、基準値、用語などを短時間で復習。なるべく答えを見ずに思い出す。</span></div><div class="schedule-row"><b>平日・夜</b><span>過去問を解き、分からない箇所を図解で確認。同じテーマの類題を解く。</span></div><div class="schedule-row"><b>休日</b><span>連続した時間を使い、計算問題や理解に時間のかかるテーマに取り組む。</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="study-sources" aria-labelledby="sources-title">
+    <div class="wrap">
+      <div class="section-head"><div class="sec-no">06 / REFERENCES</div><div><h2 id="sources-title">制度・学習法の、<br>確認先。</h2><p class="lead">試験の制度は公式情報に従い、学習の進め方は実体験と学習科学の知見を参考にしています。</p></div></div>
+      <p class="source-note">2026年度の公表基準では、科目合格は各科目60%以上の正答率、区分合格は必要な全科目の合格です。ただし基準は年度ごとに公表されるため、今後の受験では当該年度の公式発表を必ず確認してください。反復学習や想起練習の有効性は研究で支持されていますが、「暗記科目を先に学ぶ順番」や「2.5か月」という期間そのものは運営者の推奨です。</p>
+      <div class="sources">
+        <a class="source-link" href="https://www.jemai.or.jp/polconman/examination/past.html" target="_blank" rel="noopener noreferrer"><span>産業環境管理協会｜国家試験の問題と正解<small>公式過去問・出題科目の確認</small></span><span aria-hidden="true">↗</span></a>
+        <a class="source-link" href="https://www.jemai.or.jp/polconman/examination/results.html" target="_blank" rel="noopener noreferrer"><span>産業環境管理協会｜国家試験合格基準<small>当該年度の公式発表を確認</small></span><span aria-hidden="true">↗</span></a>
+        <a class="source-link" href="https://pubmed.ncbi.nlm.nih.gov/26173288/" target="_blank" rel="noopener noreferrer"><span>Dunlosky ほか｜効果的な学習技法のレビュー<small>反復・想起練習などに関する研究</small></span><span aria-hidden="true">↗</span></a>
+        <a class="source-link" href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2021.581216/full" target="_blank" rel="noopener noreferrer"><span>Donoghue &amp; Hattie｜学習技法のメタ分析<small>問題演習と分散学習の根拠</small></span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer class="foot dark"><div class="wrap foot-inner"><div class="foot-big">POLLUTION CONTROL</div><a class="btn" style="color:white;border-color:white" href="index.html">← HOME</a></div></footer>
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const id=a.getAttribute('href');
-    const el=document.querySelector(id);
-    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
-  })
-})
-</script>
-
-</body></html>
+<footer class="foot"><div class="wrap foot-inner"><div class="foot-big">POLLUTION CONTROL</div><a class="btn" href="index.html">← HOME</a></div></footer>
+</body>
+</html>
