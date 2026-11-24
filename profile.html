@@ -139,6 +139,9 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
   .hero-grid{padding:60px 0}
   .foot-inner{display:block}
 }
+
+.stats-note{font-size:12px;color:#515c55;margin:12px 0 0}
+@media(max-width:480px){.wrap{width:calc(100% - 32px)}.trow{grid-template-columns:66px minmax(0,1fr);gap:12px}.page-hero h1{font-size:clamp(44px,10vw,60px)}.section h2{font-size:clamp(34px,9vw,42px)}.section{padding:64px 0}.page-hero{padding:72px 0 60px}.header-inner{height:68px}.lead{font-size:16px}.foot-big{overflow-wrap:anywhere}}
 </style>
 </head>
 <body>
@@ -174,13 +177,16 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
       <p class="lead">30歳。国立大学院修士課程で化学工学を専攻し、膜分離に関する研究に取り組みました。現在は化学メーカーの生産技術職。化学工学をベースに日々の技術検討に取り組んでいます。</p>
       <p class="lead">本名・勤務先・大学名など、個人や所属先を特定できる情報は公開していません。</p>
     </div>
-    <div class="timeline">
-      <div class="trow"><strong>2019</strong><span>化学工学技士基礎 / 一発合格</span></div>
-      <div class="trow"><strong>2022</strong><span>危険物取扱者 甲種 / 一発合格</span></div>
-      <div class="trow"><strong>2023</strong><span>高圧ガス製造保安責任者 甲種 / 一発合格</span></div>
-      <div class="trow"><strong>2023</strong><span>エネルギー管理士 / 一発合格</span></div>
-      <div class="trow"><strong>2025</strong><span>公害防止管理者 水質関係第1種 / 一発合格</span></div>
-      <div class="trow"><strong>2026</strong><span>公害防止管理者 大気関係第1種 / 自己採点合格見込み</span></div>
+    <div class="timeline" aria-labelledby="exam-results-title">
+      <h3 id="exam-results-title" style="font-size:18px;margin:16px 0 0">資格試験の合格実績</h3>
+      <div class="trow"><strong>2019</strong><span>化学工学技士基礎</span></div>
+      <div class="trow"><strong>2021</strong><span>危険物取扱者 甲種</span></div>
+      <div class="trow"><strong>2022</strong><span>高圧ガス製造保安責任者 甲種</span></div>
+      <div class="trow"><strong>2023</strong><span>エネルギー管理士</span></div>
+      <div class="trow"><strong>2025</strong><span>公害防止管理者 水質関係第1種</span></div>
+      <div class="trow"><strong>2026</strong><span>公害防止管理者 大気関係第1種</span></div>
+      <p class="stats-note">※年は試験の受験年（合格した試験の実施年）を記載しています。免状の交付年とは異なる場合があります。</p>
+      <p class="stats-note">掲載した6資格はいずれも初回受験で合格しています。</p>
     </div>
   </div>
 </section>

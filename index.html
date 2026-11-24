@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="化学系資格を、丸暗記から理解へ。図解・丁寧な途中式・演習で学ぶ資格学習サイト。" name="description"/>
+<meta content="化学系資格を、丸暗記から理解へ。危険物取扱者・高圧ガス・エネルギー管理士・公害防止管理者を、出題傾向・図解・途中式・演習で学ぶ資格学習サイト。現役の生産技術職による学習の進め方も紹介。" name="description"/>
 <title>化学資格研究所 | 資格を、丸暗記から理解へ。</title>
 <style>
 :root{
@@ -140,6 +140,48 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
   .hero-grid{padding:60px 0}
   .foot-inner{display:block}
 }
+
+/* CQL: first-visit guide and features */
+section[id]{scroll-margin-top:96px}
+.nav{gap:20px}
+.nav a:focus-visible,.btn:focus-visible,.qual:focus-visible,.guide-example a:focus-visible{outline:3px solid #52731c;outline-offset:5px}
+.guide-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.guide-step{display:flex;flex-direction:column;min-width:0;min-height:230px;background:rgba(255,255,255,.52);border:1px solid var(--line);padding:24px}
+.step-label{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:800;letter-spacing:.1em;color:#515c55;margin-bottom:30px}
+.step-num{font-size:36px;color:var(--ink);line-height:1;letter-spacing:-.05em}
+.guide-step h3{font-size:clamp(19px,2vw,25px);line-height:1.35;margin:0 0 12px;letter-spacing:-.03em}
+.guide-step p{font-size:14px;color:#4f5953;margin:0}
+.guide-repeat{margin:16px 0 0;border:1px solid var(--line);background:var(--lime);padding:15px 22px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800}
+.guide-repeat span{font-size:22px;line-height:1}
+.guide-example{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;border-top:1px solid var(--line);padding-top:24px;margin-top:30px}
+.guide-example h3{margin:6px 0;font-size:20px;line-height:1.4}
+.guide-example p{font-size:14px;color:#4f5953;margin:0;max-width:740px}
+.guide-note{margin:16px 0 0;color:#515c55;font-size:12px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.feature-card{min-width:0;min-height:220px;border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.4)}
+.feature-card h3{font-size:24px;line-height:1.4;margin:18px 0 8px;letter-spacing:-.025em}
+.feature-card p{margin:0;color:#4f5953;font-size:15px}
+.feature-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.feature-top b{font-size:40px;line-height:1;letter-spacing:-.05em}
+.feature-top .chip{font-size:11px}
+.about-stats{margin-top:40px}
+.about-stats .stat strong{font-size:clamp(36px,5vw,64px)}
+.about-stats .stat span{display:block;letter-spacing:.025em;color:#4f5953;font-size:12px;margin-top:10px}
+.stats-note{font-size:12px;color:#515c55;margin:12px 0 0}
+.guide-strength{display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px;align-items:start;padding:22px 24px;margin:0 0 24px;background:rgba(255,255,255,.45);border:1px solid var(--line);border-left:4px solid var(--lime)}
+.guide-strength h3{font-size:18px;line-height:1.5;margin:0;letter-spacing:-.025em}
+.guide-strength p{font-size:15px;color:#4f5953;line-height:1.8;margin:0}
+.guide-strength strong{color:var(--ink)}
+.guide-strength-copy{min-width:0}
+.guide-strength-copy p+p{margin-top:10px}
+.about-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:800px){.guide-strength{grid-template-columns:1fr;gap:8px;padding:18px}.about-stats{grid-template-columns:1fr}}
+.foot.dark{background:var(--black);color:var(--white)}
+@media(max-width:1050px){.guide-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-step{min-height:205px}.nav{gap:12px}}
+@media(max-width:800px){section[id]{scroll-margin-top:88px}.guide-example{grid-template-columns:1fr}.guide-example .btn{justify-self:start}.about-stats{margin-top:32px}.about-stats .stat{padding:22px 0}.guide-step{padding:20px}.feature-card{padding:22px;min-height:200px}.feature-card h3{font-size:21px}.hero-grid>div{min-width:0}.hero h1{font-size:clamp(48px,10vw,80px)}.foot-big{overflow-wrap:anywhere}}
+@media(max-width:480px){.wrap{width:calc(100% - 32px)}.guide-steps,.feature-grid{grid-template-columns:1fr}.guide-step{min-height:0}.step-label{margin-bottom:16px}.guide-repeat{padding:14px 16px}.feature-card{min-height:0}.feature-card h3{margin-top:16px}.qual{grid-template-columns:24px minmax(0,1fr) 36px;gap:10px;padding:20px 0}.qname{font-size:clamp(18px,5.5vw,24px)}.arrow{width:36px;height:36px}.qname .chip{vertical-align:middle}.trow{grid-template-columns:66px minmax(0,1fr);gap:12px}.hero .actions{gap:8px}.hero .actions .btn{padding:12px 14px}.header-inner{height:68px}.section{padding:64px 0}.section-head{margin-bottom:32px}.section h2{font-size:clamp(34px,9vw,42px)}.lead{font-size:16px}.guide-example .btn{max-width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.qual{transition:none}.btn:hover{transform:none}.qual:hover{padding-left:0}}
+
 </style>
 </head>
 <body>
@@ -149,9 +191,10 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
 <span class="mark">CQL</span>
 <span>化学資格研究所<small>CHEMICAL QUALIFICATION LAB.</small></span>
 </a>
-<nav class="nav">
-<a href="index.html#qualifications">QUALIFICATIONS</a>
-<a href="index.html#principle">PRINCIPLE</a>
+<nav class="nav" aria-label="メインナビゲーション">
+<a href="#how-to-use">START HERE</a>
+<a href="#qualifications">QUALIFICATIONS</a>
+<a href="#principle">FEATURES</a>
 <a href="profile.html">ABOUT</a>
 </nav>
 </div>
@@ -165,7 +208,8 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
 <p class="hero-copy">参考書で省略されがちな「なぜ？」を、図・式・ことばで丁寧にほどく。化学系資格を、合格だけで終わらせないための学習メディアです。</p>
 <div class="actions">
 <a class="btn primary" href="#qualifications">資格から探す →</a>
-<a class="btn" href="profile.html">運営者について ↗</a>
+<a class="btn" href="#how-to-use">サイトの使い方 ↓</a>
+<a class="btn" href="#principle">サイトの特徴 ↓</a>
 </div>
 </div>
 <div aria-hidden="true" class="atom">
@@ -174,20 +218,29 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
 </div>
 </div>
 </section>
-<section class="section" id="principle">
+<section class="section" id="how-to-use" aria-labelledby="guide-title">
 <div class="wrap">
-<div class="section-head">
-<div class="sec-no">01 / PRINCIPLE</div>
-<div>
-<h2>わからないまま、<br/>先へ進まない。</h2>
-<p class="lead">市販の参考書は、試験対策のため説明がコンパクトです。この研究所では、その「途中」を一段ずつ分解します。</p>
+<div class="section-head"><div class="sec-no">01 / START HERE</div><div>
+<h2 id="guide-title">このサイトの、<br/>使い方。</h2>
+<p class="lead">まずは受験する資格を選び、出題される内容を把握する。問題を解きながら理解を深め、繰り返し復習する。化学資格研究所では、次の4ステップをおすすめしています。</p>
+</div></div>
+<div class="guide-strength">
+<h3>このサイトの強み</h3>
+<div class="guide-strength-copy">
+<p><strong>最大の強みは、過去問を年度横断で掘り下げる独自の出題分析です。</strong> 参考書で体系的に知識を学び、過去問解説で個々の問題を理解する。それに加え、本サイトでは「何が、どのくらい出題され、何を優先して学ぶべきか」まで整理します。</p>
+<p>例えば公害防止管理者では、過去10年の設問を一問ずつテーマ別に分類し、出題頻度や年度ごとの傾向を可視化。重要テーマをS/Aランクで整理し、図解・丁寧な途中式・演習につなげることで、効率的な試験対策と本質的な理解を支援します。</p>
 </div>
 </div>
-<div class="stats">
-<div class="stat"><strong>6</strong><span>QUALIFICATIONS*</span></div>
-<div class="stat"><strong>100%</strong><span>FIRST ATTEMPT*</span></div>
-<div class="stat"><strong>5 yr</strong><span>PROCESS ENGINEERING</span></div>
-</div>
+<ol class="guide-steps">
+<li class="guide-step"><div class="step-label"><span class="step-num">01</span>PLAN</div><div><h3>資格・科目を選ぶ</h3><p>試験概要と出題傾向を確認し、優先して取り組むテーマを決める。暗記事項の多い分野は早めに着手する。</p></div></li>
+<li class="guide-step"><div class="step-label"><span class="step-num">02</span>TRY</div><div><h3>まず問題を解く</h3><p>過去問や演習問題に挑戦し、自分が何を理解できていないのかを見つける。</p></div></li>
+<li class="guide-step"><div class="step-label"><span class="step-num">03</span>UNDERSTAND</div><div><h3>図解・途中式で理解</h3><p>該当する図解や解説を読み、原理・装置の仕組み・公式の意味を整理する。</p></div></li>
+<li class="guide-step"><div class="step-label"><span class="step-num">04</span>REVIEW</div><div><h3>類題・復習で定着</h3><p>条件や問い方が異なる問題に挑戦し、日を空けて解き直す。暗記事項は見ずに思い出す練習を続ける。</p></div></li>
+</ol>
+<p class="guide-repeat"><span aria-hidden="true">↻</span> STEP 02〜04をテーマごとに繰り返し、知識を自分のものにする。</p>
+<p class="guide-note">※教材の構成・公開状況は資格や科目によって異なります。過去問は各試験実施団体の公式資料などもご活用ください。</p>
+<div class="guide-example"><div><div class="sec-no">STUDY EXAMPLE / 公害防止管理者</div><h3>働きながら合格を目指す方へ。</h3><p>公害防止管理者のページでは、実際の約2か月間の学習経験をもとに、暗記事項を早めに把握する理由や昼休みの復習、休日の計算演習、試験約2.5か月前からの推奨学習プランを紹介しています。</p></div><a class="btn" href="pollution.html#study-roadmap">学習ロードマップを見る ↗</a></div>
+<div class="actions" style="margin-top:24px"><a class="btn primary" href="#qualifications">学習する資格を選ぶ ↓</a></div>
 </div>
 </section>
 <section class="section dark" id="qualifications">
@@ -196,7 +249,7 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
 <div class="sec-no">02 / QUALIFICATIONS</div>
 <div>
 <h2>学びたい資格から、<br/>はじめる。</h2>
-<p class="lead">まずは4領域から。試験概要、頻出分野、過去問、図解、演習へつなげていきます。</p>
+<p class="lead">4つの資格領域から、受験する資格を選んでください。各ページから試験概要、出題分析、図解、演習など、公開中の教材へ進めます。</p>
 </div>
 </div>
 <div class="qual-list">
@@ -215,51 +268,55 @@ h1 .accent{display:inline-block;background:var(--lime);padding:0 .08em .06em;bor
 </div>
 </div>
 </section>
-<section class="section">
+<section class="section" id="principle" aria-labelledby="feature-title">
 <div class="wrap">
-<div class="section-head">
-<div class="sec-no">03 / METHOD</div>
-<div><h2>見る。理解する。<br/>手を動かす。</h2></div>
+<div class="section-head"><div class="sec-no">03 / FEATURES</div><div>
+<h2 id="feature-title">わからないまま、<br/>先へ進まない。</h2>
+<p class="lead">見る。理解する。手を動かす。試験対策の参考書ではコンパクトにまとめられがちな「なぜ？」を、図・式・ことばで一段ずつ分解します。</p>
+</div></div>
+<div class="feature-grid">
+<article class="feature-card"><div class="feature-top"><b>01</b><span class="chip c1">ANALYSIS</span></div><div><h3>出題傾向から、重要分野を知る。</h3><p>過去問の独自分析や頻出テーマの整理を通じて、優先して学ぶべき内容を把握する。公害防止管理者では過去10年の分析とS/Aランク別の学習ガイドを掲載しています。</p></div></article>
+<article class="feature-card"><div class="feature-top"><b>02</b><span class="chip c2">VISUAL</span></div><div><h3>文章だけでなく、図で理解する。</h3><p>化学反応、装置の構造、物理現象の関係を図解で整理。文字だけではイメージしにくい仕組みを、視覚的に理解することを目指します。</p></div></article>
+<article class="feature-card"><div class="feature-top"><b>03</b><span class="chip c3">LOGIC</span></div><div><h3>公式の意味と途中式を大切に。</h3><p>公式を覚えるだけでなく、なぜその式になるのか、単位や計算過程が何を表すのかを解説。初めて学ぶ人にも理解しやすい説明を心がけます。</p></div></article>
+<article class="feature-card"><div class="feature-top"><b>04</b><span class="chip c4">PRACTICE</span></div><div><h3>演習で、使える知識にする。</h3><p>Web演習や計算問題を通じて理解を確認。解説を読んで終わらず、自分で考えて解くことを重視します。資格取得後の実務にもつながる理解を目指します。</p></div></article>
 </div>
-<div class="principles">
-<div class="pcard"><b>01</b><div><h3>VISUAL</h3><p>文章だけでは掴みにくい関係を、図解で整理する。</p></div></div>
-<div class="pcard"><b>02</b><div><h3>LOGIC</h3><p>途中式と理由を飛ばさず、理解の穴を埋める。</p></div></div>
-<div class="pcard"><b>03</b><div><h3>PRACTICE</h3><p>読むだけで終わらず、Web演習で自分の手を動かす。</p></div></div>
-</div>
+<p class="guide-note">※資格・科目ごとに教材の種類や公開範囲は異なります。各資格ページでご確認ください。</p>
 </div>
 </section>
-<section class="section">
-<div class="wrap about-grid">
+<section class="section" id="about" aria-labelledby="about-title">
+<div class="wrap">
+<div class="about-grid">
 <div>
 <div class="sec-no">04 / ABOUT</div>
-<h2 style="margin:18px 0 26px">化学を学び、<br/>現場で使い、<br/>資格で深める。</h2>
-<p class="lead">国立大学院修士課程で化学工学を専攻。現在は化学メーカーの生産技術職として勤務しています。匿名で運営しています。</p>
+<h2 id="about-title" style="margin:18px 0 26px">化学を学び、<br/>現場で使い、<br/>資格で深める。</h2>
+<p class="lead">国立大学院修士課程で化学工学を専攻。現在は化学メーカーの生産技術職として勤務しています。資格学習で得た知識と実務経験をもとに、匿名で運営しています。</p>
 <div class="actions"><a class="btn primary" href="profile.html">PROFILE →</a></div>
 </div>
-<div class="timeline">
+<div class="timeline" aria-labelledby="exam-results-title">
+<h3 id="exam-results-title" style="font-size:18px;margin:16px 0 0">資格試験の合格実績</h3>
 <div class="trow"><strong>2019</strong><span>化学工学技士基礎</span></div>
-<div class="trow"><strong>2022</strong><span>危険物取扱者 甲種</span></div>
-<div class="trow"><strong>2023</strong><span>高圧ガス製造保安責任者 甲種 / エネルギー管理士</span></div>
+<div class="trow"><strong>2021</strong><span>危険物取扱者 甲種</span></div>
+<div class="trow"><strong>2022</strong><span>高圧ガス製造保安責任者 甲種</span></div>
+<div class="trow"><strong>2023</strong><span>エネルギー管理士</span></div>
 <div class="trow"><strong>2025</strong><span>公害防止管理者 水質関係第1種</span></div>
-<div class="trow"><strong>2026</strong><span>公害防止管理者 大気関係第1種（自己採点合格見込み）</span></div>
+<div class="trow"><strong>2026</strong><span>公害防止管理者 大気関係第1種</span></div>
+<p class="stats-note">※年は試験の受験年（合格した試験の実施年）を記載しています。免状の交付年とは異なる場合があります。</p>
 </div>
+</div>
+<div class="stats about-stats" aria-label="運営者の資格試験の合格実績">
+<div class="stat"><strong>6</strong><span>掲載資格の合格実績</span></div>
+<div class="stat"><strong>100%</strong><span>掲載資格の初回受験合格率</span></div>
+</div>
+<p class="stats-note">※掲載した6資格に関する運営者個人の実績です。サイト利用者の合格率や合格を保証するものではありません。</p>
 </div>
 </section>
 </main>
 <footer class="foot dark">
 <div class="wrap foot-inner">
 <div class="foot-big">CHEMICAL<br/>QUALIFICATION<br/>LAB.</div>
-<div style="font-size:11px;color:#9da49f">© 2026 CQL<br/>*自己採点合格見込みを含む</div>
+<div style="font-size:11px;color:#9da49f">© 2026 CQL</div>
 </div>
 </footer>
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const id=a.getAttribute('href');
-    const el=document.querySelector(id);
-    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}
-  })
-})
-</script>
+
 </body>
 </html>
